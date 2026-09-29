@@ -1,12 +1,19 @@
 import { Button, Paragraph, Post } from "@toss/tds-mobile";
+import type { RefObject } from "react";
 
 interface HomePageProps {
+  mainRef: RefObject<HTMLElement>;
   onStart: () => void;
 }
 
-export function HomePage({ onStart }: HomePageProps) {
+export function HomePage({ mainRef, onStart }: HomePageProps) {
   return (
-    <main className="page" aria-labelledby="home-title">
+    <main
+      ref={mainRef}
+      tabIndex={-1}
+      className="page"
+      aria-labelledby="home-title"
+    >
       <section className="page-content">
         <Paragraph.Text className="page-brand" typography="t5" fontWeight="bold">
           냉털픽

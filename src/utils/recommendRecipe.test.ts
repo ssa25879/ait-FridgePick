@@ -1,0 +1,67 @@
+import { describe, expect, it } from "vitest";
+import type { Recipe } from "../types/recipe";
+import { getRecipeCandidates, pickRecipeCandidate } from "./recommendRecipe";
+
+const makeRecipe = (
+  id: string,
+  requiredIngredients: string[],
+  optionalIngredients: string[] = [],
+): Recipe => ({
+  id,
+  name: id,
+  requiredIngredients,
+  optionalIngredients,
+  steps: ["첫 단계", "둘째 단계", "셋째 단계"],
+  difficulty: "easy",
+});
+
+describe("메뉴 추천 계산", () => {
+  it("필수 재료의 보유 목록, 부족 목록과 60% 매칭률을 계산한다", () => {
+    const recipe = makeRecipe(
+      "sixty_percent",
+      ["a", "b", "c", "d", "e"],
+      ["optional"],
+    );
+    const [match] = getRecipeCandidates(
+      ["a", "b", "c", "optional"],
+      [recipe],
+    );
+
+    expect(match.matchedRequiredIngredientIds).toEqual(["a", "b", "c"]);
+    expect(match.missingRequiredIngredientIds).toEqual(["d", "e"]);
+    expect(match.matchRate).toBe(0.6);
+    expect(getRecipeCandidates(["optional"], [recipe])).toEqual([]);
+  });
+
+  it("필수 재료 매칭률이 60% 미만이면 후보에서 제외한다", () => {
+    const recipe = makeRecipe("below_threshold", ["a", "b", "c"]);
+
+    expect(getRecipeCandidates(["a"], [recipe])).toEqual([]);
+  });
+
+  it("다시 뽑을 때 후보가 둘 이상이면 직전 메뉴를 제외한다", () => {
+    const candidates = getRecipeCandidates(
+      ["a", "b", "c", "d", "e", "f"],
+      [
+        makeRecipe("first", ["a", "b", "c"]),
+        makeRecipe("second", ["d", "e", "f"]),
+      ],
+    );
+
+    expect(pickRecipeCandidate(candidates, "first", () => 0)?.recipe.id).toBe(
+      "second",
+    );
+  });
+
+  it("후보가 하나면 그 메뉴를 유지하고 후보가 없으면 null을 반환한다", () => {
+    const [onlyCandidate] = getRecipeCandidates(
+      ["a", "b", "c"],
+      [makeRecipe("only", ["a", "b", "c"])],
+    );
+
+    expect(pickRecipeCandidate([onlyCandidate], "only", () => 0)).toBe(
+      onlyCandidate,
+    );
+    expect(pickRecipeCandidate([], undefined, () => 0)).toBeNull();
+  });
+});

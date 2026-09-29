@@ -59,6 +59,14 @@
 
 .ingredient-page-header button {
   flex: 0 0 auto;
+  min-height: 44px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.ingredient-page-actions {
+  width: 100%;
+  margin-top: auto;
 }
 
 .category-tabs {
@@ -69,6 +77,7 @@
 
 .category-tabs > button {
   min-width: 0;
+  min-height: 44px;
   white-space: normal;
 }
 
@@ -128,6 +137,120 @@
 }
 
 .ingredient-page button:focus-visible {
+  outline: 2px solid #1f2937;
+  outline-offset: 3px;
+}
+
+.result-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: 480px;
+  min-height: 100%;
+  margin: 0 auto;
+  padding: 24px 0;
+}
+
+.result-page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.result-page-header .page-title {
+  min-width: 0;
+}
+
+.result-page-header button {
+  flex: 0 0 auto;
+  min-height: 44px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.result-recommendation,
+.result-empty {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  background: #f9fafb;
+}
+
+.result-recipe-name,
+.result-match-rate,
+.result-no-alternatives,
+.result-empty-hint {
+  margin: 0;
+}
+
+.result-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.result-recipe-name {
+  overflow-wrap: anywhere;
+  font-size: 24px;
+  line-height: 1.35;
+}
+
+.result-match-rate {
+  color: #374151;
+  line-height: 1.5;
+}
+
+.result-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.result-detail-title {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.result-detail-text,
+.result-steps,
+.result-empty-hint {
+  margin: 0;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.result-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 24px;
+}
+
+.result-page-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.result-empty-message {
+  margin: 0;
+}
+
+.result-no-alternatives {
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.result-page button:focus-visible {
   outline: 2px solid #1f2937;
   outline-offset: 3px;
 }

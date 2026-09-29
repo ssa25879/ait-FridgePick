@@ -1,4 +1,5 @@
 import { useState } from "react";
+import type { RefObject } from "react";
 import { Button, Post } from "@toss/tds-mobile";
 import { CategoryTabs } from "../components/CategoryTabs";
 import { IngredientChip } from "../components/IngredientChip";
@@ -7,14 +8,18 @@ import { INGREDIENTS, INGREDIENT_CATEGORIES } from "../data/ingredients";
 import type { Ingredient, IngredientCategory } from "../types/ingredient";
 
 interface IngredientPageProps {
+  mainRef: RefObject<HTMLElement>;
   selectedIngredientIds: string[];
   onToggleIngredient: (ingredientId: string) => void;
+  onRecommend: () => void;
   onBack: () => void;
 }
 
 export function IngredientPage({
+  mainRef,
   selectedIngredientIds,
   onToggleIngredient,
+  onRecommend,
   onBack,
 }: IngredientPageProps) {
   const [activeCategory, setActiveCategory] =
@@ -32,7 +37,12 @@ export function IngredientPage({
     );
 
   return (
-    <main className="ingredient-page" aria-labelledby="ingredients-title">
+    <main
+      ref={mainRef}
+      tabIndex={-1}
+      className="ingredient-page"
+      aria-labelledby="ingredients-title"
+    >
       <header className="ingredient-page-header">
         <div className="ingredient-page-heading">
           <Post.H1 id="ingredients-title" className="page-title">
@@ -78,6 +88,18 @@ export function IngredientPage({
       </section>
 
       <SelectedIngredientBar ingredients={selectedIngredients} />
+
+      <div className="ingredient-page-actions">
+        <Button
+          type="button"
+          color="dark"
+          display="full"
+          size="xlarge"
+          onClick={onRecommend}
+        >
+          메뉴 뽑기
+        </Button>
+      </div>
     </main>
   );
 }
