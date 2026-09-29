@@ -2,7 +2,8 @@
 
 - 기준일: 2026-09-29
 - 저장소: `D:\work\ait-FridgePick`
-- 브랜치: `feature/public-recipe-catalog`
+- 개발 브랜치: `feature/public-recipe-catalog` (master에 병합됨)
+- 현재 체크아웃: `master`
 - 다음 작업: CSV 데이터 이용 조건을 확인하고, 허용 범위 안에서 파서·재료 매핑·추천 카탈로그를 구현한다.
 - 진행 문서: [`plan.md`](./plan.md)
 
@@ -48,21 +49,20 @@
 
 ## Git 작업 상태
 
-마지막 확인 시점의 상태:
+커밋·병합 후 현재 상태:
 
 ```text
-## feature/public-recipe-catalog
- M specs/roadmap.md
+## master
 ?? COOKRCP01.csv
 ?? Review.md
 ?? public/fridgepick-app-icon.png
-?? specs/26-09-29_feature_public_recipe_catalog/
 ```
 
-- `specs/roadmap.md`와 기능 명세 디렉터리는 이번 기능 작업이다.
+- 문서와 로드맵 변경은 `59ee483 docs: add recipe catalog handoff`로 커밋하고 `master`에 fast-forward 병합했다. 로컬 `feature/public-recipe-catalog` 브랜치는 같은 커밋을 가리키며 유지 중이다.
+- 기능 코드 구현 커밋은 아직 없다. 현재 저장소 상태에서 기능 관련 추적 파일은 깨끗하다.
 - `COOKRCP01.csv`는 로컬 입력으로만 사용하며 절대 stage/commit하지 않는다. `.gitignore` 규칙을 추가한다.
 - `Review.md`, `public/fridgepick-app-icon.png`는 현재 상태에서 기존 미관련 untracked 파일이다. 변경하거나 stage하지 않는다.
-- 아직 기능 구현 커밋은 없다. 사용자는 앞서 현재 작업 완료 후 커밋을 지시했다. 구현과 검증을 마치면 기능 관련 파일만 명시적으로 stage해 저장소 커밋 관례를 따른다. master 병합은 이번 요청 범위가 아니다.
+- 구현 검증(테스트, lint, build, AIT 화면)은 사용자의 지시에 따라 보류했다. 구현을 이어갈 때 계획의 검증 항목을 실행한다.
 
 ## 작업 로그
 
