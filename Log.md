@@ -8,3 +8,5 @@
 - `603d0df feat: implement TDS home entry` — TDS Mobile을 적용하고 냉털픽 홈과 재료 선택 안내 화면 및 이동을 구현했다. React 18 호환성을 맞추고 계획·로드맵·검증 문서를 갱신했다.
 - `0683a64 docs: plan ingredient catalog selection` — 로드맵 2단계 재료 카탈로그·선택 기능의 요구사항, 설계, 결정 사항, 개발 계획, 검증 계획을 작성했다.
 - `4c0158d feat: implement ingredient catalog selection` — 다섯 카테고리와 28개 재료 선택, 선택 요약과 홈 왕복 상태 유지를 구현하고 AIT DevTools 320×640 CSS px에서 확인했다.
+- `7610906 docs: mark ingredient catalog roadmap complete` — 재료 선택 2단계와 검증 완료 항목을 로드맵에 표시했다.
+- `f31d4c6 test: add ingredient selection coverage` — Vitest·jsdom·React Testing Library를 추가하고 카탈로그 무결성 및 재료 선택 흐름 테스트를 작성했다.
