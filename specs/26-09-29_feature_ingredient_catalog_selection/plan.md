@@ -31,7 +31,7 @@
 1. 작업 브랜치 `feature/ingredient-catalog-selection`을 생성했다.
 2. 현재 홈 화면과 두 화면 간 로컬 상태 전환이 있다.
 3. `package.json`이 React 18.3.1 및 TDS Mobile 2.5.1을 선언한다.
-4. 프로젝트에 별도 테스트 러너가 없으므로 수동 시나리오와 기존 lint/build 명령으로 확인한다.
+4. Vitest와 React Testing Library로 카탈로그 및 재료 선택 흐름을 자동 검증하고 수동 시나리오와 lint/build를 함께 확인한다.
 
 ## 작은 작업 순서
 
@@ -64,7 +64,8 @@
 
 ### 4. 검증
 
-- [x] `validation.md`의 카테고리, 선택·해제, 선택 요약, 화면 이동 시나리오를 수행한다.
+- [x] `npm test`로 카탈로그 무결성과 카테고리·선택·요약·홈 왕복 흐름을 자동 검증한다.
+- [x] `validation.md`의 수동 카테고리, 선택·해제, 선택 요약, 화면 이동 시나리오를 수행한다.
 - [x] AIT DevTools 사용자 지정 320×640 CSS px에서 가로 넘침과 잘림을 확인한다.
 - [x] Tab, Enter, Space 키로 카테고리와 재료 버튼을 사용할 수 있는지 확인한다.
 - [x] `npm run lint`와 `npm run build`를 실행하고 결과를 기록한다.

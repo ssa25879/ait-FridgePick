@@ -1,6 +1,6 @@
 # 검증 계획: 재료 카탈로그와 선택
 
-구현 후 브라우저에서 기능 흐름을 확인했고 lint/build도 실행했다. AIT DevTools의 사용자 지정 뷰포트로 320×640 CSS px 화면도 확인했다. 프로젝트에 별도 테스트 러너가 없어 기능 확인은 수동으로 진행했다.
+Vitest와 React Testing Library로 카탈로그와 주요 재료 선택 흐름을 자동화했다. 브라우저 수동 확인 및 AIT DevTools 사용자 지정 320×640 CSS px 확인도 수행했고 lint/build도 실행했다.
 
 ## 기준 상태
 
@@ -8,6 +8,7 @@
 - AIT DevTools v3.6.0의 Viewport에서 사용자 지정 320×640 CSS px를 적용해 재료 선택 화면을 확인했다. 다섯 카테고리가 세 개와 두 개로 줄바꿈되고, 재료 칩과 선택 요약이 화면 너비 안에 표시되며 시각적인 가로 잘림·겹침은 보이지 않았다.
 - 로컬 브라우저에는 `window.__appsInTossConstants`가 없어 TDS `SafeAreaInsets` 오류가 기록됐다. 실제 Toss WebView의 안전 영역 검증은 별도 앱인토스 확인 단계에서 수행한다.
 - 이번 구현 후 `npm run lint`와 `npm run build`는 모두 종료 코드 0이었다. lint에서 수정하지 않은 `src/hooks/useInAppAds.tsx:54` 경고가 있었고, 빌드에서 500 kB 초과 번들 경고가 있었다.
+- `npm test`는 2개 테스트 파일, 5개 테스트가 모두 통과했다. TDS provider가 사용하는 `matchMedia`와 앱인토스 safe area 상수는 jsdom에 없어서 테스트 전용 설정에서만 모의했다.
 
 ## 요구사항별 검증
 
@@ -23,6 +24,7 @@
 | ING-VAL-08 모바일·키보드 | Tab/Enter/Space를 사용하고 320 CSS px에서 확인한다. | 키보드로 조작 가능하고 가로 넘침이 없다. | 키보드 확인; AIT DevTools 320×640에서 전체 너비 내 표시와 선택 요약 확인 |
 | ING-VAL-09 데이터 무결성 | 로컬 카탈로그 ID와 category 값을 확인한다. | 28개 ID가 중복되지 않고 각 category가 타입과 일치한다. | 확인: 28개, 중복·잘못된 category 없음 |
 | ING-VAL-10 코드 품질 | `npm run lint`, `npm run build`를 실행한다. | 두 명령이 종료 코드 0으로 끝나고 경고를 기록한다. | 확인: 모두 0; 기존 코드 lint 및 번들 크기 경고 |
+| ING-VAL-11 자동 회귀 테스트 | `npm test`를 실행한다. | 카탈로그와 실제 화면 상호작용 시나리오가 통과한다. | 확인: 2개 파일, 5개 테스트 통과 |
 
 ## 앱인토스 검증
 
