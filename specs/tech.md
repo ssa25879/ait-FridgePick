@@ -1,0 +1,48 @@
+# 기술 스택
+
+현재 의존성과 실행 명령은 [`package.json`](../package.json), 앱인토스 설정은 [`apps-in-toss.config.ts`](../apps-in-toss.config.ts)가 기준이다. 루트 README는 Vite 템플릿 설명을 포함하므로 실제 버전과 명령은 프로젝트 설정 파일을 우선한다.
+
+## 현재 스택
+
+| 영역 | 기술 | 프로젝트 설정 |
+| --- | --- | --- |
+| 언어 | TypeScript | `~6.0.2` |
+| UI | React / React DOM | `^19.2.8` |
+| 개발·번들러 | Vite | `^8.2.2` |
+| React 플러그인 | `@vitejs/plugin-react` | `^6.1.0` |
+| 앱 플랫폼 | Apps in Toss WebView 미니앱 | `@apps-in-toss/web-framework` `3.2.0` |
+| 로컬 개발 도구 | Apps in Toss Devtools | `@apps-in-toss/devtools` `^3.2.0` |
+| 린터 | Oxlint | `^1.79.0` |
+| 스타일 | 일반 CSS | 현재 `src`에서 CSS 파일을 직접 import한다. |
+
+버전은 `package.json`에 선언된 범위다. 잠금된 설치 결과는 `package-lock.json`에서 확인한다.
+
+## 실행 명령
+
+| 명령 | 동작 |
+| --- | --- |
+| `npm run dev` | Vite 개발 서버 실행 |
+| `npm run lint` | Oxlint 실행 |
+| `npm run build` | TypeScript 프로젝트 검사 → Vite 빌드 → 앱인토스 빌드 |
+| `npm run preview` | Vite 빌드 결과 미리보기 |
+| `npm run deploy` | 앱인토스 배포 명령 실행 |
+
+## 앱인토스 설정
+
+- 앱 이름은 `ait-fridgepick`이다.
+- 웹 번들 출력 폴더는 `dist`다.
+- 현재 권한 목록은 비어 있다. 기능이 권한을 요구하게 되면 공식 가이드에서 필요한 권한을 확인하고 설정한다.
+- Vite에는 React 플러그인과 Apps in Toss Devtools 플러그인이 등록되어 있다.
+
+## 냉털픽 MVP 구현 방향
+
+- **렌더링 구조:** 작은 화면 흐름을 React 페이지·컴포넌트로 나눈다. 현재 `App.tsx`는 샘플 화면이며 제품 화면으로 교체한다.
+- **상태:** 선택 재료와 현재 추천을 React 기본 상태로 관리한다. 기획서 기준으로 `useState`와 props 또는 작은 Context면 충분하며 Redux/Zustand는 도입하지 않는다.
+- **재료·레시피 데이터:** 서버 없이 로컬 TypeScript 또는 JSON으로 제공한다. 별도 백엔드, 데이터베이스, 외부 레시피 API는 MVP 범위에서 제외한다.
+- **추천 계산:** 선택한 재료와 레시피의 필수 재료를 비교하는 결정 가능한 로컬 함수로 만든다. 후보 매칭 기준은 기획서의 초기 제안값(60%)을 구현 전에 확정한다.
+- **스타일:** 기존 일반 CSS 구성을 우선 활용한다. CSS Modules로 바꿔야 할 요구사항은 현재 없다.
+- **화면 흐름:** 홈 → 재료 선택 → 결과 또는 빈 결과. 현재 패키지에는 별도 라우터가 선언되어 있지 않다.
+
+## 개발 상태 메모
+
+현재 `src/App.tsx`는 Apps in Toss 샘플 시작 화면과 인앱 광고 예제 화면을 제공한다. 냉털픽의 재료 카탈로그, 레시피 데이터, 추천 로직은 아직 구현되어 있지 않다. 이 문서의 MVP 구현 방향은 [`NaengteolPick_React_Project_Plan.md`](./NaengteolPick_React_Project_Plan.md)을 바탕으로 한 계획이며, 현재 코드 구현 사실과 구분한다.
