@@ -1,8 +1,7 @@
 :root {
-  font-family: sans-serif;
-  color: #333d4b;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color-scheme: light;
-  background: #ffffff;
+  background: #fff;
 }
 
 * {
@@ -14,6 +13,10 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  min-height: 100dvh;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  background: #fff;
 }
 
 #app,
@@ -22,7 +25,12 @@ my-element {
   display: block;
   width: 100%;
   min-height: 100vh;
-  padding: 24px;
+  min-height: 100dvh;
+  padding:
+    max(24px, env(safe-area-inset-top))
+    max(24px, env(safe-area-inset-right))
+    max(24px, env(safe-area-inset-bottom))
+    max(24px, env(safe-area-inset-left));
 }
 
 @media (min-width: 481px) {
@@ -38,6 +46,6 @@ my-element {
   my-element {
     max-width: 480px;
     margin: 0 auto;
-    background-color: #ffffff;
+    background: #fff;
   }
 }

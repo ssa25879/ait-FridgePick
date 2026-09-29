@@ -1,71 +1,33 @@
-.app {
-  display: flex;
-  flex-direction: column;
-}
-
-.app-header {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding: 24px 0;
-}
-
-.page-title {
-  margin: 0;
-  color: #333d4b;
-  font-size: 24px;
-  font-weight: 600;
-}
-
-.page-subtitle {
-  margin: 0;
-  color: #4e5968;
-  font-size: 18px;
-}
-
-.app-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 24px 0;
-}
-
-.app-button {
-  display: flex;
+.page {
   width: 100%;
-  padding: 20px;
-  align-items: center;
-  justify-content: center;
-  border: 0;
-  border-radius: 16px;
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: 500;
-  text-decoration: none;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: clamp(48px, 10vh, 80px) 0 24px;
 }
 
-.app-button:active {
-  transform: scale(0.96);
-  transition: transform 0.1s ease;
+.page-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
 }
 
-.app-button-primary {
-  color: #2272eb;
-  background-color: #ebf2ff;
+.page-brand,
+.page-title,
+.page-description {
+  margin: 0;
 }
 
-.app-button-primary:hover {
-  background-color: #c9e2ff;
+.page-title,
+.page-description {
+  max-width: 100%;
 }
 
-.app-logo-wrap {
-  position: fixed;
-  bottom: 24px;
-  left: 50%;
-  transform: translateX(-50%);
+.page-actions {
+  margin-top: 32px;
 }
 
-.logo {
-  width: 160px;
-  height: auto;
+.page-actions button:focus-visible {
+  outline: 2px solid #1f2937;
+  outline-offset: 4px;
 }
