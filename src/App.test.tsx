@@ -49,7 +49,7 @@ describe("재료 선택 흐름", () => {
     const user = renderApp();
     await user.click(screen.getByRole("button", { name: "재료 고르기" }));
 
-    await user.click(screen.getByRole("button", { name: "고기" }));
+    await user.click(screen.getByRole("button", { name: "단백질" }));
 
     expect(
       screen.getByRole("button", { name: "돼지고기" }),
@@ -63,7 +63,7 @@ describe("재료 선택 흐름", () => {
     const user = renderApp();
     await user.click(screen.getByRole("button", { name: "재료 고르기" }));
     await user.click(screen.getByRole("button", { name: "김치" }));
-    await user.click(screen.getByRole("button", { name: "고기" }));
+    await user.click(screen.getByRole("button", { name: "단백질" }));
     await user.click(screen.getByRole("button", { name: "돼지고기" }));
 
     expect(

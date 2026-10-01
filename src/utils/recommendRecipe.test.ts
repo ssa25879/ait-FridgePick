@@ -39,6 +39,18 @@ describe("메뉴 추천 계산", () => {
     expect(getRecipeCandidates(["a"], [recipe])).toEqual([]);
   });
 
+  it("선택 목록에 없는 필수 재료도 매칭률과 부족 목록에 포함한다", () => {
+    const recipe: Recipe = {
+      ...makeRecipe("unmapped", ["tofu", "tomato", "onion"]),
+      unmappedRequiredIngredients: ["황태", "전복"],
+    };
+    const [match] = getRecipeCandidates(["tofu", "tomato", "onion"], [recipe]);
+
+    expect(match.matchRate).toBe(0.6);
+    expect(match.missingUnmappedRequiredIngredients).toEqual(["황태", "전복"]);
+    expect(getRecipeCandidates(["tofu", "tomato"], [recipe])).toEqual([]);
+  });
+
   it("다시 뽑을 때 후보가 둘 이상이면 직전 메뉴를 제외한다", () => {
     const candidates = getRecipeCandidates(
       ["a", "b", "c", "d", "e", "f"],

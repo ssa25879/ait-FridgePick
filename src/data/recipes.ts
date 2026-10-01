@@ -1,6 +1,7 @@
 import type { Recipe } from "../types/recipe";
+import { PUBLIC_RECIPES } from "./publicRecipes";
 
-export const RECIPES: Recipe[] = [
+export const LOCAL_RECIPES: Recipe[] = [
   {
     id: "kimchi_fried_rice",
     name: "김치볶음밥",
@@ -242,3 +243,5 @@ export const RECIPES: Recipe[] = [
     difficulty: "normal",
   },
 ];
+
+export const RECIPES: Recipe[] = [...LOCAL_RECIPES, ...PUBLIC_RECIPES];

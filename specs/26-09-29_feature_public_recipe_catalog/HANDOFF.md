@@ -1,69 +1,46 @@
-# 인수인계: 식품안전나라 CSV 레시피 카탈로그
+# 인수인계: 식품안전나라 레시피 CSV 카탈로그
 
-- 기준일: 2026-09-29
+- 기준일: 2026-10-01
 - 저장소: `D:\work\ait-FridgePick`
-- 개발 브랜치: `feature/public-recipe-catalog` (master에 병합됨)
-- 현재 체크아웃: `master`
-- 다음 작업: CSV 데이터 이용 조건을 확인하고, 허용 범위 안에서 파서·재료 매핑·추천 카탈로그를 구현한다.
-- 진행 문서: [`plan.md`](./plan.md)
+- 작업 브랜치: `feature/public-recipe-catalog`
+- 작업 체크아웃: `C:\Users\USER\.codex\worktrees\public-recipe-catalog\ait-FridgePick`
+- 입력 CSV: 기본 작업 폴더의 `COOKRCP01.csv` (로컬 입력, Git에 넣지 않음)
+- 구현 상태: 기본 구현은 `de66472`에 커밋했고, 3개 관점 서브에이전트 리뷰의 숫자로 시작하는 재료명 누락·양념장/소스 선택 분류·장식 선택 분류 문제를 수정했다. 수정분은 51개 테스트, TypeScript, lint, Vite/AIT 빌드 검증과 리뷰 재확인을 완료했다. 기능 수정 커밋과 master 병합이 남아 있다.
+- 상세 문서: [`plan.md`](./plan.md), [`validation.md`](./validation.md)
 
-## 현재까지 완료
+## 완료된 내용
 
-- 로드맵 8단계(식품안전나라 레시피 CSV 카탈로그 확장)를 추가했다. 7단계 앱인토스 실기기 사이클 완료는 사용자의 확인을 근거로 표시했다.
-- 기능 명세 디렉터리의 README, 요구사항, 설계, 결정, 검증 문서 초안을 작성했다.
-- 앱이 `ait-fridgepick` 앱인토스 WebView 미니앱이며 정적 Vite/AIT 번들로 배포된다는 점을 설계에 반영했다. 런타임 외부 API 호출은 계획하지 않는다.
-- 식품안전나라 COOKRCP01 CSV 상세 페이지의 다운로드 방식과 인증키 포함 URL 형식, 공식 앱인토스 자료를 확인했다. API 상세 페이지만으로 앱 번들 내 재배포 권리는 확인되지 않았다.
-- 루트의 사용자 제공 CSV를 실제로 조사했다.
-  - 파일: `COOKRCP01.csv` (UTF-8 BOM)
-  - 열: 55개. `RCP_SEQ`, `RCP_NM`, 재료 설명, 최대 20개 조리 단계·이미지 필드 등을 포함한다.
-  - 데이터: 1,164행, 비어 있지 않은 `RCP_SEQ` 1,164개 모두 고유, 이름 누락 0개, 조리 단계가 없는 레코드 1개.
-  - 현재 재료 28개만 대상으로 한 초기 토큰 매핑은 낮은 적합도를 보였다. 당시 규칙은 탐색용 근사치이며 최종 제외·포함 통계가 아니다. 재료 별칭·괄호·수량·묶음 제목을 처리하는 파서와 매핑 분석이 필요하다.
+- `src/data/recipeCsv.ts`, `src/data/recipeCsv.test.ts`: BOM 및 인용 필드 안 쉼표·개행을 지원하고 필수 열·행 폭·중복 ID를 검사하는 CSV 파서.
+- `src/data/recipeCatalog.ts`, `src/data/recipeCatalog.test.ts`: 재료 표현과 선택 섹션 파싱, 명시적 별칭 매핑, 물 제외, 60% 미만 매핑 레시피 제외와 미지원 필수 재료 보존.
+- `scripts/generateRecipeCatalog.mjs`, `src/data/publicRecipes.ts`: CSV를 재현 가능한 정적 TypeScript 레시피 배열로 생성. 실제 입력 1,156행 중 888개 포함, 268개 제외(매핑률 미달 255, 매핑된 재료 없음 12, 조리 단계 없음 1). CSV의 기준일은 제공되지 않아 생성 요약에 `unknown`으로 기록.
+- `src/data/ingredients.ts`: 28개에서 100개로 재료를 확장하고 기존 카테고리 안에 배치.
+- `src/data/recipes.ts`: 기존 수기 20개를 보존하고 공개 888개를 합쳐 총 908개 제공.
+- `src/utils/recommendRecipe.ts`, `src/pages/ResultPage.tsx`: 미지원 필수 재료도 매칭률 분모·부족 재료 표시에 포함하고 원문 재료·분량 및 데이터 출처·ID를 표시.
+- `src/App.css` 및 테스트: 긴 재료 설명 줄바꿈과 카탈로그/추천/결과 화면을 검증.
+- 공공데이터포털 개별 레시피 DB 이용허락범위 “제한 없음” 표기 확인. 출처와 원본 ID를 남기며 원본 이미지 자산은 배포하지 않음.
 
-## 아직 하지 않은 작업
+## 확인 결과
 
-- 앱 내 정적 재배포와 가공을 허용하는 공식 이용 조건·라이선스를 확인하지 않았다. 앱용 파생 레시피 데이터 생성 및 커밋은 이 확인 전 보류한다.
-- CSV 파서, 단위 테스트, 레시피 카탈로그, 재료 카탈로그 변경, 추천 계산 변경, 결과 화면 출처 표시는 구현되지 않았다.
-- 테스트, lint, Vite/AIT 빌드, 번들 크기 비교, CSV 반영 후 320×640 모바일 화면 또는 Toss 테스트 환경 검증은 실행하지 않았다.
-- CSV가 `.gitignore`에 아직 추가되지 않았다. 원본 파일은 커밋 금지이며 다음 작업에서 제외 규칙을 추가한다.
+- 전체 테스트 51/51 통과, TypeScript 검사 성공, lint 종료 코드 0(기존 광고 훅 경고 1건), Vite/AIT 빌드 성공.
+- 최종 `.ait`는 959,551 B로 기준 715,371 B보다 244,180 B(+34.1%) 증가했다. Vite JavaScript 청크는 2,371.07 kB(gzip 636.50 kB)다. 실제 Toss WebView 시작 속도는 미측정이다.
+- CSV 조리 단계 6,717개 중 원문에서 문장부호 뒤 표시용 알파벳 접미가 확인된 17건을 정규화 시 제거하고 회귀 테스트를 추가했다.
+- AIT DevTools 모의 환경 320×640에서 선택 화면, 공개 레시피 결과, 세로 스크롤과 CTA를 확인. 실제 Toss 테스트 업로드는 아직 하지 않음.
+- 대표 10개 고정 선택 조합의 후보 없음은 기존·통합 모두 3개였고, Mulberry32 seed 20261001 카테고리 균등 합성표본 100개에서는 94%에서 89%로 내려갔다. 실제 사용자 분포를 나타내지는 않아 무결과 문제가 해결됐다고 단정하지 않음.
+- 3개 관점의 심층 리뷰에서 Critical/Important 발견 사항은 남지 않았다. 숫자로 시작하는 파프리카와 필수 양념 분류, 장식 섹션 분류를 수정·회귀 테스트로 확인했다. CSV에 실제 빈 행이 있을 경우 파서 오류의 행 번호 표시가 오류 종류별로 달라질 수 있다는 Minor 관찰은 실제 입력에서 빈 행이 확인되지 않아 유지했다.
+- 일반 브라우저에서는 Toss safe-area 브리지 부재 오류가 기록됐지만 로컬 DevTools 화면에서 주요 UI 흐름은 동작했다. 로컬 결과를 실제 Toss WebView와 동일한 검증으로 간주하지 않음.
+- 근거·통계·검증 한계는 [`validation.md`](./validation.md)에 정리함.
 
-## 구현 시 중요한 코드 위치
+## Git 및 로컬 상태
 
-- `src/data/ingredients.ts`: 현재 재료 28개와 카테고리
-- `src/types/ingredient.ts`: 재료 카테고리 타입
-- `src/data/recipes.ts`: 기존 20개 레시피
-- `src/types/recipe.ts`: `Recipe` 모델. 현재 출처·미지원 재료 메타데이터 없음
-- `src/utils/recommendRecipe.ts`: 필수 재료 기준 60% 매칭 계산
-- `src/pages/ResultPage.tsx`: 보유·부족 재료 표시. 현재 카탈로그에 없는 재료 ID는 이름 조회가 불가능함
-- `src/data/recipes.test.ts`, `src/data/ingredients.test.ts`, `src/pages/ResultPage.test.tsx`, `src/App.test.tsx`: 데이터·화면·흐름 테스트. 현재 일부 테스트가 20개 레시피/28개 재료에 고정된 기대값을 가짐
-- `package.json`, `vite.config.ts`: Vitest와 AIT 빌드 명령 설정
+- 이 작업은 관리형 feature worktree에서만 진행했고 기본 `D:\work\ait-FridgePick` 체크아웃은 `master`로 유지한다.
+- 기본 폴더의 기존 `COOKRCP01.csv`, `Review.md`, `public/fridgepick-app-icon.png`는 이번 변경과 무관하므로 수정·stage하지 않았다.
+- `.gitignore`의 `/COOKRCP01.csv` 규칙과 실제 ignore 적용을 확인했다.
+- `node_modules` Junction은 검증을 위해 기본 폴더의 설치를 가리킨다. 제거할 때는 링크 대상이 기본 폴더인지 확인하고 Junction만 제거한다.
+- 임시 Vite/AIT 비교 산출물은 Codex 시각화 임시 폴더에 두었고 저장소에는 추가하지 않았다.
+- Codex 작업 로그는 `D:\Codex\Log\20261001_FridgePick_PublicRecipeCatalog_Log.md`에 기록한다. 저장소 루트 `Log.md`는 수정하지 않는다.
 
-## 진행 순서와 제약
+## 이어서 할 일
 
-1. 공식 이용 조건에서 상업 앱 번들 내 정적 제공, 변형·요약, 출처 표기 방법을 확인한다. 불명확하면 식품안전나라에 문의하고 답변 근거를 남긴다. 확인 전 파생 레시피를 앱에 배포하지 않는다.
-2. `/COOKRCP01.csv`를 `.gitignore`에 추가한다. 기존에 있던 `Review.md`, `public/fridgepick-app-icon.png`는 별도 미관련 파일이므로 수정하거나 커밋하지 않는다.
-3. 테스트 우선으로 CSV 파서를 만든다. BOM, CSV 인용 쉼표·줄바꿈·큰따옴표, 빈 필드와 중복 ID를 검증한다. 재료명 파싱은 괄호 안 쉼표를 보존하고 수량·묶음 제목 처리를 테스트한다.
-4. 기존 카탈로그의 근사 매핑 결과가 낮으므로, 자주 등장하는 재료를 근거로 선택 카탈로그 확장안을 만든다. 근거가 모호한 재료는 기존 ID로 억지 매핑하지 않는다. 누락 재료명은 결과에서 숨기지 않거나 해당 레시피를 명시적으로 제외한다.
-5. 권리 확인을 통과한 데이터만 기존 20개 레시피와 결합한다. 원본 `RCP_SEQ`, 출처, 필요한 attribution을 파생 데이터에 보존한다.
-6. 동일한 대표 재료 선택 묶음에서 기존/확장 후보 수와 후보 없음 비율을 비교한다. 레시피 개수 증가만으로 추천 개선을 단정하지 않는다.
-7. 테스트, lint, `npm run build`(TypeScript, Vite, `ait build`), 번들 크기, AIT DevTools 320×640 CSS px 모바일 흐름을 검증하고 실제 수행 결과만 기록한다.
-
-## Git 작업 상태
-
-커밋·병합 후 현재 상태:
-
-```text
-## master
-?? COOKRCP01.csv
-?? Review.md
-?? public/fridgepick-app-icon.png
-```
-
-- 문서와 로드맵 변경은 `59ee483 docs: add recipe catalog handoff`로 커밋하고 `master`에 fast-forward 병합했다. 로컬 `feature/public-recipe-catalog` 브랜치는 같은 커밋을 가리키며 유지 중이다.
-- 기능 코드 구현 커밋은 아직 없다. 현재 저장소 상태에서 기능 관련 추적 파일은 깨끗하다.
-- `COOKRCP01.csv`는 로컬 입력으로만 사용하며 절대 stage/commit하지 않는다. `.gitignore` 규칙을 추가한다.
-- `Review.md`, `public/fridgepick-app-icon.png`는 현재 상태에서 기존 미관련 untracked 파일이다. 변경하거나 stage하지 않는다.
-- 구현 검증(테스트, lint, build, AIT 화면)은 사용자의 지시에 따라 보류했다. 구현을 이어갈 때 계획의 검증 항목을 실행한다.
-
-## 작업 로그
-
-Codex 외부 로그는 `D:\Codex\Log\20260929_FridgePick_PublicRecipeApi_Log.md`에 이어 쓴다. 저장소 루트의 `Log.md`와 위 미관련 파일은 건드리지 않는다.
+1. 기능 수정분을 커밋하고 `master`에 병합한다.
+2. 실제 사용자 선택 분포가 생기면 추천 후보 없음 비율과 60% 임계값·원문 재료 해석을 다시 평가한다.
+3. 실제 Toss 테스트 업로드와 검수 제출은 아직 하지 않았다. 앱 번들은 기준 대비 약 34% 커져 출시 전 WebView 시작 속도를 확인한다.
