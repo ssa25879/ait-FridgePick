@@ -3,14 +3,15 @@ import type { Recipe } from "../types/recipe";
 
 export const PUBLIC_RECIPE_IMPORT_SUMMARY = {
   "sourceRecordCount": 1156,
-  "includedRecordCount": 881,
-  "excludedRecordCount": 275,
+  "includedRecordCount": 888,
+  "excludedRecordCount": 268,
   "excludedByReason": {
-    "low-ingredient-coverage": 261,
-    "missing-ingredients": 13,
+    "low-ingredient-coverage": 255,
+    "missing-ingredients": 12,
     "missing-steps": 1
   },
-  "minimumIngredientCoverage": 0.6
+  "minimumIngredientCoverage": 0.6,
+  "sourceSnapshotDate": "unknown"
 } as const;
 
 export const PUBLIC_RECIPES: Recipe[] = [
@@ -45,27 +46,60 @@ export const PUBLIC_RECIPES: Recipe[] = [
     }
   },
   {
+    "id": "fsk_29",
+    "name": "부추 콩가루 찜",
+    "requiredIngredients": [
+      "chives",
+      "soy_sauce",
+      "green_onion",
+      "garlic",
+      "chili_powder",
+      "sugar",
+      "sesame_oil",
+      "sesame"
+    ],
+    "optionalIngredients": [],
+    "steps": [
+      "1. 부추는 깨끗이 씻어 물기를 제거하고, 5cm 길이로 썰고 부추에 날콩가루를 넣고 고루 섞이도록 버무린다.",
+      "2. 찜기에 면보를 깔고 부추를 넣은 후 김이 오르게 쪄서 파랗게 익힌다.",
+      "3. 저염간장에 다진 대파, 다진 마늘, 고춧가루, 요리당 , 참기름, 참깨를 섞어 양념장을 만들고 찐 부추는 그릇에 담아낸다."
+    ],
+    "difficulty": "normal",
+    "unmappedRequiredIngredients": [
+      "날콩가루"
+    ],
+    "sourceIngredientText": "[1인분]조선부추 50g, 날콩가루 7g(1⅓작은술)\n·양념장 : 저염간장 3g(2/3작은술), 다진 대파 5g(1작은술), 다진 마늘 2g(1/2쪽), 고춧가루 2g(1/3작은술), 요리당 2g(1/3작은술), 참기름 2g(1/3작은술), 참깨 약간",
+    "source": {
+      "provider": "식품의약품안전처",
+      "dataset": "조리식품의 레시피 DB",
+      "sourceId": "29",
+      "sourceUrl": "https://www.data.go.kr/data/15060073/openapi.do",
+      "usageScope": "공공데이터포털 이용허락범위 제한 없음"
+    }
+  },
+  {
     "id": "fsk_31",
     "name": "방울토마토 소박이",
     "requiredIngredients": [
       "tomato",
       "onion",
-      "chives"
-    ],
-    "optionalIngredients": [
+      "chives",
       "chili_powder",
       "garlic",
       "plum_syrup",
       "sugar",
       "sesame"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 물기를 빼고 2cm 정도의 크기로 썰은 부추와 양파를 양념장에 섞어 양념속을 만든다.",
       "2. 깨끗이 씻은 방울토마토는 꼭지를 떼고 윗부분에 칼로 십자모양으로 칼집을 낸다.",
       "3. 칼집을 낸 방울토마토에 양념속을 사이사이에 넣어 버무린다."
     ],
     "difficulty": "normal",
-    "unmappedRequiredIngredients": [],
+    "unmappedRequiredIngredients": [
+      "멸치액젓"
+    ],
     "sourceIngredientText": "●방울토마토 소박이 : \n방울토마토 150g(5개), 양파 10g(3×1cm), 부추 10g(5줄기)\n●양념장 : \n고춧가루 4g(1작은술), 멸치액젓 3g(2/3작은술), 다진 마늘 2.5g(1/2쪽), 매실액 2g(1/3작은술), 설탕 2g(1/3작은술), 물 2ml(1/3작은술), 통깨 약간",
     "source": {
       "provider": "식품의약품안전처",
@@ -371,37 +405,6 @@ export const PUBLIC_RECIPES: Recipe[] = [
     }
   },
   {
-    "id": "fsk_111",
-    "name": "칠곡석류국수",
-    "requiredIngredients": [
-      "salt",
-      "vinegar"
-    ],
-    "optionalIngredients": [
-      "pine_nut",
-      "almond",
-      "walnut",
-      "cucumber"
-    ],
-    "steps": [
-      "1. 잣, 아몬드, 해바라기씨, 호두, 호박씨는 다진다.",
-      "2. 끓는 물에 저염소금과 식초를 넣은 후 소면을 삶은 후 체에 건져 물기를\n뺀다.",
-      "3. 석류는 물 600g와 함께 믹서에 갈고 체에 걸러 즙을 낸다. 그릇에 면을 담고 차갑게 식힌 석류즙을 붓고 견과류, 채 썬 오이를 고명으로 올린다."
-    ],
-    "difficulty": "normal",
-    "unmappedRequiredIngredients": [
-      "소면"
-    ],
-    "sourceIngredientText": "●주재료 : 소면 160g, 저염소금 4g(1작은술), 식초 8g(1/2작은술)\n●소스 : 석류 200g(1/2개)\n●장식 : 잣 4g(1작은술), 아몬드 4g(1작은술), 해바라기씨 4g(1작은술), 호두 4g(1작은술), 호박씨 4g(1작은술), 오이 20g(1/4개)",
-    "source": {
-      "provider": "식품의약품안전처",
-      "dataset": "조리식품의 레시피 DB",
-      "sourceId": "111",
-      "sourceUrl": "https://www.data.go.kr/data/15060073/openapi.do",
-      "usageScope": "공공데이터포털 이용허락범위 제한 없음"
-    }
-  },
-  {
     "id": "fsk_114",
     "name": "닭가슴살 브로콜리 만두",
     "requiredIngredients": [
@@ -512,12 +515,11 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "pork",
       "chili_pepper",
       "egg",
-      "cooking_oil"
-    ],
-    "optionalIngredients": [
+      "cooking_oil",
       "soy_sauce",
       "vinegar"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 감자는 믹서에 갈고 양배추는 채 썰고 고기, 당근, 청양고추, 두부는 다진다.",
       "2. 준비해둔 재료를 모두 섞고 부침가루와 계란을 넣어 반죽한다.",
@@ -525,7 +527,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "부침가루"
+      "부침가루",
+      "오렌지즙"
     ],
     "sourceIngredientText": "●주재료 : 감자 100g(1개), 양배추 150g(1/2개), 당근 15g(1/10개), 두부 20g(1/20모), 돼지고기 30g, 청양고추 5g(1개), 부침가루 45g(3큰술), 달걀 60g(1개), 식용유 15g(1큰술)\n●소스 : 오렌지즙 15g(1큰술), 간장 2g(1/2작은술), 식초 10g(2작은술)",
     "source": {
@@ -570,14 +573,13 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "name": "석류 보쌈김치",
     "requiredIngredients": [
       "cabbage",
-      "salt"
-    ],
-    "optionalIngredients": [
+      "salt",
       "radish",
       "water_parsley",
       "green_onion",
       "garlic"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 배추를 소금물에 하루 동안 절인 후 물기를 빼고 석류는 즙을 낸다.",
       "2. 무는 채 썰고, 쪽파와 미나리는 4cm로 자른다.",
@@ -585,7 +587,9 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "석류즙"
+      "석류즙",
+      "다진 생강",
+      "새우젓국"
     ],
     "sourceIngredientText": "●주재료 : 배추 70g(1/10개), 석류즙 10g(2작은술), 소금 5g(1/2작은술)\n●양념 : 무 10g(3cm), 미나리 10g, 쪽파 10g(1개), 다진 마늘 5g(1작은술), 다진 생강 5g(1작은술), 새우젓국 15g(1큰술)",
     "source": {
@@ -606,13 +610,12 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "chives",
       "apple",
       "green_onion",
-      "salt"
-    ],
-    "optionalIngredients": [
+      "salt",
       "raw_rice",
       "syrup",
       "bell_pepper"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 황파프리카를 갈아 체에 내리고 멥쌀로 쌀풀을 만들어 황파프리카 즙을 섞고 물엿을 첨가하여 양념을 만든다.",
       "2. 배추를 소금물에 절이고 절인 배추를 찬물로 씻어 소금기를 뺀다.",
@@ -638,9 +641,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "zucchini",
       "mushroom",
       "eggplant",
-      "apple"
-    ],
-    "optionalIngredients": [
+      "apple",
       "onion",
       "garlic",
       "tomato",
@@ -648,6 +649,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "basil",
       "gochujang"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 양파와 마늘은 다져서 볶다가 토마토 과육과 설탕, 바질을 넣고 고추장을 섞어 토마토 소스를 만든다.",
       "2. 가지, 양송이버섯, 애호박, 사과는 썰고 살라미는 데친다.",
@@ -671,14 +673,13 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "name": "민들레 샐러드",
     "requiredIngredients": [
       "beet",
-      "orange"
-    ],
-    "optionalIngredients": [
+      "orange",
       "soy_sauce",
       "chili_pepper",
       "lemon",
       "sugar"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 간장, 레몬즙, 설탕, 다진 홍고추를 섞어 드레싱을 만든다.",
       "2. 민들레 잎은 4×4cm로 썰고, 비트는 채 썰고 물에 담가 색을 뺀다.",
@@ -705,12 +706,11 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "tomato",
       "sprouts",
       "garlic",
-      "cooking_oil"
-    ],
-    "optionalIngredients": [
+      "cooking_oil",
       "vinegar",
       "black_pepper"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 올리브오일, 발사믹식초, 후춧가루를 섞어 차게 식혀 드레싱을 만든다.",
       "2. 가지와 토마토는 5mm두께로 썰고 120도 오븐에 20분 구운 후 구운 가지는 물기를 제거한다.",
@@ -1289,14 +1289,13 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "chili_pepper",
       "kimchi",
       "crown_daisy",
-      "kelp"
-    ],
-    "optionalIngredients": [
+      "kelp",
       "sugar",
       "chili_powder",
       "garlic",
       "gochujang"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 통조림 햄을 썰어 끓는 물에 데친다.",
       "2. 애호박은 반달모양으로 썰고, 두부는 도톰하게 썰고, 팽이버섯은 3등분하고, 청양고추는 어슷 썬다.",
@@ -1408,14 +1407,13 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "green_onion",
       "chili_pepper",
       "tofu",
-      "kelp"
-    ],
-    "optionalIngredients": [
+      "kelp",
       "doenjang",
       "glutinous_rice_flour",
       "garlic",
       "soy_sauce"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 표고버섯은 머리와 밑동을 분리하고, 머리 부분은 잘게 썬다.",
       "2. 애호박, 감자, 양파는 한입 크기로 썰고, 미나리와 부추는 3cm 길이로 썰고, 대파와 청양고추는 송송 썬다.",
@@ -1426,7 +1424,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "표고버섯 밑동"
+      "표고버섯 밑동",
+      "들깻가루"
     ],
     "sourceIngredientText": "•필수 재료 : 표고버섯(3g), 애호박(10g), 감자(10g), 양파(3g), 미나리(3g), 부추(1g), 대파(1g), 청양고추(1g), 순두부(100g)\n•육수 : 다시마(3g), 표고버섯 밑동(3g), 물(250g)\n•양념 : 저염된장(5g), 찹쌀가루(3g), 다진마늘(1g), 들깻가루(7g), 저염국간장(1g)",
     "source": {
@@ -1449,6 +1448,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "salt",
       "cooking_oil",
       "eggplant",
+      "bell_pepper",
       "zucchini"
     ],
     "optionalIngredients": [],
@@ -1515,9 +1515,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "requiredIngredients": [
       "squid",
       "onion",
-      "chili_pepper"
-    ],
-    "optionalIngredients": [
+      "chili_pepper",
       "garlic",
       "chili_powder",
       "tomato",
@@ -1527,6 +1525,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "black_pepper",
       "sesame_oil"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 오징어는 솔방울 모양으로 잘라준다.",
       "2. 미니 파프리카, 양파, 청홍고추는 적당한\n크기로 잘라준다.",
@@ -1558,12 +1557,11 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "onion",
       "potato",
       "lemon",
-      "parsley"
-    ],
-    "optionalIngredients": [
+      "parsley",
       "apple",
       "butter"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 쇠고기는 칼집을 살짝 넣어준 후 건 바질을\n뿌려 1시간 정도 숙성시킨다.",
       "2. 감자는 껍질을 벗긴 후 먹기 좋게 잘라 뜨거운\n물에 70% 정도 익혀준다.",
@@ -1574,7 +1572,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "건바질"
+      "건바질",
+      "르네디종 홀그레인머스터"
     ],
     "sourceIngredientText": "쇠고기등심 240g, 시금치 50g, 마늘 15g, 양파 50g, 건바질 2g\n감자 60g, 레몬 25g, 파슬리가루 1g\n소스 : 르네디종 홀그레인머스터 15g, 사과 80g, 버터 15g",
     "source": {
@@ -1627,6 +1626,40 @@ export const PUBLIC_RECIPES: Recipe[] = [
     }
   },
   {
+    "id": "fsk_391",
+    "name": "토마토소고기장조림",
+    "requiredIngredients": [
+      "tomato",
+      "garlic",
+      "onion",
+      "soy_sauce",
+      "black_pepper",
+      "sugar"
+    ],
+    "optionalIngredients": [],
+    "steps": [
+      "1. 소고기는 사방 2cm 정도의 크기로 잘라서\n물에서 80% 정도까지 익혀준 후 냉수에\n깨끗하게 세척해 준다.",
+      "2. 양파는 먹기 좋게 자르고 물 400g과 함께\n간장 물을 만들어준다.",
+      "3. 간장 물에 데쳐 놓은 소고기부터 졸여주기\n시작한다.",
+      "4. 메추리알을 넣고 함께 졸여준다.",
+      "5. 방울토마토, 양파, 마늘, 꽈리고추까지 넣고\n마지막으로 졸여준다."
+    ],
+    "difficulty": "normal",
+    "unmappedRequiredIngredients": [
+      "소고기 우둔살",
+      "메추리알",
+      "꽈리고추"
+    ],
+    "sourceIngredientText": "소고기 우둔살 200g, 메추리알 100g, 방울토마토 100g, 마늘 30g, 꽈리고추 50g, 양파 45g\n양념장 : 맛간장 30g, 흰후추 1g, 어간장 15g, 설탕 15g",
+    "source": {
+      "provider": "식품의약품안전처",
+      "dataset": "조리식품의 레시피 DB",
+      "sourceId": "391",
+      "sourceUrl": "https://www.data.go.kr/data/15060073/openapi.do",
+      "usageScope": "공공데이터포털 이용허락범위 제한 없음"
+    }
+  },
+  {
     "id": "fsk_392",
     "name": "토마토소고기찜",
     "requiredIngredients": [
@@ -1670,11 +1703,10 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "ginger",
       "green_onion",
       "sesame",
-      "butter"
-    ],
-    "optionalIngredients": [
+      "butter",
       "soy_sauce"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 소스 재료를 이용해 맛 간장으로 만든 데리\n야끼소스를 만들어준다.",
       "2. 참치는 손질해 수분을 빼준 후 흰 후추로\n밑간을 해준다.",
@@ -1685,7 +1717,9 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "삼치"
+      "삼치",
+      "생강청",
+      "커피"
     ],
     "sourceIngredientText": "삼치 200g, 생강 50g, 대파 100g, 통깨 1g, 버터 10g\n소스 : 맛간장 30g, 생강청 25g, 커피 1g",
     "source": {
@@ -1850,12 +1884,11 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "chives",
       "lotus_root",
       "radish",
-      "soy_sauce"
-    ],
-    "optionalIngredients": [
+      "soy_sauce",
       "chili_powder",
       "sesame"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 오이고추는 배를 갈라 씨를 제거하고 세척 후 절임물에 절여준다.",
       "2. 영양부추, 연근은 송송 다지고 무는 채 썬다.",
@@ -1867,7 +1900,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
       "오이고추",
-      "해물육수"
+      "해물육수",
+      "생강청"
     ],
     "sourceIngredientText": "•필수재료 : 오이고추(40g), 영양부추(5g), 연근(5g), 무(5g)\n•절임물 : 해물육수(8g), 어간장(3g)\n•양념 : 고춧가루(3g), 생강청(3g), 통깨(1g)",
     "source": {
@@ -1934,13 +1968,12 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "egg",
       "almond",
       "walnut",
-      "cooking_oil"
-    ],
-    "optionalIngredients": [
+      "cooking_oil",
       "yogurt",
       "honey",
       "lemon"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 광어는 포를 길게 떠서 소금과\n후춧가루에 밑간을 해 놓는다.",
       "2. 아몬드와 호두는 입자있게 다져\n준비한다.",
@@ -2082,15 +2115,14 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "black_pepper",
       "egg",
       "starch",
-      "cooking_oil"
-    ],
-    "optionalIngredients": [
+      "cooking_oil",
       "lemon",
       "sugar",
       "garlic",
       "ginger",
       "vinegar"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 닭고기살은 작게 썰어 소금과 후춧\n가루를 살짝 뿌려 밑간을 하고 달걀을\n넣어 섞는다.",
       "2. 달걀을 넣어 섞은 닭고기 살에 녹말\n가루를 넣어 골고루 묻힌다.",
@@ -2103,7 +2135,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "unmappedRequiredIngredients": [
       "백년초국수",
       "뽕잎국수",
-      "치자국수"
+      "치자국수",
+      "연유"
     ],
     "sourceIngredientText": "닭고기살(150g), 소금(0.3g), 후춧가루(0.2g), 달걀(50g)\n녹말가루(20g), 백년초국수(20g), 뽕잎국수(20g)\n치자국수(20g), 튀김기름(400g)\n- 소스 : 레몬(10g), 설탕(20g), 연유(10g), 물(50g)\n다진 마늘(10g), 생강(5g), 식초(20g), 녹말가루(20g)",
     "source": {
@@ -2123,9 +2156,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "beef",
       "rosemary",
       "salt",
-      "black_pepper"
-    ],
-    "optionalIngredients": [
+      "black_pepper",
       "sugar",
       "carrot",
       "onion",
@@ -2136,6 +2167,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "broccoli",
       "eggplant"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 새우는 꼬리를 자르고 내장을 제거\n한다.",
       "2. 스테이크 소고기는 소금과 로즈마리를\n뿌리고 후춧가루를 살짝 뿌려 놓는다.",
@@ -2145,7 +2177,11 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "6. 팬에 와인과 설탕을 넣고 끓이다가,\n당근, 양파와 토마토 마늘, 대파를 다져\n넣고 볶듯이 끓이다가 발사믹소스를\n넣고 한 번 더 졸인 소스를 스테이크\n위에 얹고, 브로컬리와 새송이, 가지,\n아스파라거스를 함께 놓아 완성한다."
     ],
     "difficulty": "normal",
-    "unmappedRequiredIngredients": [],
+    "unmappedRequiredIngredients": [
+      "와인",
+      "발사믹소스",
+      "새송이"
+    ],
     "sourceIngredientText": "새우(60g), 버터(10g), 소고기(120g), 로즈마리(2g)\n소금(0.3g), 후춧가루(2g)\n- 소스 : 와인(50g), 설탕(20g), 당근(20g), 양파(20g)\n토마토(30g), 마늘(20g), 대파(10g), 발사믹소스(20g)\n- 곁들임채소 : 아스파라거스(20g), 브로컬리(20g)\n새송이(20g), 가지(30g)",
     "source": {
       "provider": "식품의약품안전처",
@@ -2162,9 +2198,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "salt",
       "black_pepper",
       "chives",
-      "butter"
-    ],
-    "optionalIngredients": [
+      "butter",
       "yuzu",
       "sugar",
       "cream",
@@ -2172,6 +2206,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "onion",
       "carrot"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 통 삼겹살에 함초와 소금, 후춧가루를\n뿌려 숙성을 시킨다.",
       "2. 부추는 약 6cm 길이로 썰고, 양파는\n채를 썰어 놓고, 당근은 납작하게\n편으로 썰어 준비한다.",
@@ -2183,7 +2218,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
       "통삼겹살",
-      "함초가루"
+      "함초가루",
+      "쌈장"
     ],
     "sourceIngredientText": "통삼겹살(150g), 함초가루(10g), 소금(0.5g), 후춧가루(0.2g)\n부추(30g), 버터(5g)\n- 소스 : 유자청(20g), 쌈장(10g), 설탕(20g), 생크림(20g)\n연두부(30g), 양파(20g), 당근(20g)",
     "source": {
@@ -2204,9 +2240,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "rosemary",
       "breadcrumbs",
       "black_pepper",
-      "bell_pepper"
-    ],
-    "optionalIngredients": [
+      "bell_pepper",
       "onion",
       "yogurt",
       "sugar",
@@ -2214,6 +2248,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "vinegar",
       "starch"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 돼지고기와 소고기를 섞어, 매실액을\n넣고 30분 정도 냉장고에서 숙성을\n시킨다.",
       "2. 숙성된 돼지고기와 소고기에 다진마늘,\n로즈마리, 빵가루, 후춧가루를 넣고\n골고루 섞는다.",
@@ -2223,7 +2258,9 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "6. 볶아진 팬(⑤)에 준비한 플레인요거트와\n설탕, 매실액을 넣고 끓이다가, 식초와\n녹말을 넣고 한 번 더 끓여 소스를\n완성한다. 햄버거스테이트(④)에 소스를\n얹고, 어린잎을 올려 완성한다."
     ],
     "difficulty": "normal",
-    "unmappedRequiredIngredients": [],
+    "unmappedRequiredIngredients": [
+      "어린잎"
+    ],
     "sourceIngredientText": "다진 돼지고기(60g), 다진 소고기(60g), 다진 마늘(10g)\n로즈마리(2g), 빵가루(20g), 후춧가루(0.2g), 파프리카(20g)\n- 소스 : 양파(20g), 플레인요거트(20g), 설탕(10g)\n매실액(10g), 식초(5g), 녹말가루(10g)\n- 곁들임채소 : 어린잎(5g)",
     "source": {
       "provider": "식품의약품안전처",
@@ -2239,13 +2276,12 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "requiredIngredients": [
       "salt",
       "starch",
-      "cooking_oil"
-    ],
-    "optionalIngredients": [
+      "cooking_oil",
       "ginger",
       "yuzu",
       "lemon"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 삼치는 반으로 잘라지지 않게 편으로\n떠서 소금을 살짝 뿌려 잠시 말려\n놓는다.",
       "2. 손질을 한 삼치에 녹말가루를 입혀\n팬에 기름을 두르고 구워 접시에 담아\n놓는다.",
@@ -2274,9 +2310,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "tomato",
       "broccoli",
       "cooking_oil",
-      "black_pepper"
-    ],
-    "optionalIngredients": [
+      "black_pepper",
       "garlic",
       "onion",
       "carrot",
@@ -2285,6 +2319,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "lemon",
       "bay_leaf"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 마늘은 곱게 다지고 양파, 당근,\n방울토마토는 입자있게 다진다.",
       "2. 토마토는 씨와 껍질을 제거하고 채를\n썰어놓는다.",
@@ -2295,7 +2330,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "펜네"
+      "펜네",
+      "육수"
     ],
     "sourceIngredientText": "토마토(50g), 브로컬리(20g), 펜네(100g), 올리브오일(10g)\n후춧가루(0.1g)\n- 소스 : 마늘(10g), 양파(20g), 당근(20g), 방울토마토(50g)\n올리브오일(10g), 육수(400g), 설탕(10g)\n소금(0.3g), 레몬즙(10g), 월계수잎(1장)",
     "source": {
@@ -2317,13 +2353,12 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "bell_pepper",
       "zucchini",
       "onion",
-      "vinegar"
-    ],
-    "optionalIngredients": [
+      "vinegar",
       "almond",
       "milk",
       "syrup"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 닭고기살은 끓는 물에 데쳐 손으로\n찢고, 느타리버섯도 데쳐 손으로 찢어\n준비한다.",
       "2. 사과는 씨를 제거하고 약 6cm 길이로\n채를 썰고, 오이와 파프리카도 같은\n길이로 채를 썰어 놓는다.",
@@ -2334,7 +2369,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "또띠아"
+      "또띠아",
+      "머스터드"
     ],
     "sourceIngredientText": "또띠아(50g), 닭고기살(100g), 느타리버섯(20g), 사과(20g)\n오이(20g), 파프리카(20g), 애호박(20g), 양파(20g), 식초(10g)\n- 소스 : 아몬드(10g), 우유(20g), 머스터드(20g), 올리고당(20g)",
     "source": {
@@ -3220,12 +3256,11 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "carrot",
       "egg",
       "garlic",
-      "lemon"
-    ],
-    "optionalIngredients": [
+      "lemon",
       "gochujang",
       "sesame"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 주꾸미를 몸과 다리를 분리 후 잘 씻어준다.",
       "2. 주꾸미 다리, 미나리, 양파, 당근을 다져준다.",
@@ -3282,6 +3317,79 @@ export const PUBLIC_RECIPES: Recipe[] = [
     }
   },
   {
+    "id": "fsk_416",
+    "name": "조기까스",
+    "requiredIngredients": [
+      "black_pepper",
+      "cooking_oil",
+      "starch",
+      "gochujang",
+      "soy_sauce",
+      "butter",
+      "onion"
+    ],
+    "optionalIngredients": [],
+    "steps": [
+      "1. 다진마늘을 버터에 충분히 볶아준다.",
+      "2. 화이트와인을 뿌려주고 소스재료로 소스를\n만들어준다.",
+      "3. 찜기에 살짝 져 준다. 이때 80% 정도까지만\n익혀준다.",
+      "4. 쪄준 조기는 와인과 후추로 밑간을 해준 후\n전분을 발라준다.",
+      "5. 전분를 바른 조기에 허브크러스트를 두툼하게\n올려준다.",
+      "6. 팬에 기름을 두르고 조기를 한쪽부터 구운 뒤,\n뒤집어서 다시 구워주고 소스를 뿌려 완성한다."
+    ],
+    "difficulty": "normal",
+    "unmappedRequiredIngredients": [
+      "조기",
+      "허브크러스트",
+      "화이트와인"
+    ],
+    "sourceIngredientText": "조기 1마리(250g), 허브크러스트 100g, 흰 후추 1g, 화이트와인 15g, 마늘오일 15g, 전분 15g\n소스 : 고추장 15g, 저염간장 15g, 화이트와인 15g, 버터 5g\n다진양파 15g, 흰후추 1g, 마늘오일 15g",
+    "source": {
+      "provider": "식품의약품안전처",
+      "dataset": "조리식품의 레시피 DB",
+      "sourceId": "416",
+      "sourceUrl": "https://www.data.go.kr/data/15060073/openapi.do",
+      "usageScope": "공공데이터포털 이용허락범위 제한 없음"
+    }
+  },
+  {
+    "id": "fsk_417",
+    "name": "돼지머리수육맑은전골",
+    "requiredIngredients": [
+      "water_parsley",
+      "chili_pepper",
+      "garlic",
+      "green_onion",
+      "cooking_wine",
+      "radish",
+      "soy_sauce"
+    ],
+    "optionalIngredients": [],
+    "steps": [
+      "1. 무, 청고추, 미나리, 대파는 먹기 좋게 썰어준다.",
+      "2. 돼지머리는 냉수에 데친다. 냉수일 때부터\n돼지머리를 넣어야 물이 끓어오르면 불순물이\n제거된다.",
+      "3. 일본 된장을 풀어 체에 걸러준다.",
+      "4. 돼지머리를 살짝 졸여준다.",
+      "5. 냄비에 국물을 끓여주다가 채소를 넣어 끓인다.",
+      "6. 국물에 우동면을 데쳐낸 뒤 완성한다."
+    ],
+    "difficulty": "normal",
+    "unmappedRequiredIngredients": [
+      "돼지머리",
+      "우동면",
+      "일본 된장",
+      "해물육수"
+    ],
+    "sourceIngredientText": "돼지머리 200g, 우동면 100g, 미나리 20g, 청고추 15g\n소스 : 일본 된장 30g, 다진마늘 10g, 다진대파 10g, 청주 15g, 무 25g\n육수 : 해물육수 300g, 청양고추 20g, 맛간장 15g",
+    "source": {
+      "provider": "식품의약품안전처",
+      "dataset": "조리식품의 레시피 DB",
+      "sourceId": "417",
+      "sourceUrl": "https://www.data.go.kr/data/15060073/openapi.do",
+      "usageScope": "공공데이터포털 이용허락범위 제한 없음"
+    }
+  },
+  {
     "id": "fsk_418",
     "name": "파인애플볶음밥",
     "requiredIngredients": [
@@ -3327,14 +3435,13 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "requiredIngredients": [
       "lotus_root",
       "onion",
-      "cucumber"
-    ],
-    "optionalIngredients": [
+      "cucumber",
       "yuzu",
       "pine_nut",
       "sugar",
       "vinegar"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 양파는 채 썰어 물에 담가주고, 오이는 돌려\n깎기 해서 물에 담가준다.",
       "2. 연근은 껍질을 까고 얇게 썰어서 식초 2방울을\n넣은 물에 데쳐준다.",
@@ -3345,7 +3452,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "밤"
+      "밤",
+      "강황가루"
     ],
     "sourceIngredientText": "연근 200g, 양파 60g, 오이 40g, 밤 60g\n소스 : 유자청 25g, 강황가루 2g, 잣 2g, 설탕 5g, 식초 15g",
     "source": {
@@ -3363,9 +3471,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "bean_sprout",
       "water_parsley",
       "radish",
-      "salt"
-    ],
-    "optionalIngredients": [
+      "salt",
       "soy_sauce",
       "black_pepper",
       "cooking_wine",
@@ -3373,6 +3479,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "garlic",
       "sesame"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 코다리는 어간장, 청주, 흰후추, 생강청에\n살짝 재워준다.",
       "2. 함초는 손질해 잘라준다.",
@@ -3384,7 +3491,9 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
       "코다리",
-      "함초"
+      "함초",
+      "생강청",
+      "연겨자"
     ],
     "sourceIngredientText": "코다리 250g, 콩나물 50g, 미나리 20g, 함초 25g, 무 30g, 함초소금 1g\n양념 : 간편어간장 15g, 함초소금 1g, 생강청 15g, 흰후추 1g, 청주 15g\n레몬즙 5g, 다진마늘 15g, 연겨자 7g, 통깨 10g",
     "source": {
@@ -3405,15 +3514,14 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "black_pepper",
       "potato",
       "chili_pepper",
-      "cooking_oil"
-    ],
-    "optionalIngredients": [
+      "cooking_oil",
       "perilla_oil",
       "vinegar",
       "syrup",
       "mayonnaise",
       "sesame"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 두부는 물기를 꼭 짠 뒤 으깨어 전분, 계란과\n섞어준다.",
       "2. 우엉, 인삼, 감자는 아주 곱게 채 썰어서 냉수에\n담가준다.",
@@ -3425,7 +3533,9 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
       "우엉",
-      "인삼"
+      "인삼",
+      "일본된장",
+      "땅콩잼"
     ],
     "sourceIngredientText": "두부 300g, 전분 50g, 계란 60g, 흰후추 2g\n소 : 우엉 30g, 인삼 15g, 감자 30g, 청고추 10g, 홍고추 15g, 마늘기름 15g, 흰후추 1g\n소스 : 일본된장 15g, 마늘기름 15g, 들기름 15g, 식초 30g, 올리고당 5g\n마요네즈 15g, 땅콩잼 30g, 참깨 2g",
     "source": {
@@ -3441,15 +3551,14 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "name": "사과장아찌",
     "requiredIngredients": [
       "onion",
-      "chili_pepper"
-    ],
-    "optionalIngredients": [
+      "chili_pepper",
       "soy_sauce",
       "vinegar",
       "sugar",
       "plum_syrup",
       "cooking_wine"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 사과는 8조각으로 잘라 씨를 제거한다.",
       "2. 청고추, 홍고추는 어슷하게 잘라준다.",
@@ -3460,7 +3569,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "풋사과"
+      "풋사과",
+      "생강청"
     ],
     "sourceIngredientText": "풋사과 200g, 양파 80g, 청고추 20g, 홍고추 20g\n소스 : 맛간장 30g, 식초 30g, 설탕 10g, 생강청 30g, 매실청 15g, 청주 30g",
     "source": {
@@ -3515,14 +3625,13 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "onion",
       "chili_pepper",
       "green_onion",
-      "water_parsley"
-    ],
-    "optionalIngredients": [
+      "water_parsley",
       "soy_sauce",
       "chili_powder",
       "sesame",
       "garlic"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 참외는 껍질을 벗기고 반으로 잘라 속을\n파 준 후 먹기 좋게 잘라준다.",
       "2. 청고추, 홍고추는 송송 잘라준다.",
@@ -3533,7 +3642,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "참외"
+      "참외",
+      "생강청"
     ],
     "sourceIngredientText": "참외 200g, 양파 60g, 청고추 17g, 홍고추 17g, 대파 15g, 미나리 20g\n양념장 : 저염간장 15g, 생강청 10g, 고춧가루 10g, 통깨 5g, 다진마늘 5g",
     "source": {
@@ -3545,20 +3655,54 @@ export const PUBLIC_RECIPES: Recipe[] = [
     }
   },
   {
+    "id": "fsk_425",
+    "name": "새콤한연어샐러드",
+    "requiredIngredients": [
+      "salmon",
+      "onion",
+      "yuzu",
+      "vinegar",
+      "cooking_wine",
+      "salt"
+    ],
+    "optionalIngredients": [],
+    "steps": [
+      "1. 연어는 얇게 모양을 살려 슬라이스 한 후\n정종에 소금을 섞어 분무기에 넣어 냉장고에\n넣어둔다.",
+      "2. 건조된 방울토마토는 올리브오일과 후추로\n양념하여 사용한다.",
+      "3. 양상추는 먹기 좋은 크기로 뜯어 어린잎과\n함께 찬물에 담가 물기를 제거한 후 사용한다.",
+      "4. 유자청과 감식초는 함께 섞어 믹서에 갈아\n드레싱소스를 완성한다.",
+      "5. 양파는 모양을 살려 얇게 슬라이스 하여\n찬물에 담가 물기를 제거한 뒤 사용한다.",
+      "6. 샐러드 접시에 준비된 모든 채소를 담고,\n연어는 장미 모양으로 접어서 보기좋게 담아\n드레싱 소스를 곁들여 완성한다."
+    ],
+    "difficulty": "normal",
+    "unmappedRequiredIngredients": [
+      "어린잎",
+      "말린 토마토",
+      "2가지색 미니파프리카"
+    ],
+    "sourceIngredientText": "연어 60g, 어린잎 20g, 말린 토마토 15g, 양파 50g, 2가지색 미니파프리카 70g\n소스 : 유자청 30g, 감식초 15g, 정종 100ml, 볶은소금 0.5g",
+    "source": {
+      "provider": "식품의약품안전처",
+      "dataset": "조리식품의 레시피 DB",
+      "sourceId": "425",
+      "sourceUrl": "https://www.data.go.kr/data/15060073/openapi.do",
+      "usageScope": "공공데이터포털 이용허락범위 제한 없음"
+    }
+  },
+  {
     "id": "fsk_426",
     "name": "논우렁순무섞박지",
     "requiredIngredients": [
       "water_parsley",
       "onion",
       "chili_pepper",
-      "green_onion"
-    ],
-    "optionalIngredients": [
+      "green_onion",
       "chili_powder",
       "soy_sauce",
       "garlic",
       "yogurt"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 콜라비는 껍질을 벗긴 후 저염간장에 30분\n정도 절여준다.",
       "2. 우렁은 뜨거운 물에 데친 후 행군 뒤 물기를\n빼준다.",
@@ -3569,7 +3713,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
       "콜라비",
-      "논우렁"
+      "논우렁",
+      "생강청"
     ],
     "sourceIngredientText": "콜라비 200g, 논우렁 100g, 미나리 25g, 양파 60g, 청고추 15g, 홍고추 15g, 대파 10g\n양념 : 고춧가루 20g, 생강청 15g, 저염간장 15g, 다진마늘 15g, 플레인요구르트 15g",
     "source": {
@@ -3627,9 +3772,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "pumpkin",
       "banana",
       "bell_pepper",
-      "tomato"
-    ],
-    "optionalIngredients": [
+      "tomato",
       "cream",
       "yogurt",
       "vinegar",
@@ -3638,6 +3781,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "sesame",
       "pine_nut"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 연두부는 동글게 썰어 준비한다.",
       "2. 호박은 갈라 씨를 제거 하고 껍질을\n벗겨 쪄서 작은 깍둑썰기로 썰어 준비\n한다.",
@@ -3648,7 +3792,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "어린잎"
+      "어린잎",
+      "마"
     ],
     "sourceIngredientText": "연두부(100g), 닭고기살(50g), 통후추(1g), 단호박(20g)\n바나나(20g), 파프리카(20g), 토마토(20g), 어린잎(10g)\n- 소스 : 마(20g), 생크림(20g), 요거트(20g), 식초(5g)\n올리브오일(10g), 설탕(10g), 흑임자(5g), 잣(10g)",
     "source": {
@@ -3734,12 +3879,11 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "salt",
       "black_pepper",
       "egg",
-      "cooking_oil"
-    ],
-    "optionalIngredients": [
+      "cooking_oil",
       "sugar",
       "vinegar"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 새우는 껍질을 제거하고 소금과\n후춧가루를 넣어 밑간을 해놓는다.",
       "2. 어린잎은 찬물에 담그어 놓는다.",
@@ -3751,7 +3895,9 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
       "튀김가루",
-      "누룽지"
+      "누룽지",
+      "오렌지주스",
+      "어린잎"
     ],
     "sourceIngredientText": "새우(100g), 소금(0.3g), 후춧가루(0.02g)\n튀김가루(100g), 달걀(50g), 누룽지(50g), 튀김기름(200g)\n- 소스 : 오렌지주스(100g), 설탕(10g), 식초(10g)\n- 곁들임채소 : 어린잎(20g)",
     "source": {
@@ -3814,15 +3960,14 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "bell_pepper",
       "carrot",
       "starch",
-      "cooking_oil"
-    ],
-    "optionalIngredients": [
+      "cooking_oil",
       "garlic",
       "chili_powder",
       "sugar",
       "vinegar",
       "lemon"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 닭고기살에 로즈마리를 뿌려 약 3시간\n이상 숙성을 시킨다.",
       "2. 냄비에 물을 1/3쯤 넣고, 양파채를 썰어\n넣어 끓으면, 숙성된 닭고기살을 넣고\n약 20분 정도 삶아 건진다.",
@@ -3858,14 +4003,13 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "perilla_leaf",
       "bell_pepper",
       "carrot",
-      "onion"
-    ],
-    "optionalIngredients": [
+      "onion",
       "yogurt",
       "honey",
       "lemon",
       "sugar"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 닭고기살은 천일염과 후춧가루를 뿌려\n마리네이드를 해놓는다.",
       "2. 양배추와 부추는 김이 오른 찜통에\n쪄서 식혀 놓는다.",
@@ -3875,7 +4019,9 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "6. 쪄 놓은 양배추에 준비한 채소(③)와\n닭고기살(④)을 넣고, 돌돌 말아 쪄\n놓은 부추로 양배추를 묶어 완성하고,\n만들어 놓은 요거트 소스를 함께 제공\n한다."
     ],
     "difficulty": "normal",
-    "unmappedRequiredIngredients": [],
+    "unmappedRequiredIngredients": [
+      "머스터드"
+    ],
     "sourceIngredientText": "닭고기살(100g), 천일염(0.5g), 후춧가루(0.3g), 식용유(10g)\n정종(10g), 양배추(80g), 부추(30g), 깻잎(10g)\n홍파프리카(20g), 노랑파프리카(20g), 당근(20g), 양파(20g)\n- 소스 : 요거트(20g), 머스터드(20g), 꿀(10g), 레몬즙(10g)\n설탕(5g)",
     "source": {
       "provider": "식품의약품안전처",
@@ -3901,13 +4047,12 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "sprouts",
       "pumpkin",
       "flour",
-      "salt"
-    ],
-    "optionalIngredients": [
+      "salt",
       "onion",
       "cooking_oil",
       "vinegar"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 단호박은 1/8 등분으로 갈라 속을\n파내고 찜통에서 약 15~20분 정도\n충분히 쪄낸다.",
       "2. 소고기는 채를 썰어 마늘, 간장, 설탕에\n양념을 하고 팬에 볶아서 식힌다.",
@@ -3937,15 +4082,14 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "perilla_leaf",
       "flour",
       "curry_powder",
-      "egg"
-    ],
-    "optionalIngredients": [
+      "egg",
       "mayonnaise",
       "yogurt",
       "sugar",
       "vinegar",
       "lettuce"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 생선살에 생강즙과 정종을 넣고 약 30분\n정도 숙성을 시켜 비릿한 맛 제거 및 생선\n살의 탱탱함을 살려준다.",
       "2. 콩가루와 밀가루, 카레가루, 녹말가루,\n달걀을 넣고 골고루 섞어 튀김 반죽을\n만들어 놓는다.",
@@ -3984,9 +4128,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "cooking_oil",
       "sesame_oil",
       "pine_nut",
-      "sesame"
-    ],
-    "optionalIngredients": [
+      "sesame",
       "chili_powder",
       "garlic",
       "soy_sauce",
@@ -3994,6 +4136,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "black_pepper",
       "sugar"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 썰어 놓은 삼겹살에 생갑즙과 정종을\n넣고 약 2시간 정도 숙성을 시켜 준비\n한다.",
       "2. 가지는 씨가 적은 것으로 골라 반으로\n갈라 어슷썰어 놓는다.",
@@ -4023,15 +4166,14 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "lettuce",
       "water_parsley",
       "chili_pepper",
-      "bell_pepper"
-    ],
-    "optionalIngredients": [
+      "bell_pepper",
       "pear",
       "radish",
       "sugar",
       "garlic",
       "salt"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 끓는 물에 식초 한 방울을 떨어 뜨려\n주꾸미를 데쳐 한김 식혀 먹기 좋게\n썰어놓는다.",
       "2. 끓는 물에 식초 한 방울을 떨어 뜨려\n주꾸미를 데쳐 한김 식혀먹기 좋게\n썰어놓는다.",
@@ -4041,7 +4183,9 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "6. 만들어 놓은 샐러드소스와 함께 썰어\n놓은 주꾸미(②)와 채소(③, ④)를 넣어\n먹기 직전에 버무려 완성한다."
     ],
     "difficulty": "normal",
-    "unmappedRequiredIngredients": [],
+    "unmappedRequiredIngredients": [
+      "와사비"
+    ],
     "sourceIngredientText": "주꾸미(120g), 밀가루(10g), 식초(10g)\n양상추(30g), 미나리(30g), 홍고추(10g), 피망(20g)\n- 소스 : 배(40g), 무(20g), 와사비(5g), 설탕(20g)\n다진 마늘(20g), 식초(10g), 소금(0.5g)",
     "source": {
       "provider": "식품의약품안전처",
@@ -4058,12 +4202,11 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "chicken",
       "cooking_wine",
       "curry_powder",
-      "cooking_oil"
-    ],
-    "optionalIngredients": [
+      "cooking_oil",
       "cream",
       "cabbage"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 닭가슴살에 칼을 1/3 쯤 넣고 양쪽으로\n포를 뜨고, 정종을 살짝 발라놓는다.",
       "2. 포뜬 닭가슴살 위에 카레가루를 솔솔\n뿌려 숙성을 시킨다.",
@@ -4074,7 +4217,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "현미쌀"
+      "현미쌀",
+      "토마토소스"
     ],
     "sourceIngredientText": "닭가슴살(150g), 정종(10g), 카레가루(20g)\n현미쌀(50g), 튀김기름(200g)\n- 소스 : 토마토소스(50g), 생크림(20g)\n- 곁들임채소 : 적양배추(20g), 양배추(20g)",
     "source": {
@@ -4100,15 +4244,14 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "carrot",
       "mushroom",
       "perilla_leaf",
-      "green_onion"
-    ],
-    "optionalIngredients": [
+      "green_onion",
       "sugar",
       "vinegar",
       "lemon",
       "chili_powder",
       "plum_syrup"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 삼겹살에 소금, 후춧가루, 생강즙,\n정종을 넣고 약 30분 정도 숙성을 시킨다.",
       "2. 조와 쌀은 물에 약 30분 정도 불려 밥을\n짓고, 밥이 다 익으면, 뚜껑을 열어 주걱\n으로 골고루 섞어 한 김을 빼 놓는다.",
@@ -4136,9 +4279,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "requiredIngredients": [
       "salt",
       "starch",
-      "cooking_oil"
-    ],
-    "optionalIngredients": [
+      "cooking_oil",
       "soy_sauce",
       "sugar",
       "broccoli",
@@ -4146,6 +4287,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "carrot",
       "bell_pepper"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 미니버섯을 깨끗이 씻어 소금을 살짝\n뿌려 놓는다.",
       "2. 녹말가루에 물을 반쯤 넣고, 가만히\n가라앉혀 윗물은 따라 버리고, 딱딱한\n된녹말을 만들어 놓는다.",
@@ -4157,7 +4299,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
       "미니버섯",
-      "달걀흰자"
+      "달걀흰자",
+      "홍초"
     ],
     "sourceIngredientText": "미니버섯(120g), 소금(0.3g), 녹말가루(50g)\n달걀흰자(30g), 튀김기름(300g)\n- 소스 : 저염간장(30g), 홍초(20g), 설탕(20g)\n브로컬리(20g), 오이(20g), 당근(20g)\n홍파프리카(20g), 노란파프리카(20g)\n물녹말(녹말가루 10g, 물 10g)",
     "source": {
@@ -4687,11 +4830,10 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "green_onion",
       "garlic",
       "ginger",
-      "cooking_oil"
-    ],
-    "optionalIngredients": [
+      "cooking_oil",
       "soy_sauce"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 새우는 내장을 제거하고 껍질을 벗겨 깨끗이 씻는다.",
       "2. 찜기에 새우와 생강을 넣어 약 5분 정도 찐다.",
@@ -5049,13 +5191,12 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "garlic",
       "sesame_oil",
       "sesame",
-      "salt"
-    ],
-    "optionalIngredients": [
+      "salt",
       "vinegar",
       "sugar",
       "black_pepper"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 함초는 송송 다져준다.",
       "2. 당근, 새송이, 샐러리, 양파를 송송 다져준다.",
@@ -5101,7 +5242,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "초록, 흰색) 각",
+      "3가지색 소면 각",
       "다시마물",
       "모시조개"
     ],
@@ -5242,9 +5383,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "onion",
       "chili_pepper",
       "jujube",
-      "carrot"
-    ],
-    "optionalIngredients": [
+      "carrot",
       "soy_sauce",
       "garlic",
       "green_onion",
@@ -5253,6 +5392,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "syrup",
       "sesame"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 갈비는 핏물을 빼주고 뜨거운 물에 80% 이상\n데쳐준 뒤 갈비와 감자를 물을 자작하게 넣고\n청주, 생강청을 넣고 푹 삶아준다.",
       "2. 양파, 청고추, 홍고추는 먹기 좋게 썰어준다.",
@@ -5265,7 +5405,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "unmappedRequiredIngredients": [
       "찜갈비",
       "마른미역줄기",
-      "메추리알"
+      "메추리알",
+      "생강청"
     ],
     "sourceIngredientText": "찜갈비 200g, 마른미역줄기 10g, 감자 20g, 양파 25g, 청고추 15g\n홍고추 15g, 대추 4g, 당근 20g, 메추리알 25g,\n양념장 : 맛간장 30g, 다진마늘 5g, 다진대파 5g, 생강청 15g, 후추 1g\n참기름 3g, 올리고당 15g, 통깨 1g",
     "source": {
@@ -5466,9 +5607,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "requiredIngredients": [
       "potato",
       "spinach",
-      "carrot"
-    ],
-    "optionalIngredients": [
+      "carrot",
       "salt",
       "black_pepper",
       "butter",
@@ -5476,6 +5615,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "lemon",
       "onion"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 망고는 손질 후 버터로 살짝 볶고 레드와인을\n넣고 졸이다가 믹서로 갈아주고 딸기잼으로\n간과 농도를 맞추어 레드와인 소스를 만든다.",
       "2. 소 채끝살은 손질 후 만들어진 레드와인 소스에\n마리네이드 해준다.",
@@ -5486,7 +5626,9 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "소 채끝살"
+      "소 채끝살",
+      "레드와인",
+      "딸기잼"
     ],
     "sourceIngredientText": "소 채끝살 200g, 감자 70g, 시금치 25g, 당근 30g\n소스 : 레드와인 200cc. 망고 50g, 딸기잼 30g, 볶은소금 0.5g, 후추 2g\n무염버터 5g, 설탕 10g, 레몬즙 5g, 다진양파 15g",
     "source": {
@@ -5542,9 +5684,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "glutinous_rice_flour",
       "starch",
       "egg",
-      "cooking_oil"
-    ],
-    "optionalIngredients": [
+      "cooking_oil",
       "bell_pepper",
       "onion",
       "carrot",
@@ -5554,6 +5694,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "sugar",
       "vinegar"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 황태는 가위로 약 3cm 길이로 잘라\n스프레이로 물기를 준다.",
       "2. 밀가루를 세 군데로 나눠 각각 찹쌀\n가루와 녹말가루, 삼색 가루를 넣어\n세 가지의 색을 만든다.",
@@ -5624,13 +5765,12 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "onion",
       "eggplant",
       "bell_pepper",
-      "tomato"
-    ],
-    "optionalIngredients": [
+      "tomato",
       "sugar",
       "garlic",
       "apple"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 소등심은 소금과 후춧가루, 로즈마리를\n뿌려 약 30분 이상 숙성을 시킨다.",
       "2. 애호박은 동그랗게 자르고, 양파는 형태\n그대로 떼어내고, 가지는 직사각형으로\n잘라 준비한다.",
@@ -5641,7 +5781,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "소등심"
+      "소등심",
+      "발사믹소스"
     ],
     "sourceIngredientText": "소등심(100g), 소금(0.3g), 후춧가루(0.03g), 로즈마리(0.5g)\n애호박(20g), 양파(20g), 가지(20g), 파프리카(20g)\n토마토(20g)\n- 소스 : 발사믹소스(20g), 설탕(10g), 마늘(20g), 사과(20g)",
     "source": {
@@ -5825,14 +5966,13 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "flour",
       "egg",
       "breadcrumbs",
-      "cooking_oil"
-    ],
-    "optionalIngredients": [
+      "cooking_oil",
       "mayonnaise",
       "tomato",
       "lettuce",
       "parsley"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 우유에 등심을 넣어 30분간 재워 놓은\n뒤, 후춧가루, 정종을 발라 1시간 이상\n숙성시킨다.",
       "2. 방울토마토는 반으로 잘라 준비한다.",
@@ -5842,7 +5982,10 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "6. 삶은 달걀은 다지고 피클(④)에\n마요네즈를 넣어 섞어 샐러드 소스를\n만들고, 접시에 양상추를 깔고 그 위에\n어린잎채소, 돈가스(⑤)와 방울토마토\n(②)를 올려 소스와 함께 완성한다."
     ],
     "difficulty": "normal",
-    "unmappedRequiredIngredients": [],
+    "unmappedRequiredIngredients": [
+      "피클",
+      "어린잎채소"
+    ],
     "sourceIngredientText": "돼지등심(120g), 정종(10g), 소금(0.3g), 후춧가루(0.02g)\n우유(30g), 밀가루(20g), 달걀(50g), 빵가루(20g)\n튀김기름(400g)\n- 소스 : 삶은 달걀(50g), 피클(20g), 마요네즈(20g)\n- 곁들임채소 : 방울토마토(30g), 양상추(30g)\n어린잎채소(10g), 파슬리가루(0.3g)",
     "source": {
       "provider": "식품의약품안전처",
@@ -5900,14 +6043,13 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "lemon",
       "ginger",
       "curry_powder",
-      "cooking_oil"
-    ],
-    "optionalIngredients": [
+      "cooking_oil",
       "onion",
       "peanut",
       "mayonnaise",
       "yogurt"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 닭날개는 끝을 잘라 뒤로 뒤집어 봉을\n만든다.",
       "2. 오렌지즙과 레몬즙을 짜서 섞어 주고,\n생강을 갈아 소창에 걸러 즙을 낸다.",
@@ -5918,7 +6060,9 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "닭봉"
+      "닭봉",
+      "파스리가루",
+      "어린잎"
     ],
     "sourceIngredientText": "닭봉(120g), 오렌지(30g), 레몬(20g), 생강즙(10g)\n카레가루(30g), 튀김기름(400g)\n- 소스 : 양파(20g), 땅콩(20g), 마요네즈(20g)\n파스리가루(0.3g), 요거트(30g)\n- 곁들임채소 : 어린잎(10g)",
     "source": {
@@ -6225,47 +6369,6 @@ export const PUBLIC_RECIPES: Recipe[] = [
     }
   },
   {
-    "id": "fsk_252",
-    "name": "차돌박이볶음",
-    "requiredIngredients": [
-      "bell_pepper",
-      "onion",
-      "chives",
-      "plum_syrup",
-      "cooking_oil",
-      "vinegar",
-      "black_pepper",
-      "soy_sauce",
-      "pear"
-    ],
-    "optionalIngredients": [],
-    "steps": [
-      "1. 차돌박이는 고기 밑간에 재워둔다.",
-      "2. 파프리카, 양파는 깨끗이 씻어 곱게\n채 썰고, 부추도 비슷한 길이로 썬다.",
-      "3. 해초는 깨끗이 손질하여\n해초 밑간에 재운다.",
-      "4. 3가지 소스를 만든다.",
-      "5. 차돌박이를 팬에 볶아 준비한다.",
-      "6. 볶은 차돌박이와 해초, 부추,\n파프리카, 양파를 접시에 담고\n삼색소스를 곁들여 마무리한다."
-    ],
-    "difficulty": "normal",
-    "unmappedRequiredIngredients": [
-      "재료 차돌박이",
-      "해초",
-      "소스",
-      "연겨자",
-      "고기 밑간 설탕",
-      "해초 밑간 설탕"
-    ],
-    "sourceIngredientText": "재료 차돌박이(100g), 파프리카(15g), 양파(10g), 부추(5g), 해초(50g)\n소스1 발사믹식초(5g), 매실청(5g), 올리브유(5g)\n소스2 마요네즈(10g), 연겨자(5g)\n소스3 유자청(10g), 식초(5g)\n고기 밑간 설탕(1.5g), 후춧가루(0.1g), 저염 간장(3g), 배(10g), 양파(5g)\n해초 밑간 설탕(2g), 식초(5g)",
-    "source": {
-      "provider": "식품의약품안전처",
-      "dataset": "조리식품의 레시피 DB",
-      "sourceId": "252",
-      "sourceUrl": "https://www.data.go.kr/data/15060073/openapi.do",
-      "usageScope": "공공데이터포털 이용허락범위 제한 없음"
-    }
-  },
-  {
     "id": "fsk_253",
     "name": "토마토오리볶음",
     "requiredIngredients": [
@@ -6468,15 +6571,14 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "onion",
       "chili_pepper",
       "carrot",
-      "water_parsley"
-    ],
-    "optionalIngredients": [
+      "water_parsley",
       "soy_sauce",
       "cooking_oil",
       "garlic",
       "sesame",
       "sesame_oil"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 주꾸미는 먹기 좋게 잘라주고, 바지락살은 물에\n데쳐서 수분을 빼고 생강청으로 비린내를 제\n거한 뒤 볶아준다.",
       "2. 소고기와 닭가슴살은 각각 양념해준다.",
@@ -6614,9 +6716,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "chili_pepper",
       "chives",
       "egg",
-      "cooking_oil"
-    ],
-    "optionalIngredients": [
+      "cooking_oil",
       "soy_sauce",
       "garlic",
       "green_onion",
@@ -6625,6 +6725,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "sesame",
       "lemon"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 실곤약은 세척해 물기를 빼준 뒤 레몬즙을 살짝 뿌려준다.",
       "2. 당근, 양파, 홍고추, 청고추는 채 썰어 볶는다.",
@@ -6635,7 +6736,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "실곤약"
+      "실곤약",
+      "흑설탕"
     ],
     "sourceIngredientText": "•필수 재료 : 실곤약(50g), 당근(10g), 오이(10g), 양파(10g), 팽이버섯(5g), 청고추(10g), 홍고추(10g), 영양부추(10g), 달걀(30g), 식용유(3g)\n•소스 : 맛간장(5g), 흑설탕(5g), 다진마늘(2g), 다진대파(2g), 흰후추(0.5g)\n•양념 : 참기름(3g), 통깨(3g), 레몬즙(10g)",
     "source": {
@@ -6655,14 +6757,13 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "chili_pepper",
       "green_onion",
       "carrot",
-      "egg"
-    ],
-    "optionalIngredients": [
+      "egg",
       "soy_sauce",
       "vinegar",
       "lemon",
       "sesame"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 닭가슴살은 송송 다져준 후 소금, 후추로\n밑간을 해준다.",
       "2. 미역은 물에 불려준 후 송송 잘라준다.",
@@ -6673,7 +6774,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "미역"
+      "미역",
+      "고추냉이"
     ],
     "sourceIngredientText": "닭가슴살 100g, 미역 10g, 두부 50g, 청양고추 10g, 대파 10g, 당근 10g, 계란 60g\n소스 : 저염간장 30g, 식초 15g, 레몬즙 10g, 고추냉이 5g, 통깨 1g",
     "source": {
@@ -6690,14 +6792,13 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "requiredIngredients": [
       "onion",
       "bell_pepper",
-      "cabbage"
-    ],
-    "optionalIngredients": [
+      "cabbage",
       "soy_sauce",
       "yuzu",
       "chili_pepper",
       "green_onion"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 당귀는 잎만 떼어 먹기 좋게 잘라서 물에\n담가준다.",
       "2. 두가지묵은 먹기 좋게 길이로 잘라준다.",
@@ -6765,13 +6866,12 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "mayonnaise",
       "carrot",
       "onion",
-      "cucumber"
-    ],
-    "optionalIngredients": [
+      "cucumber",
       "soy_sauce",
       "garlic",
       "black_pepper"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 두부는 1cm 두께로 잘라 볶은소금을 뿌려\n수분을 제거한다.",
       "2. 오이는 껍질 부분만 송송 썰어준다.",
@@ -6802,9 +6902,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "cooked_rice",
       "mushroom",
       "carrot",
-      "zucchini"
-    ],
-    "optionalIngredients": [
+      "zucchini",
       "sesame_oil",
       "soy_sauce",
       "black_pepper",
@@ -6812,6 +6910,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "green_onion",
       "sesame"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 다진 쇠고기는 양념장에 버무려주고 두부는\n으깨준다.",
       "2. 애호박, 당근은 송송 다져준다.",
@@ -6822,13 +6921,54 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "청국장가루"
+      "청국장가루",
+      "다진쇠고기",
+      "버섯마늘소금"
     ],
     "sourceIngredientText": "청국장가루 20g, 두부 60g, 밥 150g, 표고버섯 12g, 당근 20g, 애호박 25g\n양념장 : 다진쇠고기 30g, 참기름 15g, 맛간장 10g, 버섯마늘소금 1g\n흰후추 1g, 다진마늘 10g, 다진대파 7g, 흑임자 1g",
     "source": {
       "provider": "식품의약품안전처",
       "dataset": "조리식품의 레시피 DB",
       "sourceId": "368",
+      "sourceUrl": "https://www.data.go.kr/data/15060073/openapi.do",
+      "usageScope": "공공데이터포털 이용허락범위 제한 없음"
+    }
+  },
+  {
+    "id": "fsk_369",
+    "name": "망고샐러드",
+    "requiredIngredients": [
+      "lettuce",
+      "tomato",
+      "onion",
+      "cooking_oil",
+      "yuzu",
+      "vinegar",
+      "salt",
+      "black_pepper",
+      "sesame"
+    ],
+    "optionalIngredients": [],
+    "steps": [
+      "1. 증편은 팬에 구워준다.",
+      "2. 망고와 방울토마토는 먹기 좋게 잘라준다.",
+      "3. 모든 채소는 먹기 좋게 잘라서 물에 담근다.",
+      "4. 소스 재료를 섞어 소스를 만들고, 접시에 준비된\n채소를 담고 소스를 뿌려준 후 구운 떡과 망고\n를 올려 완성한다."
+    ],
+    "difficulty": "normal",
+    "unmappedRequiredIngredients": [
+      "증편",
+      "망고",
+      "치커리",
+      "다진 파프리카",
+      "다진 청피망",
+      "다진 홍피망"
+    ],
+    "sourceIngredientText": "증편 200g, 망고 150g, 양상추 30g, 치커리 20g, 방울토마토 60g, 양파 60g\n소스 : 올리브오일 30g, 유자청 15g, 식초 15g, 볶은소금 2g, 후추 1g, 다진 파프리카(노랑) 15g\n다진 청피망 15g, 다진 홍피망 15g, 통깨 5g",
+    "source": {
+      "provider": "식품의약품안전처",
+      "dataset": "조리식품의 레시피 DB",
+      "sourceId": "369",
       "sourceUrl": "https://www.data.go.kr/data/15060073/openapi.do",
       "usageScope": "공공데이터포털 이용허락범위 제한 없음"
     }
@@ -7034,14 +7174,13 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "cream",
       "potato",
       "cooking_oil",
-      "broccoli"
-    ],
-    "optionalIngredients": [
+      "broccoli",
       "orange",
       "sugar",
       "cooking_wine",
       "salt"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 삼겹살은 로즈마리를 뿌려\n숙성시킨다.",
       "2. 고구마는 삶아 준비하고, 감자는 웨지\n감자형으로 썰어 익힌 후 기름에 튀겨\n놓는다.",
@@ -7051,7 +7190,9 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "6. 팬에 오렌지즙과 설탕, 정종, 소금을\n넣고 바글바글 졸인 후 와사비를 넣어\n소스를 만들고, 오븐에 구어진 삼겹살을\n잘라 접시에 담고 그 위에 소스를\n살짝 올리고, 한쪽에는 감자튀김(②),\n고구마무스(③), 브로컬리(⑤)를\n곁들여 완성한다."
     ],
     "difficulty": "normal",
-    "unmappedRequiredIngredients": [],
+    "unmappedRequiredIngredients": [
+      "와사비"
+    ],
     "sourceIngredientText": "삼겹살(100g), 로즈마리(5g)\n고구마(30g), 생크림(10g), 감자(20g), 튀김기름(200g)\n브로컬리(30g), 올리브오일(10g)\n- 소스 : 오렌지(50g), 설탕(10g), 정종(10g), 저염소금(5g)\n와사비(5g)",
     "source": {
       "provider": "식품의약품안전처",
@@ -7073,15 +7214,14 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "breadcrumbs",
       "salt",
       "butter",
-      "cooking_oil"
-    ],
-    "optionalIngredients": [
+      "cooking_oil",
       "sweet_potato",
       "banana",
       "mayonnaise",
       "plum_syrup",
       "broccoli"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 마늘과 양파를 입자있게 다져 팬에 볶아\n식혀 준비하고 파프리카는 다져 놓는다.",
       "2. 다진 소고기에 준비한 채소(①)와\n빵가루, 후춧가루, 소금 넣고 골고루 치\n대어 소고기 볼을 만든 후 후라이팬에\n버터와 식용유를 두르고 소고기볼을\n속까지 익혀 준비한다.",
@@ -7091,7 +7231,11 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "6. 익혀 놓은 소고기볼(②)을 접시에 담고\n그 위에 소스(④)를 얹은 뒤 브로컬리와\n미니버섯(⑤), 어린잎을 올려 완성한다."
     ],
     "difficulty": "normal",
-    "unmappedRequiredIngredients": [],
+    "unmappedRequiredIngredients": [
+      "게맛살",
+      "어린잎",
+      "미니새송이"
+    ],
     "sourceIngredientText": "다진 소고기(100g), 마늘(10g), 양파(20g), 파프리카(20g)\n후춧가루(0.02g), 빵가루(10g), 소금(0.3g), 버터(10g)\n식용유(5g)\n- 소스 : 고구마(20g), 바나나(20g), 마요네즈(20g)\n매실액(5g), 게맛살(30g)\n- 곁들임채소 : 어린잎(10g), 브로컬리(20g), 미니새송이(20g)",
     "source": {
       "provider": "식품의약품안전처",
@@ -7114,12 +7258,11 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "cooking_wine",
       "glutinous_rice_flour",
       "jujube",
-      "sesame"
-    ],
-    "optionalIngredients": [
+      "sesame",
       "syrup",
       "sugar"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 수삼은 뇌두를 제거하고 양파와\n대파, 마늘과 함께 다진다",
       "2. 다진 소고기에 다진 재료(①)와 간장,\n후춧가루, 정종, 찹쌀가루를 넣어\n골고루 섞는다.",
@@ -7132,7 +7275,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "unmappedRequiredIngredients": [
       "수삼",
       "새송이",
-      "어린잎"
+      "어린잎",
+      "육수"
     ],
     "sourceIngredientText": "다진소고기(100g), 수삼(50g), 양파(20g), 대파(10g)\n마늘(10g), 저염간장(10g), 후춧가루(0.05g), 정종(10g)\n찹쌀가루(10g), 새송이(50g), 대추(20g), 통깨(2g)\n어린잎(10g)\n- 소스 : 저염간장(10g), 올리고당(20g), 설탕(5g), 육수(100g)",
     "source": {
@@ -7212,7 +7356,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "메추리알"
+      "메추리알",
+      "칠리소스"
     ],
     "sourceIngredientText": "양파(20g), 대파(10g), 당근(20g), 마늘(10g)\n식용유(10g), 메추리알(100g), 밥(100g), 소금(0.5g)\n밀가루(20g), 녹말가루(10g), 달걀(50g), 빵가루(20g)\n튀김기름(400g)\n- 소스 : 칠리소스(50g)",
     "source": {
@@ -7246,7 +7391,9 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "6. 구운 가지위에 토마토와 모짜렐라치즈를\n올려 팬에 굽고, 별도로 팽이버섯에\n후춧가루를 뿌려 살짝 구워 접시에 담고,\n끓여 놓은 토마토소스를 올려 완성한다."
     ],
     "difficulty": "normal",
-    "unmappedRequiredIngredients": [],
+    "unmappedRequiredIngredients": [
+      "토마토소스"
+    ],
     "sourceIngredientText": "가지(80g), 올리브오일(10g), 소금(0.5g), 토마토(40g)\n모짜렐라치즈(30g)\n- 소스 : 토마토소스(20g), 토마토(40g)\n- 곁들임 : 팽이버섯(20g), 후춧가루(0.02g)",
     "source": {
       "provider": "식품의약품안전처",
@@ -7270,15 +7417,14 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "black_pepper",
       "egg",
       "starch",
-      "breadcrumbs"
-    ],
-    "optionalIngredients": [
+      "breadcrumbs",
       "green_onion",
       "soy_sauce",
       "syrup",
       "sugar",
       "tomato"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 마늘과 양파는 입자있게 다져 볶아서 준비한다.",
       "2. 다진 소고기와 돼지고기에 볶아놓은 마늘과 양파를 넣고, 소금과 후춧가루, 달걀물, 빵가루, 녹말가루를 넣어 골고루 치대어 숙성시킨다.",
@@ -7289,7 +7435,9 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "메추리알"
+      "메추리알",
+      "마른고추",
+      "와인"
     ],
     "sourceIngredientText": "•필수 재료 : 다진 소고기(90g), 다진 돼지고기(90g), 양파(15g), 마늘(7g), 깻잎(3g), 올리브오일(5g), 메추리알(35g)\n•숙성 : 소금(0.2g), 후춧가루(0.02g), 달걀(15g), 녹말가루(3g), 빵가루(7g)\n•소스 : 마른고추(3g), 대파(5g), 마늘(5g), 와인(15g),저염간장(5g), 올리고당(5g), 설탕(5g), 토마토(5g)",
     "source": {
@@ -7345,15 +7493,14 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "pear",
       "sugar",
       "banana",
-      "pineapple"
-    ],
-    "optionalIngredients": [
+      "pineapple",
       "garlic",
       "cooking_oil",
       "chili_powder",
       "vinegar",
       "soy_sauce"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 사과와 배는 껍질을 베이킹파우더에\n깨끗이 씻어 납작하게 썰어 설탕물에\n담그어 색이 변하지 않게 준비한다.",
       "2. 바나나는 동글하게 썰고, 키위는 껍질을\n제거하고 은행잎 모양으로 썰고,\n파인애플은 가운데 심을 제거하고\n사각형 모양으로 썰어놓는다.",
@@ -7384,9 +7531,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "salt",
       "starch",
       "egg",
-      "cooking_oil"
-    ],
-    "optionalIngredients": [
+      "cooking_oil",
       "soy_sauce",
       "sugar",
       "vinegar",
@@ -7394,6 +7539,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "onion",
       "carrot"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 새송이와 느타리, 표고버섯은 먹기\n좋은 형태로 썰어 준비한다.",
       "2. 썰어 놓은 버섯에 소금을 살짝 뿌려\n놓는다.",
@@ -7844,15 +7990,46 @@ export const PUBLIC_RECIPES: Recipe[] = [
     }
   },
   {
+    "id": "fsk_163",
+    "name": "꼬막 달래 된장 무침",
+    "requiredIngredients": [
+      "perilla_leaf",
+      "bell_pepper",
+      "doenjang",
+      "gochujang",
+      "sesame_oil",
+      "sesame",
+      "garlic"
+    ],
+    "optionalIngredients": [],
+    "steps": [
+      "1. 된장, 고추장, 사과즙, 깨, 다진 마늘, 참기름을 넣어 소스를 만든다.",
+      "2. 꼬막을 30분간 소금물에 해감시킨 후 끓는 물에 10분 데친다.",
+      "3. 달래, 깻잎, 파프리카를 5cm로 썰고 꼬막과 달래, 깻잎, 파프리카에 소스를 넣고 버무린다."
+    ],
+    "difficulty": "normal",
+    "unmappedRequiredIngredients": [
+      "꼬막",
+      "달래",
+      "사과즙"
+    ],
+    "sourceIngredientText": "●주재료 : 꼬막 1000g, 달래 100g(2단), 깻잎 10g(10장), 파프리카 100g(1개)\n●소스 : 된장 15g(1큰술), 고추장 5g(1작은술), 사과즙 300g(1/2컵), 참기름 20g(1⅓큰술), 깨 15g(1큰술), 다진 마늘 10g(2작은술)",
+    "source": {
+      "provider": "식품의약품안전처",
+      "dataset": "조리식품의 레시피 DB",
+      "sourceId": "163",
+      "sourceUrl": "https://www.data.go.kr/data/15060073/openapi.do",
+      "usageScope": "공공데이터포털 이용허락범위 제한 없음"
+    }
+  },
+  {
     "id": "fsk_165",
     "name": "베이컨 가지 말이",
     "requiredIngredients": [
       "eggplant",
       "bacon",
       "bell_pepper",
-      "water_parsley"
-    ],
-    "optionalIngredients": [
+      "water_parsley",
       "gochujang",
       "chili_powder",
       "pear",
@@ -7861,6 +8038,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "syrup",
       "vinegar"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 마늘, 양파, 배는 다지고 고추장, 와사비, 고춧가루, 올리고당, 사과식초와 함께 섞어 고추장 소스를 만든다.",
       "2. 가지는 길게 자르고, 미나리는 잎을 떼고, 파프리카는 채 썬다.",
@@ -7868,42 +8046,14 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "청파프리카"
+      "청파프리카",
+      "와사비"
     ],
     "sourceIngredientText": "●주재료 : 가지 150g(1/2개), 베이컨 80g(8장), 홍파프리카 50g(1/2개), 황파프리카 50g(1/2개), 청파프리카 50g(1/2개), 미나리 30g\n●소스 : 고추장 5g(1작은술), 와사비 1g(1/3작은술), 고춧가루 2g(1/2작은술), 배 10g(2cm), 양파 2g(1cm), 마늘 1g(1/5개), 올리고당 5g(1작은술), 사과식초 5g(1/2작은술)",
     "source": {
       "provider": "식품의약품안전처",
       "dataset": "조리식품의 레시피 DB",
       "sourceId": "165",
-      "sourceUrl": "https://www.data.go.kr/data/15060073/openapi.do",
-      "usageScope": "공공데이터포털 이용허락범위 제한 없음"
-    }
-  },
-  {
-    "id": "fsk_172",
-    "name": "청국장소스 연어 스테이크",
-    "requiredIngredients": [
-      "salmon",
-      "cooking_oil"
-    ],
-    "optionalIngredients": [
-      "mayonnaise",
-      "jujube"
-    ],
-    "steps": [
-      "1. 검정깨, 마요네즈, 청국장 가루를 섞어 소스를 만든다.",
-      "2. 팬에 식용유를 둘러 연어와 마늘종을 굽는다.",
-      "3. 마늘종을 접시에 깔고 연어를 올린 뒤 소스를 뿌리고 채썬 대추채를 얹어 장식한다.\n대추채를 얹어 장식한다."
-    ],
-    "difficulty": "normal",
-    "unmappedRequiredIngredients": [
-      "마늘종"
-    ],
-    "sourceIngredientText": "●주재료 : 마늘종 60g(10개), 연어 200g, 식용유 5g(1/2작은술)\n●소스 : 검정깨 5g(1작은술), 청국장가루 5g(1작은술), 마요네즈 20g(4작은술)\n●장식 : 대추 5g(1개)",
-    "source": {
-      "provider": "식품의약품안전처",
-      "dataset": "조리식품의 레시피 DB",
-      "sourceId": "172",
       "sourceUrl": "https://www.data.go.kr/data/15060073/openapi.do",
       "usageScope": "공공데이터포털 이용허락범위 제한 없음"
     }
@@ -8345,11 +8495,10 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "mushroom",
       "chili_pepper",
       "green_onion",
-      "onion"
-    ],
-    "optionalIngredients": [
+      "onion",
       "doenjang"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 냄비에 육수 재료를 넣고 10분간\n끓여 체로 건진다.",
       "2. 단호박은 전자레인지에 2분간 넣고\n익힌 후 껍질을 벗겨 으깬다.",
@@ -8876,9 +9025,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "3. 구워진 바나나의 겉면에 설탕을 뿌리고 가열된 팬에 구운 후 완성된 바나나를 접시에 담고, 다진 호두를 뿌린다."
     ],
     "difficulty": "normal",
-    "unmappedRequiredIngredients": [
-      "다진 호두"
-    ],
+    "unmappedRequiredIngredients": [],
     "sourceIngredientText": "●주재료 : 바나나 100g(1개), 설탕 5g(1/2작은술)\n●장식 : 다진 호두 15g(1큰술)",
     "source": {
       "provider": "식품의약품안전처",
@@ -9053,15 +9200,14 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "pumpkin",
       "tomato",
       "spinach",
-      "chives"
-    ],
-    "optionalIngredients": [
+      "chives",
       "pine_nut",
       "garlic",
       "vinegar",
       "cooking_oil",
       "chili_pepper"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 영양부추, 시금치는 먹기 좋게 잘라 물에\n담가준다.",
       "2. 단호박은 삶아서 체에 내려준다.",
@@ -9071,7 +9217,9 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "6. 접시에 준비된 채소를 깔고 연어를 올리고\n소스를 올려 완성한다."
     ],
     "difficulty": "normal",
-    "unmappedRequiredIngredients": [],
+    "unmappedRequiredIngredients": [
+      "더덕"
+    ],
     "sourceIngredientText": "연어 60g, 단호박 50g, 방울토마토 4개, 시금치 50g, 영양부추 50g\n소스 : 잣 5g, 더덕 45g, 마늘 5g, 식초 15g, 올리브오일 30g, 다진홍고추 15g",
     "source": {
       "provider": "식품의약품안전처",
@@ -9121,13 +9269,12 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "mushroom",
       "soy_sauce",
       "black_pepper",
-      "rosemary"
-    ],
-    "optionalIngredients": [
+      "rosemary",
       "lemon",
       "syrup",
       "garlic"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 통삼겹살은 어간장, 마늘기름, 로즈마리,\n통후추에 재워준다.",
       "2. 양송이, 피망, 파프리카는 먹기 좋게 썰어서\n마늘기름에 구워준다.",
@@ -9139,7 +9286,9 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
       "통삼겹",
-      "건고추"
+      "2가지색 미니파프리카",
+      "건고추",
+      "오렌지주스"
     ],
     "sourceIngredientText": "통삼겹 200g, 고구마 100g,\n대파 40g, 2가지색 미니파프리카 40g, 청피망 40g, 양송이 40g, 건고추 3g,\n어간장 10g, 통후추 1g, 로즈마리 1g. 마늘기름 15g\n소스 : 오렌지주스 100g, 레몬즙 15g, 올리고당 15g, 후추 1g, 다진마늘 10g",
     "source": {
@@ -9158,13 +9307,12 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "lemon",
       "soy_sauce",
       "onion",
-      "butter"
-    ],
-    "optionalIngredients": [
+      "butter",
       "sesame",
       "yogurt",
       "honey"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 곤약은 세척 후 물기를 빼준다.",
       "2. 사과는 가늘게 채 썰어 레몬에 살짝 담가 주고,\n다진양파도 레몬즙에 살짝 담가준다.",
@@ -9176,7 +9324,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
       "곤약국수",
-      "다진생강"
+      "다진생강",
+      "그라놀라"
     ],
     "sourceIngredientText": "곤약국수 200g, 사과 60g, 레몬즙 15g\n볶음양념 : 맛간장 30g, 다진생강 3g, 다진양파 15g, 버터 10g\n소스 : 다진양파 10g, 흑임자 7g, 플레인요거트 30g, 그라놀라 30g, 꿀 10g",
     "source": {
@@ -9271,14 +9420,13 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "potato",
       "broccoli",
       "tomato",
-      "chives"
-    ],
-    "optionalIngredients": [
+      "chives",
       "plum_syrup",
       "vinegar",
       "cooking_oil",
       "black_pepper"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 소고기에 물을 넣어 육수를 뽑아준 후 천연\n조미료로 간을 해준다.",
       "2. 소고기는 곱게 다져준 뒤 볶아준다.",
@@ -9313,15 +9461,14 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "radish",
       "soy_sauce",
       "chili_powder",
-      "garlic"
-    ],
-    "optionalIngredients": [
+      "garlic",
       "doenjang",
       "plum_syrup",
       "perilla_oil",
       "onion",
       "sesame"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 미나리는 데친 후 먹기 좋은 크기로 잘라서\n밥을 해준다.",
       "2. 닭가슴살에 밥을 넣고 말아서 오븐에 굽는다.",
@@ -9337,6 +9484,39 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "provider": "식품의약품안전처",
       "dataset": "조리식품의 레시피 DB",
       "sourceId": "322",
+      "sourceUrl": "https://www.data.go.kr/data/15060073/openapi.do",
+      "usageScope": "공공데이터포털 이용허락범위 제한 없음"
+    }
+  },
+  {
+    "id": "fsk_323",
+    "name": "강황고구마밥",
+    "requiredIngredients": [
+      "raw_rice",
+      "sweet_potato",
+      "chives",
+      "chili_pepper",
+      "onion",
+      "soy_sauce"
+    ],
+    "optionalIngredients": [],
+    "steps": [
+      "1. 먼저 영양부추를 뺀 재료로 양념장을 30분\n전에 만들어준다.",
+      "2. 쌀은 30분전에 불려주고 고구마는 껍질째\n작은 깍두기 모양으로 잘라 냉수에 담가준다.",
+      "3. 닭육수에 강황가루를 풀어주고 쌀과 고구마를\n고루 섞어 밥을 해준다.",
+      "4. 만들어진 양념장에 영양부추를 한입 크기로\n잘라 최종 양념장을 만들어준다.",
+      "5. 그릇에 강황고구마밥을 담아주고 양념장과\n함께 완성한다."
+    ],
+    "difficulty": "normal",
+    "unmappedRequiredIngredients": [
+      "강황가루",
+      "닭육수"
+    ],
+    "sourceIngredientText": "쌀 100g, 강황가루 15g, 고구마 50g, 닭육수 300g\n양념장 : 영양부추 10g, 다진청고추 15g, 다진홍고추 15g, 다진양파 15g, 간편 어간장 15g",
+    "source": {
+      "provider": "식품의약품안전처",
+      "dataset": "조리식품의 레시피 DB",
+      "sourceId": "323",
       "sourceUrl": "https://www.data.go.kr/data/15060073/openapi.do",
       "usageScope": "공공데이터포털 이용허락범위 제한 없음"
     }
@@ -9413,12 +9593,11 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "carrot",
       "radish",
       "chives",
-      "onion"
-    ],
-    "optionalIngredients": [
+      "onion",
       "vinegar",
       "sugar"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 겨자분말은 물에 섞은 후, 뜨거운 물 3g에 중탕하여 발효시킨 후 설탕과 식초를 넣어 겨자 소스를 만들고 당근, 무, 양파는 0.1×5cm로 채 썬다.",
       "2. 부추는 3cm 길이로 썬다.",
@@ -9426,7 +9605,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "오이고추"
+      "오이고추",
+      "겨자분말"
     ],
     "sourceIngredientText": "●주재료 : 오이고추 15g(1개), 당근 5g(5cm), 무 5g(5cm), 부추 5g(6cm), 양파 5g(5cm)\n●소스 : 겨자분말 5g(1작은술), 식초 10g(2작은술), 설탕 10g(2작은술)",
     "source": {
@@ -9677,14 +9857,13 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "egg",
       "green_onion",
       "cooking_oil",
-      "sesame"
-    ],
-    "optionalIngredients": [
+      "sesame",
       "soy_sauce",
       "garlic",
       "black_pepper",
       "sesame_oil"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 소 불고기는 양념장을 버무려 팬에 볶아준다.",
       "2. 청고추, 홍고추는 가늘게 채 썰어준다.",
@@ -9696,7 +9875,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
       "쌀밥",
-      "소불고기"
+      "소불고기",
+      "생강청"
     ],
     "sourceIngredientText": "쌀밥 200g, 소불고기 150g, 양파 60g, 청고추 15g, 홍고추 18g\n팽이버섯 20g, 계란 60g, 쪽파 15g, 마늘기름 30g, 통깨 5g\n양념장 : 맛간장 15g, 생강청 15g, 다진마늘 10g, 다진대파 10g, 흰후추 1g, 참기름 5g",
     "source": {
@@ -9783,6 +9963,45 @@ export const PUBLIC_RECIPES: Recipe[] = [
     }
   },
   {
+    "id": "fsk_343",
+    "name": "모듬해물찜",
+    "requiredIngredients": [
+      "green_onion",
+      "chili_pepper",
+      "bell_pepper",
+      "onion",
+      "soy_sauce",
+      "syrup",
+      "sesame_oil",
+      "black_pepper"
+    ],
+    "optionalIngredients": [],
+    "steps": [
+      "1. 자숙새우와 소라살은 한번 데친 후 소라살은\n먹기 좋게 잘라준다.",
+      "2. 전복은 껍질을 벗기지 말고 세척해 준다.",
+      "3. 양파, 홍피망, 대파는 먹기 좋게 잘라준다.",
+      "4. 청고추, 홍고추도 먹기 좋게 잘라준다.",
+      "5. 데친 물 200g에 양념장을 만들어 멕시코\n고추를 담가 숙성시켜준 뒤 양념장에 알마늘을\n넣어 끓여준다.",
+      "6. 만들어진 양념장에 소라, 전복, 자숙새우,\n준비된 채소 순으로 넣어 모듬해물찜을 완성\n한다."
+    ],
+    "difficulty": "normal",
+    "unmappedRequiredIngredients": [
+      "전복",
+      "자숙새우",
+      "소라살",
+      "알마늘",
+      "멕시코고추"
+    ],
+    "sourceIngredientText": "전복 200g, 자숙새우 60g, 소라살 45g, 알마늘 20g, 대파 15g\n청고추 15g, 홍고추 15g, 홍피망 15g, 양파 50g\n양념장 : 멕시코고추 2g, 맛간장 30g, 올리고당 15g, 참기름 15g, 흰후추 1g, 물 200g",
+    "source": {
+      "provider": "식품의약품안전처",
+      "dataset": "조리식품의 레시피 DB",
+      "sourceId": "343",
+      "sourceUrl": "https://www.data.go.kr/data/15060073/openapi.do",
+      "usageScope": "공공데이터포털 이용허락범위 제한 없음"
+    }
+  },
+  {
     "id": "fsk_346",
     "name": "토마토제철나물 샐러드",
     "requiredIngredients": [
@@ -9791,9 +10010,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "tomato",
       "onion",
       "tofu",
-      "cooking_oil"
-    ],
-    "optionalIngredients": [
+      "cooking_oil",
       "garlic",
       "sesame",
       "honey",
@@ -9802,6 +10019,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "lemon",
       "vinegar"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 마늘과 흑임자 참깨를 다져서 소스를 만든다.",
       "2. 영양부추는 5cm 길이로 잘라주고 알배추는\n채 썰어 냉수에 담가둔다.",
@@ -9866,14 +10084,14 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "egg",
       "cucumber",
       "bell_pepper",
-      "spinach"
-    ],
-    "optionalIngredients": [
+      "spinach",
       "pine_nut",
       "vinegar",
       "sugar",
       "sesame",
-      "black_pepper",
+      "black_pepper"
+    ],
+    "optionalIngredients": [
       "jujube"
     ],
     "steps": [
@@ -9885,7 +10103,9 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "6. 대추는 돌려깎기 해서 잘라주고 준비된 모든\n재료를 섞어 샐러드를 만들고 대추채를 올려\n완성한다."
     ],
     "difficulty": "normal",
-    "unmappedRequiredIngredients": [],
+    "unmappedRequiredIngredients": [
+      "연겨자"
+    ],
     "sourceIngredientText": "닭가슴살 250g, 달걀 60g, 오이 25g, 피망 25g, 파프리카 25g, 시금치 50g\n소스 : 잣 20g, 식초 15g, 연겨자 15g, 설탕 15g, 참깨 15g, 흰후추 1g\n고명 : 대추 10g",
     "source": {
       "provider": "식품의약품안전처",
@@ -9915,7 +10135,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "닭육수"
+      "닭육수",
+      "일식된장"
     ],
     "sourceIngredientText": "•필수 재료 : 방울토마토(100g), 시금치(30g), 알배추(25g), 팽이버섯(5g)\n•육수 : 닭육수(250g)\n•양념 : 일식된장(25g)",
     "source": {
@@ -9979,12 +10200,11 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "garlic",
       "butter",
       "black_pepper",
-      "cooking_oil"
-    ],
-    "optionalIngredients": [
+      "cooking_oil",
       "honey",
       "lemon"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 닭은 손질해 주고 흰 후추와 올리브오일로\n밑간을 해준다.",
       "2. 시금치는 데친 후 수분을 제거해 먹기 좋게\n잘라주고, 양파는 송송 다져준다. 준비된\n채소를 마늘과 버터에 볶아주다 생크림을 넣어\n살짝 졸여준다.",
@@ -9996,7 +10216,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
       "콜리플라워",
-      "닭육수"
+      "닭육수",
+      "오렌지주스"
     ],
     "sourceIngredientText": "닭가슴살 150g, 시금치 30g, 양파 60g, 콜리플라워 30g\n브로콜리 100g, 양송이 30g, 방울토마토 100g,\n닭육수 200g, 다진마늘 5g, 버터 15g, 흰후추 1g, 올리브오일 15g\n소스 : 버터 5g, 꿀 30g, 오렌지주스 200g, 레몬즙 15g, 흰후추 1g",
     "source": {
@@ -10041,43 +10262,6 @@ export const PUBLIC_RECIPES: Recipe[] = [
     }
   },
   {
-    "id": "fsk_354",
-    "name": "가지말이샐러드",
-    "requiredIngredients": [
-      "eggplant",
-      "potato",
-      "onion"
-    ],
-    "optionalIngredients": [
-      "cooking_oil",
-      "garlic",
-      "sugar",
-      "syrup",
-      "cheese"
-    ],
-    "steps": [
-      "1. 가지는 길이로 포를 떠 준다. 이때 필러를\n이용하면 간편하게 할 수가 있다.",
-      "2. 감자는 채 썰어 냉수에 담가 전분기를 완전히\n빼준다.",
-      "3. 파프리카, 양파, 청고추는 감자와 같은 길이로\n채 썰어준다.",
-      "4. 소스를 만들어준다.",
-      "5. 가지를 기름 없이 구워준다.",
-      "6. 구운 가지를 펴 놓고 준비된 채소를 말아서\n가지말이를 만들고, 마늘튀김을 올려 소스랑\n완성한 뒤 파마산치즈를 다져서 먹기 직전에\n뿌려준다."
-    ],
-    "difficulty": "normal",
-    "unmappedRequiredIngredients": [
-      "미니파프리카",
-      "마늘튀김"
-    ],
-    "sourceIngredientText": "가지 250g, 감자 50g, 미니파프리카 30g, 양파 40g, 마늘튀김 15g\n소스 : 홀그레인머스터드 15g, 올리브오일 30g, 다진마늘 15g, 설탕 5g\n올리고당 15g, 레드와인 30g\n곁들이채소 : 어린채소 30g\n고명 : 파마산치즈",
-    "source": {
-      "provider": "식품의약품안전처",
-      "dataset": "조리식품의 레시피 DB",
-      "sourceId": "354",
-      "sourceUrl": "https://www.data.go.kr/data/15060073/openapi.do",
-      "usageScope": "공공데이터포털 이용허락범위 제한 없음"
-    }
-  },
-  {
     "id": "fsk_485",
     "name": "유자등갈비구이",
     "requiredIngredients": [
@@ -10087,9 +10271,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "cooking_oil",
       "garlic",
       "onion",
-      "carrot"
-    ],
-    "optionalIngredients": [
+      "carrot",
       "yuzu",
       "apple",
       "cream",
@@ -10097,6 +10279,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "salt",
       "vinegar"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 등갈비는 찬물에 약 2시간 이상 담그어\n핏물을 빼고, 월계수잎과 생강, 통훗추를\n넣고 약 1시간 삶아 건져 놓는다.",
       "2. 적양배추와 당근, 양파를 채를 썰어\n찬물에 담그어 놓는다.",
@@ -10107,7 +10290,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "등갈비"
+      "등갈비",
+      "밤"
     ],
     "sourceIngredientText": "등갈비(150g), 월계수잎(2g), 생강(10g), 통후추(3g)\n식용유(10g), 마늘(20g)m 적양배추(20g), 양파(20g)\n당근(20g)\n- 소스 : 유자청(30g), 사과(20g), 밤(10g), 생크림(10g)\n설탕(10g), 소금(0.2g), 식초(10g)",
     "source": {
@@ -10126,11 +10310,10 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "bean_sprout",
       "onion",
       "bell_pepper",
-      "chili_pepper"
-    ],
-    "optionalIngredients": [
+      "chili_pepper",
       "garlic"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 뜨거운 물에 실곤약을 넣고, 약 20초\n정도 삶아 건진다.",
       "2. 양파와 청 피망, 홍고추는 약 5cm\n길이로 채를 썰고, 홍고추 몇 개는\n어슷썰어 놓는다.",
@@ -10141,7 +10324,9 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "실곤약"
+      "실곤약",
+      "굴소스",
+      "액젓"
     ],
     "sourceIngredientText": "실곤약(120g), 소고기(50g), 숙주(50g)\n양파(20g), 청피망(10g), 홍고추(10g)\n- 소스 : 굴소스(20g), 다진 마늘(10g), 액젓(10g)",
     "source": {
@@ -10165,12 +10350,11 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "onion",
       "zucchini",
       "salt",
-      "cooking_oil"
-    ],
-    "optionalIngredients": [
+      "cooking_oil",
       "tomato",
       "garlic"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 닭고기살은 넓게 펴서, 약 10분 정도\n우유에 담그어 놓는다.",
       "2. 수수와 쌀은 깨끗이 씻어 찬물에 약 30분\n정도 불려 밥을 지어 놓는다.",
@@ -10181,7 +10365,9 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "수수"
+      "수수",
+      "케첩",
+      "육수"
     ],
     "sourceIngredientText": "닭고기(100g), 우유(50g), 후춧가루(0.02g), 수수(20g)\n쌀(50g), 파프리카(20g), 당근(20g), 양파(20g)\n애호박(20g), 소금(0.5g), 식용유(5g)\n- 소스 : 토마토(20g), 다진 마늘(10g), 케첩(20g), 육수(100g)",
     "source": {
@@ -10204,13 +10390,12 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "salt",
       "black_pepper",
       "starch",
-      "egg"
-    ],
-    "optionalIngredients": [
+      "egg",
       "sugar",
       "bell_pepper",
       "perilla_leaf"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 밀가루는 세 군데로 나눠 각각 뽕잎\n가루와 호박가루, 백년초가루를\n넣고 올리브오일을 넣어 반죽을\n하고, 비닐봉투에 넣어 숙성시킨다.",
       "2. 닭은 작게 토막을 내어 생강과 정종,\n소금, 후춧가루를 뿌려 숙성시킨다.",
@@ -10223,7 +10408,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "unmappedRequiredIngredients": [
       "뽕잎가루",
       "백년초가루",
-      "호박가루"
+      "호박가루",
+      "크림소스"
     ],
     "sourceIngredientText": "밀가루(200g), 뽕잎가루(10g), 백년초가루(10g)\n호박가루(10g), 올리브오일(10g), 닭고기(200g), 생강(5g)\n정종(10g), 소금(0.5g), 후춧가루(0.02g), 녹말가루(50g)\n달걀(50g), 튀김기름(400g)\n- 소스 : 크림소스(30g), 설탕(10g), 파프리카(20g)\n청피망(20g), 깻잎(10g)",
     "source": {
@@ -10246,15 +10432,14 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "lemon",
       "sugar",
       "honey",
-      "garlic"
-    ],
-    "optionalIngredients": [
+      "garlic",
       "yogurt",
       "onion",
       "carrot",
       "bell_pepper",
       "cucumber"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 닭은 깨끗이 씻어 여러 번 토막을 낸다.",
       "2. 토막 낸 닭을 카레가루와 녹말가루에\n버무려 놓는다.",
@@ -10264,7 +10449,9 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "6. 튀김기름 온도가 170℃가 되면 버무려\n놓은 닭(②)을 넣고 두 번 튀겨, 기름을\n제거하고, ④번 소스에 살짝 버무려\n접시에 담아, 준비한 요거트소스(⑤)를\n올려 완성한다."
     ],
     "difficulty": "normal",
-    "unmappedRequiredIngredients": [],
+    "unmappedRequiredIngredients": [
+      "케첩"
+    ],
     "sourceIngredientText": "닭고기(200g), 카레가루(20g), 녹말가루(10g),\n튀김기름(400g), 저염간장(20g), 레몬즙(10g), 설탕(10g)\n꿀(10g), 다진마늘(10g)\n- 소스 : 요거트(20g), 양파(20g), 당근(20g), 파프리카(20g)\n오이(20g), 케첩(10g)",
     "source": {
       "provider": "식품의약품안전처",
@@ -10288,14 +10475,13 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "green_onion",
       "tomato",
       "bacon",
-      "garlic"
-    ],
-    "optionalIngredients": [
+      "garlic",
       "yuzu",
       "soy_sauce",
       "lemon",
       "sugar"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 소고기는 포를 두툼하게 떠서, 소금과\n후춧가루를 뿌려 숙성을 시킨다.",
       "2. 인삼은 뇌두를 잘라 씻어 약 2cm\n두께로 썰고, 파인애플과 파프리카도\n두툼하게 썰고, 표고버섯과 대파,\n토마토를 썰어 준비하고, 베이컨도\n2cm 길이로 썰어 준비한다.",
@@ -10367,15 +10553,14 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "requiredIngredients": [
       "raw_rice",
       "eggplant",
-      "shrimp"
-    ],
-    "optionalIngredients": [
+      "shrimp",
       "onion",
       "garlic",
       "cooking_oil",
       "tomato",
       "sugar"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 쌀은 물에 불려 밥을 짓고, 가지는 길게\n썰어 팬에 구워 놓는다.",
       "2. 양파와 마늘은 잘게 다져 준비한다.",
@@ -10385,7 +10570,11 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "6. 볶아지는 양파와 마늘에 토마토소스와\n케첩을 넣어 볶다가 토마토와 설탕을\n넣어 볶다가 졸이고, 밥을 그릇에 담고,\n구운 가지와 새우를 올린 후 졸여 놓은\n토마토소스를 위에 올린 후 어린잎을\n살짝 올려 완성한다."
     ],
     "difficulty": "normal",
-    "unmappedRequiredIngredients": [],
+    "unmappedRequiredIngredients": [
+      "토마토소스",
+      "케첩",
+      "어린잎"
+    ],
     "sourceIngredientText": "쌀(100g), 가지(50g), 새우(20g)\n- 소스 : 양파(20g), 마늘(10g), 올리브오일(10g)\n토마토소스(20g), 케첩(20g), 토마토(80g), 설탕(5g)\n- 곁들임채소 : 어린잎(5g)",
     "source": {
       "provider": "식품의약품안전처",
@@ -10486,14 +10675,13 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "bell_pepper",
       "carrot",
       "broccoli",
-      "lettuce"
-    ],
-    "optionalIngredients": [
+      "lettuce",
       "vinegar",
       "sugar",
       "cooking_oil",
       "salt"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 닭고기에 물을 자작하게 넣고\n월계수잎과 통후추, 정종을 넣고\n약 20분 정도 삶아 식혀 찢어놓는다.",
       "2. 브로컬리는 끓는 물에 소금을 넣고,\n데쳐 작게 썰어놓고, 양상추는 물에\n담그어 놓았다가 먹기 좋게 손으로\n찢어 놓는다.",
@@ -10846,14 +11034,13 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "green_onion",
       "egg",
       "raw_rice",
-      "bean_sprout"
-    ],
-    "optionalIngredients": [
+      "bean_sprout",
       "salt",
       "black_pepper",
       "kelp",
       "soy_sauce"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 다시마 우린 물에 가다랑어포를 넣고 10분간 담갔다가 체에 거르고, 쌀로 밥을 짓는다.",
       "2. 돼지고기는 소금과 후춧가루로 밑간을 한 뒤 굽는다.",
@@ -11571,9 +11758,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "tomato",
       "chives",
       "onion",
-      "chili_pepper"
-    ],
-    "optionalIngredients": [
+      "chili_pepper",
       "banana",
       "pear",
       "chili_powder",
@@ -11583,6 +11768,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "garlic",
       "sesame_oil"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 토마토는 먹기 좋은 크기로 잘라준다.",
       "2. 청고추, 홍고추, 양파는 채 썰고 부추는 먹기\n좋게 잘라준다.",
@@ -11592,7 +11778,9 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "6. 마지막에 영양부추를 넣어 김치를 완성한다."
     ],
     "difficulty": "normal",
-    "unmappedRequiredIngredients": [],
+    "unmappedRequiredIngredients": [
+      "젓갈"
+    ],
     "sourceIngredientText": "방울토마토 200g, 영양부추 20g, 양파 40g, 청고추 15g, 홍고추 15g\n양념 : 바나나 40g, 배 40g, 고춧가루 15g, 매실청 10g, 간편 어간장 15g\n통깨 2g, 다진마늘 15g, 참기름 5g, 젓갈 5g",
     "source": {
       "provider": "식품의약품안전처",
@@ -11613,13 +11801,12 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "potato",
       "tomato",
       "milk",
-      "cooking_oil"
-    ],
-    "optionalIngredients": [
+      "cooking_oil",
       "garlic",
       "flour",
       "black_pepper"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 닭가슴살은 먹기 좋은 크기로 잘라서 우유에\n재워준 뒤 뜨거운 물에 데쳐준다.",
       "2. 방울토마토는 반으로 자르고, 양파는 먹기 좋은\n크기로 잘라준다.",
@@ -11629,7 +11816,9 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "6. 끓고 있는 국물 50g에 밀가루를 섞어 농도를\n맞추어 준다."
     ],
     "difficulty": "normal",
-    "unmappedRequiredIngredients": [],
+    "unmappedRequiredIngredients": [
+      "토마토페이스트"
+    ],
     "sourceIngredientText": "닭가슴살 200g, 당근 30g, 양파 30g, 브로콜리 30g, 감자 40g\n방울토마토 100g, 우유 100g, 올리브유 15g\n소스 : 토마토페이스트 100g, 다진마늘 15g, 밀가루 7g, 흰후추 3g",
     "source": {
       "provider": "식품의약품안전처",
@@ -11647,9 +11836,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "onion",
       "green_onion",
       "chili_pepper",
-      "soy_sauce"
-    ],
-    "optionalIngredients": [
+      "soy_sauce",
       "gochujang",
       "garlic",
       "sesame",
@@ -11657,6 +11844,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "chili_powder",
       "vinegar"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 가지는 먹기 좋은 크기로 잘라서 간편 어간장에\n절여준다.",
       "2. 다진 대파, 청홍고추, 양파는 송송 잘라준다.",
@@ -11665,7 +11853,9 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 완성된 가지김치는 2시간 정도 후에 숙성시켜\n완성한다."
     ],
     "difficulty": "normal",
-    "unmappedRequiredIngredients": [],
+    "unmappedRequiredIngredients": [
+      "생강청"
+    ],
     "sourceIngredientText": "가지 250g, 양파 60g, 대파 25g, 청고추 15g, 홍고추 15g, 간편 어간장 15g\n양념장 : 고추장 15g, 생강청 15g, 다진마늘 5g, 통깨 7g, 매실청 10g, 고춧가루 10g, 식초 10g",
     "source": {
       "provider": "식품의약품안전처",
@@ -11748,6 +11938,42 @@ export const PUBLIC_RECIPES: Recipe[] = [
     }
   },
   {
+    "id": "fsk_407",
+    "name": "미역줄기두부무침",
+    "requiredIngredients": [
+      "tofu",
+      "rosemary",
+      "soy_sauce",
+      "onion",
+      "garlic",
+      "black_pepper",
+      "sesame",
+      "vinegar"
+    ],
+    "optionalIngredients": [],
+    "steps": [
+      "1. 두부는 물기를 꼭 짜준 후 으깬다.",
+      "2. 미역줄기는 불린 후 먹기 좋게 자른다.",
+      "3. 양념장을 만들어준다.",
+      "4. 준비된 견과류를 송송 다져준다.",
+      "5. 불린 미역줄기에 소스를 섞어 재워준다.",
+      "6. 불린 미역줄기에 두부를 넣어 섞어준다."
+    ],
+    "difficulty": "normal",
+    "unmappedRequiredIngredients": [
+      "건조미역줄기",
+      "혼합견과류"
+    ],
+    "sourceIngredientText": "건조미역줄기 10g, 두부 70g, 로즈마리 1g, 혼합견과류 25g\n소스 : 맛간장 15g, 다진양파 15g, 다진마늘 5g, 흰후추 1g, 통깨 3g, 식초 5g",
+    "source": {
+      "provider": "식품의약품안전처",
+      "dataset": "조리식품의 레시피 DB",
+      "sourceId": "407",
+      "sourceUrl": "https://www.data.go.kr/data/15060073/openapi.do",
+      "usageScope": "공공데이터포털 이용허락범위 제한 없음"
+    }
+  },
+  {
     "id": "fsk_408",
     "name": "맑은육개장",
     "requiredIngredients": [
@@ -11791,9 +12017,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "octopus",
       "apple",
       "onion",
-      "chili_pepper"
-    ],
-    "optionalIngredients": [
+      "chili_pepper",
       "cooking_oil",
       "vinegar",
       "garlic",
@@ -11801,6 +12025,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "black_pepper",
       "lemon"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 더덕은 손질해 어슷하게 잘라 소금물에 살짝\n담가준다.",
       "2. 사과는 먹기 좋게 썰어서 레몬즙에 살짝\n뿌려준다.",
@@ -11811,7 +12036,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "더덕"
+      "더덕",
+      "레몬소금"
     ],
     "sourceIngredientText": "주꾸미 50g, 사과 60g, 더덕 40g, 양파 60g, 청고추 15g, 홍고추 15g\n소스 : 마늘기름 30g, 식초 15g, 다진마늘 5g, 다진대파 5g, 레몬소금 1g, 흰후추 1g\n다진청고추 15g, 레몬즙 15g",
     "source": {
@@ -11867,13 +12093,12 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "potato",
       "curry_powder",
       "onion",
-      "cooking_oil"
-    ],
-    "optionalIngredients": [
+      "cooking_oil",
       "vinegar",
       "soy_sauce",
       "sugar"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 감자는 껍질을 벗겨서 1개를 채 썰고 물에\n담가둔다.",
       "2. 감자 1개는 강판에 갈아서 즙과 건지를 따로\n분리해준다.",
@@ -11892,6 +12117,42 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "provider": "식품의약품안전처",
       "dataset": "조리식품의 레시피 DB",
       "sourceId": "411",
+      "sourceUrl": "https://www.data.go.kr/data/15060073/openapi.do",
+      "usageScope": "공공데이터포털 이용허락범위 제한 없음"
+    }
+  },
+  {
+    "id": "fsk_412",
+    "name": "두부채소샐러드",
+    "requiredIngredients": [
+      "tofu",
+      "chili_pepper",
+      "tomato",
+      "yogurt",
+      "honey",
+      "lemon"
+    ],
+    "optionalIngredients": [],
+    "steps": [
+      "1. 두부는 먹기 좋은 크기로 잘라서 팬에 바삭\n하게 구워준다.",
+      "2. 구워진 두부는 기름을 빼고 채 썰어준다.",
+      "3. 방울토마토는 작은 사각형으로 잘라주고,\n치커리는 먹기좋게 잘라준다.",
+      "4. 표고버섯와 홍고추, 노란파프리카는 가늘게\n채 썰어 볶아준다.",
+      "5. 소스를 만들어준다. 잘라준 토마토는 먹기\n직전에 소스와 섞어준다.",
+      "6. 접시에 치커리를 깔고 볶아진 두부와 채소를\n올려 완성한다."
+    ],
+    "difficulty": "normal",
+    "unmappedRequiredIngredients": [
+      "건 표고버섯",
+      "치커리",
+      "노란색 파프리카",
+      "겨자"
+    ],
+    "sourceIngredientText": "두부 100g, 건 표고버섯 10g, 치커리 15g, 홍고추 17g, 노란색 파프리카 25g, 방울토마토 40g\n소스 : 요거트 50g, 겨자 2g, 꿀 15g, 레몬즙 15g",
+    "source": {
+      "provider": "식품의약품안전처",
+      "dataset": "조리식품의 레시피 DB",
+      "sourceId": "412",
       "sourceUrl": "https://www.data.go.kr/data/15060073/openapi.do",
       "usageScope": "공공데이터포털 이용허락범위 제한 없음"
     }
@@ -11936,9 +12197,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "salmon",
       "rosemary",
       "lemon",
-      "cooking_oil"
-    ],
-    "optionalIngredients": [
+      "cooking_oil",
       "carrot",
       "onion",
       "tomato",
@@ -11948,6 +12207,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "milk",
       "bay_leaf"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 연어에 로즈마리를 위에 올려\n마리네이드를 한다.",
       "2. 마리네이드를 해놓은 연어에 레몬즙을\n뿌린다.",
@@ -11957,7 +12217,10 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "6. 팬에 올리브 오일을 두르고, 연어\n(①)를 올려 앞뒤로 구어 접시에\n담고, 토마토소스를 올려 완성한다."
     ],
     "difficulty": "normal",
-    "unmappedRequiredIngredients": [],
+    "unmappedRequiredIngredients": [
+      "토마토 소스",
+      "육수"
+    ],
     "sourceIngredientText": "연어(150g), 로즈마리(3g), 레몬(10g), 올리브오일(30g)\n- 소스 : 당근(20g), 양파(20g), 토마토(30g), 마늘(10g)\n버터(5g), 밀가루(10g), 토마토 소스(50g)\n육수(150g), 우유(50g), 월계수잎(1장)",
     "source": {
       "provider": "식품의약품안전처",
@@ -12182,12 +12445,11 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "green_onion",
       "garlic",
       "sesame_oil",
-      "sugar"
-    ],
-    "optionalIngredients": [
+      "sugar",
       "soy_sauce",
       "cooking_wine"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 양배추는 깨끗이 씻어 찜기에 김이\n오르면 쪄서 식혀 준비한다.",
       "2. 느타리, 표고 ,팽이버섯, 당근, 오이는\n약 5cm 길이로 채를 썰어 준비한다.",
@@ -12293,9 +12555,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "chicken",
       "milk",
       "rosemary",
-      "black_pepper"
-    ],
-    "optionalIngredients": [
+      "black_pepper",
       "tomato",
       "garlic",
       "mushroom",
@@ -12304,6 +12564,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "potato",
       "broccoli"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 닭가슴살에 로즈마리, 후춧가루를\n넣고, 15분 정도 우유에 담그어 놓는다.",
       "2. 당근과 감자는 사각으로 깎아 양 모서리를\n칼로 다시 다듬어 주사위 모양으로\n둥그스럼하게 만들어 준비한다.",
@@ -12314,7 +12575,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "저염버터"
+      "저염버터",
+      "토마토케첩"
     ],
     "sourceIngredientText": "닭가슴살(150g), 우유(100g), 로즈마리(5g), 후춧가루(0.02g)\n저염버터(10g)\n- 소스 : 토마토(50g), 마늘(10g), 저염버터(10g)\n양송이(20g), 토마토케첩(50g), 생크림(20g)\n- 곁들임채소 : 당근(20g), 감자(20g), 브로컬리(30g)",
     "source": {
@@ -12436,11 +12698,10 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "bean_sprout",
       "bell_pepper",
       "egg",
-      "sesame"
-    ],
-    "optionalIngredients": [
+      "sesame",
       "vinegar"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 청포묵을 약 6~7cm 길이로 썰어\n맛소금과 참기름에 살짝 버무려 놓는다.",
       "2. 소고기는 채를 썰어 간장과 설탕,\n참기름에 볶아놓고 미나리는 데쳐\n찬물에 식혀 5~6cm 길이로 썰고,\n숙주는 머리와 꼬리를 떼어 내고,\n뜨거운 물에 데쳐 식혀 준비한다.",
@@ -13374,9 +13635,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "perilla_leaf",
       "chili_pepper",
       "onion",
-      "ginger"
-    ],
-    "optionalIngredients": [
+      "ginger",
       "soy_sauce",
       "syrup",
       "cooking_wine",
@@ -13385,6 +13644,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "sesame",
       "green_onion"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 장어는 한입 크기로 잘라서 흰 후추와 청주를\n뿌려 재워준다.",
       "2. 깻잎은 채를 썰어서 냉수에 담가 물기를\n빼준다.",
@@ -13395,7 +13655,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "장어"
+      "장어",
+      "통마늘"
     ],
     "sourceIngredientText": "장어 150g, 깻잎 10g, 청고추17g, 홍고추 17g, 양파 60g, 생강 15g\n양념장 : 맛간장 25g, 올리고당 15g, 청주 15g, 참기름 15g, 흰후추 1g\n통깨 5g, 통마늘 20g, 대파 10g",
     "source": {
@@ -13418,13 +13679,12 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "sugar",
       "potato",
       "butter",
-      "milk"
-    ],
-    "optionalIngredients": [
+      "milk",
       "doenjang",
       "garlic",
       "yogurt"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 통삼겹에 건로즈마리와 로즈마리, 올리브유를\n넣고 마리네이드 해준다.",
       "2. 양파는 먹기 좋게 썰어 식초, 설탕, 로즈마리에\n살짝 버무려준다.",
@@ -13437,7 +13697,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "unmappedRequiredIngredients": [
       "통삼겹",
       "건로즈마리",
-      "백일송이"
+      "백일송이",
+      "2가지색 미니파프리카"
     ],
     "sourceIngredientText": "통삼겹 200g, 건로즈마리 1g, 로즈마리 2g, 올리브유 15g\n곁들이채소1 : 백일송이 30g, 당근 20g, 양파 60g\n곁들이채소2 : 2가지색 미니파프리카 30g, 양파 60g, 식초 15g, 설탕 1g\n매쉬포테이토 : 감자 100g, 버터 10g, 우유 30g\n소스 : 된장 15g, 다진마늘 15g, 다진양파 15g, 플레인요구르트 30g, 설탕 15g\n고명 : 볶은현미 25g",
     "source": {
@@ -13459,15 +13720,14 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "cooking_oil",
       "pumpkin",
       "potato",
-      "rosemary"
-    ],
-    "optionalIngredients": [
+      "rosemary",
       "sesame_oil",
       "soy_sauce",
       "black_pepper",
       "garlic",
       "sesame"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 단호박, 감자는 가늘게 채 썰어 기름에 바싹\n튀겨준다",
       "2. 불고기에 다진 양파를 섞어 양념장에 버무려\n준다.",
@@ -13477,7 +13737,11 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "6. 접시에 으깬 감자와 불고기볼 그리고 튀김을\n올리고 소스와 바질을 올려 완성한다"
     ],
     "difficulty": "normal",
-    "unmappedRequiredIngredients": [],
+    "unmappedRequiredIngredients": [
+      "생강청",
+      "딸기잼",
+      "오미자청"
+    ],
     "sourceIngredientText": "다진소고기 40g, 다진양파 15g 빵가루 30g, 계란 60g, 밀가루 15g\n식용유 200g, 단호박 25g, 감자 25g, 로즈마리 1g\n양념장 : 참기름 5g, 맛간장 15g, 생강청 15g, 흰후추 1g, 다진마늘 1g, 통깨 1g\n소스 : 딸기잼 30g, 오미자청 15g, 물 30g",
     "source": {
       "provider": "식품의약품안전처",
@@ -13580,12 +13844,11 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "flour",
       "egg",
       "breadcrumbs",
-      "cooking_oil"
-    ],
-    "optionalIngredients": [
+      "cooking_oil",
       "sugar",
       "starch"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 등심은 넓게 펴서 소금과 후춧가루를\n뿌려 준비한다.",
       "2. 파프리카와 파인애플은 속을 제거하고\n약 7cm 길이로 썰어놓는다.",
@@ -13595,7 +13858,9 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "6. 냄비에 칠리소소와 물, 설탕을 넣고\n바글바글 끓이다가 물녹말을 넣고\n한 번 더 끓인 후, 튀겨놓은 등심채소\n롤에 함께 뿌려 완성한다."
     ],
     "difficulty": "normal",
-    "unmappedRequiredIngredients": [],
+    "unmappedRequiredIngredients": [
+      "칠리소스"
+    ],
     "sourceIngredientText": "돼지등심(100g), 소금(0.3g), 후춧가루(0.05g)\n파프리카(30g), 시금치(30g), 파인애플(30g), 치즈(30g)\n밀가루(20g), 달걀(50g), 빵가루(30g), 튀김기름(200g)\n- 소스 : 칠리소스(30g), 설탕(10g), 물녹말(녹말가루5g, 물 5g)",
     "source": {
       "provider": "식품의약품안전처",
@@ -13657,13 +13922,12 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "breadcrumbs",
       "cream",
       "salt",
-      "black_pepper"
-    ],
-    "optionalIngredients": [
+      "black_pepper",
       "mayonnaise",
       "cheese",
       "tomato"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 찹쌀과 현미는 깨끗이 씻어 30분 이상\n충분히 불려 밥을 지어, 둥글둥글하게\n패티를 만들어 놓는다.",
       "2. 마늘과 양파는 곱게 다져 볶아 준비\n한다.",
@@ -13742,14 +14006,13 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "breadcrumbs",
       "milk",
       "lemon",
-      "cheese"
-    ],
-    "optionalIngredients": [
+      "cheese",
       "onion",
       "tomato",
       "garlic",
       "apple"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 돼지등심을 넓게 피고 소금과 후춧가루\n올리브오일을 발라 숙성시킨다.",
       "2. 우유를 끓이다가 레몬즙을 넣고 몽글\n거리면, 소창에 걸러 리코타치즈를\n만든다.",
@@ -13759,7 +14022,10 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "6. 냄비에 준비해 놓은 소스(③)를 넣고\n볶다가 돈가스 소스를 넣고 다시 한 번 더\n끓인 후 튀겨놓은 리코타돈가스(⑤)에\n곁들여 완성한다."
     ],
     "difficulty": "normal",
-    "unmappedRequiredIngredients": [],
+    "unmappedRequiredIngredients": [
+      "케첩",
+      "돈가스소스"
+    ],
     "sourceIngredientText": "돼지등심(120g), 소금(0.3g), 후춧가루(0.03g), 올리브오일(10g)\n밀가루(10g), 달걀(50g), 빵가루(20g), 튀김기름(200g)\n- 리코타치즈 : 우유(50g), 레몬즙(10g), 모짜렐라치즈(10g)\n- 소스 : 양파(20g), 토마토(30g), 마늘(10g), 사과(20g)\n케첩(20g), 돈가스소스(20g)",
     "source": {
       "provider": "식품의약품안전처",
@@ -13780,14 +14046,13 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "black_pepper",
       "doenjang",
       "chives",
-      "chili_pepper"
-    ],
-    "optionalIngredients": [
+      "chili_pepper",
       "soy_sauce",
       "sugar",
       "syrup",
       "starch"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 보쌈용 삼겹살을 깨끗이 씻어 생강채와\n양파채, 월계수잎, 통후추와 소주를\n넣고 약 1시간 정도 숙성을 시킨다.",
       "2. 찜통에 물과 된장, 편마늘을 넣고 숙성된\n삼겹살을 올려 약 50분 정도 찜을 하다가\n부추를 올려 1분 정도 더 찜을 한다.",
@@ -13819,11 +14084,10 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "mushroom",
       "carrot",
       "sesame_oil",
-      "pine_nut"
-    ],
-    "optionalIngredients": [
+      "pine_nut",
       "soy_sauce"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 깨끗이 씻은 쌀에 물을 2배 정도 넣고\n약 30분 정도 충분히 불려 준비한다.",
       "2. 전복은 수저를 이용하여 껍질에서\n떼어내어 내장을 분리해 놓는다.",
@@ -13857,14 +14121,13 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "chili_pepper",
       "green_onion",
       "carrot",
-      "sesame"
-    ],
-    "optionalIngredients": [
+      "sesame",
       "gochujang",
       "vinegar",
       "ginger",
       "syrup"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 오징어는 껍질을 벗겨 안 쪽으로 칼집을\n넣어 무늬를 만들어 놓는다.",
       "2. 끓는 물에 소금을 넣고 미나리를 데쳐\n찬물에 헹구고, 바로 오징어를 데쳐\n준비한다.",
@@ -13936,14 +14199,13 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "green_onion",
       "chili_pepper",
       "jujube",
-      "sesame"
-    ],
-    "optionalIngredients": [
+      "sesame",
       "soy_sauce",
       "syrup",
       "sesame_oil",
       "black_pepper"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 배는 껍질을 벗겨 배즙을 갈아 준비한다.",
       "2. 소고기에 배즙과 정종을 넣어 버무려 숙성시킨다.",
@@ -14057,9 +14319,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "cucumber",
       "onion",
       "carrot",
-      "radish"
-    ],
-    "optionalIngredients": [
+      "radish",
       "soy_sauce",
       "syrup",
       "sugar",
@@ -14067,6 +14327,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "green_onion",
       "black_pepper"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 돼지갈비는 물에 담그어 핏물을 충분히\n제거한다.",
       "2. 홍고추는 어슷썰어 냄비에 볶는다.",
@@ -14078,7 +14339,9 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
       "돼지갈비",
-      "밤"
+      "밤",
+      "다진 생강",
+      "소주"
     ],
     "sourceIngredientText": "돼지갈비(150g), 홍고추(5g), 참기름(5g), 통깨(2g)\n배(20g), 사과(20g), 대추(20g), 밤(10g), 오이(20g)\n양파(20g), 당근(20g), 무(20g)\n- 양념장 : 저염간장(20g), 올리고당(20g), 설탕(10g)\n다진 마늘(20g), 다진 대파(10g), 다진 생강(5g)\n후춧가루(0.03g), 소주(10g)",
     "source": {
@@ -14098,15 +14361,14 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "carrot",
       "perilla_leaf",
       "cabbage",
-      "sweet_potato"
-    ],
-    "optionalIngredients": [
+      "sweet_potato",
       "tomato",
       "garlic",
       "chili_powder",
       "gochujang",
       "plum_syrup"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 닭은 먹기 좋은 크기로 잘라 준비한다.",
       "2. 토막 낸 닭 에 생강즙과 소주를 넣어\n숙성한다.",
@@ -14118,7 +14380,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
       "닭",
-      "소주"
+      "소주",
+      "토마토소스"
     ],
     "sourceIngredientText": "닭(120g), 생강즙(10g), 소주(10g), 양파(20g), 당근(20g)\n깻잎(5g), 양배추(30g), 고구마(20g),\n- 소스 : 토마토(30g), 토마토소스(50g), 마늘(20g)\n고춧가루(10g), 고추장(20g), 매실청(10g)",
     "source": {
@@ -14143,9 +14406,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "pear",
       "apple",
       "banana",
-      "pineapple"
-    ],
-    "optionalIngredients": [
+      "pineapple",
       "gochujang",
       "chili_powder",
       "garlic",
@@ -14155,6 +14416,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "ginger",
       "sesame_oil"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 골뱅이는 뜨거운 물에 살짝 데친 뒤\n물기를 빼고 4등분으로 썬다.",
       "2. 양파와 깻잎은 채썰고, 당근은 양파랑\n같은 길이로 얇게 저미고, 고추와\n대파는 어슷썰고, 양배추는 1~2cm\n두께로 썬다.",
@@ -14165,7 +14427,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
       "골뱅이",
-      "황도"
+      "황도",
+      "케첩"
     ],
     "sourceIngredientText": "골뱅이(50g), 통깨(2g), 당근(20g), 양파(20g), 양배추(20g)\n깻잎(10g), 대파(10g), 홍고추(5g), 청고추(5g), 황도(20g)\n배(20g), 사과(20g), 바나나(20g), 파인애플(20g)\n- 양념장 : 고추장(20g), 고춧가루(20g), 다진 마늘(10g)\n케첩(20g), 설탕(20g), 식초(10g), 매실액(10g)\n생강즙(5g), 참기름(5g)",
     "source": {
@@ -15021,7 +15284,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
       "무청시래기 불린 것",
-      "포도씨유"
+      "포도씨유",
+      "12g"
     ],
     "sourceIngredientText": "무청시래기 불린 것 50g , 밥 180g, 된장 18g, 다진 마늘 2.5g, 생강즙 1.25g, 포도씨유, 12g, 생크림 30g, 버터 3g",
     "source": {
@@ -15066,6 +15330,38 @@ export const PUBLIC_RECIPES: Recipe[] = [
     }
   },
   {
+    "id": "fsk_705",
+    "name": "우엉들깨무침",
+    "requiredIngredients": [
+      "green_onion",
+      "garlic",
+      "perilla_oil",
+      "soy_sauce"
+    ],
+    "optionalIngredients": [],
+    "steps": [
+      "1. 우엉은 껍질을 벗긴다.",
+      "2. 껍질을 벗긴 우엉은 4cm 길이로 가늘게 채 썬다.",
+      "3. 냄비에 물과 우엉을 넣어 3~5분간 삶는다.",
+      "4. 삶은 우엉을 체에 건진다.",
+      "5. 파를 어슷 썬다.",
+      "6. 삶은 우엉, 손질한 파, 양념 재료를 넣고 골고루 무쳐 마무리한다."
+    ],
+    "difficulty": "normal",
+    "unmappedRequiredIngredients": [
+      "우엉",
+      "들깻가루"
+    ],
+    "sourceIngredientText": "•필수재료 : 우엉(25g), 파(2g), 물(300g)\n•양념 : 들깻가루(2g), 다진마늘(2g), 들기름(1g), 간장(3g)",
+    "source": {
+      "provider": "식품의약품안전처",
+      "dataset": "조리식품의 레시피 DB",
+      "sourceId": "705",
+      "sourceUrl": "https://www.data.go.kr/data/15060073/openapi.do",
+      "usageScope": "공공데이터포털 이용허락범위 제한 없음"
+    }
+  },
+  {
     "id": "fsk_706",
     "name": "새우두부만두",
     "requiredIngredients": [
@@ -15090,6 +15386,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
+      "8g",
       "만두피"
     ],
     "sourceIngredientText": "칵테일 새우 50g, 두부 80g, 부추 10g, 표고버섯, 8g, 소금 1g, 후추 0.25g, 만두피 75g, 간장 1.5g, 식초 0.75g, 물 5g, 고춧가루 0.4g",
@@ -15183,9 +15480,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "carrot",
       "mushroom",
       "cabbage",
-      "green_onion"
-    ],
-    "optionalIngredients": [
+      "green_onion",
       "gochujang",
       "syrup",
       "garlic",
@@ -15193,6 +15488,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "apple",
       "butter"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 떡볶이는 뜨거운 물에 담그어 놓는다.",
       "2. 토마토, 사과는 입자 있게 다진다.",
@@ -15205,7 +15501,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "unmappedRequiredIngredients": [
       "떡볶이떡",
       "어묵",
-      "육수"
+      "육수",
+      "케첩"
     ],
     "sourceIngredientText": "떡볶이떡(100g), 어묵(20g), 양파(20g), 당근(20g)\n표고버섯(20g), 양배추(20g), 대파(20g), 육수(100g)\n- 소스 : 고추장(20g), 케첩(20g), 올리고당(20g), 다진마늘(10g)\n토마토(100g), 사과(20g), 버터(10g)",
     "source": {
@@ -15228,11 +15525,10 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "onion",
       "carrot",
       "tomato",
-      "bell_pepper"
-    ],
-    "optionalIngredients": [
+      "bell_pepper",
       "syrup"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 소고기는 깍뚝썰어 준비한다.",
       "2. 깍뚝썰은 소고기에 소금, 후추, 올리브\n오일을 넣어 숙성시킨다.",
@@ -15242,7 +15538,10 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "6. 채소를 볶은 팬에 다시 숙성된 소고기를\n익히고, 볶아놓은 채소를 넣고 소스를\n넣어 살짝 더 졸여 완성한다."
     ],
     "difficulty": "normal",
-    "unmappedRequiredIngredients": [],
+    "unmappedRequiredIngredients": [
+      "포도주스",
+      "칠리소스"
+    ],
     "sourceIngredientText": "소고기등심(150g), 소금(0.3g), 후춧가루(0.3g)\n올리브오일(10g), 브로컬리(30g), 양파(20g), 당근(20g)\n토마토(30g), 파프리카(30g), 식용유(10g)\n- 소스 : 포도주스(50g), 올리고당(10g), 칠리소스(50g)",
     "source": {
       "provider": "식품의약품안전처",
@@ -15300,13 +15599,12 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "black_pepper",
       "pumpkin",
       "onion",
-      "green_onion"
-    ],
-    "optionalIngredients": [
+      "green_onion",
       "gochujang",
       "garlic",
       "syrup"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 닭다리살은 뼈를 발라 일정 크기로\n자른 뒤 우유에 재워둔다.",
       "2. 재워둔 닭다리살에 소금과 후춧가루를\n뿌려놓는다.",
@@ -15318,7 +15616,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
       "떡볶이떡",
-      "꼬치"
+      "꼬치",
+      "케첩"
     ],
     "sourceIngredientText": "닭다리살(120g), 우유(20g), 소금(0.3g), 후춧가루(0.05g)\n떡볶이떡(30g), 단호박(50g), 양파(20g), 대파(20g), 꼬치(3개)\n- 소스 : 고추장(20g), 다진마늘(20g), 다진양파(20g), 케첩(20g)\n올리고당(20g)",
     "source": {
@@ -15580,9 +15879,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "name": "L..A갈비구이",
     "requiredIngredients": [
       "pear",
-      "onion"
-    ],
-    "optionalIngredients": [
+      "onion",
       "soy_sauce",
       "bay_leaf",
       "black_pepper",
@@ -15594,6 +15891,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "sesame_oil",
       "sesame"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. L.A 갈비는 물에 담그어 핏물과 갈비\n톱밥을 제거시켜 놓는다.",
       "2. 강판에 배와 양파를 곱게 갈아 준비\n한다.",
@@ -15604,7 +15902,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "L.A갈비"
+      "L.A갈비",
+      "대파 다진것"
     ],
     "sourceIngredientText": "L.A갈비(200g), 배(20g), 양파(20g)\n- 양념 : 저염간장(20g), 월계수잎(5g), 통후추(5g)\n올리고당(20g), 정종(10g), 설탕(10g), 매실액(10g)\n대파 다진것(20g), 다진 마늘(20g), 참기름(3g)\n통깨(5g)",
     "source": {
@@ -15627,13 +15926,12 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "cheese",
       "salt",
       "black_pepper",
-      "flour"
-    ],
-    "optionalIngredients": [
+      "flour",
       "tomato",
       "syrup",
       "milk"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 닭살을 깎뚝 썰어 소금, 후춧가루,\n밀가루 넣어 살살 털어 준비해 놓는다.",
       "2. 마늘과 토마토, 양파는 입자있게 다져\n놓는다.",
@@ -15645,7 +15943,10 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
       "스파게티",
-      "닭살"
+      "닭살",
+      "토마토소스",
+      "굴소스",
+      "육수"
     ],
     "sourceIngredientText": "마늘(20g), 양파(20g), 양송이버섯(30g), 버터(10g)\n스파게티(70g), 올리브오일(5g), 모짜렐라치즈(20g)\n- 닭가슴살 : 닭살(100g), 소금(0.2g), 후춧가루(0.02g)\n밀가루(20g)\n- 소스 : 토마토(40g), 토마토소스(20g), 올리고당(10g)\n굴소스(5g), 육수(100g), 우유(100g)",
     "source": {
@@ -16705,7 +17006,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "unmappedRequiredIngredients": [
       "현미유",
       "홍시",
-      "호상요구르트"
+      "호상요구르트",
+      "3배 식초"
     ],
     "sourceIngredientText": "연근배추샐러드 : 연근 20g, 배추 20g, 사과 20g, 배 20g, 땅콩 3g, 호두 3g, 현미유 5g, 물 100g 홍시드레싱 : 홍시 30g, 호상요구르트 30g, 3배 식초 0.5g, 소금 0.3g",
     "source": {
@@ -16757,15 +17059,14 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "asparagus",
       "carrot",
       "potato",
-      "walnut"
-    ],
-    "optionalIngredients": [
+      "walnut",
       "garlic",
       "butter",
       "syrup",
       "black_pepper",
       "salt"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 망고를 먹기 좋은 크기로 자르고 소스재료로\n소스를 만들어준다.",
       "2. 호두를 곱게 다져준다.",
@@ -16776,7 +17077,10 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "안심"
+      "안심",
+      "망고",
+      "블루베리잼",
+      "포도주"
     ],
     "sourceIngredientText": "안심 160g, 아스파라거스 60g, 당근 25g, 감자 60g, 호두 40g\n소스 : 망고 150g, 블루베리잼 30g, 다진마늘 15g, 버터 15g, 포도주 15g\n올리고당 15g, 흰후추 1g, 볶은소금 1g",
     "source": {
@@ -16826,55 +17130,16 @@ export const PUBLIC_RECIPES: Recipe[] = [
     }
   },
   {
-    "id": "fsk_376",
-    "name": "베이컨밀푀유",
-    "requiredIngredients": [
-      "cabbage",
-      "perilla_leaf",
-      "bacon",
-      "radish",
-      "bean_sprout",
-      "soy_sauce"
-    ],
-    "optionalIngredients": [
-      "lemon",
-      "syrup"
-    ],
-    "steps": [
-      "1. 베이컨은 뜨거운 물에 살짝 데쳐준다.",
-      "2. 배춧잎 위에 깻잎 2장을 양쪽으로 깔고, 그\n사이에 베이컨을 얹는 방식으로 반복하여\n겹겹이 올려준 후 먹기 좋게 잘라준다.",
-      "3. 냄비 바닥에 끓인 무와 청경채, 숙주나물을\n깔아준다.",
-      "4. 2가지 소스를 만들어준다.",
-      "5. 가운데 부분은 백일송이버섯으로 채워주고\n먹기 직전에 만든 육수를 부어 끓여주고\n소스와 함께 완성한다."
-    ],
-    "difficulty": "normal",
-    "unmappedRequiredIngredients": [
-      "청경재",
-      "백일송이",
-      "채소국물",
-      "다시마, 무, 마늘, 대파뿌리, 양파)"
-    ],
-    "sourceIngredientText": "알배추 8장(200g), 깻잎 12장(20g), 베이컨 80g\n무 100g, 숙주 120g, 청경재 80g, 백일송이 25g\n국물 : 채소국물 8컵(표고버섯, 다시마, 무, 마늘, 대파뿌리, 양파), 맛간장 15g\n소스 : 멸치간장 15g, 와사비 10g, 레몬즙 15g\n소스 : 칠리소스 30g, 올리고당 15g, 레몬즙 15g",
-    "source": {
-      "provider": "식품의약품안전처",
-      "dataset": "조리식품의 레시피 DB",
-      "sourceId": "376",
-      "sourceUrl": "https://www.data.go.kr/data/15060073/openapi.do",
-      "usageScope": "공공데이터포털 이용허락범위 제한 없음"
-    }
-  },
-  {
     "id": "fsk_377",
     "name": "실곤약냉파스타",
     "requiredIngredients": [
       "shrimp",
       "broccoli",
       "basil",
-      "lemon"
-    ],
-    "optionalIngredients": [
+      "lemon",
       "cooking_oil"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 실 곤약은 세척 후에 물기를 빼준다.",
       "2. 새우와 브로콜리는 데쳐 냉수에 헹궈 준비한다.",
@@ -16885,7 +17150,9 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "실곤약"
+      "실곤약",
+      "잣 바질페이소스",
+      "드라이토마토"
     ],
     "sourceIngredientText": "실곤약 150g, 칵테일새우 100g, 브로콜리 100g, 바질 5g, 레몬즙 15g\n소스 : 잣 바질페이소스 15g, 마늘오일 15g , 드라이토마토 10g",
     "source": {
@@ -16939,11 +17206,10 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "black_pepper",
       "garlic",
       "egg",
-      "flour"
-    ],
-    "optionalIngredients": [
+      "flour",
       "lemon"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 양송이는 꼭지를 제거하고 밀가루를 살짝\n묻혀준다.",
       "2. 청양고추를 송송 다진다.",
@@ -16954,7 +17220,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "다진 돼기고기"
+      "다진 돼기고기",
+      "홀스레디쉬"
     ],
     "sourceIngredientText": "양송이 100g, 로즈마리 1g\n소 : 다진 돼기고기 100g, 청양고추 30g, 후추 1g, 다진마늘 5g, 달걀 60g, 밀가루 5g\n소스 : 홀스레디쉬 30g, 레몬즙 15g, 후추 1g",
     "source": {
@@ -17009,16 +17276,16 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "tomato",
       "pumpkin",
       "green_onion",
+      "bell_pepper",
       "onion",
       "black_pepper",
       "garlic",
-      "cooking_oil"
-    ],
-    "optionalIngredients": [
+      "cooking_oil",
       "vinegar",
       "sugar",
       "butter"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 닭가슴살과 단호박은 사방 2.5cm 크기로\n잘라준다.",
       "2. 양파 2가지, 색파프리카, 대파는 닭 크기와\n비슷하게 잘라준다.",
@@ -17257,6 +17524,37 @@ export const PUBLIC_RECIPES: Recipe[] = [
     }
   },
   {
+    "id": "fsk_2965",
+    "name": "브로콜리견과류복음",
+    "requiredIngredients": [
+      "broccoli",
+      "butter",
+      "salt"
+    ],
+    "optionalIngredients": [],
+    "steps": [
+      "1. 끓는 물에 한 입 크기로 썬 브로콜리를 데친다.",
+      "2. 팬에 아몬드슬라이스, 캐슈넛을 굽는다.",
+      "3. 팬에 무염버터를 녹인다.",
+      "4. 버터가 녹으면 브로콜리를 넣어 불향이 나도록 볶는다.",
+      "5. 구운 견과류를 넣어 볶다가 소금으로 간한다.",
+      "6. 그릇에 담아 마무리한다."
+    ],
+    "difficulty": "normal",
+    "unmappedRequiredIngredients": [
+      "아몬드슬라이스",
+      "캐슈넛"
+    ],
+    "sourceIngredientText": "•필수재료 : 브로콜리 70g, 아몬드슬라이스 5g, 캐슈넛 10g\n•양념 : 무염버터 10g, 소금 0.3g",
+    "source": {
+      "provider": "식품의약품안전처",
+      "dataset": "조리식품의 레시피 DB",
+      "sourceId": "2965",
+      "sourceUrl": "https://www.data.go.kr/data/15060073/openapi.do",
+      "usageScope": "공공데이터포털 이용허락범위 제한 없음"
+    }
+  },
+  {
     "id": "fsk_3014",
     "name": "유린기",
     "requiredIngredients": [
@@ -17267,14 +17565,13 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "sprouts",
       "garlic",
       "ginger",
-      "cooking_oil"
-    ],
-    "optionalIngredients": [
+      "cooking_oil",
       "vinegar",
       "soy_sauce",
       "lemon",
       "sugar"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 양상추와 그린치커리, 라디치오는 먹기 좋은 크기로 찢고, 고추는 잘게 다진다.",
       "2. 대파와 생강, 마늘은 곱게 다지고, 팬에 식용유를 두른 뒤 볶는다.",
@@ -17286,7 +17583,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
       "그린치커리",
-      "라디치오"
+      "라디치오",
+      "옥수수전분"
     ],
     "sourceIngredientText": "•필수 재료 : 닭다리살(110g), 양상추(25g), 그린치커리(5g), 라디치오(5g), 홍고추(5g), 청양고추(5g), 대파(5g), 무순(3g), 마늘(1g), 생강(1g), 식용유(3g)\n•소스 : 식초(5g), 저염간장(5g), 레몬즙(2g), 설탕(1g), 물(5g)\n•양념 : 옥수수전분(5g)",
     "source": {
@@ -17643,14 +17941,13 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "requiredIngredients": [
       "green_onion",
       "garlic",
-      "ginger"
-    ],
-    "optionalIngredients": [
+      "ginger",
       "salt",
       "chili_powder",
       "sesame",
       "sesame_oil"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 배추는 연한 잎으로 골라 한 장씩 떼어 길게 갈라놓는다.",
       "2. 배추에 소금을 뿌려 절인다.",
@@ -17661,7 +17958,9 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "통배추"
+      "통배추",
+      "홍시",
+      "젓갈"
     ],
     "sourceIngredientText": "•필수 재료 : 통배추(25g), 쪽파(1g), 마늘(1g), 생강(0.5g)\n•양념 : 소금(0.1g), 홍시(1g), 고춧가루(1g), 젓갈(1g), 통깨(1g), 참기름(0.5g)",
     "source": {
@@ -17679,13 +17978,12 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "potato",
       "onion",
       "milk",
-      "parsley"
-    ],
-    "optionalIngredients": [
+      "parsley",
       "butter",
       "salt",
       "black_pepper"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 감자는 슬라이스하고, 양파는 채 썬다.",
       "2. 끓는 물(5컵)에 감자를 넣어 7분간 삶아 건진다.",
@@ -17967,14 +18265,13 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "name": "매운락교무침",
     "requiredIngredients": [
       "green_onion",
-      "garlic"
-    ],
-    "optionalIngredients": [
+      "garlic",
       "chili_powder",
       "sugar",
       "sesame_oil",
       "sesame"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 락교는 물에 헹군다.",
       "2. 락교의 물기를 제거한다.",
@@ -18071,6 +18368,41 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "provider": "식품의약품안전처",
       "dataset": "조리식품의 레시피 DB",
       "sourceId": "3066",
+      "sourceUrl": "https://www.data.go.kr/data/15060073/openapi.do",
+      "usageScope": "공공데이터포털 이용허락범위 제한 없음"
+    }
+  },
+  {
+    "id": "fsk_3071",
+    "name": "황태미역국",
+    "requiredIngredients": [
+      "kelp",
+      "mushroom",
+      "green_onion",
+      "sesame_oil",
+      "garlic",
+      "soy_sauce"
+    ],
+    "optionalIngredients": [],
+    "steps": [
+      "1. 물과 육수 재료를 넣고 끓여 육수를 만든다.",
+      "2. 끓인 육수를 체에 거른다.",
+      "3. 건미역과 황태를 물에 불린 후, 먹기 좋은 크기로 썬다.",
+      "4. 냄비에 참기름을 두르고 미역과 황태를 넣어 볶는다.",
+      "5. 냄비에 육수를 넣고 끓인다",
+      "6. 다진마늘과 저염국간장으로 간을 맞춰 마무리한다."
+    ],
+    "difficulty": "normal",
+    "unmappedRequiredIngredients": [
+      "건미역",
+      "황태",
+      "황태머리"
+    ],
+    "sourceIngredientText": "•필수 재료 : 건미역(2g), 황태(4g)\n•육수 : 황태머리(5g), 다시마(1g), 표고버섯(1g), 대파(1g), 물(250g)\n•양념 : 참기름(1g), 다진마늘(1g), 저염국간장(2g)",
+    "source": {
+      "provider": "식품의약품안전처",
+      "dataset": "조리식품의 레시피 DB",
+      "sourceId": "3071",
       "sourceUrl": "https://www.data.go.kr/data/15060073/openapi.do",
       "usageScope": "공공데이터포털 이용허락범위 제한 없음"
     }
@@ -18765,43 +19097,6 @@ export const PUBLIC_RECIPES: Recipe[] = [
     }
   },
   {
-    "id": "fsk_3765",
-    "name": "청국장 또옥국수",
-    "requiredIngredients": [
-      "chicken",
-      "perilla_leaf",
-      "lemon",
-      "garlic"
-    ],
-    "optionalIngredients": [
-      "salt",
-      "black_pepper",
-      "cooking_oil",
-      "soy_sauce"
-    ],
-    "steps": [
-      "1. 닭다리살은 기름기를 제거하고\n키친타월로 물기를 제거한다.\n1.5×1.5cm 크기로 잘라 소금(0.1g),\n후추로 밑간해 20분간 재운다.",
-      "2. 마늘은 다지고, 적양파(50g)는\n1.5×1.5cm 크기로 깍둑썰기하고,\n나머지 적양파(50g)는 채 썬다. 깻잎은\n깨끗이 씻어 젖은 키친타월에 보관하고,\n레몬은 세로로 1/4 크기로 자른다.",
-      "3. 팬에 식용유(40g), 강황가루(0.5g), 고운\n고춧가루를 넣어 고추기름을 내고 밑간한\n닭다리살을 볶는다. 닭다리살이 익으면\n다진 마늘, 깍둑썬 적양파를 넣고 볶다가\n간장, 소금(0.2g), 물을 넣고 조린다.",
-      "4. 다른 팬에 식용유(90g), 강황가루(0.5g),\n소금(0.2g), 채 썬 적양파(50g)를 넣고\n약한 불에서 튀긴 후 식힌다.",
-      "5. 끓는 물에 소면을 넣고 3분 30초 동안\n삶은 후 찬물에 비벼 씻는다. 삶은\n소면을 동그랗게 말아 접시에 담고,\n조린 닭다리살, 청국장가루, 김가루를\n얹는다.",
-      "6. 손질한 깻잎을 채 썰고, 튀긴 적양파와\n함께 소면 주위에 두른다. 손질한 레몬\n조각을 올려 마무리한다."
-    ],
-    "difficulty": "normal",
-    "unmappedRequiredIngredients": [
-      "적양파",
-      "소면"
-    ],
-    "sourceIngredientText": "주재료 \n닭다리살 100g, 적양파 100g, 깻잎 10g, 레몬 25g, 다진 마늘 10g,소면 100g\n\n양념 \n소금 0.5g, 후추 1g, 식용유 130g, 강황가루 1g, 고운 고춧가루 10g,\n간장 10g, 물 60ml, 청국장가루 10g, 김가루 4g",
-    "source": {
-      "provider": "식품의약품안전처",
-      "dataset": "조리식품의 레시피 DB",
-      "sourceId": "3765",
-      "sourceUrl": "https://www.data.go.kr/data/15060073/openapi.do",
-      "usageScope": "공공데이터포털 이용허락범위 제한 없음"
-    }
-  },
-  {
     "id": "fsk_3768",
     "name": "떠먹는 송편",
     "requiredIngredients": [
@@ -18814,15 +19109,14 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "milk",
       "cream",
       "green_onion",
-      "salt"
-    ],
-    "optionalIngredients": [
+      "salt",
       "cooking_oil",
       "black_pepper",
       "butter",
       "sesame",
       "syrup"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 멥쌀가루, 소금을 체친다. 3개의 볼에\n나누고 2개의 볼에는 각각 치자가루,\n고추기름을 넣고 익반죽해 반죽을 만든다.",
       "2. 배추를 다져 3개의 볼에 나누고 콩가루\n+ 구운 호두(10g), 레몬즙, 청양고추를\n각각 넣어 볶은 후 물기를 제거해\n송편소를 만든다.",
@@ -18860,11 +19154,10 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "cooking_wine",
       "vinegar",
       "yuzu",
-      "kelp"
-    ],
-    "optionalIngredients": [
+      "kelp",
       "cooking_oil"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 묵말랭이는 따뜻한 물에 5시간 정도\n불린 후, 끓는 물에 15분간 삶아\n식힌다.",
       "2. 양배추, 당근은 채 썰고, 쪽파는 잘게\n자른다.",
@@ -19094,15 +19387,14 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "chicken",
       "basil",
       "garlic",
-      "breadcrumbs"
-    ],
-    "optionalIngredients": [
+      "breadcrumbs",
       "cooking_oil",
       "gochujang",
       "salt",
       "black_pepper",
       "sesame_oil"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 양배추와 양파는 채 썰고, 오이는 어슷하게 썬다. 토마토, 빨간 파프리카,\n청양고추는 한입 크기로 썬다. 닭가슴살은 칼로 기름기를 제거하고\n키친타월로 물기를 제거한다.",
       "2. 믹서에 손질한 토마토, 빨간 파프리카, 청양고추, 양파(50g), 바질(4장), 다진\n마늘, 올리브유(20g), 화이트와인식초, 고추장, 소금을 넣고 곱게 갈아 가스파초 소스를 만든다.",
@@ -19114,7 +19406,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
       "빨간 파프리카",
-      "쫄면 사리"
+      "쫄면 사리",
+      "화이트와인식초"
     ],
     "sourceIngredientText": "주재료 \n양배추 30g, 양파 150g, 오이 20g, 토마토 250g,\n빨간 파프리카 60g, 청양고추 4g, 닭가슴살 40g, 바질 5장(2g),\n다진 마늘 4g, 빵가루 20g, 쫄면 사리 100g\n\n양념 \n올리브유 30g, 화이트와인식초 20g, 고추장 5g, 소금 0.5g,\n식용유 5g, 후춧가루 0.3g, 참기름 10g",
     "source": {
@@ -19334,7 +19627,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "황태 머리"
+      "황태 머리",
+      "1장)"
     ],
     "sourceIngredientText": "[ 2인분 ] 양파(½개), 토마토(2개), 새우(8마리), 쌀(1½컵), 카레가루(1Ts), 황태 머리(1개), 다시마(5×5cm, 1장), 다진 마늘(1Ts), 파슬리가루(0.3Ts), 후춧가루(0.3Ts)",
     "source": {
@@ -19353,15 +19647,14 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "green_onion",
       "garlic",
       "flour",
-      "cooking_oil"
-    ],
-    "optionalIngredients": [
+      "cooking_oil",
       "tomato",
       "chili_powder",
       "vinegar",
       "sugar",
       "starch"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 오징어는 채 썰고, 마늘과 대파는 곱게 다진다.",
       "2. 오징어, 대파, 마늘, 달걀노른자, 밀가루, 물(10g)을 섞어 반죽한 뒤 동그랗게 빚는다.",
@@ -19434,15 +19727,14 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "flour",
       "egg",
       "breadcrumbs",
-      "green_onion"
-    ],
-    "optionalIngredients": [
+      "green_onion",
       "sesame_oil",
       "cooking_oil",
       "lemon",
       "black_pepper",
       "soy_sauce"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 다진 돼지고기는 키친타월로 핏물을\n제거하고 순두부는 물기를 제거한다.\n건곤드레나물은 물에 12시간 정도\n불린다.",
       "2. 불린 곤드레나물을 잘게 다진다. 팬에\n손질한 곤드레나물, 참기름(15g), 다진\n마늘(15g)을 넣고 볶은 후 식힌다.\n따뜻한 현미밥, 볶은 곤드레나물을\n섞어 곤드레나물밥을 만든다.",
@@ -19455,7 +19747,10 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "unmappedRequiredIngredients": [
       "건곤드레나물",
       "현미밥",
-      "참외"
+      "참외",
+      "쌈장",
+      "알룰로스",
+      "전분물"
     ],
     "sourceIngredientText": "주재료 \n다진 돼지고기 100g, 순두부 100g, 건곤드레나물 15g,\n현미밥 200g, 다진 마늘 35g, 감자전분 50g, 밀가루 50g, 달걀 50g,\n빵가루 50g, 대파 30g, 참외 50g\n\n양념 \n참기름 30g, 올리브유 50g, 레몬즙 30g, 후추 5g, 쌈장 15g,\n알룰로스 30g, 식용유 200g, 간장 5g, 전분물 60g(전분 30g + 물 30ml)",
     "source": {
@@ -19512,13 +19807,12 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "chili_pepper",
       "ginger",
       "onion",
-      "garlic"
-    ],
-    "optionalIngredients": [
+      "garlic",
       "chili_powder",
       "plum_syrup",
       "salt"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 콜라비는 껍질을 벗긴 뒤 깍둑 썬다.",
       "2. 손질한 콜라비에 천일염을 뿌려 1시간 동안 절인다.",
@@ -19529,7 +19823,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "콜라비"
+      "콜라비",
+      "액젓"
     ],
     "sourceIngredientText": "•필수재료 : 콜라비(80g), 쪽파(5g), 홍고추(0.5g), 생강(0.1g), 양파(0.1g), 마늘(1g)\n•양념장 : 고춧가루(4g), 액젓(1g), 매실청(0.2g)\n•양념 : 천일염(0.1g)",
     "source": {
@@ -19611,9 +19906,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "name": "청경채 김치",
     "requiredIngredients": [
       "bok_choy",
-      "pear"
-    ],
-    "optionalIngredients": [
+      "pear",
       "plum_syrup",
       "chili_powder",
       "soy_sauce",
@@ -19621,6 +19914,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "salt",
       "glutinous_rice_flour"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 청경채는 반으로 자른 후 줄기 부분에 칼집을 넣는다.",
       "2. 청경채에 소금을 뿌려 30~40분 정도 절인다.",
@@ -19630,7 +19924,9 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "6. 절인 청경채의 물기를 제거하고, 양념장을 버무려 마무리한다."
     ],
     "difficulty": "normal",
-    "unmappedRequiredIngredients": [],
+    "unmappedRequiredIngredients": [
+      "다진생강"
+    ],
     "sourceIngredientText": "•필수 재료 : 청경채(60g), 배(10g)\n•양념장 : 매실액(5g), 고춧가루(5g), 저염간장(3g), 다진마늘(1g), 다진생강(2g)\n•양념 : 소금(2g), 찹쌀가루(10g)",
     "source": {
       "provider": "식품의약품안전처",
@@ -19782,6 +20078,41 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "provider": "식품의약품안전처",
       "dataset": "조리식품의 레시피 DB",
       "sourceId": "3288",
+      "sourceUrl": "https://www.data.go.kr/data/15060073/openapi.do",
+      "usageScope": "공공데이터포털 이용허락범위 제한 없음"
+    }
+  },
+  {
+    "id": "fsk_3363",
+    "name": "생선까스&타르타르소스",
+    "requiredIngredients": [
+      "egg",
+      "cooking_oil",
+      "black_pepper",
+      "lemon",
+      "mayonnaise",
+      "chili_pepper",
+      "onion"
+    ],
+    "optionalIngredients": [],
+    "steps": [
+      "1. 명태포는 키친타월에 올려 물기를 제거한다.",
+      "2. 후춧가루와 레몬즙을 뿌려 비린내를 제거한다.",
+      "3. 볼에 튀김가루와 달걀, 식용유, 물을 섞어 튀김옷을 만든다",
+      "4. 명태포에 튀김옷을 입힌 뒤 170℃ 기름에서 두 번 튀긴다.",
+      "5. 삶은 달걀, 홍고추, 청양고추, 양파를 다져 볼에 섞은 뒤 마요네즈와 레몬즙, 후춧가루를 섞어 소스를 만든다",
+      "6. 생선까스에 타르타르소스를 곁들여 담는다."
+    ],
+    "difficulty": "normal",
+    "unmappedRequiredIngredients": [
+      "명태포",
+      "튀김가루"
+    ],
+    "sourceIngredientText": "•필수재료 : 명태포(40g), 튀김가루(20g), 달걀(1/4개), 식용유(5g), 물(30g)\n•밑간 : 후춧가루(1g), 레몬즙(3g)\n•타르타르 소스 : 삶은 달걀(1/2개), 마요네즈(5g), 홍고추(1g), 청양고추(1g), 양파(3g), 후추(2g), 레몬즙(10g)",
+    "source": {
+      "provider": "식품의약품안전처",
+      "dataset": "조리식품의 레시피 DB",
+      "sourceId": "3363",
       "sourceUrl": "https://www.data.go.kr/data/15060073/openapi.do",
       "usageScope": "공공데이터포털 이용허락범위 제한 없음"
     }
@@ -19944,14 +20275,13 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "name": "레몬등갈비구이",
     "requiredIngredients": [
       "garlic",
-      "lemon"
-    ],
-    "optionalIngredients": [
+      "lemon",
       "black_pepper",
       "cooking_oil",
       "yogurt",
       "honey"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 등갈비는 찬물(5컵)에 담가 1시간 이상 핏물을 제거한다.",
       "2. 등갈비는 한 쪽씩 썬다.",
@@ -19962,7 +20292,9 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "등갈비"
+      "등갈비",
+      "소주",
+      "로즈메리"
     ],
     "sourceIngredientText": "•필수 재료 : 등갈비(150g), 마늘(10g), 레몬(15g)\n•밑간 : 소주(10g), 로즈메리(1g), 다진마늘(1g), 후춧가루(1g), 올리브유(5g)\n•디핑소스 : 요거트(10g), 꿀(2g), 레몬즙(2g)",
     "source": {
@@ -20069,13 +20401,12 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "cooking_wine",
       "perilla_leaf",
       "vinegar",
-      "lemon"
-    ],
-    "optionalIngredients": [
+      "lemon",
       "salt",
       "black_pepper",
       "cooking_oil"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 현미는 2시간 이상 물에 불린다.\n소고기에 소금, 후추로 밑간하고 달군\n팬에 올리브유(20g)를 두르고 소고기\n겉면을 바싹 익힌다.",
       "2. 양파, 셀러리, 당근을 잘게 다진다.\n올리브유(10g)를 두른 팬에 손질한\n양파(30g), 당근, 셀러리, 다진\n마늘(10g)을 넣고 볶다가 익힌 소고기,\n닭뼈육수(150g), 청주를 넣고 약한 불로\n20분간 뭉근하게 조린다.",
@@ -20089,7 +20420,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "현미",
       "셀러리",
       "닭뼈육수",
-      "참나물"
+      "참나물",
+      "파르미지아노 치즈"
     ],
     "sourceIngredientText": "주재료 \n현미 80g, 소고기(정강이살) 180g, 양파 60g, 당근 30g,\n셀러리 20g, 다진 마늘 20g, 닭뼈육수 300g, 청주 30g, 깻잎 8g,\n참나물 12g, 사과식초 10g, 레몬즙 10g\n\n양념 \n소금 1g, 후추 2g, 올리브유 60g, 파르미지아노 치즈 13g",
     "source": {
@@ -20324,13 +20656,12 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "requiredIngredients": [
       "mushroom",
       "bell_pepper",
-      "cooking_oil"
-    ],
-    "optionalIngredients": [
+      "cooking_oil",
       "salt",
       "black_pepper",
       "soy_sauce"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 느타리버섯은 밑동을 자르고 가닥가닥 찢어 데쳐서 찬물에 헹궈 물기를 제거한다.",
       "2. 파프리카와 청피망은 채 썰고, 크래미는 잘게 찢는다.",
@@ -20631,7 +20962,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "케찹"
+      "케찹",
+      "10g"
     ],
     "sourceIngredientText": "새우살 30g, 토마토 20g, 양파 15g, 당근 10g, 애호박 15g, 건다시마 3g, 버터 3g, 케찹 5g,10g, 후추 0.1g, 소금 0.2g, 물 300ml",
     "source": {
@@ -21227,12 +21559,11 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "pear",
       "garlic",
       "ginger",
-      "green_onion"
-    ],
-    "optionalIngredients": [
+      "green_onion",
       "chili_powder",
       "sesame"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 배와 참외는 1~1.5cm 크기로 깍둑 썬다.",
       "2. 무는 1~1.5cm 크기로 깍둑 썬다.",
@@ -22000,15 +22331,14 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "requiredIngredients": [
       "green_onion",
       "onion",
-      "cooking_oil"
-    ],
-    "optionalIngredients": [
+      "cooking_oil",
       "syrup",
       "garlic",
       "soy_sauce",
       "sesame_oil",
       "sesame"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 떡볶이 떡은 끓는 물에 데쳐 건진다.",
       "2. 꼬치에 데친 떡을 꽂는다.",
@@ -22019,7 +22349,9 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "떡볶이떡"
+      "떡볶이떡",
+      "케첩",
+      "스리라차"
     ],
     "sourceIngredientText": "•필수 재료 : 떡볶이떡(40g), 파(3.5g), 양파(7g), 식용유(3g)\n•양념장 : 케첩(8g), 스리라차(3g), 올리고당(2g), 다진마늘(2g), 간장(1g), 참기름(1g), 통깨(0.5g)",
     "source": {
@@ -22185,9 +22517,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "onion",
       "garlic",
       "ginger",
-      "kelp"
-    ],
-    "optionalIngredients": [
+      "kelp",
       "doenjang",
       "gochujang",
       "mayonnaise",
@@ -22195,6 +22525,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "sesame",
       "sesame_oil"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 비름나물을 적당한 길이로 잘라 다시마육수에 데친 뒤 찬물에 헹궈 물기를 뺀다.",
       "2. 양파는 2mm 두께로 채 썰고 생강과 마늘은 곱게 다진다.",
@@ -23799,11 +24130,10 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "onion",
       "chili_pepper",
       "garlic",
-      "kelp"
-    ],
-    "optionalIngredients": [
+      "kelp",
       "black_pepper"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 닭정육과 닭뼈를 깨끗이 씻어 물, 마늘, 대파, 다시마를 넣고 육수를 끓인다.",
       "2. 닭 정육이 익으면 건져 잘게 찢는다.",
@@ -23899,13 +24229,12 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "requiredIngredients": [
       "lettuce",
       "carrot",
-      "cabbage"
-    ],
-    "optionalIngredients": [
+      "cabbage",
       "apple",
       "pineapple",
       "lemon"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 양상추는 깨끗이 씻어 먹기 좋은 크기로 썬다.",
       "2. 당근과 적양배추는 곱게 채 썰고, 치커리는 잘게 썬다.",
@@ -24401,15 +24730,14 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "radish",
       "carrot",
       "onion",
-      "chili_pepper"
-    ],
-    "optionalIngredients": [
+      "chili_pepper",
       "garlic",
       "black_pepper",
       "soy_sauce",
       "sugar",
       "syrup"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 닭고기는 부위별로 토막 내어 끓는 물에 살짝 데친다.",
       "2. 데친 닭고기에 양념 재료를 섞어 30분 이상 재운다.",
@@ -24427,43 +24755,6 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "provider": "식품의약품안전처",
       "dataset": "조리식품의 레시피 DB",
       "sourceId": "3082",
-      "sourceUrl": "https://www.data.go.kr/data/15060073/openapi.do",
-      "usageScope": "공공데이터포털 이용허락범위 제한 없음"
-    }
-  },
-  {
-    "id": "fsk_3084",
-    "name": "두부튀김&무소스",
-    "requiredIngredients": [
-      "tofu",
-      "egg",
-      "perilla_leaf",
-      "cooking_oil",
-      "radish",
-      "soy_sauce",
-      "sugar"
-    ],
-    "optionalIngredients": [],
-    "steps": [
-      "1. 두부는 2cm의 정사각형으로 썰어 전분과 계란물을 무쳐 기름에 튀긴다.",
-      "2. 무는 믹서기나 강판에 갈아준다.",
-      "3. 끓는 물에 가쓰오부시를 살짝 넣었다 빼내어 국물을 우려낸다.",
-      "4. 무와 가쓰오부시 국물에 설탕, 미향, 레몬즙, 식초, 저염간장을 넣고 섞어준다.",
-      "5. 깻잎은 곱게 채를 쳐준다.",
-      "6. 접시에 두부와 깻잎을 담고, 소스를 곁들여 낸다."
-    ],
-    "difficulty": "normal",
-    "unmappedRequiredIngredients": [
-      "옥수수전분",
-      "혼다랑어가쓰오부시",
-      "레몬쥬스",
-      "미향"
-    ],
-    "sourceIngredientText": "두부 70g, 계란 20g, 깻잎 2.5g, 옥수수전분 10g, 식용유 10g, 혼다랑어가쓰오부시 1g, 무 10g, 레몬쥬스 2g, 2배 양조식초 1.5g, 저염간장 3g, 미향 6g, 설탕 1g",
-    "source": {
-      "provider": "식품의약품안전처",
-      "dataset": "조리식품의 레시피 DB",
-      "sourceId": "3084",
       "sourceUrl": "https://www.data.go.kr/data/15060073/openapi.do",
       "usageScope": "공공데이터포털 이용허락범위 제한 없음"
     }
@@ -25824,7 +26115,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
       "대구살",
-      "와사비 갠 것"
+      "와사비 갠 것1"
     ],
     "sourceIngredientText": "주재료: 대구살 60, 소금 0.3, 흰후추 0.02, 찹쌀가루 12, 새송이버섯 40, 마늘 2, 올리브유 6, 베이비채소 5 소스: 마요네즈 4, 와사비 갠 것1, 레몬즙 2, 후추 0.02",
     "source": {
@@ -27083,42 +27374,6 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "provider": "식품의약품안전처",
       "dataset": "조리식품의 레시피 DB",
       "sourceId": "774",
-      "sourceUrl": "https://www.data.go.kr/data/15060073/openapi.do",
-      "usageScope": "공공데이터포털 이용허락범위 제한 없음"
-    }
-  },
-  {
-    "id": "fsk_777",
-    "name": "롤 삼계탕",
-    "requiredIngredients": [
-      "jujube",
-      "pumpkin",
-      "asparagus",
-      "garlic",
-      "raw_rice",
-      "green_onion"
-    ],
-    "optionalIngredients": [],
-    "steps": [
-      "1. 닭은 살을 발라낸다.",
-      "2. 남은 뼈는 파, 마늘을 넣고 육수를 만든다.",
-      "3. 마와 단호박은 1x1x5cm로 썬다.",
-      "4. 마늘, 아스파라거스, 영콘은 굽는다.",
-      "5. 닭에 마, 대추, 쌀, 단호박, 은행을 넣고 랩으로 감싸 만다.",
-      "6. 곁들일 단호박과 찜통에 찐다."
-    ],
-    "difficulty": "normal",
-    "unmappedRequiredIngredients": [
-      "마",
-      "은행",
-      "영콘",
-      "닭"
-    ],
-    "sourceIngredientText": "●주재료: 마 30g(1/3개), 대추20g(10개), 은행35g(25개), 단호박 40g(1/8개), 아스파라거스 15g(1/3개), 영콘 20g(1개), 마늘 10g(2개), 쌀 200g(1컴)\n●육수 : 닭 550g(1마리), 파 15g(1큰술), 마늘 15(3개)",
-    "source": {
-      "provider": "식품의약품안전처",
-      "dataset": "조리식품의 레시피 DB",
-      "sourceId": "777",
       "sourceUrl": "https://www.data.go.kr/data/15060073/openapi.do",
       "usageScope": "공공데이터포털 이용허락범위 제한 없음"
     }
@@ -30475,11 +30730,10 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "almond",
       "walnut",
       "carrot",
-      "milk"
-    ],
-    "optionalIngredients": [
+      "milk",
       "syrup"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 단호박과 고구마는 껍질을 벗긴다",
       "2. 냄비에 우유를 붓고 단호박과 고구마를 넣어 삶는다.",
@@ -31024,13 +31278,12 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "green_onion",
       "onion",
       "garlic",
-      "sesame"
-    ],
-    "optionalIngredients": [
+      "sesame",
       "salt",
       "chili_powder",
       "sugar"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 배추에 세로로 칼집을 낸 뒤 저염소금을 뿌리고, 10분 뒤 씻는다.",
       "2. 무는 깨끗이 손질하여 씻은 뒤 얇게 채 썰고, 쪽파는 4cm 길이로 썰고, 양파는 채 썬다.",
@@ -31040,7 +31293,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "다진생강"
+      "다진생강",
+      "젓갈"
     ],
     "sourceIngredientText": "•필수재료 : 배추(50g), 무(20g), 쪽파(10g), 양파(5g), 다진마늘(5g), 다진생강(5g), 참깨(1g)\n•양념 : 저염소금(5g), 고춧가루(10g), 설탕(5g), 젓갈(3g)",
     "source": {
@@ -31644,12 +31898,11 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "bell_pepper",
       "green_onion",
       "ginger",
-      "cooking_oil"
-    ],
-    "optionalIngredients": [
+      "cooking_oil",
       "garlic",
       "sugar"
     ],
+    "optionalIngredients": [],
     "steps": [
       "1. 포두부, 양파, 피망, 파, 생강은 가늘게 채 썬다.",
       "2. 참느타리버섯, 게맛살은 가늘게 찢는다.",
@@ -31662,7 +31915,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     "unmappedRequiredIngredients": [
       "포두부",
       "참느타리버섯",
-      "게맛살"
+      "게맛살",
+      "노두유"
     ],
     "sourceIngredientText": "•필수 재료 : 포두부(100g), 참느타리버섯(45g), 양파(45g), 게맛살(15g), 청피망(15g), 홍피망(15g), 파(10g), 생강(3g), 식용유(3g)\n•양념 : 다진마늘(10g), 설탕(15g), 노두유(3g)",
     "source": {
@@ -32062,7 +32316,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "낙지"
+      "낙지",
+      "물 30m"
     ],
     "sourceIngredientText": "낙지 30g, 가지 12g, 오이 7g, 표고버섯 24g, 당근 10g, 미나리 12g, 홍고추 0.1g, 설탕 15g, 식초 25g, 물 30m , 사과 10g, 간장10g, 고춧가루 1g, 깨 1g",
     "source": {
@@ -32140,7 +32395,8 @@ export const PUBLIC_RECIPES: Recipe[] = [
     ],
     "difficulty": "normal",
     "unmappedRequiredIngredients": [
-      "육수용 멸치"
+      "육수용 멸치",
+      "2장)"
     ],
     "sourceIngredientText": "[ 2인분 ] 마늘(4쪽), 토마토(2개), 양파(1개), 월계수잎(2장), 육수용 멸치(½컵), 다시마(5×5cm, 2장)",
     "source": {

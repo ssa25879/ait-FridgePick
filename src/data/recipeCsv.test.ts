@@ -110,7 +110,9 @@ describe("식품안전나라 레시피 CSV 파서", () => {
       '101,"메뉴"x,재료,단계',
     ].join("\n");
 
-    expect(() => parseRecipeCsv(unclosedQuoteCsv)).toThrow(/닫히지 않은 따옴표/);
+    expect(() => parseRecipeCsv(unclosedQuoteCsv)).toThrow(
+      /CSV 2행.*닫히지 않은 따옴표/,
+    );
     expect(() => parseRecipeCsv(trailingCharacterCsv)).toThrow(/따옴표 뒤/);
   });
 });

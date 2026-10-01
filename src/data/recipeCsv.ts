@@ -94,7 +94,7 @@ function parseCsvRows(csvText: string): string[][] {
   }
 
   if (insideQuotes) {
-    throw new Error("CSV에 닫히지 않은 따옴표가 있습니다.");
+    throw new Error("CSV " + rowNumber + "행: 닫히지 않은 따옴표가 있습니다.");
   }
 
   if (quoteClosed || fields.length > 0 || field.length > 0) {

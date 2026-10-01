@@ -47,7 +47,7 @@ describe("parseRecipeIngredients", () => {
     });
   });
 
-  it("양념장처럼 콜론으로 표시된 구역을 선택 재료로 분류한다", () => {
+  it("양념장처럼 콜론으로 표시된 구역을 필수 재료로 분류한다", () => {
     expect(
       parseRecipeIngredients({
         RCP_NM: "토마토 닭가슴살",
@@ -55,8 +55,8 @@ describe("parseRecipeIngredients", () => {
           "주재료 : 닭가슴살 100g, 토마토 1개\n●양념장 : 다진 마늘 2g, 소금 약간",
       }),
     ).toEqual({
-      requiredIngredients: ["닭가슴살", "토마토"],
-      optionalIngredients: ["다진 마늘", "소금"],
+      requiredIngredients: ["닭가슴살", "토마토", "다진 마늘", "소금"],
+      optionalIngredients: [],
     });
   });
 
@@ -77,6 +77,56 @@ describe("parseRecipeIngredients", () => {
       optionalIngredients: [],
     });
   });
+
+  it("숫자로 시작하는 재료명에서 숫자를 수량으로 오인하지 않는다", () => {
+    expect(
+      parseRecipeIngredients({
+        RCP_NM: "파프리카 달걀 볶음",
+        RCP_PARTS_DTLS: "2가지색 파프리카 100g, 달걀 1개",
+      }),
+    ).toEqual({
+      requiredIngredients: ["2가지색 파프리카", "달걀"],
+      optionalIngredients: [],
+    });
+  });
+
+  it("단위가 생략된 분량 뒤의 재료 이름도 보존한다", () => {
+    expect(
+      parseRecipeIngredients({
+        RCP_NM: "김치밥그라탕",
+        RCP_PARTS_DTLS: "밥 180, 배추김치 30, 양파 20",
+      }),
+    ).toEqual({
+      requiredIngredients: ["밥", "배추김치", "양파"],
+      optionalIngredients: [],
+    });
+  });
+
+  it("양념장 재료는 필수로, 고명은 선택 재료로 분류한다", () => {
+    expect(
+      parseRecipeIngredients({
+        RCP_NM: "토마토 소박이",
+        RCP_PARTS_DTLS:
+          "토마토 소박이\n토마토 150g, 양파 10g\n양념장\n고춧가루 4g, 다진 마늘 2.5g\n고명\n통깨 약간",
+      }),
+    ).toEqual({
+      requiredIngredients: ["토마토", "양파", "고춧가루", "다진 마늘"],
+      optionalIngredients: ["통깨"],
+    });
+  });
+
+  it("장식 구역의 재료는 선택 재료로 분류한다", () => {
+    expect(
+      parseRecipeIngredients({
+        RCP_NM: "토마토 샐러드",
+        RCP_PARTS_DTLS:
+          "토마토 샐러드\n토마토 150g, 양파 10g\n●장식\n호두 4개, 오이 20g",
+      }),
+    ).toEqual({
+      requiredIngredients: ["토마토", "양파"],
+      optionalIngredients: ["호두", "오이"],
+    });
+  });
 });
 
 describe("공식 레시피 재료 매핑", () => {
@@ -84,6 +134,7 @@ describe("공식 레시피 재료 매핑", () => {
     expect(mapRecipeIngredientName("다진 마늘")).toBe("garlic");
     expect(mapRecipeIngredientName("새송이버섯")).toBe("mushroom");
     expect(mapRecipeIngredientName("저염간장")).toBe("soy_sauce");
+    expect(mapRecipeIngredientName("2가지색 파프리카")).toBe("bell_pepper");
     expect(mapRecipeIngredientName("황태")).toBeUndefined();
   });
 
@@ -101,6 +152,21 @@ describe("공식 레시피 재료 매핑", () => {
 });
 
 describe("공식 레시피 정규화", () => {
+  it("숫자로 시작하는 재료를 매핑해 필수 재료로 보존한다", () => {
+    const result = normalizePublicRecipeRecord({
+      RCP_SEQ: "385",
+      RCP_NM: "파프리카 달걀 볶음",
+      RCP_PARTS_DTLS: "2가지색 파프리카 100g, 달걀 1개",
+      MANUAL01: "재료를 함께 볶는다.",
+    });
+
+    expect(result.recipe?.requiredIngredients).toEqual([
+      "bell_pepper",
+      "egg",
+    ]);
+    expect(result.recipe?.unmappedRequiredIngredients).toEqual([]);
+  });
+
   it("조리 단계 끝에 붙은 CSV 표시용 알파벳 접미를 제거한다", () => {
     const result = normalizePublicRecipeRecord({
       RCP_SEQ: "99",

@@ -1,8 +1,11 @@
 import { readFile, writeFile } from "node:fs/promises";
-import { dirname, resolve } from "node:path";
+import { basename, dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { parseRecipeCsv } from "../src/data/recipeCsv.ts";
-import { normalizePublicRecipeRecord } from "../src/data/recipeCatalog.ts";
+import {
+  MINIMUM_PUBLIC_RECIPE_COVERAGE,
+  normalizePublicRecipeRecord,
+} from "../src/data/recipeCatalog.ts";
 
 const repositoryRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const inputPath = process.argv[2];
@@ -10,11 +13,23 @@ const outputPath = resolve(
   repositoryRoot,
   process.argv[3] ?? "src/data/publicRecipes.ts",
 );
+const sourceSnapshotDate = process.argv[4] ?? "unknown";
 
 if (!inputPath) {
   throw new Error(
-    "사용법: node --experimental-strip-types scripts/generateRecipeCatalog.mjs <CSV 경로> [출력 경로]",
+    "사용법: node --experimental-strip-types scripts/generateRecipeCatalog.mjs <CSV 경로> [출력 경로] [데이터 기준일 YYYY-MM-DD]",
   );
+}
+
+const snapshotTimestamp = Date.parse(`${sourceSnapshotDate}T00:00:00.000Z`);
+if (
+  sourceSnapshotDate !== "unknown" &&
+  (!/^\d{4}-\d{2}-\d{2}$/.test(sourceSnapshotDate) ||
+    !Number.isFinite(snapshotTimestamp) ||
+    new Date(snapshotTimestamp).toISOString().slice(0, 10) !==
+      sourceSnapshotDate)
+) {
+  throw new Error("데이터 기준일은 YYYY-MM-DD 또는 unknown이어야 합니다.");
 }
 
 const records = parseRecipeCsv(await readFile(resolve(inputPath), "utf8"));
@@ -41,7 +56,8 @@ const summary = {
   includedRecordCount: recipes.length,
   excludedRecordCount: records.length - recipes.length,
   excludedByReason,
-  minimumIngredientCoverage: 0.6,
+  minimumIngredientCoverage: MINIMUM_PUBLIC_RECIPE_COVERAGE,
+  sourceSnapshotDate,
 };
 
 const output = [
@@ -57,7 +73,7 @@ const output = [
 await writeFile(outputPath, output, "utf8");
 console.log(
   JSON.stringify({
-    inputFileName: "COOKRCP01.csv",
+    inputFileName: basename(resolve(inputPath)),
     outputPath: resolve(outputPath),
     ...summary,
   }),

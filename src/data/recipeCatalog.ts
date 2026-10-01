@@ -9,19 +9,46 @@ export interface ParsedRecipeIngredients {
 
 const OPTIONAL_SECTIONS = new Set([
   "고명",
+  "장식",
+  "토핑",
+  "곁들임",
+]);
+
+const REQUIRED_SECTIONS = new Set([
   "양념",
   "양념장",
   "소스",
   "드레싱",
   "밑간",
   "부재료",
-  "토핑",
-  "곁들임",
 ]);
 
 const NEUTRAL_SECTIONS = new Set(["재료", "기본재료", "주재료"]);
-const QUANTITY_PATTERN =
-  /\d+(?:\.\d+)?(?:\/\d+)?|약간|적당량|적당히|조금|한\s*꼬집|한\s*줌|한\s*큰술|한\s*작은술/;
+const NUMBER_PATTERN = String.raw`\d+(?:\.\d+)?(?:\/\d+)?(?:\s*[~～–-]\s*\d+(?:\.\d+)?(?:\/\d+)?)?`;
+const LATIN_QUANTITY_UNITS = String.raw`(?:kg|mg|g|ml|cc|cm|mm|l|ts|t)`;
+const KOREAN_QUANTITY_UNITS =
+  String.raw`(?:작은술|큰술|줄기|가닥|꼬집|뿌리|토막|조각|봉지|방울|송이|포기|인분|마리|공기|컵|쪽|모|장|줄|대|단|줌|캔|팩|통|알|개|분|초|일|회|배|톨)(?:씩)?`;
+const QUANTITY_PATTERN = new RegExp(
+  `(?:${NUMBER_PATTERN}\\s*${LATIN_QUANTITY_UNITS}(?![a-z])|${NUMBER_PATTERN}\\s*${KOREAN_QUANTITY_UNITS}(?![가-힣])|약간|적당량|적당히|조금|한\\s*꼬집|한\\s*줌|한\\s*큰술|한\\s*작은술)`,
+  "i",
+);
+const BARE_QUANTITY_PATTERN =
+  /\s+\d+(?:\.\d+)?(?:\/\d+)?(?:\s*[~～–-]\s*\d+(?:\.\d+)?(?:\/\d+)?)?(?=$|\s*[()])/;
+
+function findQuantityAfterIngredient(value: string): RegExpExecArray | null {
+  const pattern = new RegExp(QUANTITY_PATTERN.source, "gi");
+  let match = pattern.exec(value);
+
+  while (match && match.index === 0) {
+    match = pattern.exec(value);
+  }
+
+  return match ?? BARE_QUANTITY_PATTERN.exec(value);
+}
+
+function hasQuantity(value: string): boolean {
+  return findQuantityAfterIngredient(value) !== null;
+}
 
 const INGREDIENT_ALIASES: Record<string, string[]> = {
   kimchi: ["김치", "배추김치", "묵은지"],
@@ -116,6 +143,7 @@ const INGREDIENT_ALIASES: Record<string, string[]> = {
   honey: ["꿀"],
   bell_pepper: [
     "파프리카",
+    "2가지색파프리카",
     "청피망",
     "홍피망",
     "피망",
@@ -312,7 +340,7 @@ function splitIngredientItems(text: string): string[] {
     const insideQuantityParentheses =
       character === "," &&
       depth > 0 &&
-      QUANTITY_PATTERN.test(item) &&
+      hasQuantity(item) &&
       item.lastIndexOf("(") > item.lastIndexOf(")");
 
     if (character === "(" || character === "[") depth += 1;
@@ -360,7 +388,7 @@ function extractIngredientName(value: string, recipeName: string): string {
     item = item.slice(colonIndex + 1).trim();
   }
 
-  const quantity = QUANTITY_PATTERN.exec(item);
+  const quantity = findQuantityAfterIngredient(item);
   if (quantity?.index !== undefined) {
     const nameBeforeQuantity = item.slice(0, quantity.index);
     const lastOpeningParenthesis = nameBeforeQuantity.lastIndexOf("(");
@@ -405,8 +433,9 @@ export function parseRecipeIngredients(
     if (
       hasMultipleLines &&
       item === firstLine &&
-      !QUANTITY_PATTERN.test(firstLine) &&
+      !hasQuantity(firstLine) &&
       !OPTIONAL_SECTIONS.has(sectionLabel) &&
+      !REQUIRED_SECTIONS.has(sectionLabel) &&
       !NEUTRAL_SECTIONS.has(sectionLabel)
     ) {
       continue;
@@ -416,7 +445,10 @@ export function parseRecipeIngredients(
       currentSection = "optional";
       if (colonIndex >= 0) item = item.slice(colonIndex + 1).trim();
       else continue;
-    } else if (NEUTRAL_SECTIONS.has(sectionLabel)) {
+    } else if (
+      NEUTRAL_SECTIONS.has(sectionLabel) ||
+      REQUIRED_SECTIONS.has(sectionLabel)
+    ) {
       currentSection = "required";
       if (colonIndex >= 0) item = item.slice(colonIndex + 1).trim();
       else continue;
