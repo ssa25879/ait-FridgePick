@@ -2,10 +2,11 @@
 
 - 기준일: 2026-10-01
 - 저장소: `D:\work\ait-FridgePick`
-- 작업 브랜치: `feature/public-recipe-catalog`
+- 작업 브랜치: `feature/public-recipe-catalog` (master에 병합 완료)
+- master 병합 커밋: `a30268a`; 기능 수정 커밋: `b5e196e`
 - 작업 체크아웃: `C:\Users\USER\.codex\worktrees\public-recipe-catalog\ait-FridgePick`
 - 입력 CSV: 기본 작업 폴더의 `COOKRCP01.csv` (로컬 입력, Git에 넣지 않음)
-- 구현 상태: 기본 구현은 `de66472`에 커밋했고, 3개 관점 서브에이전트 리뷰의 숫자로 시작하는 재료명 누락·양념장/소스 선택 분류·장식 선택 분류 문제를 수정했다. 수정분은 51개 테스트, TypeScript, lint, Vite/AIT 빌드 검증과 리뷰 재확인을 완료했다. 기능 수정 커밋과 master 병합이 남아 있다.
+- 구현 상태: 기본 구현 `de66472`와 리뷰 수정 `b5e196e`를 커밋하고 `a30268a`로 master 병합을 완료했다. 3개 관점 서브에이전트 리뷰에서 확인한 숫자로 시작하는 재료명 누락·양념장/소스 선택 분류·장식 선택 분류 문제를 수정했다. 수정분은 51개 테스트, TypeScript, lint, Vite/AIT 빌드 검증과 리뷰 재확인을 완료했다.
 - 상세 문서: [`plan.md`](./plan.md), [`validation.md`](./validation.md)
 
 ## 완료된 내용
@@ -32,7 +33,7 @@
 
 ## Git 및 로컬 상태
 
-- 이 작업은 관리형 feature worktree에서만 진행했고 기본 `D:\work\ait-FridgePick` 체크아웃은 `master`로 유지한다.
+- 구현은 관리형 feature worktree에서 진행했고 기본 `D:\work\ait-FridgePick` 체크아웃은 `master`다. feature 브랜치는 보존되어 있으며 master의 `a30268a` 병합 커밋에 통합했다.
 - 기본 폴더의 기존 `COOKRCP01.csv`, `Review.md`, `public/fridgepick-app-icon.png`는 이번 변경과 무관하므로 수정·stage하지 않았다.
 - `.gitignore`의 `/COOKRCP01.csv` 규칙과 실제 ignore 적용을 확인했다.
 - `node_modules` Junction은 검증을 위해 기본 폴더의 설치를 가리킨다. 제거할 때는 링크 대상이 기본 폴더인지 확인하고 Junction만 제거한다.
@@ -41,6 +42,5 @@
 
 ## 이어서 할 일
 
-1. 기능 수정분을 커밋하고 `master`에 병합한다.
-2. 실제 사용자 선택 분포가 생기면 추천 후보 없음 비율과 60% 임계값·원문 재료 해석을 다시 평가한다.
-3. 실제 Toss 테스트 업로드와 검수 제출은 아직 하지 않았다. 앱 번들은 기준 대비 약 34% 커져 출시 전 WebView 시작 속도를 확인한다.
+1. 실제 사용자 선택 분포가 생기면 추천 후보 없음 비율과 60% 임계값·원문 재료 해석을 다시 평가한다.
+2. 실제 Toss 테스트 업로드와 검수 제출은 아직 하지 않았다. 앱 번들은 기준 대비 약 34% 커져 출시 전 WebView 시작 속도를 확인한다.

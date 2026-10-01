@@ -1,8 +1,8 @@
 # 식품안전나라 레시피 CSV 카탈로그 확장
 
-- 상태: 구현·로컬 검증·커밋 완료
+- 상태: 구현·검증·커밋 완료, master 병합 완료 (`a30268a`)
 - 작성일: 2026-09-29 / 구현 완료: 2026-10-01
-- 브랜치: `feature/public-recipe-catalog`
+- 작업 브랜치: `feature/public-recipe-catalog` (master에 병합됨)
 - 대상: 앱인토스 WebView 미니앱 (`ait-fridgepick`)
 - 로드맵: [`specs/roadmap.md`](../roadmap.md) 8단계
 
