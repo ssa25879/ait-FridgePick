@@ -40,6 +40,12 @@ export function ResultPage({
         .map((id) => ingredientById.get(id))
         .filter((ingredient) => ingredient !== undefined)
     : [];
+  const missingIngredientNames = recommendation
+    ? [
+        ...missingIngredients.map(({ name }) => name),
+        ...recommendation.missingUnmappedRequiredIngredients,
+      ]
+    : [];
 
   return (
     <main
@@ -86,11 +92,27 @@ export function ResultPage({
               부족한 필수 재료
             </h3>
             <p className="result-detail-text">
-              {missingIngredients.length > 0
-                ? missingIngredients.map(({ name }) => name).join(", ")
+              {missingIngredientNames.length > 0
+                ? missingIngredientNames.join(", ")
                 : "부족한 필수 재료가 없어요."}
             </p>
           </section>
+          {recommendation.recipe.sourceIngredientText && (
+            <section
+              className="result-detail"
+              aria-labelledby="source-ingredients-title"
+            >
+              <h3
+                id="source-ingredients-title"
+                className="result-detail-title"
+              >
+                재료와 분량
+              </h3>
+              <p className="result-detail-text result-source-ingredients">
+                {recommendation.recipe.sourceIngredientText}
+              </p>
+            </section>
+          )}
           <section className="result-detail" aria-labelledby="steps-title">
             <h3 id="steps-title" className="result-detail-title">
               조리 순서
@@ -101,6 +123,18 @@ export function ResultPage({
               ))}
             </ol>
           </section>
+          {recommendation.recipe.source && (
+            <section className="result-detail" aria-labelledby="source-title">
+              <h3 id="source-title" className="result-detail-title">
+                데이터 출처
+              </h3>
+              <p className="result-detail-text">
+                출처: {recommendation.recipe.source.provider}{" "}
+                {recommendation.recipe.source.dataset} · 원본 ID{" "}
+                {recommendation.recipe.source.sourceId}
+              </p>
+            </section>
+          )}
           {candidateCount === 1 && (
             <p className="result-no-alternatives">
               현재 재료로 추천할 수 있는 메뉴가 1개예요.

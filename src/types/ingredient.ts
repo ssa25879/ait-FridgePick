@@ -1,6 +1,6 @@
 export type IngredientCategory =
   | "vegetable"
-  | "meat"
+  | "protein"
   | "eggDairy"
   | "carb"
   | "seasoning";

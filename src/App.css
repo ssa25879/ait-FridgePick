@@ -227,6 +227,10 @@
   line-height: 1.5;
 }
 
+.result-source-ingredients {
+  white-space: pre-line;
+}
+
 .result-steps {
   display: flex;
   flex-direction: column;

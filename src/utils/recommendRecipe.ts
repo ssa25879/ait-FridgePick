@@ -7,6 +7,7 @@ export interface RecipeMatch {
   recipe: Recipe;
   matchedRequiredIngredientIds: string[];
   missingRequiredIngredientIds: string[];
+  missingUnmappedRequiredIngredients: string[];
   matchRate: number;
 }
 
@@ -17,7 +18,11 @@ export function getRecipeCandidates(
   const selectedIds = new Set(selectedIngredientIds);
 
   return recipes.flatMap((recipe) => {
-    if (recipe.requiredIngredients.length === 0) return [];
+    const unmappedRequiredIngredients =
+      recipe.unmappedRequiredIngredients ?? [];
+    const totalRequiredIngredientCount =
+      recipe.requiredIngredients.length + unmappedRequiredIngredients.length;
+    if (totalRequiredIngredientCount === 0) return [];
 
     const matchedRequiredIngredientIds = recipe.requiredIngredients.filter(
       (id) => selectedIds.has(id),
@@ -26,7 +31,7 @@ export function getRecipeCandidates(
       (id) => !selectedIds.has(id),
     );
     const matchRate =
-      matchedRequiredIngredientIds.length / recipe.requiredIngredients.length;
+      matchedRequiredIngredientIds.length / totalRequiredIngredientCount;
 
     if (matchRate < MINIMUM_RECIPE_MATCH_RATE) return [];
 
@@ -35,6 +40,7 @@ export function getRecipeCandidates(
         recipe,
         matchedRequiredIngredientIds,
         missingRequiredIngredientIds,
+        missingUnmappedRequiredIngredients: unmappedRequiredIngredients,
         matchRate,
       },
     ];

@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 
 *.ait
+
+# Local source data; never commit the original export.
+/COOKRCP01.csv

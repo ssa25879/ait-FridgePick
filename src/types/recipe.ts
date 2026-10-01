@@ -1,5 +1,13 @@
 export type RecipeDifficulty = "easy" | "normal";
 
+export interface RecipeSource {
+  provider: string;
+  dataset: string;
+  sourceId: string;
+  sourceUrl: string;
+  usageScope: string;
+}
+
 export interface Recipe {
   id: string;
   name: string;
@@ -7,4 +15,7 @@ export interface Recipe {
   optionalIngredients?: string[];
   steps: string[];
   difficulty: RecipeDifficulty;
+  unmappedRequiredIngredients?: string[];
+  sourceIngredientText?: string;
+  source?: RecipeSource;
 }
