@@ -32,6 +32,38 @@
   outline-offset: 4px;
 }
 
+.home-page {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(
+    100dvh - max(24px, env(safe-area-inset-top)) -
+      max(24px, env(safe-area-inset-bottom))
+  );
+}
+
+.home-page-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.home-page-ad {
+  width: calc(
+    100% + max(24px, env(safe-area-inset-left)) +
+      max(24px, env(safe-area-inset-right))
+  );
+  height: 96px;
+  flex: 0 0 96px;
+  margin-left: calc(0px - max(24px, env(safe-area-inset-left)));
+  overflow: hidden;
+}
+
+.home-page-ad[data-state="hidden"] {
+  height: 0;
+  flex-basis: 0;
+}
+
 .ingredient-page {
   display: flex;
   flex-direction: column;

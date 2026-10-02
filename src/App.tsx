@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import "./App.css";
+import { initializeBannerAds } from "./ads/bannerAds";
 import { HomePage } from "./pages/HomePage";
 import { IngredientPage } from "./pages/IngredientPage";
 import { ResultPage } from "./pages/ResultPage";
@@ -29,6 +30,7 @@ function App() {
   const [recommendation, setRecommendation] = useState<RecipeMatch | null>(
     null,
   );
+  const [bannerAdsReady, setBannerAdsReady] = useState(false);
 
   const toggleIngredient = (ingredientId: string) => {
     setSelectedIngredientIds((currentIds) =>
@@ -67,6 +69,20 @@ function App() {
     mainRef.current?.focus();
   }, [screen]);
 
+  useEffect(() => {
+    let isMounted = true;
+
+    void initializeBannerAds().then((isReady) => {
+      if (isMounted) {
+        setBannerAdsReady(isReady);
+      }
+    });
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
   if (screen === "result") {
     return (
       <ResultPage
@@ -98,7 +114,13 @@ function App() {
     );
   }
 
-  return <HomePage mainRef={mainRef} onStart={() => setScreen("ingredients")} />;
+  return (
+    <HomePage
+      mainRef={mainRef}
+      onStart={() => setScreen("ingredients")}
+      showBannerAd={bannerAdsReady}
+    />
+  );
 }
 
 export default App;

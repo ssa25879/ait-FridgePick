@@ -1,8 +1,38 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { StrictMode } from "react";
+import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { TDSMobileAITProvider } from "@toss/tds-mobile-ait";
-import { describe, expect, it } from "vitest";
+import { beforeEach, describe, expect, it, vi } from "vitest";
 import App from "./App";
+
+const ads = vi.hoisted(() => ({
+  initialize: vi.fn(),
+  initializeSupported: vi.fn(),
+  attachBanner: vi.fn(),
+  attachBannerSupported: vi.fn(),
+  destroyBanner: vi.fn(),
+}));
+
+vi.mock("@apps-in-toss/web-framework", () => ({
+  TossAds: {
+    initialize: Object.assign(ads.initialize, {
+      isSupported: ads.initializeSupported,
+    }),
+    attachBanner: Object.assign(ads.attachBanner, {
+      isSupported: ads.attachBannerSupported,
+    }),
+  },
+}));
+
+beforeEach(() => {
+  vi.clearAllMocks();
+  ads.initializeSupported.mockReturnValue(true);
+  ads.initialize.mockImplementation((options) => {
+    options.callbacks?.onInitialized?.();
+  });
+  ads.attachBannerSupported.mockReturnValue(true);
+  ads.attachBanner.mockImplementation(() => ({ destroy: ads.destroyBanner }));
+});
 
 function renderApp() {
   const user = userEvent.setup();
@@ -16,6 +46,75 @@ function renderApp() {
 }
 
 describe("재료 선택 흐름", () => {
+  it("StrictMode에서도 광고를 한 번 초기화하고 홈에서만 부착·해제한다", async () => {
+    const user = userEvent.setup();
+    render(
+      <StrictMode>
+        <TDSMobileAITProvider>
+          <App />
+        </TDSMobileAITProvider>
+      </StrictMode>,
+    );
+
+    expect(await screen.findByRole("region", { name: "배너 광고" })).toBeInTheDocument();
+    expect(ads.initialize).toHaveBeenCalledTimes(1);
+    expect(ads.attachBanner).toHaveBeenCalledTimes(2);
+    expect(ads.attachBanner.mock.calls[0][0]).toBe("ait-ad-test-banner-id");
+    expect(ads.attachBanner.mock.calls[1][0]).toBe("ait-ad-test-banner-id");
+    expect(ads.destroyBanner).toHaveBeenCalledTimes(1);
+
+    await user.click(screen.getByRole("button", { name: "재료 고르기" }));
+
+    expect(screen.queryByRole("region", { name: "배너 광고" })).not.toBeInTheDocument();
+    expect(ads.destroyBanner).toHaveBeenCalledTimes(2);
+  });
+
+  it("광고가 없으면 슬롯을 접고 홈 CTA를 계속 사용할 수 있다", async () => {
+    ads.attachBanner.mockImplementation((_groupId, _target, options) => {
+      options.callbacks?.onNoFill?.({
+        slotId: "test-slot",
+        adGroupId: "test-group",
+        adMetadata: {},
+      });
+      return { destroy: ads.destroyBanner };
+    });
+    const user = renderApp();
+
+    await waitFor(() => {
+      expect(
+        screen.queryByRole("region", { name: "배너 광고" }),
+      ).not.toBeInTheDocument();
+    });
+    expect(screen.getByRole("button", { name: "재료 고르기" })).toBeEnabled();
+
+    await user.click(screen.getByRole("button", { name: "재료 고르기" }));
+
+    expect(screen.getByRole("heading", { name: "재료 선택" })).toBeInTheDocument();
+  });
+
+  it("배너 렌더 실패 뒤에도 홈 CTA를 사용할 수 있다", async () => {
+    ads.attachBanner.mockImplementation((_groupId, _target, options) => {
+      options.callbacks?.onAdFailedToRender?.({
+        slotId: "test-slot",
+        adGroupId: "test-group",
+        adMetadata: {},
+        error: { code: 1, message: "render failed" },
+      });
+      return { destroy: ads.destroyBanner };
+    });
+    const user = renderApp();
+
+    await waitFor(() => {
+      expect(
+        screen.queryByRole("region", { name: "배너 광고" }),
+      ).not.toBeInTheDocument();
+    });
+
+    await user.click(screen.getByRole("button", { name: "재료 고르기" }));
+
+    expect(screen.getByRole("heading", { name: "재료 선택" })).toBeInTheDocument();
+  });
+
   it("매칭률·난이도 필터를 결과 편집까지 유지하고 처음부터 기본값으로 초기화한다", async () => {
     const user = renderApp();
     await user.click(screen.getByRole("button", { name: "재료 고르기" }));

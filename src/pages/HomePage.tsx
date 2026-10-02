@@ -1,17 +1,19 @@
 import { Button, Paragraph, Post } from "@toss/tds-mobile";
 import type { RefObject } from "react";
+import { HomeBannerAd } from "../components/HomeBannerAd";
 
 interface HomePageProps {
   mainRef: RefObject<HTMLElement>;
   onStart: () => void;
+  showBannerAd: boolean;
 }
 
-export function HomePage({ mainRef, onStart }: HomePageProps) {
+export function HomePage({ mainRef, onStart, showBannerAd }: HomePageProps) {
   return (
     <main
       ref={mainRef}
       tabIndex={-1}
-      className="page"
+      className="page home-page"
       aria-labelledby="home-title"
     >
       <section className="page-content">
@@ -25,16 +27,19 @@ export function HomePage({ mainRef, onStart }: HomePageProps) {
           있는 재료를 고르면 만들기 좋은 메뉴를 추천해요.
         </Post.Paragraph>
       </section>
-      <div className="page-actions">
-        <Button
-          type="button"
-          color="dark"
-          display="full"
-          size="xlarge"
-          onClick={onStart}
-        >
-          재료 고르기
-        </Button>
+      <div className="home-page-footer">
+        <div className="page-actions">
+          <Button
+            type="button"
+            color="dark"
+            display="full"
+            size="xlarge"
+            onClick={onStart}
+          >
+            재료 고르기
+          </Button>
+        </div>
+        {showBannerAd && <HomeBannerAd />}
       </div>
     </main>
   );
