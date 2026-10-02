@@ -1,6 +1,6 @@
 import { TossAds } from "@apps-in-toss/web-framework";
 import { useEffect, useRef, useState } from "react";
-import { TEST_BANNER_AD_GROUP_ID } from "../ads/bannerAds";
+import { BANNER_AD_GROUP_ID } from "../ads/bannerAds";
 
 type BannerState = "loading" | "visible" | "hidden";
 
@@ -21,7 +21,7 @@ export function HomeBannerAd() {
       }
 
       const banner = TossAds.attachBanner(
-        TEST_BANNER_AD_GROUP_ID,
+        BANNER_AD_GROUP_ID,
         target,
         {
           callbacks: {

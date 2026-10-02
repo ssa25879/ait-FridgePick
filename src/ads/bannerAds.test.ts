@@ -1,4 +1,4 @@
-import { beforeEach, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
 const sdk = vi.hoisted(() => ({
   initialize: vi.fn(),
@@ -66,5 +66,23 @@ describe("배너 광고 초기화", () => {
     const { initializeBannerAds } = await import("./bannerAds");
 
     await expect(initializeBannerAds()).resolves.toBe(false);
+  });
+});
+
+afterEach(() => vi.unstubAllEnvs());
+
+describe("배너 광고 그룹 ID 선택", () => {
+  it("테스트 모드는 공식 테스트 ID를 사용한다", async () => {
+    const { BANNER_AD_GROUP_ID, TEST_BANNER_AD_GROUP_ID } = await import("./bannerAds");
+
+    expect(BANNER_AD_GROUP_ID).toBe(TEST_BANNER_AD_GROUP_ID);
+  });
+
+  it("release 모드는 발급된 활성 그룹 ID를 사용한다", async () => {
+    vi.stubEnv("MODE", "release");
+    const { BANNER_AD_GROUP_ID, RELEASE_BANNER_AD_GROUP_ID } = await import("./bannerAds");
+
+    expect(RELEASE_BANNER_AD_GROUP_ID).toBe("ait.v2.live.65a4afab51804f34");
+    expect(BANNER_AD_GROUP_ID).toBe(RELEASE_BANNER_AD_GROUP_ID);
   });
 });
