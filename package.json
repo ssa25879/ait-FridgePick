@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build && ait build",
+    "build:release": "tsc -b && vite build --mode release && ait build",
     "lint": "oxlint",
     "test": "vitest run",
     "preview": "vite preview",

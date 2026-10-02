@@ -1,6 +1,12 @@
 import { TossAds } from "@apps-in-toss/web-framework";
 
 export const TEST_BANNER_AD_GROUP_ID = "ait-ad-test-banner-id";
+export const RELEASE_BANNER_AD_GROUP_ID = "<AD_GROUP_ID>";
+
+export const BANNER_AD_GROUP_ID =
+  import.meta.env.MODE === "release"
+    ? RELEASE_BANNER_AD_GROUP_ID
+    : TEST_BANNER_AD_GROUP_ID;
 
 let initialization: Promise<boolean> | undefined;
 

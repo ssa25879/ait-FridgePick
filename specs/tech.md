@@ -45,4 +45,4 @@
 
 ## 개발 상태 메모
 
-현재 앱은 재료 카탈로그, 레시피 데이터, 추천 로직과 홈·재료 선택·결과 화면을 제공한다. `src/hooks/useInAppAds.tsx`와 `src/pages/InAppAdsPage.tsx`에는 전면형·보상형 광고 샘플이 있으나 제품 화면 흐름에 연결되어 있지 않다. 홈 하단 배너는 공식 테스트 ID를 사용하는 구현을 추가했으며, 실제 groupId 연결과 토스 앱의 콘솔 QR 검증은 광고 지면 ID 발급 후 진행한다. 자세한 범위는 [홈 하단 배너 광고 문서](./26-10-02_feature_home_banner_ad/README.md)에 기록한다.
+현재 앱은 재료 카탈로그, 레시피 데이터, 추천 로직과 홈·재료 선택·결과 화면을 제공한다. `src/hooks/useInAppAds.tsx`와 `src/pages/InAppAdsPage.tsx`에는 전면형·보상형 광고 샘플이 있으나 제품 화면 흐름에 연결되어 있지 않다. 홈 하단 배너는 기본 개발·테스트 모드에서 공식 테스트 ID를 쓰고 `build:release`에서만 활성 발급 groupId를 선택한다. 토스 앱의 콘솔 QR 광고 검증은 아직 대기 중이다. 자세한 범위는 [홈 하단 배너 광고 문서](./26-10-02_feature_home_banner_ad/README.md)에 기록한다.
