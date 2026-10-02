@@ -196,6 +196,7 @@ describe("공식 레시피 정규화", () => {
       name: "두부 토마토 볶음",
       requiredIngredients: ["tofu", "tomato"],
       unmappedRequiredIngredients: ["황태"],
+      difficulty: "easy",
       sourceIngredientText: "두부 100g, 토마토 1개, 황태 20g, 물 100ml",
       source: {
         provider: "식품의약품안전처",
@@ -203,6 +204,20 @@ describe("공식 레시피 정규화", () => {
         sourceId: "100",
       },
     });
+  });
+
+  it("난이도 판정에서 미지원 필수 재료도 재료 수에 포함한다", () => {
+    const result = normalizePublicRecipeRecord({
+      RCP_SEQ: "103",
+      RCP_NM: "여러 재료 볶음",
+      RCP_PARTS_DTLS:
+        "두부 100g, 토마토 1개, 양파 1개, 달걀 1개, 당근 1개, 감자 1개, 황태 20g",
+      MANUAL01: "재료를 익힌다.",
+    });
+
+    expect(result.recipe?.requiredIngredients).toHaveLength(6);
+    expect(result.recipe?.unmappedRequiredIngredients).toEqual(["황태"]);
+    expect(result.recipe?.difficulty).toBe("normal");
   });
 
   it("미지원 필수 재료 비율이 높으면 사유와 함께 제외한다", () => {

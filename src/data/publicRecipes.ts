@@ -34,7 +34,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "2. 연두부, 달걀, 생크림, 설탕에 녹인 무염버터를 믹서에 넣고 간 뒤 새우(1)를 함께 섞어 그릇에 담는다.",
       "3. 시금치를 잘게 다져 혼합물 그릇(2)에 뿌리고 찜기에 넣고 중간 불에서 10분 정도 찐다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "새우두부계란찜\n연두부 75g(3/4모), 칵테일새우 20g(5마리), 달걀 30g(1/2개), 생크림 13g(1큰술), 설탕 5g(1작은술), 무염버터 5g(1작은술)\n고명\n시금치 10g(3줄기)",
     "source": {
@@ -124,7 +124,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "2. 오이는 소금으로 문질러 씻어 반을 갈라 씨를 제거하고 어슷썰기를 한다.",
       "3. 썰어 놓은 오이에 순두부사과 소스를 넣고 버무린 후 다진 땅콩을 뿌려 마무리 한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "●오이무침 :\n오이 70g(1/3개), 다진 땅콩 10g(1큰술)\n●순두부사과 소스 : \n순두부 40g(1/8봉지), 사과 50g(1/3개)",
     "source": {
@@ -150,7 +150,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "3. 찬물에 북어채, 새우, 표고버섯, 양파를 넣고 20분 정도 끓인 후 사과를 넣어 북어의 씁쓸한 맛을 없앤다.",
       "5. 그릇에 담아낸다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "북어채"
     ],
@@ -179,7 +179,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "4. 냄비에 물을 붓고 황태와 무를 넣고 끓인 후 육수에서 물을 건져내고 저염 된장을 푼다.",
       "5. 콩나물, 다진 마늘, 청양고추를 넣고 뚜껑을 덮어 김이 나게 끓\n여준다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "황태"
     ],
@@ -209,7 +209,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "2. 냄비에 물을 붓고 된장을 푼 뒤 감자, 양파, 두부를 넣어 재료가 투명해지게 끓인 후 된장국의 재료를 건져서 믹서에 넣어 갈고 된장국에 넣어 한번 더 끓인다.",
       "3. 구운 애느타리버섯과 대파를 국에 넣어 끓인 후 그릇에 담는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "된장국\n두부 20g(2×2×2cm), 애느타리버섯 20g(4가닥), 감자 10g(4×3×1cm), 양파 10g(2×1cm), 대파 10g(5cm), 된장 5g(1작은술), 물 300ml(1½컵)",
     "source": {
@@ -332,7 +332,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "2. 연두부에 다진 양파, 다진 오이피클, 올리브유, 머스터드, 후추, 꿀, 식초, 레몬즙을 넣어 두부타르타르 소스를 만든다.",
       "3. 새송이버섯은 0.5cm 두께로 썰고 프라이팬에 노릇하게 구워준 후 접시에 새송이버섯과 치커리를 담고 소스를 곁들인다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "●버섯구이 : 새송이버섯 70g(7개), 올리브유 10g(2작은술)\n●곁들임 : 치커리 10g(3줄기)\n●두부타르타르 소스 : 연두부 30g(1/4모), 다진 양파 10g(2작은술), 다진 오이피클 10g(2작은술), 올리브유 2g(1/3작은술), 식초 5g(1작은술), 레몬즙 3g(2/3작은술), 머스터드 3g(2/3작은술), 꿀 2g(1/3작은술), 흰 후추 약간",
     "source": {
@@ -363,7 +363,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "2. 호박, 가지, 새송이버섯은 3cm 길이로 자른 후 얇은 편으로 채 썰고, 양파, 파프리카, 피망은 호박 길이로 썬다.",
       "3. 가지, 호박, 새송이버섯, 양파, 파프리카, 피망에 올리브유를 바르고 달궈진 그릴 팬에 구운 후 접시에 담고 발사믹 크레타를 뿌리고 간장레몬 소스를 곁들인다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "호박",
       "발사믹크레마"
@@ -393,7 +393,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 주스를 살얼음이 생길 만큼 시원하게 냉동한다.",
       "6. 컵에 담아 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "오렌지 당근펀치\n당근 100g(1/2개), 오렌지 100g(1/2개)",
     "source": {
@@ -488,7 +488,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "2. 다시마와 물을 끓여 다시마물을 만든다.",
       "3. 냄비에 소시지, 베이컨, 두부, 스팸, 무, 우민찌, 김치, 다시마물 300g을 넣어 끓인 후 저염된장, 양파, 대파, 다진 마늘, 떡국 떡을 넣고 재료가 다 익으면 홍고추와 청양고추를 넣어 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "떡국 떡",
       "스팸",
@@ -525,7 +525,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "2. 준비해둔 재료를 모두 섞고 부침가루와 계란을 넣어 반죽한다.",
       "3. 가열된 팬에 기름을 두르고 반죽을 부어 굽고 소스를 함께 곁들인다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "부침가루",
       "오렌지즙"
@@ -554,7 +554,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "2. 돌나물은 손질하여 찬물에 담구고 새송이버섯은 달군 프라이팬에 참기름을 두르고 노릇\n하게 굽는다.",
       "3. 돌나물은 물기를 빼고 구운 새송이버섯과 레몬마요네즈 소스를 넣고\n버무려 접시에 담는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "돌나물",
       "미니새송이버섯"
@@ -621,7 +621,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "2. 배추를 소금물에 절이고 절인 배추를 찬물로 씻어 소금기를 뺀다.",
       "3. 소금기를 뺀 배추에 채썬 자색고구마, 무, 쪽파, 부추, 사과, 배를 놓고 양념을 부은 후 3일 동안 숙성시켜 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "자색고구마"
     ],
@@ -655,7 +655,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "2. 가지, 양송이버섯, 애호박, 사과는 썰고 살라미는 데친다.",
       "3. 오븐용 팬에 토마토 소스를 넓게 펴준 뒤 애호박, 가지, 양송이버섯, 살라미를 겹치게 넣고 180℃로 예열한 오븐에 넣고 30분 구워 완성한다"
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "저염살라미"
     ],
@@ -793,7 +793,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 재료가 골고루 섞인 떡갈비를 갈비\n모양으로 만든다.",
       "6. 떡갈비를 팬에 굽고, 접시에 배춧잎을\n깔고 익힌 양송이를 올리고 떡갈비를\n담는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "인삼"
     ],
@@ -832,7 +832,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 흰곤약과 비트, 치자가루를 섞은 곤약,\n채썬 다시마를 접시에 담는다.",
       "6. 양파, 오이 초절임과 닭살을 한쪽에\n담아 먹기 직전에 겨자소스를 올린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "가시오가피",
       "실곤약",
@@ -939,7 +939,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 저염간장, 레몬, 설탕, 다진마늘을\n넣고 살짝 끓여 소스를 만든다.",
       "6. 간장소스에 전분을 풀어 농도를\n맞추고, 전복찜에 여러번 바르고\n식용꽃을 올린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "전복",
       "해초",
@@ -1014,7 +1014,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "4. 김치를 한입 크기로 썬 뒤 참기름에\n볶다가 육수를 붓는다.",
       "5. 두부, 애호박, 느타리버섯, 미나리,\n닭가슴살을 넣어 끓어오르면\n달걀물과 청양고추를 넣고 조금\n더 끓여 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료 닭가슴살",
       "육수 다시마",
@@ -1088,7 +1088,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 자작하게 끓으면 오징어를 넣고\n끓이고, 오징어가 익으면 들깻가루를\n넣고 끓인다.",
       "6. 두부, 팽이버섯, 쑥갓, 고구마,\n붉은 고추를 넣고 끓여 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료 오징어",
       "육수 무",
@@ -1129,7 +1129,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 김칫국물과 배즙을 2:1로 섞은 뒤 찌개에 넣어 간을 맞춘다.",
       "6. 두부, 팽이버섯을 넣고 한소끔 끓여 마무리한다"
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "배즙"
     ],
@@ -1167,7 +1167,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "4. 돼지고기, 쇠고기에 고기완자양념을\n넣어 반죽한 뒤 빚어 완자를 만든다.",
       "5. 냄비에 모든 재료를 돌려 담은 뒤\n육수를 부어 끓인다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료 느타리버섯",
       "불린 당면",
@@ -1215,7 +1215,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 다진 돼지고기에 다진 파, 다진 마늘,\n후춧가루, 소금을 섞어 완자를\n만들고 밀가루와 달걀물을 묻혀\n식용유(5g)를 두른 팬에 부친다.",
       "6. 냄비에 재료를 보기 좋게 담고\n사골육수를 부은 뒤 끓이다가\n쑥갓과 들깻가루를 넣어 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료 통조림 햄",
       "실곤약",
@@ -1259,7 +1259,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 양념장 재료를 섞은 뒤 육수(13g)를\n넣고 양념장을 만든다.",
       "6. 준비한 재료를 담고 육수를 부은 뒤\n양념장을 넣고 끓여 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료 닭가슴살",
       "떡",
@@ -1304,7 +1304,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 냄비에 물과 다시마를 넣고 살짝 끓여 육수를 만든다.",
       "6. 육수에 손질한 재료를 담고 양념장의 1/2 분량을 넣고 중간 불에 끓이다가 쑥갓과 남은 양념장을 넣고 약한 불에 조금 더 끓여 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "통조림 햄"
     ],
@@ -1342,7 +1342,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 육수에 굴, 다진 마늘, 무, 양파,\n버섯을 넣고 끓인다.",
       "6. 들깻가루와 순두부를 넣고 한소끔\n끓인 뒤 국간장과 소금으로 간을\n맞추고 대파, 붉은 고추, 미나리를\n올려 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료 굴",
       "들깻가루"
@@ -1380,7 +1380,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 육수에 콩, 느타리버섯, 표고버섯,\n애호박, 저염된장, 새우, 바지락을\n넣고 끊인다.",
       "6. 순두부를 넣고 끊인 후 양파, 대파,\n붉은 고추, 풋고추를 넣고 한소끔\n끓여 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료 콩",
       "육수 마른 다시마"
@@ -1422,7 +1422,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 애호박과 표고버섯을 넣고, 순두부, 양파, 들깻가루, 저염국간장을 넣어 한소끔 끓인다.",
       "6. 대파, 청양고추, 미나리, 부추를 듬뿍 올려 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "표고버섯 밑동",
       "들깻가루"
@@ -1460,7 +1460,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 접시에 볶아진 채소와 파스타면을 서로 다시\n볶아준다.",
       "6. 치즈를 곱게 다져주고 접시에 파스타면을\n올린 뒤, 토마토스프와 치즈가루를 뿌려 완성\n한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "먹물파스타"
     ],
@@ -1534,7 +1534,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬을 약간 태우는 듯 해서 불맛과 매운맛을\n더해준다.",
       "6. 접시에 담아주고 볶은 현미를 뿌려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "미니파프리카"
     ],
@@ -1570,7 +1570,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 사과는 사방 1cm 크기로 자른 후 레몬즙을\n살짝 뿌려준 후 버터에 볶아 소스를 만들어\n준다.",
       "6. 숙성된 소고기를 팬에 구워주고 곁들이 채소와\n소스를 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "건바질",
       "르네디종 홀그레인머스터"
@@ -1609,7 +1609,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 볼에 귀리밥을 넣고 카레가루를 넣고 모든\n재료를 섞어 소 재료를 만든다.",
       "6. 오징어 안쪽에 밀가루를 묻혀주고 소를 채워\n팬에 구워준다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "옥수수",
       "귀리밥",
@@ -1681,7 +1681,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬에 버터를 넣고 소고기부터 볶기 시작하다\n채소를 넣고 볶아준다. 이 때 두꺼운 채소부터\n볶아주는 것이 고기랑 익는 시간이 같아진다.",
       "6. 마지막에 다져 놓은 홀토마토를 넣고 함초소금\n으로 간을 한 후 레몬껍질을 올려서 마무리\n한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "소고기우둔살",
       "샐러리",
@@ -1790,7 +1790,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬에 버터를 넣고 다진양파, 다진마늘, 다진\n대파, 볶은 베이컨, 새송이, 흰후추를 볶다가\n우유와 생크림, 설탕을 넣고 끓여준다.",
       "6. 뇨끼를 넣어 한 번 더 끓여준 뒤 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "백일송이",
       "치즈가루"
@@ -1863,7 +1863,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 만들어진 떡갈비를 구워준다.",
       "6. 접시에 토마토 겉절이를 담고 라이스버거와\n떡갈비를 올려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "전분가루",
       "다진쪽파"
@@ -1942,7 +1942,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 튀김기름 온도가 180℃ 정도 되면\n누룽지를 넣고 튀겨 기름을 밭쳐 놓는다.",
       "6. 닭을 넣은 육수(③)에 간장과 녹말,\n마늘, 소금, 후춧가루를 넣고 끓이다가,\n곁들임채소로 남겨 놓은 채소(②)와\n데쳐 놓은 해물 및 청경채를 넣고 한 번 더\n끓인 뒤 튀겨진 누룽지를 넣어 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "샐러리",
       "느타리",
@@ -1982,7 +1982,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬에 올리브 오일을 넣고, 팬이 따끈해\n지면 광어 살을 조심스럽게 앞뒤로\n익혀 접시에 담는다.",
       "6. 플레인요거트에 꿀과 레몬즙을 넣고\n골고루 섞어 광어스테이크소스를\n만들어 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "광어"
     ],
@@ -2020,7 +2020,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 생크림을 넣은 감자에 절여 놓은 채소와\n모짜렐라치즈를 넣고 골고루 섞는다.",
       "6. 섞여진 감자를 크로켓 모양을 만들어\n밀가루, 달걀물, 빵가루를 묻혀 튀김기름\n170~180℃ 온도에서 바삭하게 튀겨\n냅킨에 올려 기름을 제거하고, 접시에\n담아 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "감자(150g), 생크림(20g), 당근(20g), 양파(20g), 오이(20g)\n소금(0.5g), 모짜렐라치즈(50g), 밀가루(20g), 달걀(50g)\n빵가루(50g), 튀김기름(400g)",
     "source": {
@@ -2090,7 +2090,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 쌀이 익으면, 밑간이 되어 있는\n소고기에 넣고 돌돌 말아 준비한다.",
       "6. 하얀 된장에 생크림을 넣어 골고루 섞고,\n냄비에 육수를 넣고 생크림을 섞은 하얀\n된장을 넣어 끓으면, 말아놓은 소고기를\n넣고 은근히 졸여 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "강황가루",
       "새송이",
@@ -2131,7 +2131,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 녹말가루를 묻힌 닭고기살도 튀김\n기름에 튀겨 기름을 빼 놓은 둥지국수\n위에 올린다.",
       "6. 냄비에 레몬과 설탕을 넣고 물을 넣어\n끓이다가 레몬은 건져 내고, 마늘과\n생강, 연유, 식초, 녹말을 풀어 넣고\n살짝 한 번 더 끓여 녹말소스를 만들어,\n튀겨진 닭고기 위에 올려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "백년초국수",
       "뽕잎국수",
@@ -2176,7 +2176,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬에 버터를 살짝 넣고 새우를 굽고,\n스테이크를 구워 접시에 담는다.",
       "6. 팬에 와인과 설탕을 넣고 끓이다가,\n당근, 양파와 토마토 마늘, 대파를 다져\n넣고 볶듯이 끓이다가 발사믹소스를\n넣고 한 번 더 졸인 소스를 스테이크\n위에 얹고, 브로컬리와 새송이, 가지,\n아스파라거스를 함께 놓아 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "와인",
       "발사믹소스",
@@ -2215,7 +2215,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 골고루 섞은 유자청에 다져 놓은\n연두부를 넣어 섞어 냄비에 넣고, 썰어\n놓은 양파와 당근을 넣어 은근히 끓여\n소스를 만들어 놓는다.",
       "6. 숙성시킨 통삼겹은 버터를 녹인 팬에\n살짝 구워 다시 오븐에서 20분 정도\n익힌 후 먹기 좋게 썰은 뒤, 접시에\n부추를 깔고 그 위에 구워진 삼겹을\n올리고 소스를 얹어 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "통삼겹살",
       "함초가루",
@@ -2257,7 +2257,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 양파는 입자있게 다져 팬에 기름을\n넣고 은근히 볶아 양파 향을 낸다.",
       "6. 볶아진 팬(⑤)에 준비한 플레인요거트와\n설탕, 매실액을 넣고 끓이다가, 식초와\n녹말을 넣고 한 번 더 끓여 소스를\n완성한다. 햄버거스테이트(④)에 소스를\n얹고, 어린잎을 올려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "어린잎"
     ],
@@ -2328,7 +2328,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 건져진 펜네는 올리브오일을 넣어\n무친 후 그릇에 담아놓는다.",
       "6. 냄비에 오일을 넣고 마늘과 양파를\n볶다가 당근과 방울토마토를 넣어\n볶으면서 육수를 붓고 설탕과 소금,\n레몬즙, 월계수잎을 넣고 끓인 뒤\n월계수잎을 건져내고, 차갑게 식힌 후\n그릇에 담겨 있는 펜네에 토마토채(②)와\n브로컬리(③)를 함께 넣어 담아 완성\n한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "펜네",
       "육수"
@@ -2367,7 +2367,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 머스터드에 올리고당을 넣어 잘 섞어\n준다.",
       "6. 또띠아를 팬에 기름 없이 굽고, 그 안에\n닭고기 살과 느타리버섯, 오이, 사과,\n파프리카와 호박을 넣어 속이 보이도록\n말아놓고, ④번과 ⑤번은 섞어서 소스를\n만들어 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "또띠아",
       "머스터드"
@@ -2441,7 +2441,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 손질된 오징어 속 안에 준비한 속을\n채워 넣는다.",
       "6. 오징어순대에 레몬즙과 정종, 생강즙을\n섞어 바른 뒤 찜통에 김이 오르면\n오징어순대를 넣어 약 10분 정도 쪄서\n완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "통오징어",
       "견과류"
@@ -2479,7 +2479,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 볶아지는 냄비에 모시조개와 육수를\n넣고 끓인다.",
       "6. 거품을 걷어내고, 월계수 잎과 통후추,\n통마늘을 넣고 끓이다가 연어와\n생크림을 넣어 한 소큼 끓으면 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "모시조개",
       "육수",
@@ -2549,7 +2549,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 당근, 애호박, 콜리플라워는 김이 오른\n찜통에 5분 정도 쪄 낸다.",
       "6. 가지와 파프리카는 팬에 굽고,\n숙성시킨 광어도 팬에 구워 접시에\n담고 쪄 낸 야채를 담은 뒤 소스를\n올린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "광어",
       "콜리플라워",
@@ -2583,7 +2583,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 연근을 체에 건져 물기를 뺀다.",
       "6. 연근을 바삭하게 튀긴 뒤 천일염을\n살짝 뿌리고, 계피가루를 묻힌다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "계피가루"
     ],
@@ -2622,7 +2622,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 찬물에 식초, 설탕, 소금을 넣고 채 썬\n오이를 넣어 냉국을 만든다.",
       "6. 고추장에 고춧가루를 섞어 쌈밥장을\n만들고, 라이스페이퍼를 물에 담궈\n건져 밥과 준비한 야채, 달걀지단,\n쌈무, 쌈밥장을 올려 돌돌 말고 데친\n미나리로 묶는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "도라지",
       "청포묵",
@@ -2660,7 +2660,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 오곡밥을 넣은 닭살에 카레가루를\n골고루 묻힌다.",
       "6. 팬에 기름을 두르고 5번을 올려 은근히\n익혀 접시에 담고, 썰어 놓은 야채를\n닭살위에 담은 뒤 디종머스터드를\n올린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "오곡",
       "인삼",
@@ -2698,7 +2698,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. ?를 믹서로 곱게 간 뒤, 끓인다.",
       "6. 가지, 당근. 단호박은 둥근 모양으로\n만들어 팬에 시금치와 함께 익히고,\n광어도 팬에 구워 접시에 담아\n컬리플라워 소스를 올린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "광어",
       "콜리플라워"
@@ -2772,7 +2772,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 닭가슴살에 베이컨과 다진 버터를\n올린다.",
       "6. 냄비에 마늘과 바질을 섞은 버터,\n치즈를 넣고 끓이다가 ?를 놓고\n졸인다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "닭고기(가슴살, 150g), 새우(대하, 3마리), 베이컨(20g),\n마늘(20g), 바질(5g), 아스파라거스(3개), 새송이버섯(1개),\n치즈(1장), 버터(10g), 소금(0.2g), 후춧가루(0.01g)",
     "source": {
@@ -2842,7 +2842,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 밀가루에 찹쌀가루, 애호박, 깻잎,\n대추채와 다진 새우, 오징어를 넣고\n팬에 기름을 둘러 전병을 만든 뒤 돌돌\n말아 썰어 접시에 담는다.",
       "6. 저염간장과 식초, 설탕을 넣고 소스를\n만든다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "새우(3마리), 오징어(50g), 애호박(1/2개), 당근(20g),\n깻잎(3장), 대추(2알), 밀가루(100g), 찹쌀가루(50g),\n저염간장(20g), 식초(10g), 설탕(10g), 소금(0.2g)",
     "source": {
@@ -2948,7 +2948,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 냄비에 참기름을 두르고 소고기를 볶다가 물 1컵 반과 무를 넣고 양념장을 풀어 끓인다.",
       "6. 무가 반 정도 익으면 민어와 채소를 넣고 한소끔 끓인 뒤 어슷 썬 대파와 생강즙을 넣어 살짝 끓이고 소금 간하고 쑥갓을 넣는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "민어",
       "쇠고기 양지",
@@ -2988,7 +2988,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 마늘은 편 썰어 낮은 온도의\n식용유에서 바삭하게 튀긴다.",
       "6. 접시에 아몬드치킨볼을 담고\n튀긴 마늘을 얹어 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료 양송이버섯",
       "들깻가루",
@@ -3027,7 +3027,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "4. 만두피를 작은 체에 넣고\n바구니 모양으로 만들어 튀긴다.",
       "5. 콩고기와 아보카도, 바나나,\n방울토마토, 가지, 연근을 튀긴\n만두피에 담은 뒤 허브오일드레싱을\n곁들여 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료 콩고기",
       "아보카도",
@@ -3068,7 +3068,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 접시에 퀴노아를 두른 후\n닭가슴살과 감자, 가지, 양파, 피망,\n아스파라거스를 올리면서 중간\n중간에 토마토와 수박,\n리코타치즈를 넣는다.",
       "6. 맨 위에 퀴노아를 살짝 올려주고\n양상추, 플레인 요구르트,\n어린잎채소를 얹어 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료 수박껍질",
       "퀴노아",
@@ -3111,7 +3111,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 육수에 감자, 당근, 양파, 당면을\n순서대로 넣고 끓인 후 불을 끄고\n팽이버섯을 얹어 잔열로 익힌다.",
       "6. 다진 마늘, 청양고추, 저염간장, 소금,\n후춧가루를 넣어 간을 한 뒤 지단,\n쑥갓, 대파를 얹어 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료 감자",
       "육수 멸치",
@@ -3150,7 +3150,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬에 소스와 구운 닭가슴살을 넣어\n볶다가 삶은 라면을 넣고 재빠르게\n볶는다.",
       "6. 튀긴 마늘과 깻잎, 쪽파를 올려\n마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료 마늘",
       "이태리시즈닝",
@@ -3187,7 +3187,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 같은 냄비에 토마토, 우유, 생크림을\n넣은 뒤 월계수잎과 정향을 넣고\n끓인다.",
       "6. 끓으면 데친 라면, 새송이버섯, 홍합,\n새우, 조개, 양파를 넣고 끓여 다\n익으면 파르메산 치즈가루를\n뿌린 후 그 위에 파슬리가루를 뿌려\n마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료 새우",
       "조개",
@@ -3229,7 +3229,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 라면과 파프리카, 배를 섞은 후\n라이스페이퍼에 올려 만다.",
       "6. 달걀물을 묻힌 후 빵가루를 입혀\n튀긴 뒤 그릇에 어린잎채소와 함께\n담아 조린 쇠고기를 곁들여 마무리\n한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료 라면",
       "레드와인",
@@ -3373,7 +3373,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 냄비에 국물을 끓여주다가 채소를 넣어 끓인다.",
       "6. 국물에 우동면을 데쳐낸 뒤 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "돼지머리",
       "우동면",
@@ -3414,7 +3414,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 볶아진 칵테일새우에 잘라준 채소를 넣어\n다시 볶아준다.",
       "6. 여기에 밥을 넣어서 볶아주고 파인애플과\n맛간장, 통깨를 넣어서 볶아준다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "파인애플 통조림",
       "빨간파프리카",
@@ -3488,7 +3488,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 미나리와 콩나물은 손질해준 후 찜기에 깔고\n코다리를 쪄준다.",
       "6. 소스를 만든 뒤 채소를 깔고 코다리를 올리고\n미나리, 콩나물을 올려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "코다리",
       "함초",
@@ -3530,7 +3530,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 김발을 깔고 비닐을 놓아 준 후 두부를 펴준다.",
       "6. 볶아진 채소를 두부에 넣어주고 찜기에 쪄서\n식힌 뒤 한입 크기로 잘라준다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "우엉",
       "인삼",
@@ -3604,7 +3604,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 만들어진 국물에 거피한 들깨가루와 국물재료를\n넣어 끓여서 준비한다.",
       "6. 준비된 재료를 냄비에 넣고 국물을 부어 끓여\n완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "전복",
       "거피한 들깨가루"
@@ -3710,7 +3710,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "4. 다진대파, 청홍고추, 양파는 송송 잘라준다.",
       "5. 양념장에 콜라비부터 버무린 뒤 모든 재료를\n섞어서 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "콜라비",
       "논우렁",
@@ -3748,7 +3748,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 코다리를 볶은 냄비에 무, 감자, 국물 재료를\n넣고 충분히 끓인다.",
       "6. 끓고 있는 국에 양파, 청양고추, 백일송이\n버섯을 올려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "코다리",
       "백일송이버섯"
@@ -3790,7 +3790,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 마와 잣, 흑임자를 갈아 놓은 뒤 생크림,\n요거트, 식초, 올리브오일, 설탕을\n섞어 샐러드 소스를 만들어 놓는다.",
       "6. 썰어 놓은 연두부 위에 호박 , 닭고기,\n토마토, 파프리카를 각각 올린 뒤 어린\n잎을 올리고 소스를 뿌려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "어린잎",
       "마"
@@ -3857,7 +3857,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 잣은 종이를 깔고 곱게 다져 준비한다.",
       "6. 어린잎은 물에 담그어, 건져 물기를\n제거해 놓고, 으깬 고구마에 다진 잣을\n넣어 샐러드를 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "어린잎",
       "연유"
@@ -3892,7 +3892,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 누룽지는 170℃의 온도 튀김 기름에\n튀겨내고, 튀김옷 입힌 새우도 튀겨낸다.",
       "6. 냄비에 오렌지주스와 설탕, 식초를\n넣어 은근히 졸여 소스를 만들고,\n어린잎은 찬물에 건져 물기를 제거하고\n접시에 깔고 튀긴 누룽지와 튀긴 새우를\n올려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "튀김가루",
       "누룽지",
@@ -3933,7 +3933,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 식초와 간장, 설탕, 꿀, 레몬, 다진양파,\n다진마늘을 넣고 잘 섞어서 샐러드\n드레싱을 만든다.",
       "6. 준비한 백김치(①)와 주꾸미(②)를\n섞은 후 양상추를 접시에 깔고, 그 위에\n섞어놓은 백김치와 주꾸미를 올리고,\n홍고추와 어린잎을 위에 장식으로 올린\n후 샐러드 소스를 뿌려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "백김치",
       "어린잎"
@@ -3976,7 +3976,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 뜨거운 물에 라이스페이퍼를 살짝 넣어\n바로 건진다.",
       "6. 건져 놓은 라이스페이퍼에 준비한\n닭고기살과 파프리카, 오이, 당근 넣고\n돌돌 말아, 녹말가루를 살짝 입혀, 팬에\n굴리듯 익혀 완성하고, 준비해 놓은\n소스와 함께 제공한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "라이스페이퍼"
     ],
@@ -4018,7 +4018,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 요거트와 머스터드, 꿀 ,레몬즙, 설탕을\n넣고 고루 섞어 소스를 만들어 놓는다.",
       "6. 쪄 놓은 양배추에 준비한 채소(③)와\n닭고기살(④)을 넣고, 돌돌 말아 쪄\n놓은 부추로 양배추를 묶어 완성하고,\n만들어 놓은 요거트 소스를 함께 제공\n한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "머스터드"
     ],
@@ -4061,7 +4061,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 쪄 낸 단호박은 껍질을 벗기고 채에\n곱게 내려 밀가루와 물, 소금을 조금\n섞어 단호박 반죽을 만들어 놓는다.",
       "6. 팬에 올리브 오일을 바르고, 만들어\n놓은 단호박 반죽을 한 국자씩 떠 넣어,\n밀전병을 만들고, 밀전병이 익으면,\n한 김 식혀, 그 안에 소고기 볶음과\n채소를 넣어 돌돌 말아 소스와 함께\n완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "소고기(70g), 저염간장(10g), 다진 마늘(10g), 설탕(10g)\n파프리카(30g), 오이(20g), 적양배추(20g), 사과(20g)\n설탕(10g), 팽이버섯(20g), 무순(5g)\n- 밀전병 : 단호박(100g), 밀가루(50g), 소금(0.5g)\n- 소스 : 다진 마늘(10g), 다진 양파(20g), 올리브오일(20g)\n설탕(10g), 식초(20g), 소금(0.5g)",
     "source": {
@@ -4098,7 +4098,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 숙성시킨 생선살(①)에 녹말가루를\n살짝 입히고 튀김 반죽(②)을 골고루\n입힌 뒤, 튀김반죽을 입힌 깻잎(④)을\n얹어 튀김 기름 170℃ 온도에 넣어\n약 2분 정도 튀겨 기름을 자연스럽게\n빼 놓는다.",
       "6. 마요네즈와 요구르트, 설탕, 식초를\n넣어 골고루 섞어 튀김소스를 만들고,\n튀김을 접시에 담아 양상추와 함께 얹어\n완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "생선살",
       "콩가루"
@@ -4145,7 +4145,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 숙성시켜 놓은 삼겹살에 만들어 놓은\n양념장을 넣고 골고루 무쳐 놓는다.",
       "6. 팬에 기름을 살짝 둘러 양념한 고기(⑤)\n를 먼저 볶은 후 고기가 중간쯤 익으면,\n가지(②)와 썰어 놓은 채소(③)를 넣어\n볶다가 마지막에 참기름과 잣을 넣고\n한 번 더 볶은 후 통깨를 올려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "삼겹살(100g), 생강(5g), 정종(10g), 가지(50g), 양파(20g)\n당근(20g), 깻잎(10g), 느타리버섯(20g), 대파(10g)\n식용유(5g), 참기름(5g), 잣(10g), 통깨(5g)\n- 양념장 : 고춧가루(20g), 다진마늘(20g), 저염간장(30g)\n올리고당(20g), 후춧가루(0.1g), 설탕(10g)",
     "source": {
@@ -4182,7 +4182,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 강판에 곱게 간 배즙과 무즙에 와사비,\n설탕, 다진마늘, 식초, 소금을 넣어\n샐러드소스를 만든다.",
       "6. 만들어 놓은 샐러드소스와 함께 썰어\n놓은 주꾸미(②)와 채소(③, ④)를 넣어\n먹기 직전에 버무려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "와사비"
     ],
@@ -4260,7 +4260,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 파프리카는 속을 제거하고 양파,\n당근, 파프리카를 양파와 같은 길이로\n채를 썰고, 새송이와 표고버섯은 살짝\n데쳐 채를 썰고, 깻잎도 채를 썰어\n놓는다.",
       "6. 파프리카는 속을 제거하고 양파, 당근,\n파프리카를 양파와 같은 길이로 채를\n썰고, 새송이와 표고버섯은 살짝 데쳐\n채를 썰고, 깻잎도 채를 썰어 놓는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "조"
     ],
@@ -4296,7 +4296,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 소금을 뿌려 놓은 미니 버섯에 만들어\n놓은 된 녹말과 달걀흰자를 넣어 골고\n루 섞는다.",
       "6. 튀김 기름의 온도가 170~180℃가\n되면, 녹말 입힌 미니버섯을 바삭 하게\n튀겨 주고, 다시 팬에 만들어 놓은\n탕수육소스를 바글바글 끓이다가,\n썰어 놓은 채소를 넣고 살짝 익힌 후,\n물녹말을 한 숟가락 정도 넣어 끓인 후\n튀겨진 미니버섯 위에 올려 완성해 준다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "미니버섯",
       "달걀흰자",
@@ -4336,7 +4336,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬에 버터를 넣고 양파, 마늘을 볶다가\n만들어 놓은 크림소스를 넣고 졸인다.",
       "6. 접시에 볶은 야채를 담고, 200℃\n오븐에서 10분 정도 구운 연어를 담은\n뒤 크림소스를 올린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "화이트크림"
     ],
@@ -4372,7 +4372,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 볶은 야채에 식혀놓은 밥을 넣고\n볶다가 저염간장, 후춧가루로 간을\n하고 옥수수콘을 넣고 살짝 볶는다.",
       "6. 팬에 기름을 자작하게 넣고,\n라이스페이퍼를 둥글게 넣고 튀겨\n그릇에 담은 뒤 볶음밥을 담는다"
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "옥수수콘",
       "라이스페이퍼"
@@ -4482,7 +4482,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 달걀은 황백으로 나눠 지단을 부쳐\n길게 썰어 놓는다",
       "6. 밑간한 소고기와 닭살 에 찹쌀가루를\n뭍혀 홍고추와 달걀 황백지단을 넣어\n돌돌 말아 미나리로 띠를 둘러 팬에\n기름을 살짝 둘러 익힌다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "소고기(120g), 달걀(1개), 닭고기(가슴살, 100g), 미나리(50g),\n찹쌀가루(50g), 홍고추(1개), 소금(0.3g), 후춧가루(0.01g),\n통후추(5알), 저염간장(20g), 설탕(20g), 식초(10g)",
     "source": {
@@ -4588,7 +4588,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 적채는 채를 썰어 찬물에 담궈 건져\n물기를 빼 놓는다.",
       "6. 차갑게 걸러 놓은 닭 육수에 발효된\n겨자와 소금 .설탕, 식초를 넣어 육수\n간을 하고, 그릇에 닭살과 오이 적채,\n파프리카 양파를 올려 차가운 육수를\n넣어 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "겨자가루"
     ],
@@ -4660,7 +4660,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 따로 갈아 놓은 파인애플과 레몬즙\n꿀을 섞어 드레싱을 만는다",
       "6. 구워 놓은 고기에 더덕과 파인애플\n아스파라거스 깻잎을 넣어 돌돌 말고,\n팬에 발사믹 소스를 끓인 뒤 말아 놓은\n소고기롤을 넣어 졸인다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "더덕"
     ],
@@ -4697,7 +4697,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 다진 토마토를 팬에 볶다가 다진\n새우와 오징어, 밥을 넣어 볶고, 3번을\n넣고 볶아 동그랗게 모양을 만든다",
       "6. 동그란 밥에 레몬을 섞은 달걀노른자를\n묻히고 빵가루 옷을 입혀 팬에 기름을\n둘러 굴려가며 익힌 후 접시에 담고\n어린잎을 올린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "샐러리",
       "어린잎"
@@ -4766,7 +4766,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 숙성이 잘된 아보카도는 강판에 갈아\n준비한다.",
       "6. 접시에 양념한 육회와 두릅을 담고 그\n위에 배를 올리고, 달걀크림과\n아보카도를 짜서 올린다"
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "두릅",
       "아보카도",
@@ -4842,7 +4842,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬에 식용유를 두른 뒤 손질한 채소를 넣어 볶는다.",
       "6. 밥과 새우를 넣어 볶고, 저염간장을 넣어 볶아 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "대하"
     ],
@@ -4880,7 +4880,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 발사믹소스에 설탕과 레몬즙을 넣고\n골고루 섞어 소스를 만든다.",
       "6. 두부와 준비한 토마토를 접시에 돌려\n담고 어린잎을 위에 올린 뒤 먹기\n직전에 발사믹소스와 파마산치즈를\n뿌려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "마",
       "두유"
@@ -4920,7 +4920,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬에 올리브유와 들기름을 두르고\n양파, 마늘을 약한 불에 볶다가\n감자, 고구마, 우엉, 연근, 당근,\n애호박을 넣고 같이 볶는다.",
       "6. 밥과 청국장소스를 부어 80% 정도\n볶다가 시금치, 참나물, 미나리를\n넣고 한 번 더 볶고 채 썬 깻잎을\n올려 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료 쌀",
       "현미",
@@ -4998,7 +4998,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 토마토페이스트을 넣고 볶다가\n파프리카가루를 넣어 향을 낸다.",
       "6. 카레가루를 푼 물(300g)을 부어\n끓이다가 플레인 요구르트를 넣고\n농도를 맞춘 뒤 밥 위에 얹어\n마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료 감자",
       "양념 후춧가루",
@@ -5040,7 +5040,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 볶은 채소와 치즈를 참기름, 간장과\n함께 밥에 넣고 섞는다.",
       "6. 구운 닭봉을 밥으로 감싼 뒤 구운\n단호박, 새송이버섯, 새싹채소와\n함께 담아 소스를 곁들여\n마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료 닭봉",
       "주키니호박",
@@ -5086,7 +5086,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 달걀물과 빵가루를 입혀 160℃로\n예열한 기름에 바삭하게 튀긴다.",
       "6. 연어주먹밥튀김을 담고\n어린잎채소를 곁들인 뒤\n오리엔탈소스를 곁들여 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료 당근",
       "통조림 연어",
@@ -5125,7 +5125,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 데친 오징어, 볶은 쇠고기 순으로\n올려 만 뒤 랩으로 싼다.",
       "6. 고추장과 매실청을 섞은 뒤 팬에\n넣고 약한 불에서 끓여 소스를\n만들고 한입 크기로 썬 김밥에\n구운 버섯을 함께 곁들여\n마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료 오징어 몸통",
       "채 썬 쇠고기",
@@ -5163,7 +5163,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 쌀에 물을 붓고 밥을 짓는다.",
       "6. 밥 위에 닭가슴살, 양배추, 청포묵,\n숙주, 달걀지단, 무순을 담아\n마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료 닭가슴살",
       "청포묵",
@@ -5205,7 +5205,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 떡갈비 모양으로 만들어준 후 팬에 노릇하게\n구워준다.",
       "6. 소스를 만들어 구워진 떡갈비를 졸여준다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "갈은 소고기",
       "갈은 돼지고기",
@@ -5283,7 +5283,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 곁들이장을 만들어 준다.",
       "6. 냄비에 데쳐준 채소와 국물을 붓고 고기를\n먹기좋게 썰어 소스랑 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "통삼겹",
       "천연다시다",
@@ -5324,7 +5324,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 볶은 바지락과 쌀을 넣어 밥을 한다.",
       "6. 몰드에 밥과 각종 채소들을 올려주고 마지막에\n두부 스크램블을 올려 밥을 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "다진쇠고기",
       "표고",
@@ -5401,7 +5401,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 끓고 있는 양념장에 삶아진 갈비, 감자, 당근\n순으로 끓이다 메추리알을 넣고 졸여준다.",
       "6. 마지막에 미역줄기를 넣고 볶아주는 형식으로\n갈비찜을 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "찜갈비",
       "마른미역줄기",
@@ -5545,7 +5545,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 3종류의 묵은 먹기 좋은 크기로 썰어준다.",
       "6. 그릇에 밥을 담고 콩나물을 올리고 3종류의\n묵을 올린 후 계란으로 고명해 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "도토리묵",
       "올방개묵",
@@ -5588,7 +5588,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 그 릇 에 모 든 재 료 를 넣 고 오 니 기 리 를\n만들어준다.",
       "6. 그릇에 담아 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "우엉"
     ],
@@ -5624,7 +5624,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 마리네이드 하고 남은 망고소스를 다시 팬에\n졸여 소스를 만든다.",
       "6. 접시에 준비된 채소와 안심을 담고 소스를\n뿌려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "소 채끝살",
       "레드와인",
@@ -5663,7 +5663,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 토마토는 포를 떠서 준비한다.",
       "6. 으깬 감자(②)에 준비한 달걀(③)과\n채소(④)를 넣고 소금을 약간 넣은 뒤\n골고루 섞어, 밀어 놓은 식빵에 토마토,\n치즈, 양상추와 함께 넣어 돌돌 말아\n완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "어린이치즈"
     ],
@@ -5703,7 +5703,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 파프리카는 속씨를 제거하고, 양파와\n당근, 오이, 파인애플과 함께 썰어 준비\n한다.",
       "6. 저염간장에 설탕과 식초를 넣어 골고루\n섞은 후 냄비에서 바글바글 끓이다가\n물녹말을 넣고, 썰어놓은 채소를 넣어\n한 번 더 끓인 후 황태 탕수육(④)에\n곁들여 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "황태채",
       "삼색분말"
@@ -5739,7 +5739,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 밥과 감자가 잘 섞어지면, 다시 다져진\n파프리카를 넣고 섞어준다.",
       "6. 막대기에 밀가루를 살짝 바르고, 소시\n지에 반죽(⑤)을 감싸듯 손으로 둥글게\n말아 밀가루와, 달걀물, 빵가루 순서로\n입혀 튀김 기름 170℃의 온도에서\n약 2분 정도 튀긴 후 기름을 제거하여\n완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "소시지",
       "나무막대기",
@@ -5779,7 +5779,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 발사믹소스에 설탕과 마늘을 넣고 썰어\n놓은 사과채를 넣어 잘 섞은 후 바글바글\n끓여 소스를 만들어놓는다.",
       "6. 팬이 따끈해지면, 호박과 양파, 가지를\n구워 내고, 팬에 소등심을 앞뒤로 구워\n먹기 좋은 크기로 자른 뒤 구워 놓은\n양파와 호박, 가지에 각각 올리고,\n끓여놓은 소스와 파프리카, 토마토를\n얹어 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "소등심",
       "발사믹소스"
@@ -5824,7 +5824,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 고구마는 삶아 으깨고, 두부는 소창에\n물기를 짜고, 토마토와 양파, 견과류는\n입자있게 다져섞는다.",
       "6. 라이스 페이퍼를 따뜻한 물에 담궜\n다가 바로 꺼내어 으깬 고구마(⑤)를\n먼저 깔고, 그 위에 준비한 재료(②,\n③, ④)를 올려 돌돌 말은 뒤 먹기 좋은\n크기로 썰어 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "라이스페퍼",
       "견과류"
@@ -5862,7 +5862,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 다진 채소(②), 으깬 두부(③), 새우\n(④)를 넣고 섞어서 만두소를 만들어\n준다.",
       "6. 숙성된 만두 반죽(①)을 얇게 밀어\n꽃 모양으로 찍어 만두소(⑤)를 넣은\n뒤, 반죽을 맞잡아 모양을 만든다.\n우유와 생크림을 끓인 뒤 만들어 놓은\n만두를 넣고 은근히 찜을 하듯이 익혀\n완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "시금치가루",
       "호박가루",
@@ -5907,7 +5907,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 떡볶이 떡은 뜨거운 물에 잠시 담그어\n부드러워지면 꺼내서 잘게 다진다.",
       "6. 숙성된 고기(②)에 다진 채소(③)와 볶은\n마늘과 양파(④), 떡볶이떡(⑤)을 넣고\n섞이도록 치댄 후 작은 떡갈비 모양을\n만들어 팬에 기름을 두르고, 앞뒤를 돌려\n가며 익힌 후, 냄비에 간장과 올리고당을\n넣고 끓이다가, 익힌 떡갈비를 넣고 자작\n하게 졸여 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "떡볶이떡"
     ],
@@ -5981,7 +5981,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 숙성시킨 등심(①)은 물기를 제거하고,\n먹기 좋은 크기로 썰어 밀가루, 달걀물,\n빵가루 순으로 입혀, 튀김 기름\n170~180℃ 온도에 약 3분 정도 튀긴\n후 기름을 빼 놓는다.",
       "6. 삶은 달걀은 다지고 피클(④)에\n마요네즈를 넣어 섞어 샐러드 소스를\n만들고, 접시에 양상추를 깔고 그 위에\n어린잎채소, 돈가스(⑤)와 방울토마토\n(②)를 올려 소스와 함께 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "피클",
       "어린잎채소"
@@ -6020,7 +6020,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 냄비에 버터를 넣고, 다진 마늘과\n양파를 넣어 볶다가 밀가루를 넣고\n은근히 볶는다.",
       "6. 볶고 있는 채소(⑤)에 육수(④)를 부어\n한소끔 끓인 뒤, 우유와 생크림을 넣고\n다시 끓으면 새우와 삶은 조개를 넣고\n살짝 끓인 후, 삶아놓은 스파게티면\n(①)을 넣고 한 번 더 끓이고 그 위에\n파슬리 가루를 살짝 뿌려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "스파게티",
       "육수",
@@ -6058,7 +6058,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 양파를 입자있게 다져 다진 땅콩과\n마요네즈, 파슬리가루, 요거트를\n넣고 골고루 섞어 소스를 만들어\n놓는다.",
       "6. 카레가루를 입힌 닭봉은 튀김기름\n170~180℃ 온도에서 약 3분 정도 튀겨\n기름을 빼고, 접시에 어린잎을 담고\n만들어 놓은 소스와 닭봉을 함께 제공\n하여 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "닭봉",
       "파스리가루",
@@ -6101,7 +6101,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 볶아지는 냄비에 조개 삶은 육수를\n넣어 끓인다.",
       "6. 끓여지는 냄비에 데친 조개와 해물,\n치즈, 우유를 넣어 어우러지게 저어\n가며 졸이듯 끓이다가 마지막에\n시금치와 생크림 갈은 것(②)을\n넣고 살짝 끓인 후 파슬리 가루를\n살짝 뿌려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "보리쌀",
       "조개"
@@ -6143,7 +6143,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 섞어 놓은 고기(③)에 불려 놓은 떡을\n섞는다.",
       "6. 고기반죽(⑤)을 조금씩 떼어 둥글게\n완자를 빚고, 팬에 기름을 둘러 굴리듯이\n굽는다. 냄비에 간장과 올리고당을 넣고\n끓이다가 구운 완자와 참기름을 넣어\n은근히 졸인 뒤 통깨를 얹어 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "다진 쇠고기",
       "떡볶이떡"
@@ -6182,7 +6182,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬에 올리브 오일을 두르고, 따끈해지\n면, 닭살을 먼저 볶는다.",
       "6. 닭고기살(⑤)에 준비한 채소(②,③)를\n넣고 살짝 볶다가 토마토 페이스트를\n넣어 다시 볶은 후 육수와 토마토소스,\n케첩, 생크림을 넣고 끓인 후 삶아놓은\n스파게티(④)를 넣고 한 번 더 끓여\n완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "스파게티",
       "토마토페스트",
@@ -6225,7 +6225,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 빠금장에 휘핑크림과 우유, 다진\n청양고추, 후춧가루, 참깨를 넣고\n끓여 빠금장소스를 만든다.",
       "6. 계만두에 튀긴 당근과 삶은\n메추리알을 곁들인 뒤 빠금장소스를\n곁들여 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료 배추",
       "삶은 메추리알",
@@ -6266,7 +6266,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 단호박은 얇게 썰어 노릇하게\n굽는다.",
       "6. 쇠고기표고찜에 오렌지소스를\n뿌리고 피클과 구운 단호박을\n곁들여 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료 표고버섯",
       "피클",
@@ -6307,7 +6307,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 연근은 모양대로 얇게 썰어 기름에\n튀겨 연근칩을 만든다.",
       "6. 떡갈비에 유자소스를 바르고\n연근칩을 올려 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료 다진 돼지고기",
       "다진 쇠고기",
@@ -6351,7 +6351,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 어느 정도 볶아지면 양파, 당근을\n넣고 볶다가 양배추를 넣고 볶는다.",
       "6. 양배추가 익으면 먹기 좋게 손질한\n버섯을 넣고 살짝 볶아 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료 콩고기",
       "양념장 설탕",
@@ -6396,7 +6396,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 오리고기와 가지, 양파, 파프리카, 새송이버섯, 브로콜리를 같이 볶다가 토마토고추장소스를 넣어준다.",
       "6. 접시에 담은 뒤 부추와 방울토마토를 곁들여 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "오리고기"
     ],
@@ -6438,7 +6438,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 식용유를 두른 팬에 돼지고기를\n넣고 토마토비트소스와 함께 볶는다.",
       "6. 양념을 넣어 간을 맞춘 후 양배추,\n표고버섯, 양송이버섯, 파프리카,\n피망, 대파를 넣고 살짝 볶아\n마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료 양배추",
       "양념 소금"
@@ -6477,7 +6477,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬에 올리브유, 마늘, 생강,\n삶은 고기를 넣고 육즙이 나오지\n않도록 고기 겉면을 익힌 뒤 채 썬\n양파, 마늘, 레몬, 레드와인,\n올리고당을 넣고 조린다.",
       "6. 고기에 간이 배면 건져내 먹기\n좋은 크기로 썰어 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료 돼지고기",
       "붉은피망",
@@ -6512,7 +6512,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 죽이 어느정도 완성되면 치즈가루를 뿌려준다.",
       "6. 죽이 완성되면 그릇에 담아 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "함초",
       "크렌베리"
@@ -6586,7 +6586,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "4. 볶아 놓은 채소와 고기, 해산물은 양념장에\n버무린다.",
       "5. 미나리와 배를 곱게 채 썰어 올려서 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "바지락살"
     ],
@@ -6622,7 +6622,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 튀겨진 고등어를 키친타월을 이용해 기름을\n빼준다.",
       "6. 카레가 완성되면 사과, 방울토마토, 꿀을\n넣어주고 튀겨 놓은 고등어에 뿌려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "냉동고등어",
       "전분가루"
@@ -6690,7 +6690,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬에 넣고 끓이고 우유를 넣고 한 번 더 끓여\n준다.",
       "6. 생크림과 파마산치즈로 농도를 맞춘 후 그릇에\n담고 마늘칩을 올려서 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "관자",
       "파마산가루",
@@ -6734,7 +6734,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 소스를 팬에 만들어 준 뒤 곤약을 볶아준다.",
       "6. 볶은 곤약에 ②를 넣고 한 번 더 볶은 뒤 ③을 섞어 그릇에 담고, 지단채를 올리고 참기름, 통깨를 뿌려 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "실곤약",
       "흑설탕"
@@ -6772,7 +6772,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 소스를 만들어준다.",
       "6. 준비된 재료에 계란으로 반죽해 한입 크기로\n전을 부쳐준다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "미역",
       "고추냉이"
@@ -6880,7 +6880,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 오이, 당근, 양파를 소스에 버무려 샐러드를\n만들고 소스도 함께 만든다.",
       "6. 두부를 한입 크기로 잘라준 후 슬라이스햄과\n샐러드를 올려 소스랑 함께 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "단단한 두부",
       "슬라이스햄"
@@ -6919,7 +6919,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 소고기를 볶아주던 팬에 밥과 표고를 넣고\n끓여주다 두부를 넣고 죽을 해준다.",
       "6. 다진 애호박, 당근을 넣어서 끓여주고 불을\n끄기 전에 청국장과 흑임자를 넣어 죽을\n완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "청국장가루",
       "다진쇠고기",
@@ -6955,7 +6955,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "3. 모든 채소는 먹기 좋게 잘라서 물에 담근다.",
       "4. 소스 재료를 섞어 소스를 만들고, 접시에 준비된\n채소를 담고 소스를 뿌려준 후 구운 떡과 망고\n를 올려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "증편",
       "망고",
@@ -6991,7 +6991,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 끓고 있는 토마토에 불린 젤라틴을\n넣고 녹여주고, 젤라틴이 녹으면\n불을 끄고, 접시에 담아 냉장고에 약\n20분 정도 굳힌다.",
       "6. 팬에 설탕을 넣고 설탕이 녹으면,\n블루베리를 넣어 은근히 졸여진 후\n굳어진 토마토젤리 위에 올려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "판젤라틴",
       "블루베리"
@@ -7032,7 +7032,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 닭가슴살에 볶아 놓은 시금치와 버섯을\n넣어 팬에 올리브기름으로 구워 익힌다.",
       "6. 냄비에 베이컨과 양파를 넣어 볶다가\n카레가루를 넣어 살짝 볶고, 다시 우유와\n생크림, 대파를 넣고 끓여 카레소스를\n만들고, 어린잎채소와 닭스테이크\n(⑤)를 접시에 담고 카레 소스를 올려\n완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "굴소스"
     ],
@@ -7078,7 +7078,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 새송이와 가지, 표고, 홍피망은 팬에서\n굽는다.",
       "6. 팬이 따끈해지면 양념한 돼지고기를\n구워 접시에 담고 그 위에 된장 소스를\n올리고, 구워낸 채소를 다시 위에 올려\n완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "돼지고기(120g), 생강(10g), 소금(0.2g), 후춧가루(0.02g)\n저염간장(20g), 정종(10g), 설탕(20g), 대파(10g), 마늘(20g)\n양파(20g), 참기름(5g), 통깨(3g), 새송이버섯(20g)\n표고버섯(20g), 가지(20g), 홍피망(20g)\n- 된장소스 : 된장(10g), 마요네즈(20g), 생크림(10g)\n다진 땅콩(20g)",
     "source": {
@@ -7111,7 +7111,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 생선살에 다진 채소와 어린이 치즈를\n다져 섞는다.",
       "6. 채소를 다져 섞은 생선살을 동글동글\n하게 완자를 빚어 튀김기름에 약 150℃\n온도에서 은근히 5분 정도 튀겨 완성\n한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "생선살",
       "샐러리",
@@ -7149,7 +7149,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 냄비에 참기름을 두르고, 주꾸미를\n먼저 볶다가 불린 보리쌀을 넣고 다시\n볶은 뒤 썰어놓은 채소(④)를 넣는다.",
       "6. 냄비에 육수를 넣고 나무주걱으로\n은근히 저어가면 끓이다가 죽이 어우러\n지면, 우유와 치즈, 간장을 살짝 넣고\n한 번 더 끓여 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "보리",
       "육수",
@@ -7189,7 +7189,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 숙성된 삼겹살은 오븐에 굽고, 브로컬리는\n살짝 데쳐 올리브오일에 볶아놓는다.",
       "6. 팬에 오렌지즙과 설탕, 정종, 소금을\n넣고 바글바글 졸인 후 와사비를 넣어\n소스를 만들고, 오븐에 구어진 삼겹살을\n잘라 접시에 담고 그 위에 소스를\n살짝 올리고, 한쪽에는 감자튀김(②),\n고구마무스(③), 브로컬리(⑤)를\n곁들여 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "와사비"
     ],
@@ -7230,7 +7230,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 브로컬리는 작게 썰어 미니버섯과\n함께 팬에 살짝 구워 준비한다.",
       "6. 익혀 놓은 소고기볼(②)을 접시에 담고\n그 위에 소스(④)를 얹은 뒤 브로컬리와\n미니버섯(⑤), 어린잎을 올려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "게맛살",
       "어린잎",
@@ -7271,7 +7271,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 만들어 놓은 떡갈비를 팬에 은근히\n익힌다.",
       "6. 간장과 올리고당, 설탕, 육수를 넣고\n섞어가며 바글바글 끓인 뒤, 익힌 떡갈\n비(⑤)를 넣고 살짝 졸인 후 접시에 담고,\n그 위에 통깨를 살짝 뿌리고, 대추채(③)와\n어린잎을 곁들임채소로 올려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "수삼",
       "새송이",
@@ -7314,7 +7314,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 숙성된 밀가루 반죽을 꺼내 밀대를\n이용하여 넓게 밀어 준다.",
       "6. 밀어 놓은 반죽을 사각으로 자른 후\n그 안에 딤섬 속을 넣어 미나리를 데쳐\n끈을 만들어 딤섬 위쪽을 묶은 후\n찜통에서 김이 오르면 약 10분 정도\n쪄서 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "백년초가루",
       "뽕잎가루",
@@ -7354,7 +7354,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 밥으로 감싼 메추리알을 밀가루와\n녹말을 섞어 그 위에 굴리고, 다시\n달걀물에 굴린 후 빵가루를 입혀준다.",
       "6. 튀김 기름이 약 170℃ 정도 되면,\n만들어 놓은 메추리알을 넣어 골고루\n색이 나도록 튀겨 완성하고, 칠리소소와\n함께 제공한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "메추리알",
       "칠리소스"
@@ -7390,7 +7390,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 다진 토마토를 준비한 토마토소스에\n섞어 살짝 어우러지게 끓여 준비한다.",
       "6. 구운 가지위에 토마토와 모짜렐라치즈를\n올려 팬에 굽고, 별도로 팽이버섯에\n후춧가루를 뿌려 살짝 구워 접시에 담고,\n끓여 놓은 토마토소스를 올려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "토마토소스"
     ],
@@ -7433,7 +7433,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 냄비에 마른고추와 대파, 마늘, 와인, 저염간장, 올리고당, 설탕을 넣어 끓이다가, 토마토(2/3 분량)를 다져넣고, 뭉근하게 졸여 체에 걸러 놓는다.",
       "6. 남은 토마토는 원형을 살려 슬라이스하여 접시에 깔아준 뒤 익힌 함박스테이를 얹고 메추리알은 한 개씩 반숙 지단을 부쳐 익힌 함박스테이크 위에 올린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "메추리알",
       "마른고추",
@@ -7471,7 +7471,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬에 기름을 넣고 팬이 뜨거울 때\n양파를 넣어 재빠르게 볶아낸다.",
       "6. 준비한 육수에 설탕과 식초, 저염간장을\n넣어 차갑게 냉장보관하고, 그릇에\n스파게티를 담고, 그 위에 볶은 양파와\n깻잎, 파프리카와 구운 고기를 올린 후\n차가운 육수를 부어 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "스파게티",
       "육수"
@@ -7509,7 +7509,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 고춧가루에 볶은 마늘(④), 식초. 설탕,\n간장, 고춧가루를 넣고, 골고루 섞어\n양념장을 만든다.",
       "6. 설탕물에 사과와 배를 건지고, 준비한\n과일과 마를 담은 후 먹기 직전에 만들어\n놓은 양념장을 넣어 버무려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "키위",
       "마"
@@ -7548,7 +7548,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 냄비에 저염간장에 설탕을 넣고 골고루\n섞어 끓이다가, 물녹말을 풀어 농도를\n맞추고 썰어놓은 오이, 당근, 양파를\n넣어 소스를 만든다.",
       "6. 튀김기름의 온도가 약 170~180℃ 정도\n올라오면 녹말옷을 입힌 버섯(③)을\n재빠르게 튀겨 기름을 제거하고, 접시에\n담아 소스(⑤)를 얹고 키위를 올려 완성\n한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "키위"
     ],
@@ -7588,7 +7588,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 마늘은 편으로 썰고 팬에 굽는다.",
       "6. 돼지고기를 팬에 구워 접시에 담고,\n구운 마늘, 파프리카, 양송이버섯,\n데친 시금치를 담고 그 위에\n머스터드소스를 올린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "머스터드"
     ],
@@ -7625,7 +7625,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 당면은 뜨거운 물에 불려 갈비탕을\n먹기 직전에 넣는다.",
       "6. 달걀은 황백으로 나눠 지단을 부쳐\n완성된 갈비탕 위에 대추와 함께 올려\n완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "인삼"
     ],
@@ -7662,7 +7662,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬에 기름을 두르고 닭살을 익힌다.",
       "6. 그릇에 익힌 닭살을 담고 카레소스를\n올린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "샐러리"
     ],
@@ -7730,7 +7730,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬에 올리브오일을 두르고 썰어 놓은\n오이와 양파를 살짝 볶는다.",
       "6. 을 파낸 줄기토마토에 볶아 놓은\n야채와 ?번을 넣는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "줄기토마토"
     ],
@@ -7767,7 +7767,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 고추장에 식초, 설탕을 넣고\n초고추장소스를 만든다.",
       "6. 훈제 연어에 야채와 주꾸미, 소라를\n넣고 돌돌 말아 접시에 담고\n초고추장소스를 올리고 완두콩으로\n장식한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "소라",
       "완두콩",
@@ -8044,7 +8044,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "2. 가지는 길게 자르고, 미나리는 잎을 떼고, 파프리카는 채 썬다.",
       "3. 가지는 찌고, 미나리와 베이컨은 데친 후 베이컨, 가지, 파프리카 순으로 올려 말아준 뒤 미나리로 묶어 접시에 담고 소스를 뿌려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "청파프리카",
       "와사비"
@@ -8119,7 +8119,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 코코넛 밀크와 생크림, 파프리카,\n양송이버섯을 넣어 살짝 더 끓인다.",
       "6. 구운 가자미와 청양고추를 넣고\n조려 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료 고구마",
       "가자미",
@@ -8165,7 +8165,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 토마토를 넣어 3분 정도 더 볶다가\n닭육수와 월계수잎을 넣어 5분 정도\n푹 끓인 뒤 한 김 식혀 오레가노와\n바질을 넣고 믹서기에 곱게 갈아\n타콤소스를 만든다.",
       "6. 단호박과 브로콜리, 양파, 가지를\n센 불에서 빠르게 볶은 뒤 닭고기와\n타콤소스를 넣어 조리다가 닭고기가\n다 익으면 접시에 담고,\n파슬리가루를 뿌려 마무리."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료 양파",
       "셀러리",
@@ -8238,7 +8238,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 육수에 토마토채소소스를 넣어 끓인\n후, 마지막으로 두부를 넣어 약 2분\n정도 끓인다.",
       "6. 그릇에 담고 덜어놓았던 콩나물과\n관자, 고추를 올려 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료 풋고추",
       "육수 콩나물",
@@ -8313,7 +8313,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 걸쭉해지면 설탕과 돼지고기를 넣고,\n고기가 익으면 채 썬 양파, 어슷\n썬 청양고추와 꼭지를 딴\n방울토마토를 넣는다.",
       "6. 방울토마토의 껍질이 벗겨질 때까지\n끓이고 후춧가루를 넣어 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료 양파",
       "육수 무",
@@ -8372,7 +8372,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "2. 달구어진 팬에 카놀라유를 두르고 백일송이 버섯을 볶는다.",
       "3. 버섯이 살짝 숨이 죽으면 파프리카를 넣어 함께 볶아 접시에 담는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "백일송이버섯"
     ],
@@ -8403,7 +8403,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "4. 땅콩소스 재료를 섞어 땅콩소스를 만든다.",
       "5. 데친 가지와 버섯은 물기를 제거해 그릇에 담고, 땅콩소스를 곁들여 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "땅콩가루"
     ],
@@ -8470,7 +8470,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 육수에 보리된장을 풀고 호박, 양파,\n표고버섯을 넣고 끓인다.",
       "6. 갈아놓은 검은콩을 넣어 농도를\n맞춘 후 검은콩두부, 대파, 고추를\n넣고 한소끔 끓여 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료 검은콩",
       "검은콩두부",
@@ -8541,7 +8541,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "4. 식힌 육수에 된장양념을 푼다.",
       "5. 채 썬 오이와 깻잎을 올려\n마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료 가다랑어포",
       "육수 무",
@@ -8579,7 +8579,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "4. 양념장을 만든 뒤 찢은 고기와\n얼갈이배추를 넣어 버무린다.",
       "5. 육수에 무, 양념에 버무린 고기와\n얼갈이배추, 숙주, 느타리버섯, 대파,\n청양고추 순으로 넣어가며 푹 끓여\n마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료 숙주",
       "얼갈이배추",
@@ -8627,7 +8627,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 달걀은 지단으로 부쳐 채 썰고,\n목이버섯은 물에 불린다.",
       "6. 육수에 묵을 넣고 색을 맞춰 고명을\n올린 뒤 들깻가루, 참깨, 검은깨를\n얹어 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료 도토리묵",
       "메밀묵",
@@ -8675,7 +8675,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 물(300g)에 된장을 풀고 애호박과\n감자, 표고버섯을 넣고 끓이다가\n날콩가루를 넣은 뒤 청양고추,\n완자를 넣고 조금 더 끓인다.",
       "6. 그릇에 브로콜리를 담고 국물을\n부은 뒤 채 썬 대파와 고추를 얹어\n마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료 감자",
       "고추",
@@ -8715,7 +8715,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 저염재래된장을 육수에 풀고\n곤드레나물, 고구마순, 취나물을\n넣고 끓여 반 이상 익으면 애호박,\n양파를 넣는다.",
       "6. 순두부, 양념, 청양고추, 대파를 넣고\n마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료 곤드레나물",
       "고구마순",
@@ -8758,7 +8758,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 버섯을 넣고 끓으면 토마토, 다진\n마늘, 고춧가루, 들깻가루, 채 썬\n양파를 넣고 끓인다.",
       "6. 송송 썬 대파와 청양고추를 넣고\n조금 더 끓여 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료 표고버섯",
       "된장양념 콩가루",
@@ -8802,7 +8802,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 육수에 굴림만두와 애호박,\n팽이버섯을 넣고 끓인다.",
       "6. 굴림만두가 적당히 익으면 두부를\n넣고 끓인 뒤 고추 고명을 얹어\n마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료 풋고추",
       "굴림만두 새송이버섯",
@@ -8848,7 +8848,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "4. 팬에 유자청과 저염간장, 물을 넣고\n끓여 유자청간장소스를 만든다.",
       "5. 접시에 곤약함박스테이크를 담고\n어린잎채소를 올리고, 구운 채소와\n유자청간장소스를 곁들여\n마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료 새송이버섯",
       "어린잎채소",
@@ -8879,7 +8879,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "2. 삶은 두부와 플레인요거트, 검은깨\n를 믹서에 넣고 간 다음 냉장고에\n1시간 정도 보관한다.",
       "3. 차가워진 스프를 그릇에 담고 그\n위에 청국장가루를 얹는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "냉스프\n두부 120g(1/3모), 플레인요거트 70g(1개), 검은깨 8g(1⅔작은술)\n고명\n청국장가루 10g(1큰술)",
     "source": {
@@ -8905,7 +8905,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "2. 냄비에 고구마, 단호박, 우유, 설탕을 넣고 잘 저어주며 끓인다.",
       "3. 스프의 농도를 보면서 물을 조금씩 넣어가며 걸쭉하게 끓여준다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "호박고구마스프\n고구마 70g(1/2개), 단호박 30g(4×6cm), 우유 100ml(1/2컵), 설탕 2g(1/3작은술), 물 50ml(1/4컵)",
     "source": {
@@ -9024,7 +9024,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "2. 가열된 팬에 기름을 두르지 않고 바나나를 굽는다.",
       "3. 구워진 바나나의 겉면에 설탕을 뿌리고 가열된 팬에 구운 후 완성된 바나나를 접시에 담고, 다진 호두를 뿌린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "●주재료 : 바나나 100g(1개), 설탕 5g(1/2작은술)\n●장식 : 다진 호두 15g(1큰술)",
     "source": {
@@ -9057,7 +9057,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "4. 밥과 저염된장, 후춧가루를 넣고\n볶다가 들기름을 넣어 한 번 더\n볶는다.",
       "5. 그릇에 담고 으깬 단호박과\n세발나물을 곁들여 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료 단호박",
       "석박지",
@@ -9131,7 +9131,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 통계피와 생강을 물(200g)에 넣고\n끓여 우려낸 뒤 건더기를 건지고\n나머지 소스 재료를 넣고 살짝\n조린다.",
       "6. 발사믹드레싱을 만들어\n어린잎채소에 뿌리고, 방울토마토는\n반으로 썰어 라면 크로켓과 함께\n그릇에 담아 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료 검은깨",
       "다진 쇠고기",
@@ -9176,7 +9176,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 마늘과 토마토를 각각 다진 후 오일에 볶다가\n레드와인을 넣어 졸인다. 불을 끄기 직전에\n버터를 넣어 소스를 만든다.",
       "6. 채소를 각각 구워주고 구워진 두부스테이크를\n담고 레드와인 소스를 뿌려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "김",
       "허브소금",
@@ -9216,7 +9216,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 소스재료로 소스를 만든다.",
       "6. 접시에 준비된 채소를 깔고 연어를 올리고\n소스를 올려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "더덕"
     ],
@@ -9246,7 +9246,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "4. 체에 내린 감자와 브로콜리 그리고 멜론즙을\n함께 섞어준다.",
       "5. 설탕으로 간을 해주고 볼에 담고 요거트로\n장식을 해 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "멜론"
     ],
@@ -9283,7 +9283,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 모든 재료를 꼬치에 끼워서 살짝 구워준다.",
       "6. 레몬껍질을 채 썰어서 소스를 만들어주고\n꼬치와 함께 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "통삼겹",
       "2가지색 미니파프리카",
@@ -9321,7 +9321,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 사과를 물기를 완전히 제거하고 소스재료를\n섞어 곁들이 소스를 만들어준다.",
       "6. 볶음곤약을 그릇에 담고 그라놀라를 뿌려서\n완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "곤약국수",
       "다진생강",
@@ -9361,7 +9361,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 찹쌀과 보리쌀을 넣어 만들어진 채소국물에\n끓여주다 생크림과 우유를 넣어 죽 형태로\n만든다.",
       "6. 여기에 볶아진 재료를 넣고 소금으로 간을\n하고 말린 토마토를 올려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "찰보리"
     ],
@@ -9395,7 +9395,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 닭육수를 넣고 귀리가 익을 때 까지 푹 익힌 후\n믹서에 갈아 체에 걸러준다.",
       "6. 마지막으로 생크림을 넣고 농도를 조절하고\n녹차가루를 올려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "귀리",
       "닭육수",
@@ -9435,7 +9435,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 부추와 브로콜리는 뜨거운 물에 데쳐 먹기\n좋게 잘라주고, 방울토마토와 미니파프리카도\n먹기 좋게 잘라준다.",
       "6. 매실청과 올리브오일, 후추로 드레싱을 만들어\n준비된 채소를 섞어준 뒤 그릇에 담는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "게맛살",
       "천연조미료",
@@ -9477,7 +9477,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 소스를 만들어준다.",
       "6. 접시에 무조림을 깔고 닭가슴살 구이를 올리고\n청경채와 함께 소스를 뿌려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "닭가슴살 280g, 미나리 50g, 쌀 50g, 청경채 60g\n무조림 : 무 150g, 맛간장 15g, 고춧가루 15g, 다진마늘 5g, 물 200g\n소스 : 된장 15g, 매실청 15g, 들기름 10g, 다진양파 10g, 검은깨 5g, 다진마늘 5g",
     "source": {
@@ -9631,7 +9631,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "2. 오이는 반달 모양으로 슬라이스하고 식초에 절인 후 물기를 제거하고 매실액을 넣는다.",
       "3. 데쳐낸 실치와 오이를 함께 버무려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "실치"
     ],
@@ -9661,7 +9661,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "2. 무는 채 썰고 비트 물에 채 썬 무를 넣어 색을 들인다.",
       "3. 초절이 소스를 만든 후 색을 입힌 무를 소스에 넣어 재우고 절인 무를 건져 그릇에 담고 0.5cm로 썬 쪽파를 올린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "●주재료 : 무 200g(1/3개), 비트 10g(5cm), 쪽파 10g(10cm)\n●초절이 소스 : 소금 2g(1/2작은술), 식초 20g(1⅓큰술), 설탕 10g(2작은술)",
     "source": {
@@ -9727,7 +9727,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 달걀물을 붓고 익을 때까지 저은 후\n녹말물을 넣어 되직하게 끓인다.",
       "6. 밥을 그릇에 담고 덮밥소스를\n곁들인 후 두부, 가지, 가다랑어포를\n얹어 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료 두부",
       "가다랑어포",
@@ -9872,7 +9872,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 계란물을 풀어준다.",
       "6. 채소를 각각 볶아주다가 볶은 불고기에 섞어\n주고 계란물을 풀어서 밥에 올려서 통깨를\n뿌려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "쌀밥",
       "소불고기",
@@ -9911,7 +9911,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 조림장에 졸여지는 통삼겹에 장이 한 큰술\n남을 정도까지 졸여준다.",
       "6. 접시에 곁들이 채소와 청국장 리조또를 함께\n올려 셋팅한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "통삼겹",
       "청국장가루",
@@ -9948,7 +9948,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 메밀면을 삶아서 준비한다.",
       "6. 볼에 메밀면을 담고 고명을 올려준 후 믹서\n에 갈은 두부두유를 뿌려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "메밀면",
       "백일송이"
@@ -9984,7 +9984,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 데친 물 200g에 양념장을 만들어 멕시코\n고추를 담가 숙성시켜준 뒤 양념장에 알마늘을\n넣어 끓여준다.",
       "6. 만들어진 양념장에 소라, 전복, 자숙새우,\n준비된 채소 순으로 넣어 모듬해물찜을 완성\n한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "전복",
       "자숙새우",
@@ -10027,7 +10027,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "4. 두부는 기름에 구워서 크루통을 만든다.",
       "5. 준비된 채소를 물기를 빼고 접시에 담아\n두부크루통을 올린 뒤 소스와 함께 셋팅한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "치커리"
     ],
@@ -10063,7 +10063,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 바게트에 토마토시럽을 발라주고 청양고추\n버터를 발라 140도 오븐에서 2분간 구워준다.",
       "6. 그릇에 브로콜리스프를 담아주고 청양고추\n버터 바게트를 곁들여 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "닭육수"
     ],
@@ -10102,7 +10102,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 소스 재료를 믹서에 갈아 소스를 만들어준다.",
       "6. 대추는 돌려깎기 해서 잘라주고 준비된 모든\n재료를 섞어 샐러드를 만들고 대추채를 올려\n완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "연겨자"
     ],
@@ -10133,7 +10133,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 그릇에 토마토, 시금치, 알배추를 담는다.",
       "6. 끓인 된장국을 붓고 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "닭육수",
       "일식된장"
@@ -10172,7 +10172,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 샐러드소스를 만들어 샐러드를 버무려준다.",
       "6. 양념에 재워진 통삼겹을 구워주고 샐러드를\n담아 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "통삼겹",
       "닭육수",
@@ -10213,7 +10213,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 닭가슴살을 포를 떠준 후 졸여준 채소를\n채워준다.",
       "6. 닭가슴살을 팬에 구워주고 접시에 구운 채소\n와 소스를 뿌려준다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "콜리플라워",
       "닭육수",
@@ -10288,7 +10288,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬에 기름을 두르고 다진마늘을 볶아\n마늘기름을 만들어 놓는다.",
       "6. 마늘기름으로 삶아 놓은 등갈비를\n노릇노릇 하게 굽고, 접시에 담아\n물기를 빼 놓은 채소를 담고 유자소스를\n올려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "등갈비",
       "밤"
@@ -10363,7 +10363,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 우유에서 닭고기를 건져 후춧가루를\n살짝 뿌린 후 잡곡밥(②)과 볶아 놓은\n채소(④)를 넣어 돌돌 말아 준다.",
       "6. 토마토는 입자있게 다져 다진 마늘과\n함께 볶다가 케첩과 육수를 넣고 끓인\n뒤 말아놓은 닭고기를 넣고 은근히\n졸이듯 익혀 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "수수",
       "케첩",
@@ -10404,7 +10404,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 숙성한 닭(②)은 녹말가루와 달걀을\n섞은 반죽을 입혀 170℃의 튀김기름에\n두 번 튀겨 기름을 제거한다.",
       "6. 파스타면(④) 위에 튀긴 닭(⑤)을\n올리고 냄비에 크림소스를 끓이다가\n설탕을 넣고, 다시 끓으면 파프리카와\n피망, 깻잎(③)을 넣고, 한 번 더 끓인 후\n깐풍파스타에 올려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "뽕잎가루",
       "백년초가루",
@@ -10448,7 +10448,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 요거트에 썰어 놓은 양파와 당근,\n파프리카, 오이, 케첩을 넣어 섞어준다.",
       "6. 튀김기름 온도가 170℃가 되면 버무려\n놓은 닭(②)을 넣고 두 번 튀겨, 기름을\n제거하고, ④번 소스에 살짝 버무려\n접시에 담아, 준비한 요거트소스(⑤)를\n올려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "케첩"
     ],
@@ -10490,7 +10490,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 마늘은 썰어 굽고, 준비한 재료를\n꼬치에 차례로 꽂아 프라이팬 또는\n직화로 구워 담는다.",
       "6. 유자청에 저염간장과 레몬, 설탕을\n넣고 골고루 섞어 구워 놓은 소고기\n꼬지에 올려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "인삼",
       "꼬치"
@@ -10533,7 +10533,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 라면은 끓는 물에 데쳐 준비한다.",
       "6. 팬에 올리브오일을 넣어 따근해지면,\n오징어와 새우를 넣어 볶다가, 다시\n숙주와 마요네즈, 설탕, ①번 소스와\n채소를 넣어 센 불에서 재빠르게 볶고,\n다시 면을 넣어 볶아 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "황태",
       "굵은 소금"
@@ -10569,7 +10569,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬에 올리브 오일을 넣고 양파와 마늘을\n먼저 볶는다.",
       "6. 볶아지는 양파와 마늘에 토마토소스와\n케첩을 넣어 볶다가 토마토와 설탕을\n넣어 볶다가 졸이고, 밥을 그릇에 담고,\n구운 가지와 새우를 올린 후 졸여 놓은\n토마토소스를 위에 올린 후 어린잎을\n살짝 올려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "토마토소스",
       "케첩",
@@ -10649,7 +10649,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 숙성된 떡갈비를 팬에 기름을 살짝\n둘러 은근히 익혀, 냅킨에 올려 기름을\n빼놓는다.",
       "6. 끓는 물에 국수를 삶아 찬물에 여러 번\n헹구어 건져 그릇에 담고, 그 위에\n떡갈비를 올리고, 차게 보관한 동치미\n국물을 부은 뒤 곁들임채소로 오이와\n당근, 양파를 얹어 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "동치미",
       "국수"
@@ -10690,7 +10690,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 발사믹 식초에 설탕과 올리브 오일을\n넣고 골고루 섞어 소스를 만들어\n놓는다.",
       "6. 찢어 놓은 닭고기살과 백김치를 넣고,\n준비한 채소를 넣어 먹기 직전에 소스를\n올려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "백김치"
     ],
@@ -10727,7 +10727,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 볶은 마늘(④)에 베이컨과 양송이,\n양파를 넣고 다시 볶는다.",
       "6. 볶은 채소(⑤)에 육수를 붓고 끓이다가\n으깬 단호박(②), 생크림, 우유를 넣어\n한소끔 끓인 뒤 삶아놓은 스파게티면\n(②)을 넣고 다시 한 번 더 끓여 완성\n한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "육수"
     ],
@@ -10765,7 +10765,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 부추와 양파, 파는 입자있게 썰어, 볶아\n놓은 닭가슴살(③)에 섞어 편수 속을\n만들어 놓는다.",
       "6. 숙성시킨 밀가루 반죽(①)은 얇게\n밀어 사각형으로 썰어 그 안에 속을\n채워 넣고, 찜통에 약 5분 정도 쪄\n접시에 담고, 그 위에 편수 육수를\n올려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "마",
       "머스터드",
@@ -10872,7 +10872,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 양념장에 피망, 파프리카, 깻잎을\n섞는다.",
       "6. ?번을 칼집낸 호박 가운데 넣고 찜통\n에서 5분 정도 쪄 낸 뒤 그릇에 담아 저\n염간장소스를 한번 더 올린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "애호박(1개), 깻잎(3장), 양파(30g), 피망(30g), 파프리카(50g),\n저염간장(50g), 매실액(20g)",
     "source": {
@@ -10907,7 +10907,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 오이, 당근, 양파 및 표고버섯은 채를\n썰어 소금에 살짝 절여 팬에 볶아 따로\n준비한다.",
       "6. 소고기는 채를 썰어 저염간장으로 양념\n하고 팬에 볶은 후, 만들어 놓은 전병에\n볶은 야채와 소고기를 올려 돌돌 말아\n접시에 담고 그 위에 잣을 올리고\n녹차를 만든다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "계피가루",
       "녹차가루"
@@ -11049,7 +11049,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 다시 한 번 끓어오르면 쪽파와 달걀을 고루 풀어 넣고 젓지 말고 그대로 끓인다.",
       "6. 그릇에 밥을 담고, 돼지고기와 숙주를 올린 뒤 뜨거운 육수를 부어 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "가다랑어포"
     ],
@@ -11088,7 +11088,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 으깬 두부를 원형으로 만든다.",
       "6. 팬에 기름을 두르고 두부와 토마토를\n굽고, 접시에 케일을 깔고 그 위에\n두부와 토마토를 올린 뒤\n파인애플소스를 올린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "케일"
     ],
@@ -11128,7 +11128,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 묵은지는 흐르는 물에 헹군 뒤,\n묵은지에 고등어를 넣고 새우, 새송이,\n당근, 가지를 넣고 돌돌 말아 미나리로\n묶은 뒤 찐다.",
       "6. 양상추, 오이, 깻잎, 파프리카를\n채썰고 땅콩가루를 버무려 함께\n담아낸다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "고등어",
       "어린잎"
@@ -11271,7 +11271,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 소스에 꿀을 넣어 맛을 내고 차갑게\n보관한다.",
       "6. 팬에 삶아 놓은 파스타를 넣고 볶다가\n닭살과 호박채, 시금치를 넣고 볶은 뒤\n접시에 담고 차갑게 보관한 소스를\n올린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "쥬키니호박"
     ],
@@ -11344,7 +11344,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 아스파라거스와 표고버섯은 살짝 데쳐\n편으로 썬다.",
       "6. 육수에 달걀을 풀어 두툼하게 지단을\n부쳐 썰고, 밥에 촛물을 넣고 골고루\n섞어 초밥을 만든 뒤 와사비, 참치,\n달걀, 표고버섯, 파프리카 순으로 올려\n김으로 띠를 두른다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "참치",
       "김",
@@ -11453,7 +11453,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 과일을 체에 받쳐 물기를 빼고 소스에 버무린다.",
       "6. 한입 크기로 자른 양상추에 샐러드를 올려낸다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "밤",
       "곶감",
@@ -11523,7 +11523,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 거품기로 살짝 저어 거품을 낸다.",
       "6. 잔에 따르고 계피가루를 뿌린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "다진 호두",
       "계피가루"
@@ -11629,7 +11629,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 멸치다시마국물이 끓으면 옹심이를 넣고 익어서 떠오르면 홍합, 호박, 다진 파, 다진 마늘, 다시마를 넣고 국간장으로 간을 한다.",
       "6. 홍고추와 청고추로 장식한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "쌀가루",
       "홍합살",
@@ -11699,7 +11699,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 고추장, 양파, 파, 다진 마늘, 조청, 간장, 고춧가루, 참기름을 넣어 고추장양념을 만든다.",
       "6. 팬에 현미유를 조금 두르고 고추장양념을 볶다가 3의 꼬막떡꼬치에 고추장양념을 입힌 후 통깨를 뿌린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "꼬막",
       "떡볶이떡",
@@ -11777,7 +11777,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 국물에 영양부추만 뺀 재료를 넣고 버무려준다.",
       "6. 마지막에 영양부추를 넣어 김치를 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "젓갈"
     ],
@@ -11815,7 +11815,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 토마토페이스트와 닭가슴살을 데쳐낸 물을\n섞어 끓여준다.",
       "6. 끓고 있는 국물 50g에 밀가루를 섞어 농도를\n맞추어 준다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "토마토페이스트"
     ],
@@ -11852,7 +11852,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "4. 양념장에 가지와 준비된 채소를 버무려 준다.",
       "5. 완성된 가지김치는 2시간 정도 후에 숙성시켜\n완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "생강청"
     ],
@@ -11996,7 +11996,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 청양고추를 썰어서 볶은 후 국물을 미리\n끓여 놓은 국물에 붓는다.",
       "6. 만들어진 국물에 모든 재료를 넣고 한 번\n끓여 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "고사리",
       "소고기 양지"
@@ -12034,7 +12034,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 소스를 만들어준다.",
       "6. 모든 채소와 주꾸미를 섞어 소스랑 한데\n버무려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "더덕",
       "레몬소금"
@@ -12071,7 +12071,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 냄비에 갈아준 전복내장을 만들어준 기름에\n볶아주다 쌀을 넣고 볶고, 나머지 채소를\n넣어 볶는다.",
       "6. 마지막으로 새우, 바지락을 넣고 볶아 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "전복",
       "바지락살",
@@ -12216,7 +12216,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 소스가 자작 하게 끓고 있을 때, 우유를\n넣고 한 소끔 끓여준다.",
       "6. 팬에 올리브 오일을 두르고, 연어\n(①)를 올려 앞뒤로 구어 접시에\n담고, 토마토소스를 올려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "토마토 소스",
       "육수"
@@ -12257,7 +12257,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 반죽을 해 놓은 밀가루에 덧 밀가루를\n뿌려가며 얇게 밀어준다.",
       "6. 얇게 밀어 놓은 밀가루를 칼로 썰어\n덧밀가루를 털어내고, 만들어 놓은\n육수에 칼국수를 넣고, 준비한 채소\n(③)와 해물(④)을 넣고 간장으로 간을\n맞추어 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "덧밀가루",
       "홍합",
@@ -12340,7 +12340,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 소고기는 곱게 다져, 파 , 마늘, 참기름,\n후춧가루를 넣어 양념을 해 놓는다.",
       "6. 준비한 채소(③)와 고기(⑤)를 섞어\n만두속을 만들고, 숙성된 밀가루\n반죽(②)을 밀어 만든 만두피에 만두\n속을 넣어 만두를 만든다. 준비한 육수\n(④)에 삼색 만두를 넣어 끓여 담고 그\n위에 달걀지단을 올려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "들깨가루",
       "건멸치"
@@ -12380,7 +12380,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬에 기름을 두르고, 준비한 곁들임\n채소(③)와 다진 소고기를 재료별로\n따로 볶아 준비한다.",
       "6. 고추장에 콩가루를 섞고, 볶아진 소고기를\n넣어 다시 볶아 고추장 소스를 준비하고,\n쌀밥을 그릇에 담은 후 청포묵(①), 볶아\n놓은 채소와 소고기(⑤)를 올리고,\n마지막에 고추장소스를 올려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "청포묵",
       "고사리",
@@ -12458,7 +12458,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 쪄 놓은 양배추를 김발 위에 올려 넣고,\n볶아놓은 채소와 소고기를 넣는다.",
       "6. 김발을 이용하여 양배추를 돌돌 말고,\n미나리를 데쳐 끈으로 묶어 접시에\n올리고, 간장과 맛술, 참기름을 섞은\n간장소스를 만들어 담는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "양배추(120g), 미나리(20g), 느타리버섯(30g), 표고버섯(20g)\n팽이버섯(20g), 당근(30g), 오이(30g), 소금(1g)\n소고기(100g), 파(10g), 마늘(10g), 참기름(5g), 설탕(20g)\n- 양념장 : 저염간장(20g), 맛술(10g), 참기름(5g)",
     "source": {
@@ -12495,7 +12495,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 쪄 놓은 호박에 양념된 소고기를 넣고\n모양을 잡아 준다.",
       "6. 육수가 한 소큼 끓으면 만들어 놓은\n단호박떡갈비(⑤)를 넣어 약 20분 정도\n은근히 쪄서 잣을 올려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "육수"
     ],
@@ -12533,7 +12533,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 쪄놓은 배추를 한 장 펴놓고, 그 위에\n만들어 놓은 만두속을 넣어 양 쪽을\n접어 말아준다.",
       "6. 말아놓은 배추만두를 쪄 놓은 미나리\n끈으로 묶은 후, 만들어 놓은 육수가\n끓으면 배추만두를 넣고 간장으로\n간을 한 뒤 한 번 더 끓여서 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "두부(",
       "느타리",
@@ -12573,7 +12573,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 볶아지는 4번에 썰어 놓은 양송이와\n생크림을 넣고, 다시 살짝 한 번 더\n볶아준다.",
       "6. 팬에 버터를 녹이고, 재워놓은 닭가슴살\n(①)을 속이 익도록 노릇노릇 하게 익혀\n접시에 담고, 만들어 놓은 감자와 당근,\n브로컬리로 장식을 하고, 소스를 함께\n올려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "저염버터",
       "토마토케첩"
@@ -12639,7 +12639,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 으깬 두부에 된장을 넣어 섞어준다.",
       "6. 물에 담그어 놓은 채소를 체에 건져,\n물기를 털어내고, 만들어 놓은 된장\n소스에 넣어 무친다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "쌈채"
     ],
@@ -12710,7 +12710,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 김은 살짝 구어 봉투에 넣고 부수어\n김가루를 만들어 놓는다.",
       "6. 저염간장에 설탕과 식초를 넣어 골고루\n섞어 탕평채 양념장을 만들고, 접시에\n준비한 청포묵을 담고, 그 위에 채소와\n고기를 올리고, 맨 위에 달걀지단과\n김가루를 올린 후 양념장을 끼얹어 완성\n한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "청포묵",
       "맛소금",
@@ -12818,7 +12818,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 레몬과 설탕을 넣고 끓인다.",
       "6. 감자를 둥지모양으로 튀기고 그 위에\n튀긴 닭고기를 올리고 어린잎으로\n장식한 뒤 레몬소스를 올린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "통계피",
       "어린잎",
@@ -12885,7 +12885,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 콩다식 판에 숙성된 콩반죽을 넣고\n모양을 만든다.",
       "6. 콩다식에 레몬크림을 올리고\n레몬제스트로 장식한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "콩가루",
       "레몬제스트"
@@ -12923,7 +12923,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 토마토, 양파, 당근은 잘게 썰고, 쌀은\n깨끗이 씻어 불려 야채를 넣고 밥을\n짓는다.",
       "6. 쪄낸 양배추에 볶은 고기, 삶은 닭고기,\n구운 전복, 밥을 넣고 돌돌 말아 부추로\n묶어 접시에 담고, 한쪽에 구운 버섯을\n담는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "전복"
     ],
@@ -12993,7 +12993,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 어린잎은 찬물에 담궈 건져 놓는다.",
       "6. 튀긴 닭날개의 기름을 빼고 레몬과\n어린잎으로 장식한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "어린잎",
       "머스터드",
@@ -13070,7 +13070,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬에 기름을 살짝 두르고, 스테이크\n고기를 충분히 익혀 접시에 담고,\n단호박은 껍질을 벗겨 팬에 구워\n담는다.",
       "6. 배는 갈아 저염간장과 설탕을 넣고 잘\n저어 소스를 만들고 익혀 놓은\n스테이크에 올려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "배춧잎"
     ],
@@ -13143,7 +13143,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 누룽지는 손으로 잘라 기름에 튀긴다.",
       "6. 취나물에 익힌 닭가슴살과 볶은 야채를\n돌돌 말아 미나리를 감고 먹기 좋은\n크기로 썰어 접시에 담은 뒤 튀긴\n누룽지를 올린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "취나물",
       "누룽지"
@@ -13184,7 +13184,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 닭가슴살에 밀가루에 찬물, 달걀을\n넣고 튀김옷을 만들어 입힌다.",
       "6. 팬에 기름을 넉넉히 넣고 지지듯이\n닭가슴살을 튀겨 접시에 담고\n인삼소스를 뿌린 뒤, 그 위에 깻잎과\n대파, 인삼채를 올린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "인삼"
     ],
@@ -13221,7 +13221,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 랩에 닭살을 놓고 찹쌀과 인삼채,\n대추채를 올려 돌돌 만다.",
       "6. 마늘, 생강, 월계수잎 및 통후추를 넣고\n끓인 물에 김이 올라오면 말아놓은\n닭살을 찜통에서 20분 정도 찌고 한 김\n식으면 썰어 접시에 담는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "인삼"
     ],
@@ -13432,7 +13432,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 무에 간이 배면 양파와 병어를 넣고 남은 양념장을 넣어 졸여준다.",
       "6. 고추와 대파를 넣어 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "병어",
       "굵은 고춧가루",
@@ -13501,7 +13501,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 깻잎 뒷면에 4 를 한 숟가락 올리고 양끝을 오무려 돌돌 만다.",
       "6. 찹쌀가루에 물 한 큰술을 섞은 튀김옷을 골고루 입혀 바삭하게 튀겨낸다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "콩기름"
     ],
@@ -13571,7 +13571,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 부추와 실파는 다지고 참기름, 다진 마늘, 통깨, 다시마국물, 간장을 넣어 양념장을 만든다.",
       "6. 전복영양밥과에 부추양념장을 곁들인다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "전복살",
       "다시마국물"
@@ -13611,7 +13611,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 고추장, 된장, 견과류, 양파, 다진 마늘, 매실액, 파, 멸치다시마국물을 섞어 멸치견과류쌈장을 만든다.",
       "6. 근대위에 밥을 약 30g(1숟가락)정도 올리고 멸치견과류쌈장 5g 가량 넣어 근대잎으로 싼다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "현미",
       "보리쌀",
@@ -13653,7 +13653,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 만들어진 양념장 1/2에 장어를 넣고 졸여준다.",
       "6. 나머지 양념장에 준비된 채소를 넣어 볶아주다\n졸인 장어를 넣어 졸여주고 깻잎을 깔고\n완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "장어",
       "통마늘"
@@ -13693,7 +13693,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 재워 놓은 통삼겹은 플레인요구르트에 다시\n30분 정도 더 재워준 후 소스에 졸여준다.",
       "6. 감자를 쪄서 버터에 매쉬포테이토를 만들어\n담아주고, 구운 통삼겹과 준비된 채소와 볶은\n현미를 올려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "통삼겹",
       "건로즈마리",
@@ -13736,7 +13736,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 튀겨진 소고기 볼을 기름에 한 번 더 튀겨준다.",
       "6. 접시에 으깬 감자와 불고기볼 그리고 튀김을\n올리고 소스와 바질을 올려 완성한다"
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "생강청",
       "딸기잼",
@@ -13816,7 +13816,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 볶아지는 채소에 크림소스를 넣어\n은근히 볶는다.",
       "6. 소스가 볶아지면, 마지막에 다져 놓은\n캐슈넛과 생크림, 모짜렐라치즈를\n넣고 한 번 더 익힌 후, 접시에 어린잎과,\n닭가슴살을 놓고, 크림소스를 곁들여\n완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "크림소스",
       "캐슈넛"
@@ -13857,7 +13857,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 채소와 파인애플을 넣은 등심에 치즈를\n넣고 돌돌말아 밀가루, 달걀물, 빵가루\n순서로 입혀 튀김기름 170~180℃에서\n약 3분 정도 튀겨 기름을 빼 놓는다.",
       "6. 냄비에 칠리소소와 물, 설탕을 넣고\n바글바글 끓이다가 물녹말을 넣고\n한 번 더 끓인 후, 튀겨놓은 등심채소\n롤에 함께 뿌려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "칠리소스"
     ],
@@ -13895,7 +13895,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 데친 배추와 표고버섯을 입자있게\n다지고, 양파와 당근도 입자있게 다져\n준비한다.",
       "6. 두부는 물기를 짜 놓은 후 새우(③)와\n다진 야채(⑤), 마늘, 소금, 후춧가루\n를 넣고 골고루 섞는다. 유부(②)에\n속을 넣고 미나리로 묶은 후, 끓는\n육수에 유부주머니를 넣고 간장으로\n간을 하여 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "유부",
       "육수"
@@ -13936,7 +13936,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 토마토는 편으로 썰어 준비한다.",
       "6. 팬에 올리브 오일과 버터를 넣고 팬이\n따끈하게 달궈지면, 밥패티를 먼저\n굽고, 소고기 패티를 구운 후, 밥패티에\n마요네즈를 살짝 바르고, 치즈와\n토마토를 올리고, 구운 소고기패티를\n올려 다시 밥패티를 덮어 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "현미쌀",
       "으깬두부"
@@ -13979,7 +13979,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 밥과 채소가 볶아지면, 닭고기살(②)을\n넣고, 토마토 페스트와 토마토를\n다져넣고 볶는다.",
       "6. 파프리카의 속을 파내고, 그 안에\n볶아진 밥(⑤)을 넣고, 달걀물을\n씌우고 모짜렐라치즈를 뿌려 치즈가\n녹을 때까지 팬에 뚜껑을 덮어\n약불에서 익힌 후 파슬리가루를\n올려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "쥬키니호박",
       "토마토 페스트"
@@ -14021,7 +14021,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 리코타치즈를 올린 등심에 다시 모짜렐\n라치즈를 넣고 등심을 다시 위에 올려,\n밀가루와 달걀물, 빵가루 순서로 입힌\n뒤 튀김온도 170~180℃에 약 3분 정도\n튀겨 기름을 빼 놓는다.",
       "6. 냄비에 준비해 놓은 소스(③)를 넣고\n볶다가 돈가스 소스를 넣고 다시 한 번 더\n끓인 후 튀겨놓은 리코타돈가스(⑤)에\n곁들여 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "케첩",
       "돈가스소스"
@@ -14061,7 +14061,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 냄비에 간장과 물, 설탕, 올리고당,\n통후추, 생강을 넣고 은근히 끓인다.",
       "6. 소스가 은근히 끓고 있을 때 채로 생강과\n통후추를 걸러내고, 물녹말을 풀어 한\n소큼 더 끓인 후, 찜통에서 쪄 나온 부추와\n삼겹살을 썰어 접시에 담고, 그 위에\n소스와 홍고추를 올려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "소주",
       "편마늘"
@@ -14136,7 +14136,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 당근, 양파, 대파, 청 ․ 홍고추를 썰어\n놓는다.",
       "6. 만들어 놓은 양념장에 데친 오징어와\n채소를 넣어 무친 후 토마토를 돌려\n담은 접시에 담아 통깨를 올려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "오징어(100g), 미나리(20g), 소금(0.3g), 토마토(50g)\n양파(20g), 청고추(10g), 홍고추(10g), 대파(10g)\n당근(20g), 통깨(5g)\n- 양념장 : 토마토(50g), 고추장(20g), 식초(10g)\n생강즙(10g), 올리고당(20g)",
     "source": {
@@ -14174,7 +14174,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 만들어 놓은 육수에 들깨 가루를 넣어\n끓인다.",
       "6. 숙성된 밀가루(②)를 얇게 밀어 칼국수로\n만든 뒤 준비한 육수(⑤)를 한소끔 끓인\n후 칼국수와 호박을 넣어 끓이다가 다시\n홍고추를 넣고 한 번 더 끓여 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "들깨가루"
     ],
@@ -14214,7 +14214,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 만든 소스를 소불고기에 넣어 2차 숙성을 시킨다.",
       "6. 팬에 고기를 볶고 별도로 채소를 볶은 뒤 씨를 빼고 얇게 썬 대추와 통깨를 얹어 접시에 함께 담아 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "소불고기"
     ],
@@ -14253,7 +14253,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 달걀은 풀어 준비한다.",
       "6. 육수(④)가 끓으면 라면을 넣고, 다시\n한 번 더 끓으면 홍합을 넣어 끓이다가,\n불을 줄인 뒤 달걀을 넣어 줄알을 치고,\n청경채와 숙주, 홍고추와 대파를 넣고\n살짝 끓은 뒤 그릇에 담아 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "홍합",
       "굴소스"
@@ -14289,7 +14289,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 달걀은 삶아 껍질을 벗겨, 실로 잘라\n놓는다.",
       "6. 동치미 국물에 배즙 , 홍초, 설탕 , 겨자,\n식초를 넣어 섞는다. 그릇에 곤약국수를\n담고, 무김치(③)와 준비한 채소(④)를\n올리고, 삶은 달걀(⑤)을 얹고, 국물을\n살며시 넣어 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "실곤약",
       "동치미국물",
@@ -14336,7 +14336,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 사과, 대추, 밤, 오이, 양파, 당근, 무는\n사각 깍둑 썰기로 준비한다.",
       "6. 볶아진 갈비(③)에 양념장(④)과 물을\n넣고 은근히 갈비를 졸이다가, 국물이\n자작하게 남으면, 손질한 과일과 채소\n등(⑤)을 참기름과 함께 넣고, 한 번 더\n졸여 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "돼지갈비",
       "밤",
@@ -14377,7 +14377,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 닭을 먼저 냄비에 볶는다.",
       "6. 볶아지는 닭에 만들어 놓은 소스를\n넣고, 볶다가 준비한 채소를 넣어 한 번\n더 볶아 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "닭",
       "소주",
@@ -14424,7 +14424,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "4. 고추장에 고춧가루, 다진 마늘, 케첩,\n설탕, 식초, 매실액, 생강즙, 참기름을\n골고루 섞어 양념장을 만든다.",
       "5. 양념장에 준비한 골뱅이(①), 채소(②),\n과일(③)을 넣고 고루 섞은 뒤 통깨를\n얹어 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "골뱅이",
       "황도",
@@ -14467,7 +14467,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 깻잎은 저염간장에 살짝 절인다",
       "6. 구워 놓은 떡갈비와 깻잎, 표고버섯,\n연근, 애호박 및 감자를 접시에 담고 간\n마와 두유를 섞어 자작하게 끓여 만든\n소스를 그 밑에 담아 완성한다"
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "떡볶이떡",
       "흑미",
@@ -14512,7 +14512,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 달걀은 황백으로 나눠 지단을 부친다.",
       "6. 불린 쌀로 밥을 짓고, 밥과 3번과 4번을\n섞어 미니 떡갈비를 만들어 팬에\n기름을 두르고 익힌 뒤 황백지단으로\n장식한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "떡볶이떡",
       "흑미",
@@ -14588,7 +14588,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 판젤라틴은 물에 불려 중탕으로 녹여\n4에 섞고, 차갑게 휘핑한 생크림을\n넣는다.",
       "6. 5를 틀에 굳힌 후, 접시에 담고\n마카롱으로 장식한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "망고퓨레",
       "판젤라틴"
@@ -14628,7 +14628,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 믹서에 간 망고와 레몬에 설탕, 소금을\n약간 넣고 소스를 만든다.",
       "6. 토마토는 먹기 좋은 크기로 자르고,\n접시에 준비한 야채와 해산물을 담고,\n소스는 먹기 직전에 올린다"
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "관자",
       "망고",
@@ -14667,7 +14667,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 녹인 버터에 다져 놓은 야채를 볶다가\n발사믹소스를 넣고 바글바글 끓여\n소스를 만든다.",
       "6. 팬에 버터와 기름을 넣고 중불에서\n마리네이드한 닭살을 익혀 스테이크를\n만들고, 미니양배추를 팬에 굴려가며\n익혀 접시에 담은 뒤 소스를 올린다"
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "미니",
       "발사믹소스"
@@ -14703,7 +14703,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 시금치와 미역은 끓는 물에 데쳐 잘게\n썬다.",
       "6. 마늘을 다져 우유와 함께 끓이다가\n썰어 놓은 미역과 시금치, 새우완자를\n넣고 한소끔 끓인다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "관자",
       "미역",
@@ -14743,7 +14743,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 오리 가슴살을 구운 팬에\n아스파라거스, 당근, 감자를 구워\n접시에 담는다.",
       "6. 냄비 또는 팬에 다진 야채를 넣고\n볶다가 발사믹소스를 넣고 졸여 소스를\n만들고, 접시에 담아 놓은 오리\n스테이크에 올린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "오리고기",
       "발사믹소스"
@@ -14785,7 +14785,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 흑미는 충분히 불려 밥을 짓는다",
       "6. 깻잎은 간장, 식초, 설탕에 절여\n흑미밥과 너비아니 구이를 넣고 돌돌\n말아 쌈밥을 만든다"
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "흑미"
     ],
@@ -14897,7 +14897,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 야채를 섞은 안심과 두부는 다진\n단호박을 섞어 깻잎으로 먼저 감싼다.",
       "6. 숙성된 반죽을 밀대로 밀어 5번을 감싼\n뒤 오븐에 넣고 25분 정도 굽는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "소고기(안심, 120g), 두부(50g), 양송이버섯(3개), 양파(30g),\n당근(20g), 단호박(1/2개), 가지(1/2개), 감자(50g), 깻잎(3장),\n마늘(20g), 버터(20g), 밀가루(100g), 달걀(1개), 소금(0.3g)",
     "source": {
@@ -14934,7 +14934,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 냄비에 물, 복분자, 고구마를 넣고\n끓인다.",
       "6. 5번에 전분을 넣고 걸죽하게 소스를\n완성하고, 아스파라거스와 버섯은\n팬에 구워 쪄낸 닭테린 옆에 담은 뒤\n소스를 올린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "복분자"
     ],
@@ -15180,7 +15180,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 홍피망은 2cm 가량으로 가늘게 채썰고 3, 4와 파, 마늘, 설탕, 참기름, 통깨, 고춧가루, 소금을 넣고 조물조물 무친다.",
       "6. 두부위에 5의 김치달래무침을 곁들인다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "달래"
     ],
@@ -15247,7 +15247,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 달군 팬에 기름을 두르고 달걀물을 부어 반숙이 되면 말아서 두툼하게 만든 뒤 약한 불에서 아래, 위, 양옆으로 뒤집어가며 속까지 익힌다 .",
       "6. 한입 크기로 썰어 그릇에 담는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "쑥",
       "현미유"
@@ -15347,7 +15347,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 파를 어슷 썬다.",
       "6. 삶은 우엉, 손질한 파, 양념 재료를 넣고 골고루 무쳐 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "우엉",
       "들깻가루"
@@ -15384,7 +15384,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 찜기에 젖은 면보를 깔고 만두를 넣어 7분 간 찐다.",
       "6.  양념장과 함께 곁들여 낸다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "8g",
       "만두피"
@@ -15497,7 +15497,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 냄비에 버터를 녹인 뒤 토마토와 사과\n(②), 소스(④)를 넣고 볶아준다.",
       "6. 볶고 있는 소스(⑤)에 떡볶이 떡(①)과\n썰어놓은 채소와 어묵(③)을 넣고,\n육수를 부어 끓이다가 대파를 넣고\n한 번 더 끓여 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "떡볶이떡",
       "어묵",
@@ -15537,7 +15537,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬에 식용유를 두르고 채소를 먼저\n볶는다.",
       "6. 채소를 볶은 팬에 다시 숙성된 소고기를\n익히고, 볶아놓은 채소를 넣고 소스를\n넣어 살짝 더 졸여 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "포도주스",
       "칠리소스"
@@ -15575,7 +15575,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 볶아지는 냄비에 닭살과 떡볶이떡,\n양파를 넣어 다시 볶는다.",
       "6. ⑤번에 밥을 넣고 육수와 우유, 생크림을\n넣어 볶으면서 치즈를 넣고 한 번 더 고실\n하게 볶아 완성하고 삶은 당근은 꼬마\n당근을 만들어 장식으로 올려 준다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "떡볶이떡",
       "육수"
@@ -15613,7 +15613,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 고추장과 다진마늘, 다진양파, 케첩,\n올리고당을 넣고, 골고루 섞어 양념장을\n만들어 놓는다.",
       "6. 꼬치에 준비한 닭다리살과 단호박, 양파,\n떡볶이떡, 대파를 꽂아 은근히 초벌로\n굽고, 다시 만들어 놓은 양념장을 발라\n구워 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "떡볶이떡",
       "꼬치",
@@ -15657,7 +15657,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 다진 소고기에 간장과 갈아놓은 배,\n맛술, 파, 마늘, 참기름, 통깨로 양념을\n하여 30분 이상 재워둔 뒤 썰어 놓은\n김치, 다진 떡을 넣고 골고루 치대어\n섞는다.",
       "6. 팬에 기름을 넣고 따끈해지면 떡갈비\n(⑤)를 넣어 익힌 후, 콩나물밥(④)\n위에 올리고, 브로컬리는 살짝 데쳐\n장식으로 올려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "떡볶이떡"
     ],
@@ -15729,7 +15729,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 냄비에 버터를 넣고, 양파와 마늘을\n넣어 볶는다.",
       "6. 볶은 냄비(⑤)에 샐러리를 넣고 포도\n주스(③)와 채소(④)를 넣고 자작하게\n졸인 후 팬에 버터를 살짝 바르고, 팬이\n따끈해 지면 숙성한 목살을 넣어 익힌다.\n목살이 익혀지면, 자작하게 졸인 소스에\n넣어 다시 한 번 더 졸여 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "돼지목살",
       "칠리소스",
@@ -15775,7 +15775,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 닭고기살에 대추(②)와 채소(③), 소금,\n후춧가루, 참기름을 넣어 골고루 섞는다.",
       "6. 섞여진 닭고기살(⑤)을 동글동글 하게\n완자를 지어 살짝 데쳐내고, 냄비에\n버터와 밀가루를 넣어 볶다가, 육수를\n넣고 끓인 뒤 우유와 브로컬리 갈은 것\n(④)과 생크림을 넣어 한 소큼 끓여 완성\n한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "육수"
     ],
@@ -15819,7 +15819,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 어린잎은 찬물에 잠시 담그어 놓았다가\n채에 건져 물기를 제거한다.",
       "6. 말아놓은 등심에 밀가루, 달걀물,\n빵가루 순서로 입혀 튀김기름\n170~180℃의 온도에 약 3분 정도\n튀겨 기름을 빼 놓고, 튀김소스(④)와\n어린잎(⑤)을 접시에 담아 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "머스터드"
     ],
@@ -15861,7 +15861,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 재워놓은 소고기(①)와 베이컨, 햄을\n올리브기름에 볶다가 썰어 놓은 채소를\n넣어 함께 볶아 준비한다.",
       "6. 속 파낸 단호박(②)에 준비해둔 호박속\n(③)과 볶아놓은 햄과 채소(⑤)를 담고,\n모짜렐라치즈를 올려 오븐에 약 5분\n정도 구운 뒤 파슬리가루를 살짝 뿌려\n완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "미니단호박"
     ],
@@ -15900,7 +15900,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 끓여 식힌 간장에 파, 마늘, 참기름,\n통깨를 넣는다.",
       "6. 숙성시킨 L.A 갈비에 만들어 놓은\n양념을 넣고 다시 하루 정도 더 숙성\n후 팬에 구워 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "L.A갈비",
       "대파 다진것"
@@ -15940,7 +15940,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 볶아지는 냄비에 밀가루 뭍힌 닭살을\n넣어 살짝 볶는다.",
       "6. ⑤번에 양송이와 다진 토마토, 토마토\n소스, 올리고당, 굴소스를 넣고 살짝\n볶다가 육수를 넣어 끓인 후 다시 우유를\n넣고 은근히 끓이고, 스파게티는 약\n10분 정도 삶아 건져 접시에 담아, 끓인\n소스를 붓고, 위에 모짜렐라치즈를 올려\n오븐에 약 5분 정도 구어 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "스파게티",
       "닭살",
@@ -16018,7 +16018,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. ?에 생크림과 로즈마리를 넣어\n끓인다.",
       "6. 달걀은 풀어 체에 내려 넓게 지단을\n부쳐 에 넣고 오므라이스로 말아 담고\n된장 소스를 올린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "보리",
       "율무",
@@ -16093,7 +16093,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 호박잎은 끓는 물에 데친다.",
       "6. 고추장, 올리고당, 갈은 파인애플을\n섞어 소스를 만들고, 데친 호박잎에\n볶은 강황밥과 두부, 야채를 넣고\n고추장소스를 넣고 둥글게 말아\n완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "강황쌀",
       "고사리",
@@ -16200,7 +16200,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 냄비에 다진 토마토를 넣고 볶다가\n다진 양파, 월계수잎을 넣고 볶아\n은근히 끓여서 소스를 만든다.",
       "6. 파슬리는 곱게 다져 준비하고 접시에\n토마토, 가지, 애호박을 돌려담고 그\n위에 토마토소스를 올린 뒤 다진\n파슬리를 올린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "토마토(150g), 가지(1/2개), 애호박(1/2개), 홀토마토(50g),\n양파(30g), 월계수잎(1장), 파슬리(5g)",
     "source": {
@@ -16306,7 +16306,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 홍피망, 파프리카, 적채, 양파, 깻잎은\n곱게 채썬다.",
       "6. 썰어 놓은 야채를 각각 물에 담궜다\n건져 두부 옆에 담고 소스를 뿌리고\n흑임자를 올린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "적채"
     ],
@@ -16411,7 +16411,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 고추장에 준비한 다시마물을 섞고,\n설탕과 식초를 넣어 소스를 만든다.",
       "6. 소고기는 소금, 후춧가루로 밑간을\n한뒤 구워 썰고, 호박잎에 소고기와\n갖은 야채를 올려 돌돌말아 접시에\n담고 고추장 소스를 올린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "호박잎",
       "적채"
@@ -16482,7 +16482,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 파프리카, 사과, 당근은 굵게 채썬다.",
       "6. 쪄낸 양배추에 깻잎과 썰어놓은 야채를\n올려 둥그렇게 말아 준비한 소스에\n살짝 적신다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "가쓰오부시"
     ],
@@ -16513,7 +16513,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 레몬과 올리브오일을 섞는다.",
       "6. ?번에 발사믹소스를 넣고 연어 샐러드\n양념을 만들고, 접시에 연어와 물기를\n뺀 어린잎을 담는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "발사믹소스",
       "어린잎"
@@ -16652,7 +16652,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 애벌구이된 갈치 위에 고추장양념을 발라 구운다.",
       "6. 통깨를 뿌려 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "갈치",
       "다진 생강"
@@ -16683,7 +16683,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 김이 오른 찜통에 넣고 10~15분간 찐다.",
       "6. 냉장고에 넣어 식힌후 차갑게 먹는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "달걀노른자"
     ],
@@ -16754,7 +16754,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 고추장, 식초, 매실액, 파, 마늘, 통깨, 고춧가루를 넣고 고추장양념을 만든다.",
       "6. 접시에 1,2,4를 담고 5의 고추장양념을 곁들인다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "돌나물"
     ],
@@ -16966,7 +16966,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5.  다진양파, 설탕, 간장, 고춧가루, 올리브유, 식초, 마늘, 통깨를 넣어 샐러드드레싱을 만든다.",
       "6. 2의 돼지고기와 3의 참나물을 그릇에 담고 샐러드드레싱을 곁들인다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "돼지고기사태",
       "참나물",
@@ -17002,7 +17002,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 홍시, 호상요구르트, 3배 식초, 소금을 섞어 홍시드레싱을 만든다.",
       "6. 그릇에 배추, 사과, 배, 연근칩, 땅콩, 호두를 넣고 버무린 뒤 홍시드레싱을 곁들인다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "현미유",
       "홍시",
@@ -17075,7 +17075,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 호두를 발라준 안심을 구워준다.",
       "6. 남은 망고소스를 다시 졸여서 구워진 안심\n위에 뿌려주고 볶은 채소랑 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "안심",
       "망고",
@@ -17114,7 +17114,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 접시에 볶아진 채소와 파스타면을 서로 다시\n볶아준다.",
       "6. 접시에 푸슬리를 올려 셋팅하고 토마토소스를\n뿌려주고 치즈가루를 뿌려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "토마토홀",
       "푸실리",
@@ -17294,7 +17294,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 모든 재료를 꼬치에 꽂는다.",
       "6. 꼬치를 팬에 구워주면서 소스를 발라준다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "자숙새우",
       "소라살",
@@ -17331,7 +17331,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 냄비에 다진마늘과 다진양파를 볶아주다\n토마토를 넣어 소스를 만들어준다.",
       "6. 닭날개를 팬에 구워주고 감자와 샐러드를\n곁들여 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "닭날개",
       "황설탕",
@@ -17408,7 +17408,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 흑임자가루, 플레인요거트, 식초, 설탕을 섞어 드레싱을 만든다.",
       "6. 접시에 담고 소스와 베이비채소를 얹는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "베이비채소"
     ],
@@ -17439,7 +17439,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 두른 반죽 가운데 마를 올려 부친다.",
       "6. 먹기 좋게 담은 후 건대추를 고명으로 올린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "마",
       "건대추"
@@ -17470,7 +17470,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 으깬 감자와 완두콩, 당근을 섞는다.",
       "6. 플레인요거트를 섞어 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "완두콩"
     ],
@@ -17508,7 +17508,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 연겨자, 식초, 마늘, 설탕, 깨를 넣어 소스를 만든다.",
       "6. 모든 재료를 소스에 버무린 다음 무쌈과 함께 낸다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "쌈무",
       "연겨자",
@@ -17540,7 +17540,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 구운 견과류를 넣어 볶다가 소금으로 간한다.",
       "6. 그릇에 담아 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "아몬드슬라이스",
       "캐슈넛"
@@ -17580,7 +17580,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 닭다리살에 옥수수전분을 묻히고, 팬에 식용유를 두른 뒤 노릇하게 굽는다.",
       "6. 그릇에 손질한 채소를 깔고, 구운 닭다리살을 올린 뒤 소스와 무순을 올려 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "그린치커리",
       "라디치오",
@@ -17648,7 +17648,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬닝된 반죽을 호떡처럼 윗면을 살짝 눌러준다.",
       "6. 190℃에서 15분 정도 굽는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "이스트"
     ],
@@ -17679,7 +17679,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "4. 방울토마토는 반으로 썰고, 굳힌 리코타치즈는 한입 크기로 만든다.",
       "5. 그릇에 방울토마토와 리코타치즈를 올리고 발사믹 드레싱을 뿌린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "방울토마토(100g), 우유(370㎖), 레몬즙(20g), 발사믹식초(10g), 레몬즙(1g), 올리브유(10g)",
     "source": {
@@ -17782,7 +17782,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 그릇에 영양부추를 깔고, 삼겹살을 가지런히 올린다.",
       "6. 씨를 제거한 참외에 참외 저염쌈장을 담아 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "참외",
       "들깻가루",
@@ -17823,7 +17823,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 두부면과 닭육수(½컵)를 넣은 뒤 육수가 졸아들 때까지 볶고, 후춧가루(0.2Ts)와 청양고추를 넣어 1분간 볶는다.",
       "6. 그릇에 담고 볶은 돼지고기와 식초에 재운 양파를 곁들여 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "두부면",
       "닭육수"
@@ -18029,7 +18029,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 냄비에 가지소스 재료와 물(100㎖)을 넣어 4분간 끓인다.",
       "6. 그릇에 튀긴 가지를 얹고 가지소스를 뿌린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "아삭이고추",
       "튀김가루"
@@ -18068,7 +18068,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 저염 간장, 식초, 꿀, 올리브유(3Ts), 소금(0.3Ts)을 넣어 한 번 더 곱게 간다.",
       "6. 그릇에 애호박면과 토마토소스를 담고, 바질잎(1장)과 블랙올리브 파우더를 뿌려 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "참외",
       "바질잎",
@@ -18142,7 +18142,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 김을 깔고 양념한 메밀면 → 깻잎 → 오이 → 당근 → 양파 → 두부 리코타 샐러드 → 족발 순서로 올려 말아 김밥을 만든다.",
       "6. 김밥을 먹기 좋은 크기로 썰고 달걀지단을 올려 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "메밀면",
       "족발",
@@ -18249,7 +18249,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 중불에서 물을 붓고 끓으면 느타리버섯을 넣는다.",
       "6. 숙주나물과 파를 넣고 한소끔 끓이고 저염간장과 고춧가루를 넣는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "소고기 14g, 무 15g, 파 3g, 느타리버섯 5g, 숙주 5g, 저염간장 10g, 물 150g",
     "source": {
@@ -18315,7 +18315,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 육수에 무, 꽃게, 바지락을 넣고 한소끔 끓인다.",
       "6. 콩나물, 양파, 애호박 대파를 넣고 끓이다 간을 맞춰 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "꽃게",
       "조선무",
@@ -18358,7 +18358,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 새뱅이와 호박, 고추 마늘을 넣어 끓인다.",
       "6. 손수제비와 파를 넣고 간을 맞추고 마지막에 쑥갓을 올린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "새뱅이",
       "호박"
@@ -18430,7 +18430,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 구워진 닭과 가지를 매실소스에 버무린다.",
       "6. 팬에 소스 묻은 닭과 가지를 볶아 낸다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "매실엑기스",
       "대두유"
@@ -18501,7 +18501,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 물(100ml)을 넣어 조개가 입을 벌릴 때까지 끓이고, 두부크림을 넣어 끓어오르면 관자를 넣어 3분간 익힌다.",
       "6. 그릇에 담아 바질을 올리고, 그라나파다노 치즈를 뿌려 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "관자",
       "모시조개",
@@ -18545,7 +18545,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 토마토 소스를 함께 넣어 5분간 끓인다.",
       "6. 청경채, 팽이버섯, 숙주를 넣어 살짝 볶고, 깻잎과 누룽지를 올려 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "우목심",
       "홍합",
@@ -18587,7 +18587,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 고사리는 깨끗하게 씻은 뒤 물에 불린다.",
       "6. 끓는 물에 소금을 넣고 도라지, 시금치, 고사리 순으로 데친 뒤 찬물에 헹궈 물기를 짜고 양념장을 곁들인다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "도라지",
       "고사리"
@@ -18692,7 +18692,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 140도로 예열한 오븐에 25분 정도 구워 프리타타를 만든다.",
       "6. 프리타타 위에 새싹채소와 리코타 치즈를 올린 후 올리브유를 두르고 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "쌈추",
       "적근대",
@@ -18730,7 +18730,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 접시에 갈치구이를 담고 과카몰리를 곁들인다.",
       "6. 접시에 손질한 라임을 담고 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "갈치",
       "아보카도",
@@ -18768,7 +18768,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 뇨끼 반죽을 한입\n크기로 떼어 동그랗게\n만들고 포크로 모양을\n낸 뒤 끓는 물에 데쳐 뇨끼를 만든다.\n볼에 콩물을 담고 알룰로스(10g),\n소금(0.5g)으로 간하고 뇨끼를 넣는다.",
       "6. 그릇에 멘보샤, 샐러드, 콩국뇨끼를\n담고 채 썬 오이(5g)를 뇨끼에\n고명으로 올려 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "주재료 애호박",
       "튀김가루",
@@ -18808,7 +18808,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 손질한 알배추, 쪽파, 겉절이 양념(15g)을 버무린다.",
       "6. 접시에 담고 통깨를 뿌려 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "겉절이 양념",
       "[겉절이 양념",
@@ -18846,7 +18846,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 콩나물을 넣고 국간장으로 간을 하여 끓인다.",
       "6. 대파를 얹어 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "낙지",
       "대두유",
@@ -18924,7 +18924,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 손질한 채소와 밑간한 닭가슴살을 넣고 2분간 볶은 뒤 코코넛워터와 우유를 부어 끓인다.",
       "6. 그릇에 현미밥을 담고 카레를 부은 뒤 요거트소스와 파슬리가루(0.5g)를 올려 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "코코넛워터",
       "현미밥",
@@ -18999,7 +18999,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 쌈두부 → 구운 소고기 양지 → 소스 → 모차렐라 치즈 순으로 켜켜이 올리고 180도로 예열한 오븐에 8분간 익힌다.",
       "6. 깻잎을 돌돌 말아 채 썰어 올려 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "쌈두부",
       "소고기 양지",
@@ -19042,7 +19042,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 믹서에 참깨, 올리브유(6g)를 넣어 갈고 요거트, 다진 마늘을 섞어 참깨 소스를 만든다.",
       "6. 구운 가지 위에 볶음밥을 올려 돌돌 말고, 참깨 소스를 얹어 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "닭안심살",
       "알룰로스"
@@ -19079,7 +19079,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 삼계롤을 한입 크기로 썰고, 대파와\n홍고추를 잘게 썰어 고명을 만든다.",
       "6. 그릇에 삼계롤, 닭뼈육수를 넣고,\n쿠스쿠스, 대파와 홍고추 고명을 올려\n마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "쿠스쿠스",
       "밤",
@@ -19125,7 +19125,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬에 다진 양송이버섯, 마늘, 양파,\n통후추, 무염 버터를 넣어 볶는다.\n우유, 생크림을 넣고 함께 끓여 생크림\n소스를 만든다.",
       "6. 그릇에 생크림 소스, 구운 송편을\n올린다. 다진 대파, 통깨, 올리고당에\n조린 호두를 올려 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "콩가루",
       "구운 호두",
@@ -19166,7 +19166,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 올리브유를 두른 팬에 고등어를 구운\n뒤, 소바육수(5g), 맛술(5g), 유자청(5g),\n물(30ml)을 넣고 조린다.",
       "6. 그릇에 불린 묵말랭이를 담고 차가운\n소바육수를 넣는다. 조린 고등어,\n손질한 채소를 올려 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "묵말랭이",
       "고등어",
@@ -19207,7 +19207,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 육수에 대파, 청양고추, 쑥갓을 뺀 야채를 넣고 끓이다가 들깨가루와 천일염을 넣어 간 한다.",
       "6. 마지막으로 코다리를 넣고 거품을 걷어가며 끓인 뒤 대파, 청양고추, 쑥갓을 올린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "코다리",
       "호박",
@@ -19251,7 +19251,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 중간 불로 달군 팬에 식용유(5㎖)를 두른 뒤 밑간한 삼치를 5분간 앞뒤로 노릇하게 구워 꺼낸다.",
       "6. 그릇에 깻잎퓌레 → 구운 삼치 → 매시드 포테이토 → 청경채 → 튀긴 새우 → 꽃잎 순으로 올린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "삼치",
       "식용 꽃",
@@ -19287,7 +19287,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 그릇에 스파게티를 담은 뒤 손질한 참나물을 올리고 올리브유, 잣가루를 뿌린다.",
       "6. 손질한 방울토마토를 곁들여 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "참나물"
     ],
@@ -19325,7 +19325,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 치아바타는 마른 팬에 안쪽 면을 노릇하게 구워 꺼내고, 빵 안쪽에 허니 요거트소스를 바른다.",
       "6. 로메인, 삼겹살볶음, 허니요거트소스, 아보카도, 방울토마토, 후춧가루 순으로 올려 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "아보카도",
       "로메인",
@@ -19403,7 +19403,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 끓는 물에 쫄면 사리를 넣고 삶아\n찬물에 헹궈 식힌다.",
       "6. 그릇에 쫄면 사리를 담고 가스파초 소스를 뿌린다. 손질한 양배추, 오이,\n닭가슴살, 볶은 빵가루, 볶은 양파, 바질(1장)을 올려 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "빨간 파프리카",
       "쫄면 사리",
@@ -19471,7 +19471,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 고춧가루, 액젓, 다진마늘, 쪽파를 섞어 양념을 만든다.",
       "6. 깍둑썰기한 배와 양념을 버무린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "액젓"
     ],
@@ -19507,7 +19507,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 바지락 육수에 완자를 넣어 한소끔 끊인다.",
       "6. 마지막에 쑥갓, 청홍고추, 팽이버섯을 넣어 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "가자미살",
       "무우",
@@ -19544,7 +19544,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 그릇에 수박 → 가지 → 브로콜리 → 적채 → 게살 순으로 쌓는다.",
       "6. 콩국물소스를 부어 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "게살",
       "수박",
@@ -19585,7 +19585,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 같은 팬에 아스파라거스와 방울토마토를 넣어 2분간 볶는다.",
       "6. 그릇에 구운 닭다릿살과 아스파라거스, 방울토마토를 올리고 요거트 소스를 곁들여 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "닭다릿살",
       "방아잎",
@@ -19625,7 +19625,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 뚜껑을 열어 새우를 올리고, 뚜껑을 다시 덮어 5분간 더 끓이고, 불을 꺼 5분간 뜸을 들인다.",
       "6. 파슬리가루와 후춧가루를 뿌려 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "황태 머리",
       "1장)"
@@ -19663,7 +19663,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 냄비에 다진 토마토, 식초, 설탕, 물(50g), 고춧가루, 전분을 넣고 끓여 칠리소스를 만든다.",
       "6. 오징어 가라아게에 칠리소스를 곁들여 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "달걀노른자"
     ],
@@ -19703,7 +19703,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 가지를 얇게 잘라 팬에 가볍게 굽고 ④를 올리고 돌돌 말아준다.",
       "6. 토마토 소스를 아래에 깔고 ⑤를 올리고, 순두부크림 소스를 올려 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "차돌박이"
     ],
@@ -19743,7 +19743,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 볶은 순두부에 볶은\n돼지고기를 넣어\n감싸준 후, 곤드레나물밥에\n넣어 동그랗게 만든다. 밀가루, 달걀,\n빵가루를 차례로 묻힌 후 180℃로\n예열한 식용유(180g)에 넣어 1분간\n튀겨 아란치니를 만든다.",
       "6. 팬에 간장, 참기름(15g), 다진 마늘(5g),\n후추(1g), 다진 파를 넣고 끓이다\n전분물을 넣어 농도를 맞춰 소스를\n만든다. 그릇에 아란치니를 담고\n소스를 뿌린 후, 얇게 썬 참외를 올려\n마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "건곤드레나물",
       "현미밥",
@@ -19784,7 +19784,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 달군 팬에 넣고 중약 불로 살짝 볶은 후 물을 부어 끓인다. 채소가 익으면 불을 끄고 시금치를 넣어 잔열로 익힌다.",
       "6. 접시에 담고 삶은 스파게티면을 곁들여 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "닭안심살",
       "l고추장",
@@ -19888,7 +19888,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 국간장을 넣어 간을 맞춘다.",
       "6. 다진마늘을 넣고 한소끔 더 끓여서 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "건미역"
     ],
@@ -19960,7 +19960,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 약한 불로 줄인 뒤 같은 팬에 버터와 밀가루를 넣고 3~5분간 볶아 블론드 루를 만들고 우유를 부은 뒤 10분간 끓인다.",
       "6. 구운 두부새우볼과 버섯, 소금(1g), 후춧가루(1g)를 넣은 뒤 그릇에 담고 파슬리가루(2g)를 뿌린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "냉동 새우살",
       "생강가루"
@@ -19997,7 +19997,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "4. 중간 불로 달군 팬에 식용유(10㎖)를 두른 뒤 옷을 입힌 부챗살을 앞뒤로 4분간 굽는다.",
       "5. 그릇에 구운 부챗살을 담고 전복내장소스를 곁들인다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "부챗살",
       "익힌 전복내장",
@@ -20034,7 +20034,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 쌈장과 파프리카가루를 넣어 고루 섞고, 토마토 국물이 배어 나오면 바질을 손으로 뜯어 넣은 뒤 국물이 자작해질 때까지 끓인다.",
       "6. 그릇에 ⑤의 재료를 담은 뒤 가지를 엇갈려 올리고, 치즈를 얹은 뒤 전자레인지에 넣어 모차렐라치즈가 녹을 때까지 조리해 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "슈레드 모차렐라치즈",
       "쌈장",
@@ -20069,7 +20069,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 물(3컵)을 넣는다.",
       "6. 중간 불로 10분간 끓여 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "북어채"
     ],
@@ -20214,7 +20214,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 토마토 페이스트, 케찹을 넣어 볶다가 물과 월계수잎을 넣어 끓인다.",
       "6. 소금, 후추로 간을 하고 푹 익혀준다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "토마토페이스트",
       "케첩"
@@ -20255,7 +20255,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 믹서에 소스와 다진 함초(7.5g)를 넣어 곱게 간다.",
       "6. 그릇에 함초두부스테이크를 올리고 소스를 뿌린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "불린 함초",
       "으깬 두부",
@@ -20336,7 +20336,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 종이 포일에 올리브유(20g)를 뿌리고, 데친 배추를 올린 후 위에 구운 고기와 덕셀(30g)을 올리고 돌돌 말아 에어프라이어에 200도, 10분간 굽는다.",
       "6. 접시에 웰링턴을 담고 여분의 덕셀, 브라운 소스를 올리고 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "백목이버섯",
       "머스타드",
@@ -20375,7 +20375,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 달군 팬에 소스를 넣고 살짝 졸인다.",
       "6. 접시에 함박스테이크를 담고 소스를 올린 후 깨를 뿌려 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "참나물",
       "부침두부",
@@ -20415,7 +20415,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 그릇에 리소토를 담고 파르미지아노\n치즈를 갈아 올린다.",
       "6. 리소토 위에 조린 소고기를 얹고\n그레몰라타 소스를 곁들여 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "현미",
       "셀러리",
@@ -20489,7 +20489,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 조림장이 끓으면 사태, 메추리알, 당근, 곤약을 넣고 조린다.",
       "6. 접시에 담아서 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "한돈",
       "메추리알",
@@ -20527,7 +20527,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 숙성 후 색을 보고 오미자청을 더 첨가한다.",
       "6. 숙성된 오미자 나박김치를 그릇에 담아준다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "콜라비",
       "청",
@@ -20565,7 +20565,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "4. 유자오리엔탈소스를 만든다.",
       "5. 그릇에 준비한 재료와 어린잎채소를 담고 유자오리엔탈소스를 뿌린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "메밀면",
       "어린잎채소"
@@ -20634,7 +20634,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 높이가 낮은 냄비에 라타투이 소스를 넓게 깔고, 손질한 채소를 둘러 담는다.",
       "6. 오리로 채운 단호박을 가운데 올린 뒤 6~8등분하여 펼치고, 중간 불로 15분간 쪄 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "주키니호박",
       "훈제 오리",
@@ -20738,7 +20738,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 그릴에서 완전히 굽는다.",
       "6. 소스를 끼얹어 낸다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "케첩",
       "홍토마토",
@@ -20813,7 +20813,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 가열된 팬에 옷입힌 돼지고기를 지진다.",
       "6. 구운 돼지고기에 썰어둔 채소를 얹은 후 고기를 말아 소스와 곁들인다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "돼지고기 등심",
       "통마늘"
@@ -20920,7 +20920,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬에 붙은 고기 조각들을 긁어내 함께 중불에서 끓여 양송이버섯 소스를 만든다.",
       "6. 스테이크를 썰어 그릇에 담고 양송이버섯 소스를 끼얹는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "포도주스",
       "오레가노",
@@ -20960,7 +20960,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 기름을 두른 팬에 토마토와 양파를 넣고 조린다.",
       "6. ⑤에 ④와 육수, 케첩을 넣고 끓인 후 후추를 넣고 소금으로 간을 하여 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "케찹",
       "10g"
@@ -21000,7 +21000,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 떡갈비를 팬에 올려 속이 익을 때까지 굽는다.",
       "6. 잘라놓은 대추와 잣을 고명으로 올려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "돈민찌",
       "우민찌",
@@ -21109,7 +21109,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 애호박에 소를 채운 뒤 찜기에 넣어 8분간 찐다.",
       "6. 애호박 순대를 1cm 두께로 썰어 그릇에 담고 양파장아찌를 올린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "생새우",
       "달걀흰자",
@@ -21150,7 +21150,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 갈아 낸 카레를 냄비에 붓고, 가람마살라 (1Ts), 코리앤더파우더(1Ts), 커민파우더, (1Ts), 다진 마늘(1Ts), 파프리카가루(1Ts), 소금(0.5ts)을 넣어 걸쭉하게 끓인다.",
       "6. 꼬치에 파프리카와 닭을 번갈아 끼운 뒤 중간 불로 달군 팬에 닭이 익을 때까지 굽고, 그릇에 카레를 담은 뒤 닭꼬치와 바게트를 곁들여 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "바게트",
       "정향",
@@ -21227,7 +21227,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 저나트륨 과일드레싱 재료를 믹서에 넣고 곱게 간다.",
       "6. 준비된 재료를 한데 섞고 저나트륨 과일드레싱을 곁들인다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "파인애플통조림",
       "키위"
@@ -21267,7 +21267,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 저민 돼지고기와 양념한 부추, 무를 곁들여 접시에 담는다.",
       "6. 두부를 곱게 다져 분량의 소스 재료와 섞어 저나트륨 두부 된장소스를 만들어 수육과 함께 낸다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "돼지고기 삼겹살",
       "고추기름",
@@ -21305,7 +21305,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 채소와 버섯을 넣고 한번 더 볶는다.",
       "6. 육수에 간장, 정종, 후춧가루를 넣고 끓이다가 마지막에 참기름을 넣어 낸다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "생표고버섯",
       "흰목이버섯",
@@ -21343,7 +21343,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 생면은 끓는 물에 데친다.",
       "6. 가열된 팬에 식용유를 넣고 채소를 볶다가 면과 소스를 넣고 충분히 볶는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "낙지",
       "쭈꾸미",
@@ -21381,7 +21381,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 도미는 건져내고 팬에 남은 소스에 다진 파슬리가루를 뿌린다.",
       "6. 접시에 도미와 소스를 함께 곁들여 낸다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "도미",
       "화이트와인",
@@ -21415,7 +21415,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 고등어를 팬에 넣어 오븐에 굽는다.",
       "6. 저나트륨발사믹소스와 구운 고등어를 함께 제공한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "고등어"
     ],
@@ -21454,7 +21454,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 저나트륨 초고추장소스를 만든다.",
       "6. 내기 직전에 무친 후 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "골뱅이",
       "고추가루",
@@ -21536,7 +21536,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. ④에 ②에서 다져놓은 야채를 넣어 끓이고, 소금간과 레몬즙을 뿌려준다.",
       "6. 구운 수제함박스테이크에 새싹채소-파인애플-방울토마토 순으로 장식하고 소스와 함께 제공한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "도라지",
       "깐연근",
@@ -21607,7 +21607,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "4. 그릇에 해조국수를 가운데 담고, 손질한 채소와 묵을 올린다.",
       "5. 양념장을 곁들여 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "도토리묵",
       "해조국수",
@@ -21647,7 +21647,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 중간 불로 달군 팬에 식용유를 둘러 새우소시지를 올린 뒤 겉면이 하얗게 변할 때까지 노릇하게 굽는다.",
       "6. 그릇에 담고 마늘소스를 윗면에 발라 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "라이스페이퍼"
     ],
@@ -21687,7 +21687,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 찜그릇에 무, 당근 채썬 것을 놓고 녹말 입힌 도미와 찜소스를 얹어 찐다.",
       "6. 중간 중간 소스를 뿌려 주고 느타리버섯, 미나리, 홍고추, 콩나물, 채썬 대파를 얹어 찐다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "금태",
       "다시마국물"
@@ -21758,7 +21758,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬에 저나트륨 고추장소스 재료를 넣고 살짝 졸인다.",
       "6. 구워진 꽁치에 소스를 뿌려낸다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "꽁치",
       "토마토케첩",
@@ -21796,7 +21796,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 꽃게에 찹쌀가루를 묻혀 튀긴다.",
       "6. 4의 소스에 넣고 섞는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "꽃게",
       "토마토케첩",
@@ -21869,7 +21869,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 반죽을 한 스푼씩 떠 식용유를 넣은 팬에 노릇하게 구워낸다.",
       "6. 재료를 섞어 양념장을 만들어 함께 낸다"
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "마",
       "표고버섯마른것",
@@ -21909,7 +21909,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 튀김기름의 온도를 170~180℃에 맞추어 4의 멸치를 재빨리 튀겨낸다.",
       "6. 식은 후에 (2)의 소스에 버무리거나 끼얹어 낸다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "멸치중간것",
       "양파즙",
@@ -21947,7 +21947,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 꽈리고추는 데친다.",
       "6. 재료를 보기좋게 담고 양념장을 곁들여 낸다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "연두부큰것",
       "불린미역",
@@ -22022,7 +22022,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 캔 파인애플을 잘게 썰어 분량의 재료들과 함께 믹서기에 곱게 간다.",
       "6. 접시에 준비된 채소와 찐 연어를 담고 소스를 곁들인다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "훈재연어",
       "샐러리",
@@ -22131,7 +22131,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬에 고추기름을 두르고 2를 넣고 볶다가 청주, 두반장, 케첩을 첨가하여 볶은 후 물을 넣고 설탕, 식초로 간을 맞춘다.",
       "6. 살짝 졸인 뒤 튀긴 새우와 완두콩을 넣고 물녹말로 농도를 맞추고 마지막으로 참기름을 넣는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "백새우",
       "케첩",
@@ -22168,7 +22168,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 흑임자, 마요네즈, 플레인요거트를 믹서 하여 흑임자 소스를 만든다.",
       "6. 연근에 흑임자소스를 곁들여 담는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "흑임자 30g, 연근 80g, 레몬 20g, 마요네즈 15g, 플레인요거트 15g, 식초 5g",
     "source": {
@@ -22205,7 +22205,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬에 기름을 두르고 노릇하게 굽는다.",
       "6. 함박스테이크에 단호박 크림소스를 부어 제공한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "콩기름"
     ],
@@ -22238,7 +22238,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 매실청과 설탕을 넣어 새콤달콤하게 버무린다.",
       "6. 참깨를 뿌려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "배 80g, 부추 5g, 고춧가루 5g, 매실청 3g, 설탕 2g, 참깨 1g",
     "source": {
@@ -22271,7 +22271,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 180℃로 예열한 오븐에 속을 채운 빵을 넣고 5분간 구워 꺼낸다.",
       "6. 그릇에 구운 빵을 올린 뒤 파슬리가루를 뿌린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "할라피뇨",
       "훈제 닭가슴살",
@@ -22311,7 +22311,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 올리브유(1Ts)를 뿌리고 종이포일 양끝을 돌돌 만 뒤 작은 구멍을 2~3개 낸다.",
       "6. 찜기에 김이 오르면 연어를 넣고, 뚜껑을 덮어 센 불로 25분간 익혀 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "연어 필레",
       "로즈메리"
@@ -22347,7 +22347,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬에 식용유를 두른 뒤 양념장을 볶는다.",
       "6. 양념장을 떡꼬치에 묻힌 뒤 통깨를 뿌려 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "떡볶이떡",
       "케첩",
@@ -22423,7 +22423,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 야채가 부드러워지면 닭육수를 넣어 한번 더 끓이고 소금, 후추로 간 한다.",
       "6. 접시에 완성된 으깬 감자를 깔고 그 위에 야채 스튜를 올려낸다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "토마토콩카세",
       "닭육수",
@@ -22499,7 +22499,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 프라이팬에 기름을 두르고 양념한 돼지고기와 한 입 크기로 썬 채소를 볶는다.",
       "6. 썰어둔 파인애플을 넣는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "돼지고기(불고기용) 120g, 파인애플 35g, 양배추 15g, 양파 10g, 당근 7g, 대파 5g, 설탕 5g, 부추 1g, 마늘 2g, 참기름 3g, 간장 5g",
     "source": {
@@ -22534,7 +22534,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 비름나물에 양파, 양념장을 넣고 골고루 무친다.",
       "6. 참기름을 둘러 가볍게 섞은 뒤 깨를 뿌려 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "비름나물"
     ],
@@ -22569,7 +22569,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 육수에 손질한 야채와 양지를 넣고 끓인다.",
       "6. 고춧가루와 들깨가루를 넣고 끓인다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "알토란",
       "고사리",
@@ -22608,7 +22608,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 레몬즙, 식초, 설탕, 국간장, 고춧가루를 넣어 만든 소스를 야채에 버무린다.",
       "6. 한입 크기로 썬 삼겹살과 ⑤를 곁들여 낸다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "새싹채소",
       "깐대파",
@@ -22709,7 +22709,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 3을 4에 넣어 잘 섞은 뒤 찹쌀물을 넣어 농도가 나도록 끓인다.",
       "6. 소금으로 간을 맞추고 준비한 그릇에 담아낸다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "좁쌀",
       "깐밤"
@@ -22741,7 +22741,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 4가 완전히 굳으면 176℃의 오븐에서 윗면에 갈색이 나도록 40분정도 굽는다.",
       "6. 5를 적당한 크기로 잘라 접시에 담고 기호에 따라 토마토케첩을 곁들여 낸다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "옥수수가루플렌타가루"
     ],
@@ -22776,7 +22776,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 쌀이 어느 정도 익으면 2를 넣고 쌀이 완전히 익을 때까지 조리한다.",
       "6. 파마산치즈, 소금, 후추, 다진 타임, 다진 파슬리를 넣는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "닭육수",
       "파슬리다진것",
@@ -22843,7 +22843,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 냄비에 참기름을 두르고 2를 볶다가 3, 4를 넣고 한번 더 볶는다.",
       "6. 5에 물을 넣은 뒤 쌀알이 퍼지도록 끓인다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "불린 쌀",
       "마른미역"
@@ -22874,7 +22874,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 2가 끓어오르면 3,4를 넣고 끓인다.",
       "6. 입맛에 맞게 꿀로 간한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "불린쌀"
     ],
@@ -22970,7 +22970,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 단촛물을 식혀 단감에 부워 절인다.",
       "6. 30분 정도 숙성시켜 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "단감"
     ],
@@ -23006,7 +23006,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 파채에 데친 골뱅이와 양념장을 넣어 골고루 버무린다.",
       "6. 삶은 수육은 한 김 식힌 뒤 한입 크기로 썰고, 알배추, 골뱅이무침을 곁들여 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "파채",
       "골뱅이 국물"
@@ -23079,7 +23079,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 준비한 유부주머니에 만두소를 넣고 미나리로 묶어 김 오른 찜통에 10분 정도 찐다.",
       "6. 초간장을 곁들여 낸다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "유부",
       "양파채썬것",
@@ -23121,7 +23121,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 4가 반 정도 익었을 때 해산물, 토마토, 바질을 넣고 홍고추로 장식하고 다 익으면 오븐용 용기에 담는다.",
       "6. 5에 치즈를 0.5cm 넓이로 잘라 격자로 올리고 오븐에서 굽는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "도미살",
       "슬라이스 햄",
@@ -23229,7 +23229,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 4를 다시 냄비에 넣고 중간불로 끓인다.",
       "6. 5에 우유, 라임주스, 소금, 후추, 크림을 넣어 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "샐러리",
       "닭육수",
@@ -23267,7 +23267,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 완자가 떠오르면 불린 당면, 팽이버섯, 부추, 홍고추 순으로 넣는다.",
       "6. 다진마늘, 국간장, 소금으로 간한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "달걀흰자",
       "당면불린것",
@@ -23306,7 +23306,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 버터, 꿀, 소금, 후추를 넣어 맛을 내고 원하는 모양으로 빚는다.",
       "6. 5에 밀가루, 달걀물, 빵가루 순으로 묻혀 180℃ 기름에 튀긴다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "달걀물"
     ],
@@ -23373,7 +23373,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 뚜껑을 닫고 약한 불에서 속이 익을 때 까지 굽는다.",
       "6. 소금, 된장소스, 참깨소스 등 취향에 맞는 소스를 골라 찍어 먹는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "단호박 30g, 고구마 30g, 오렌지 30g, 소금적당량",
     "source": {
@@ -23442,7 +23442,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 2에 당근, 양파, 옥수수, 완두콩, 우유를 넣고 섞는다.",
       "6. 모양 틀에 넣어 김이 오른 찜통에서 10분간 찐다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "베이킹파우더",
       "캔옥수수",
@@ -23648,7 +23648,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 물, 식초, 설탕, 피클링 스파이스를 넣어 피클물을 만든다.",
       "6. ④에 피클물을 넣고 30분 정도 숙성시킨다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "피클링스파이스"
     ],
@@ -23685,7 +23685,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 닭고기, 양파, 남은 미나리, 달걀, 전분을 고루 섞어 닭볼을 만든다.",
       "6. 육수에 닭볼, 새송이버섯, 팽이버섯, 양송이버섯, 남은 미나리를 넣고, 양념으로 간한 뒤 한소끔 끓여 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "닭"
     ],
@@ -23715,7 +23715,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 대추는 돌려 깎아 씨를 제거하고 채 썬다.",
       "6. 3과 4, 5를 잘 무쳐 그릇에 담는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "홍시",
       "생밤"
@@ -23813,7 +23813,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 175℃로 예열된 오븐에 4를 넣고 밥이 바삭해질 때 까지 굽는다.",
       "6. 먹기 좋은 크기로 부숴 접시에 담고 설탕을 뿌린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "잔멸치"
     ],
@@ -23843,7 +23843,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 4에 복숭아와 배를 넣는다.",
       "6. 5에 잣과 얼음을 띄운다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "오미자",
       "천도복숭아"
@@ -23915,7 +23915,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 누룽지에 4를 골고루 펴 바르고 그 위에 토핑 재료, 피자치즈, 송송 썬 실파를 뿌린다.",
       "6. 5번을 예열된 오븐에 굽는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "잡곡밥흑미 검은콩",
       "피자치즈",
@@ -23954,7 +23954,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 4의 안쪽에 밀가루를 살짝 뿌리고 밀가루가 골고루 잘 묻도록 한다.",
       "6. 준비된 소를 채운 후 잘라둔 꼭지 부분의 뚜껑을 덮어 김 오른 찜통에 20분가량 찐 뒤 4~6등분 하여 낸다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "단호박작은것",
       "잔새우살다진것",
@@ -24029,7 +24029,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 마늘은 다지고 양파, 홍고추, 청고추는 0.3mm로 잘게 썬다.",
       "6. 팬에 고추기름을 두르고 다진 마늘을 볶다가 양파를 넣고 청, 홍고추를 넣어 살짝 볶은 뒤 물, 식초, 설탕을 넣고 물전분으로 농도를 맞춘다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "상추",
       "차이브",
@@ -24104,7 +24104,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 3을 오븐용 팬에 옮긴 뒤 토마토소스를 바르고 준비된 재료들과 피자치즈를 올린다.",
       "6. 반죽을 말아서 윗부분에 칼집을 넣은 뒤 175℃로 예열된 오븐에 굽는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "밀가루중력분",
       "이스트",
@@ -24178,7 +24178,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 소스에 파마산 치즈를 섞어준다.",
       "6. 구워진 고기에 소스를 곁들여 낸다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "돈등심",
       "참나물",
@@ -24210,7 +24210,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 식초, 설탕, 물을 섞어 단촛물을 만든다.",
       "6. 단촛물에 오이, 파프리카를 버무린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "파프리카 각"
     ],
@@ -24345,7 +24345,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬에 앞뒤로 타지 않도록 굽는다.",
       "6. 잣가루를 뿌린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "쇠고기샄코기",
       "잣가루",
@@ -24383,7 +24383,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 4에 목이버섯, 배추, 달걀을 넣고 잘 섞는다.",
       "6. 5에 육수, 소금, 물전분을 넣는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "생강다진것",
       "닭육수",
@@ -24457,7 +24457,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 4에 물, 고추기름, 설탕, 소금, 후춧가루를 넣고 간을 한 뒤 물전분으로 농도를 맞춘다.",
       "6. 감자는 껍질을 벗겨 채칼로 얇게 슬라이스 한 뒤 물에 담궈 전분을 빼고 튀겨 접시에 깔고 3, 4를 담는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "달걀흰자",
       "물밤다진것",
@@ -24746,7 +24746,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 냄비에 물(30g)과 닭고기, 시래기를 넣고, 청홍고추를 제외한 손질한 채소를 넣어 조린다.",
       "6. 홍고추와 청고추를 올려 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "무청시래기"
     ],
@@ -24777,7 +24777,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 키친타올에 올려 기름을 제거한다.",
       "6. 딸기잼과 같이 곁들여 낸다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "딸기쨈"
     ],
@@ -24812,7 +24812,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 다시마 육수(250㎖)를 2~3번에 나눠 넣어 현미를 익히다가 검은콩 두유를 넣어 졸이고 레몬즙과 다진 청양고추를 넣어 고루 섞는다.",
       "6. 그릇에 현미 리소토를 담고 고등어구이 → 채 썬 깻잎 → 달걀노른자 순으로 올린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "손질된 고등어",
       "불린 현미",
@@ -24850,7 +24850,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 데친 새우를 올리고, 다진 파슬리와 후춧가루를 뿌린 뒤 블루베리를 올린다.",
       "6. 애플민트를 올려 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "바게트",
       "다진 파슬리",
@@ -24887,7 +24887,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "4. 드레싱을 만든다.",
       "5. 그릇에 손질한 채소를 담고 수란과 얇게 썬 레몬을 올려 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "상추",
       "아보카도",
@@ -24925,7 +24925,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 4에 소스를 넣고 저어주면서 끓여 농도가 나기 시작하면 오렌지와 파인애플을 넣고 살짝 익힌다.",
       "6. 접시에 5를 담고 제공하기 직전에 깨를 뿌린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "쇠고기사태",
       "오렌지주스",
@@ -25028,7 +25028,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 4에 낫토, 카레가루, 다진 파를 넣고 골고루 섞는다.",
       "6. 5에 소금, 후춧가루로 간한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "당근다진것",
       "낫토",
@@ -25066,7 +25066,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 다시마전이 한 김 식은 후 돌돌 말아 자를 수 있도록 꼬치로 고정시킨다.",
       "6. 5를 4cm 정도 길이로 자르고 멸치액젓소스를 곁들인다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "청고추다진것",
       "홍고추다진것",
@@ -25249,7 +25249,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 순무와 양파는 다지고, 계란은 삶아 다져 준비한다.",
       "6. 두부 마요네즈에 ⑤의 재료와 설탕, 레몬, 식초, 땅콩버터, 후추, 홀그레인, 파슬리가루를 넣어 타르소스를 만든다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "쌀가루",
       "순무",
@@ -25327,7 +25327,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 중간 불로 달군 팬에 남겨둔 향유(10g)를 두르고 꽈리고추와 돼지고기를 넣어 9분간 구운 뒤 돼지고기는 얇게 한입 크기로 썬다.",
       "6. 그릇에 비빔밥, 구운 돼지고기와 꽈리고추, 손질한 양파, 쪽파, 레몬, 김가루, 고추냉이, 무순, 수란을 올린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "건함초",
       "꽈리고추",
@@ -25371,7 +25371,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬에 식용유(2컵)를 부은 뒤 중간 불로 예열하고, 라이스페이퍼를 넣어 튀긴 뒤 바로 건져낸다.",
       "6. 튀긴 라이스페이퍼에 단호박 볶음과 손질한 채소, 플레인 요거트를 올려 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "할라피뇨 피클",
       "라이스페이퍼"
@@ -25436,7 +25436,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 고구마를 조금씩 떼어 둥글게 빚는다.",
       "6. 호박씨와 썰어둔 대추로 꼭지를 만든다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "계피가루",
       "호박씨"
@@ -25469,7 +25469,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 졸인 과일을 얹고 돌돌 만 다음 양끝을 포크로 눌러 붙인다.",
       "6. 식빵의 표면에 버터를 얇게 바르고 170℃로 예열된 오븐에 넣어 노릇하게 굽는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "물전분"
     ],
@@ -25502,7 +25502,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 130~150℃로 예열한 오븐에 4를 굽는다.",
       "6. 구워진 야채칩을 식혀 담는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "연근 20g, 고구마 20g, 감자 20g, 단호박 20g, 당근 20g, 소금적당량",
     "source": {
@@ -25532,7 +25532,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 잣, 호두, 통깨에 다진 대추와 시럽을 넣고 덩어리지게 섞는다.",
       "6. 살짝 뜨거울 때 손으로 동그랗게 뭉쳐준다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "잣 3g, 호두 3g, 대추 3g, 통깨 5g [시럽] 물엿 3g, 설탕 2g",
     "source": {
@@ -25562,7 +25562,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 가열된 팬에 참기름을 두르고 약한 불에서 4를 한 국자 정도 떠서 둥글게 부친 뒤 식힌다.",
       "6. 크레이프를 펴고 각각 팥소와 당근조림을 각각 얹은 후 둥글게 만다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "현미가루"
     ],
@@ -25637,7 +25637,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 면이 볶아지면 청경채, 방울토마토를 넣고 살짝 볶는다.",
       "6. 5에 차갑게 한 버터를 넣어 소스에 윤기와 농도가 나도록 한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "달걀물",
       "굴소스"
@@ -25708,7 +25708,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 2에 건포도를 섞은 뒤 틀에 담고 4를 펴서 얹고 그 위에 슬라이스 아몬드와 설탕을 뿌린다.",
       "6. 200℃로 예열한 오븐에서 표면이 노릇해 질 때 까지 약 10분 간 굽는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "참마",
       "건포도",
@@ -25749,7 +25749,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 가열한 팬에 기름을 두르고 커틀렛을 익힌다.",
       "6. 커틀렛이 익으면 기름을 빼고 그릇에 담는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "건타임"
     ],
@@ -25787,7 +25787,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬에 식용유를 두르고 다진 마늘, 생강, 고추를 넣어 볶다가 센 불에서 바지락살과 새우, 청주를 넣어 볶은 뒤 간장소스를 넣고 끓인다.",
       "6. 5가 반정도 졸면 칼국수 면을 넣어 볶으면서 물전분으로 농도를 맞춘 뒤 송송 썬 파와 참기름을 넣고 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "바지락살",
       "생강다진것",
@@ -25895,7 +25895,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "4. 대하, 바지락, 월계수잎, 타임을 올린 뒤 화이트와인과 올리브유를 뿌린다.",
       "5. 종이 포일로 감싸고 200℃로 예열한 오븐에 15~25분간 굽는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "손질된 흰살생선",
       "대하",
@@ -25967,7 +25967,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬에 과메기를 놓고 고추장양념을 발라가며 살짝 굽는다.",
       "6. 매실장아찌를 구운 과메기위에 올려 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "과메기",
       "매실장아찌",
@@ -26075,7 +26075,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 소스 재료를 섞어 취나물된장소스를 만든다.",
       "6. 쪄낸 오징어순대를 썰어 접시에 담고 소스를 곁들여 낸다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "오곡밥",
       "데친 취나물",
@@ -26181,7 +26181,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 오븐용기에 화이트소스를 깔고 그 위에 가지를 올린 뒤 가지 사이에 버섯, 토마토소스, 화이트소스, 버섯을 넣는다.",
       "6. 남은 화이트소스와 치즈, 빵가루 순으로 얹고 180℃로 예열된 오븐에서 윗면이 노릇한 색이 나도록 굽는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "돼지고기다진것",
       "느타리벗서",
@@ -26219,7 +26219,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 믹서에 잣과 물, 설탕, 소금, 레몬즙, 간장을 넣고 뽀얗게 즙이 나도록 소스를 만든다.",
       "6. 완성된 찜에 소스를 곁들여 낸다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "흰살 생선",
       "죽순",
@@ -26260,7 +26260,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 밑간한 소고기를 넓게 펴고 전분을 뿌린 뒤 깻잎을 깔고 준비한 밥을 올려 싼다.",
       "6. 팬에 식용유를 두르고 말아놓은 쌈밥을 굴려가며 소고기가 익을 때 까지 익힌다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "쇠고기살코기"
     ],
@@ -26327,7 +26327,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 쌀알이 익으면 3의 씨앗가루를 넣고 끓인다.",
       "6. 소금간을 하고 준비한 그릇에 담아낸다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "통아몬드",
       "호박씨"
@@ -26363,7 +26363,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 4에 기호에 맞게 참기름과 실파를 넣는다.",
       "6. 물기를 제거한 상추에 밥 한 숟가락을 놓고 볶은 소고기, 참치, 마요네즈, 소스 순으로 얹는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "상추",
       "캔참치",
@@ -26438,7 +26438,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 식빵을 팬에 바삭하게 굽는다.",
       "6. 식빵에 치킨 샐러드를 얹은 뒤 남은 식빵으로 덮고, 사방을 잘라낸다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "건포도"
     ],
@@ -26474,7 +26474,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 그 위에 양상추, 치즈, 햄, 달걀, 닭고기를 올린 다음 나머지 빵 한 면에 마요네즈를 바른다.",
       "6. 빵 칼로 샌드위치의 사방의 테두리를 잘라내고 대각선으로 먹기 좋게 썬다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "치즈슬라이스",
       "슬라이스햄"
@@ -26512,7 +26512,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 3의 야채 위에 4를 뿌려 덮는다.",
       "6. 180℃로 예열된 오븐에 굽는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "오릴브오일",
       "레드어니언",
@@ -26546,7 +26546,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 포항초, 적양파, 비트의 물기를 제거한다.",
       "6. 물기를 제거한 포항초, 적양파, 비트를 소스에 버무려 낸다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "적양파"
     ],
@@ -26613,7 +26613,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 호두를 넣어 맛이 어우러지도록 조금 더 볶는다.",
       "6. 검은깨를 뿌려내 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "떡볶이 떡",
       "검정깨"
@@ -26652,7 +26652,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 밥이 다 되면 뜸을 들여준다.",
       "6. 밥을 푸고 양념장을 넣어 비벼 먹는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "삶은 죽순"
     ],
@@ -26686,7 +26686,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 손질한 멍게에 참기름을 넣어 가볍게 버무린다.",
       "6. 그릇에 밥을 담고 부추, 무순, 멍게, 김, 통깨를 올리고 양념장을 넣어 비벼 먹는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "쌀밥",
       "멍게살",
@@ -26793,7 +26793,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬에 기름을 두르고 마늘을 볶다 바지락과 맛술을 넣어 볶는다.",
       "6. 양파, 청양고추를 넣어 볶은 뒤 양념장, 수제비, 참기름을 넣어 살짝 볶는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "콩기름",
       "굴소스",
@@ -26962,7 +26962,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬에 들기름을 넣고 센불에서 가지를 볶는다.",
       "6. 가지가 다 볶아지면 양념장을 넣고 섞일 정도로만 볶는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "가지 70g, 생강 0.5g, 고추장 2g, 물엿 2g, 통깨 0.5g, 들기름 2g",
     "source": {
@@ -26996,7 +26996,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 냄비에 간장, 고추장, 설탕, 물엿을 넣고 끓여 조림장을 만든다.",
       "6. 조림장이 반으로 졸아들면 튀긴 고등어와 땅콩을 넣고 살살 뒤집어가며 윤기나게 버무린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "고등어",
       "토마토케첩"
@@ -27032,7 +27032,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 매콤한 향이 나면 양념장을 넣고 살짝 볶으면서 찐 게를 넣어 맛이 베이도록 뒤적이며 볶는다.",
       "6. 마지막에 실파를 넣고 참기름으로 향을 낸다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "꽃게",
       "건고추",
@@ -27107,7 +27107,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 육수에 간장과 굴소스로 간을 맞춘다.",
       "6. 그릇에 지져낸 새우살을 채운 두부를 넣고 끓인 미네스트로네를 담는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "돼지호박",
       "닭육수",
@@ -27145,7 +27145,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 도미살을 손가락 길이로 썰어 소금, 후추로 간을 하고 밀가루, 달걀물, 빵가루 순으로 묻혀 170℃ 정도의 기름에서 튀긴다.",
       "6. 차가운 접시에 4, 5를 담고 크루통을 뿌린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "상추/로메인",
       "앤쵸비",
@@ -27188,7 +27188,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 냉국 그릇에 2의 연두부를 담고 무순, 채썬 대파, 청, 홍고추를 가지런히 올린다.",
       "6. 5의 연두부에 차게 준비한 냉국 국물을 붓고 쑥갓을 얹은 뒤 통깨를 뿌린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "연두부 75g, 무순 10g, 대파 5g, 청고추 3g, 홍고추 3g, 쑥갓 2g, 통깨 1g, 소금적당량[냉국 국물재료] 다시마육수 90g, 간장 4g, 맛술 2g, 식초 2g, 설탕 3g",
     "source": {
@@ -27260,7 +27260,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "4. 접시에 밥을 깔고 그 위에 그린샐러드를 올린 뒤 익혀놓은 고기와 볶아놓은 야채들을 올린다.",
       "5. 마지막으로 드래싱을 뿌린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "그린 샐러드",
       "타바스코",
@@ -27294,7 +27294,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 물 전분을 넣어 농도를 맞춘다.",
       "6. 참기름을 뿌려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "물전분"
     ],
@@ -27324,7 +27324,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 올리고당을 넣는다.",
       "6. 컵에 담아 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "딸기"
     ],
@@ -27362,7 +27362,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 냄비에 참기름을 두르고 양파, 당근, 애호박을 볶은 뒤 물, 된장, 고춧가루, 다진마늘, 붉은고추, 청양고추, 두부를 넣고 조려 두부강된장을 만든다.",
       "6. 봄주먹밥에 낙지와 두릅, 두부강된장을 곁들여 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "재료",
       "낙지다리",
@@ -27429,7 +27429,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 3에 4와 나머지 우유를 넣어 끓인다.",
       "6. 5를 그릇에 담고 고구마, 데친 느타리버섯을 가운데 담는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "현미",
       "저지방우유"
@@ -27469,7 +27469,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬에 감자, 표고버섯, 두부, 밥을 넣고 볶다가 나머지 채소를 넣어 볶는다.",
       "6. 양념장을 만들어 함께 낸다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "다시마물"
     ],
@@ -27500,7 +27500,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 4에 카스텔라 가루를 넣어 농도를 맞춘다.",
       "6. 반죽을 조금씩 떼어 동그랗게 굴려 꿀환을 만든다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "카스텔라가루"
     ],
@@ -27531,7 +27531,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 믹서에 4를 붓고 깨소금, 꿀을 넣어 간다.",
       "6. 컵에 5를 붓고 계피가루를 살짝 뿌린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "계피가루"
     ],
@@ -27562,7 +27562,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 컵에 요거트-오렌지-요거트-누룽지-요거트-사과-요거트-누룽지 순으로 담는다.",
       "6. 마지막에 누룽지와 블루베리로 장식한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "블루베리"
     ],
@@ -27672,7 +27672,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 파프리카는 다지고, 사과, 배는\n갈아서 고추장, 간장, 다진 마늘을\n섞은 뒤 끓여 소스를 만든다.",
       "6. 밥에 참기름을 넣고\n함박스테이크를 담은 뒤 소스를\n올려 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "가래떡"
     ],
@@ -27718,7 +27718,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 마요네즈, 깻잎, 바나나, 된장을\n믹서에 갈아 소스를 만들고\n피클을 다져 넣는다.",
       "6. 종이호일을 깔고 중간중간\n소스를 뿌리면서 김-양상추-\n패티-파프리카-양상추-밥\n순으로 얹어 버거를 만든다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "흑미",
       "곤드레나물",
@@ -27759,7 +27759,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 닭가슴살이 다 익으면 손질한\n채소를 넣고 볶다가 밥, 우유,\n치즈, 대추를 넣고 끓인다.",
       "6. 우유가 반으로 졸아들면 불을\n줄이고 소금, 후추로 간한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "닭고기(가슴살, 30g), 쌀(50g), 양파(10g),\n표고버섯(10g), 대추(2알), 당근(5g),\n피망(5g), 치즈(10g), 우유(50g), 마늘(3g),\n소금(0.5g), 후춧가루(0.1g)",
     "source": {
@@ -27830,7 +27830,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 밥과 멸치, 밥과 소고기를 각각\n버무려 동그랗게 빚는다.",
       "6. 동그랗게 빚은 밥은 시금치, 당근,\n달걀노른자에 각각 굴린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "곤약미"
     ],
@@ -27868,7 +27868,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 찐 양배추에 밥을 얹어 돌돌 만다.",
       "6. 양배추롤을 적당한 크기로 썰고\n참치두부쌈장을 올린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "참치"
     ],
@@ -27906,7 +27906,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 끓는 물에 라비올리를 삶는다.",
       "6. 팬에 식용유를 넣고 다진 양파를 볶다가 크림을 넣고 졸인 뒤 라비올리, 파마산치즈, 비트를 넣는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "게살"
     ],
@@ -27943,7 +27943,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 양파,당근,토마토은 슬라이스하고 셀러리와 마늘은 잘게 다져 냄비에 바질, 오레가노, 로즈마리, 물, 설탕과 함께 끓여 토마토소스를 만든다.",
       "6. 라비올리와 토마토소스를 곁들여낸다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "중력분",
       "셀러리",
@@ -27982,7 +27982,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 쌀이 어느 정도 익으면 볶아놓은 버섯을 넣고 쌀이 완전히 익을 때까지 조리한다.",
       "6. 파마산치즈, 소금, 후추, 타임 다진것, 다진 파슬리를 넣어 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "닭육수",
       "파슬리다진것",
@@ -28055,7 +28055,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 미나리와 오징어는 손질하여 살짝 데치고 오징어는 얇게 저며 썬다.",
       "6. 1의 주먹밥을 준비한 각각의 재료로 말아 싼 다음 쌈장, 저나트륨 초고추장을 올려 마무리 한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "쇠고기다진것",
       "근대",
@@ -28095,7 +28095,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 다시마 육수를 평상시 밥물보다 적게 넣고 밥을 짓는다.",
       "6. 밥이 뜸이 들면 간장양념과 함께 제공한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "현미찹쌀",
       "은행",
@@ -28138,7 +28138,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 만두피에 만두소를 넣어 만두를 만든다.",
       "6. 김이 오른 찜통에 젖은 소창을 깔고 만두를 넣어 찌거나 끓는 물에 소금을 약간 넣고 터지지 않게 삶는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "애호박 50g, 표고버섯 10g, 청고추 5g, 소금 0.1g, 시금치 10g, 참기름 2g, 통깨 0.4g, 식용유 2g, 후춧가루 0.2g, 밀가루 40g, 물 20g [소스소개] 초간장:간장 2g, 식초 5g, 물 5g",
     "source": {
@@ -28172,7 +28172,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬에 1의 반죽을 얇게 부친 뒤 뒤집어 볶은 양송이버섯과 3의 감자, 달걀을 올린다.",
       "6. 에멘탈 치즈를 고루 뿌리고 반을 접어 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "에벤탈치즈",
       "메밀가루",
@@ -28213,7 +28213,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 잘라둔 파인애플에 남은 전분을\n묻힌 뒤 고기반죽으로 감싼다.",
       "6. 팬 또는 오븐(180℃, 15분)에\n노릇하게 굽는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "소고기(갈빗살, 60g), 파인애플(45g),\n양파(8g), 표고버섯(7g), 전분(10g),\n파(5g), 마늘(2g), 진간장(3g), 설탕(1g),\n참기름(1.5g), 후춧가루(0.2g)",
     "source": {
@@ -28248,7 +28248,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 구운 가지에 단호박을 얇게 \n바르고 야채들을 넣고 돌돌 만다.",
       "6. 참깨마요소스를 올린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "삼색파프리카"
     ],
@@ -28287,7 +28287,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 튀김가루, 전분, 차가운 맥주를\n섞어 튀김 반죽을 만든 뒤 두부에\n입혀 170℃기름에 튀긴다.",
       "6. 고추장, 케첩, 올리고당을 섞고\n냄비에 졸여 소스를 만들고 튀긴\n두부를 지진다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "생강가루",
       "튀김가루",
@@ -28362,7 +28362,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 묵은지 위에 달걀 흰자를 바르고\n소고기를 펼치고 전분을 묻힌 뒤\n야채를 넣고 돌돌 만다.",
       "6. 200℃로 예열한 오븐에 넣고\n15분간 굽는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "삼색파프리카",
       "참나물"
@@ -28394,7 +28394,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 흰자를 부어 4번을 감싸 \n말아준다.",
       "6. 먹기 좋은 크기로 자른다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "달걀(3개), 바나나(1개), 전분(5g),\n소금(0.2g)",
     "source": {
@@ -28464,7 +28464,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 밀가루, 달걀물, 빵가루 순으로 \n묻힌다.",
       "6. 170~180℃ 기름에 튀긴다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "현미밥"
     ],
@@ -28570,7 +28570,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 식은 밥에 4번의 소를 각각 넣고\n동그랗게 빚는다.",
       "6. 달걀물, 빵가루 순으로 묻혀\n170℃ 기름에서 튀긴다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "옥수수",
       "파마산치즈가루",
@@ -28613,7 +28613,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬에 기름을 두르고 미트볼을\n굽는다.",
       "6. 팬에 소스를 부어가며 졸인 뒤\n쪽파, 현미튀밥을 올린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "현미튀밥"
     ],
@@ -28651,7 +28651,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 굴소스와 식초로 간을 하고\n재료가 다 익어갈 때 시금치를\n넣고 불을 끈다.",
       "6. 땅콩가루와 메추리알을 올려\n마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "쌀국수",
       "메추리알",
@@ -28687,7 +28687,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 프라이팬에 새우, 단호박, 대파, \n양배추, 방울토마토를 굽는다..",
       "6. 꼬지에 보기 좋게 끼운다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "새우(60g), 단호박(60g), 양배추(40g),\n방울토마토(35g), 대파(20g), 후추(0.5g)",
     "source": {
@@ -28717,7 +28717,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬에 식용유를 두르고 4번을 \n노릇하게 굽는다.",
       "6. 꼬지에 꽂는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "아몬드슬라이스"
     ],
@@ -28785,7 +28785,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 연근, 우엉, 레디쉬, 오렌지, 땅콩, \n호두를 만들어둔 소스와 함께\n버무린다.",
       "6. 그릇에 담고 크랜베리를 올린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "우엉",
       "크랜베리",
@@ -28895,7 +28895,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬에 식용유를 소량 넣고 양념한 소고기를 볶다가 분량의 소스 재료를 넣고 볶아 저나트륨 볶음고추장을 만든다.",
       "6. 그릇에 밥을 담고 준비된 새싹과 채소를 돌려담고 저나트륨 볶음고추장을 곁들인다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "각종 새싹",
       "샐러리",
@@ -28930,7 +28930,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 가지가 다 볶아지면 양념장을 넣어 양념장이 섞일 정도로만 볶는다.",
       "6. 접시에 담는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "가지 70g, 생강 0.5g, 고추장 2g, 물엿 2g, 통깨 0.5g, 들기름 2g",
     "source": {
@@ -28957,7 +28957,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 단촛물을 감자, 오이, 래디쉬를 각각 담궜다가 물기를 뺀다.",
       "6. 채소를 차게 두었다가 겨자초장을 곁들인다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "감자 40g, 래디쉬 5g, 오이 10g [소스소개 단촛물:물60g, 식초 1.5g, 설탕 1.5g, 파인애플주스 1.5g, 소금 0.3g 겨자초장:겨자가루 1.5g, 물미지근한것 1g, 설탕 2g, 식초 3g, 소금 0.03g, 파인애플주스 1.6g",
     "source": {
@@ -28992,7 +28992,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 밑간 한 돼지고기를 달걀흰자, 녹말가루에 묻혀 놓는다.",
       "6. 팬에 식용유를 넣고 생강을 볶아 향을 내고 채소, 고기를 넣어 볶다가 간을 한 다음 참기름을 두르고 굽는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "죽순통조림"
     ],
@@ -29029,7 +29029,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 물을 끓여 식힌 후 소창에 고춧가루를 싸서 김치국물을 만든다.",
       "6. 무와 배추가 절여지며 준비한 재료들에 김치국물을 부어 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "수삼"
     ],
@@ -29069,7 +29069,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 배를 강판에 갈아 간장, 소금, 식초, 겨자, 설탕을 넣어 잡채 양념을 만든다.",
       "6. 큰 접시에 준비된 채소를 예쁘게 돌려 담고 가운데 당면을 놓은 후 양념을 부어준다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "상추",
       "겨자"
@@ -29136,7 +29136,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬이 가열되면 식용유를 넣고 한 숟가락씩 떠넣어 얇게 펴서 부친다.",
       "6. 앞뒤로 노릇하게 부치고 접시에 담아 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "단호박 50g, 밀가루 50g, 소금 0.2g, 식용유 10g, 물 10g",
     "source": {
@@ -29199,7 +29199,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 부추를 버섯크기와 비슷하게 썬다.",
       "6. 썬 부추나 실파로 장식한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "굴소스",
       "부추 또는 실파"
@@ -29475,7 +29475,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 진미채에 양념을 소량씩 \n넣으면서 버무린다.",
       "6. 깨를 뿌려 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "진미채",
       "와사비"
@@ -29724,7 +29724,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 잘 섞은 반죽을 머핀틀에 70%\n채워 넣는다.",
       "6.  175℃ 오븐에서 30분 간 굽는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "크랜베리",
       "베이킹소다",
@@ -29793,7 +29793,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 그릇에 양배추, 깻잎, 청·홍고추를 무거운 것으로 눌러놓아 뜨지 않게 한 다음 준비한 피클국물을 붓는다.",
       "6. 뚜껑을 닫아 밀봉하여 냉장고에 보관한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "양배추 16g, 깻잎 6g, 설탕 2g, 청고추 1g, 홍고추 1g [소스소개]피클소스:물 35g, 식초 2g. 소금 1g, 통후추 0.5g",
     "source": {
@@ -29831,7 +29831,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 배와 간장, 소금, 식초, 겨자, 설탕을 넣어 잡채 양념을 만든다.",
       "6. 큰 접시에 준비된 채소를 예쁘게 돌려 담고 가운데 당면을 놓은 후 양념을 부어준다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "등심얇게썬것",
       "표고버섯마른것",
@@ -29873,7 +29873,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 유리병에 모든 재료를 넣고, 참기름 드레싱을 넣고 섞은 후 접시에 담아 낸다.",
       "6. 샐러드 위에 견과류를 뿌려 마무리 한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "상추",
       "비타민",
@@ -29907,7 +29907,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 반죽에 채소를 넣어 섞은 후 기름 두른 팬에 장떡을 두껍지 않게 부친다.",
       "6. 썰어놓은 청고추와 홍고추로 장떡을 장식한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "고추자"
     ],
@@ -29942,7 +29942,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 모짜렐라 치즈를 뿌리고 170℃ 오븐에서 12분간 구워 산적꼬지로 중간을 찔러넣었을 때 아무것도 묻어나오지 않을 때 까지 익힌다.",
       "6. 익힌 프리타타를 브로일러에 넣어 골든 브라운 색이 날 때까지 3~4분 간 더 익히고 파마산치즈를 뿌린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "돼지호박",
       "캔 토마토",
@@ -29976,7 +29976,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬에 식용유를 약간 넣고 뜨거워지면 설탕을 넣어 중불에 녹여 갈색나는 시럽을 만든다.",
       "6. 튀긴 고구마를 시럽에 버무리고 검은깨를 뿌린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "고구마 60g, 설탕 20g, 물 2g, 검은깨 2g, 식용유 10g",
     "source": {
@@ -30141,7 +30141,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 만두피 그릇에 고구마무스를\n채운다.",
       "6. 딸기를 입자있게 잘라 졸인 뒤\n고구마무스 위에 올린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "딸기",
       "만두피"
@@ -30244,7 +30244,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 식빵위에 찹쌀떡을 넓게 펴 바르고 그 위에 졸인 완두콩을 올린다.",
       "6. 5번을 돌돌 말아 고정시킨 뒤 먹기 좋은 크기로 자른다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "완두콩"
     ],
@@ -30276,7 +30276,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬에 식용유를 두르고 약불에서 팬케이크를 굽는다.",
       "6. 접시에 담는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "타가토스"
     ],
@@ -30383,7 +30383,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 크로켓에 밀가루, 달걀물, 빵가루 순으로 묻힌다.",
       "6. 180℃의 기름에 크로켓을 튀긴다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "호박고구마",
       "삼색파프리카"
@@ -30421,7 +30421,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 어묵은 반을 자르고 밀가루, 달걀, 빵가루 순으로 묻혀 팬에 굽는다.",
       "6. 어묵 사이에 4번을 넣는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "어묵",
       "푸룬"
@@ -30521,7 +30521,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 볼에 4번을 넣고 찹쌀가루를 넣어 잘 풀리도록 젓는다.",
       "6. 5번을 끓이다가 엉기기 시작하면 그릇에 담아 차게 식힌다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "자색고구마"
     ],
@@ -30551,7 +30551,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 냄비에 3번을 넣고 졸인다.",
       "6. 유리컵에 4,5번을 넣고 탄산수를 부어 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "탄산수"
     ],
@@ -30580,7 +30580,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 3번을 컵에 담는다.",
       "6. 우유를 붓는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "자두"
     ],
@@ -30610,7 +30610,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 4번을 용기에 담는다.",
       "6. 졸여진 배와 사과를 과일꼬지에 꽂아 곁들인다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "레드와인",
       "계피"
@@ -30642,7 +30642,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 고구마는 삶아 껍질을 제거한다.",
       "6. 제조한 요거트(1번)에 쌀콩죽, 배즙, 고구마를 넣고 믹서에 곱게 간다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "쌀가루",
       "메주콩"
@@ -30672,7 +30672,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 4번을 체에 걸러 부드럽게 한다.",
       "6. 컵에 담고 고구마칩을 올린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "고구마칩"
     ],
@@ -30810,7 +30810,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 피클물이 끓으면 식힌 뒤 용기에 붓는다.",
       "6. 피클을 30분간 숙성해 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "피클링스파이스"
     ],
@@ -30873,7 +30873,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬에 기름을 둘러 계란물을 한겹 한겹 만다.",
       "6. 완성된 계란말이는 모양을 잡고 한입크기로 자른다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "가츠오부시"
     ],
@@ -30981,7 +30981,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 마늘과 파를 다진 뒤 새우가루, 꿀, 저염간장을 섞어 소스를 만든다.",
       "6. 양파를 채 썰어 냄비에 소스와 함께 끓인 뒤 전분물을 넣어 농도를 맞추고 완자를 넣는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "부침가루",
       "새우가루"
@@ -31014,7 +31014,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 마늘을 잘게 다진다.",
       "6. 톳나물과 두부를 볼에 담고 나머지 재료들을 섞는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "톳나물"
     ],
@@ -31128,7 +31128,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 2의 삽겹살을 모양대로 썬다.",
       "6. 수육과 해물냉채를 담는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "적파프리카",
       "주황파프리카",
@@ -31161,7 +31161,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. ④에 물을 넣고 끓이다가 떡과 브로콜리를 넣어 익힌다.",
       "6. 검정깨를 뿌려 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "떡볶이떡",
       "검정깨"
@@ -31192,7 +31192,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 4번을 체에 걸러 부드럽게 만든다.",
       "6. 컵에 담는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [],
     "sourceIngredientText": "감자(400g), 우유(200g), 설탕(10g)",
     "source": {
@@ -31221,7 +31221,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 초절임장에 양파와 홍고추, 청양고추를 넣는다.",
       "6. 양파홍초절임을 하루정도 숙성시킨다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "홍초"
     ],
@@ -31291,7 +31291,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "4. 저염소금에 절여 씻은 배추를 김치 양념에 골고루 버무린다.",
       "5. 참깨를 뿌려 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "다진생강",
       "젓갈"
@@ -31359,7 +31359,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 모든 재료를 섞고 콩 삶은 물로 반죽 농도를 맞춘다.",
       "6. 1인 분량씩 노릇하게 부친다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "검정콩",
       "부침가루",
@@ -31435,7 +31435,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 토마토홀, 월계수잎, 함초소금을 끓여 소스를 만든다.",
       "6. 완성된 계란만두에 소스를 끼얹고 파슬리로 장식한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "토마토홀"
     ],
@@ -31533,7 +31533,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 물기가 없게 볶아준 후 참기름을 넣는다.",
       "6. 접시에 담아서 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "고구마순",
       "들깨가루"
@@ -31566,7 +31566,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 데친 시금치에 토마토, 함초가루, 참기름, 참깨, 마늘을 넣어 무친다.",
       "6. 접시에 담아 완성시킨다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "함초가루"
     ],
@@ -31595,7 +31595,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 건더기가 생기지 않을 정도로 간다.",
       "6. 컵에 담아 완성시킨다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "미숫가루"
     ],
@@ -31805,7 +31805,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 중간 불로 달군 팬에 식용유(5㎖)를 두른 뒤 손질한 채소를 볶는다.",
       "6. 그릇에 삶은 소면 → 볶은 재료 → 익힌 전복 순으로 담고 육수를 붓는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "전복",
       "달걀지단",
@@ -31911,7 +31911,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 손질한 채소와 참느타리버섯, 게맛살을 넣어 볶는다.",
       "6. 채소가 익으면 데쳐 놓은 포두부를 넣고 볶다가 노두유와 설탕으로 간을 해 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "포두부",
       "참느타리버섯",
@@ -32056,7 +32056,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 구운 김에 불린 라이스페이퍼 → 달걀지단 → 깻잎 → 볶은 채 썬 채소 순으로 넣어 돌돌 말아 한입 크기로 썬다.",
       "6. 그릇에 구운 가지 → 볶은 양배추와 청경채 → 김밥 순으로 올리고 꽃잎과 파슬리가루(2g)를 뿌려 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "달걀지단",
       "구운 김",
@@ -32097,7 +32097,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 곤약면에 삶은 닭가슴살, 채 썬 채소, 들깨소스를 넣어 버무린다.",
       "6. 그릇에 담고 어린잎채소를 올린다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "곤약면",
       "어린잎채소",
@@ -32170,7 +32170,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 바질을 넣어 고루 섞고, 불을 끈 뒤 식초를 넣어 고루 섞는다.",
       "6. 그릇에 카레크림 두부면 파스타를 담고, 파슬리가루를 뿌려 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "콜리플라워",
       "무가당 두유",
@@ -32238,7 +32238,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 3에 4의 수제비를 넣고 한소끔 끓인다.",
       "6. 나머지 콩나물을 넣어 완성한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "easy",
     "unmappedRequiredIngredients": [
       "황태머리"
     ],
@@ -32273,7 +32273,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 프라이팬에 기름을 두르고 당근, 양파, 목이버섯을 볶는다.",
       "6. 5에 키위소스, 식초를 넣고 전분물을 넣어 농도를 맞춘 뒤 튀긴 재료와 오이를 섞는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "동태살",
       "튀김가루",
@@ -32314,7 +32314,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 사과를 잘게 다져서 준비한다.",
       "6. 사과, 간장, 고춧가루, 설탕, 식초, 깨로 소스를 만들어 초말이와 제공한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "낙지",
       "물 30m"
@@ -32356,7 +32356,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 팬닝 후 2차 발효(30분)를 한다.",
       "6. 윗불 160℃, 아랫불 180℃에서 15분 동안 굽는다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "쌀가루",
       "르뱅 발효종",
@@ -32429,7 +32429,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "4. 양념장을 만든다.",
       "5. 손질한 재료를 그릇에 담고, 양념장을 곁들여 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "황금팽이버섯",
       "상추",
@@ -32471,7 +32471,7 @@ export const PUBLIC_RECIPES: Recipe[] = [
       "5. 믹서에 페스토 재료를 넣어 곱게 간다.",
       "6. 그릇에 미나리 페스토를 담고, 손질한 재료를 올려 마무리한다."
     ],
-    "difficulty": "normal",
+    "difficulty": "hard",
     "unmappedRequiredIngredients": [
       "체더치즈"
     ],

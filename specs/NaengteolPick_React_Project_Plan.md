@@ -148,9 +148,11 @@ type Recipe = {
   requiredIngredients: string[];
   optionalIngredients?: string[];
   steps: string[];
-  difficulty: 'easy' | 'normal';
+  difficulty: 'easy' | 'normal' | 'hard';
 };
 ```
+
+난이도는 조리 단계 수와 전체 필수 재료 수를 기준으로 `easy | normal | hard`로 추정한다. 경계와 추천 필터는 [`specs/roadmap.md`](./roadmap.md) 9단계에 기록한다.
 
 ### 7.3 초기 레시피 데이터 규모
 
@@ -253,7 +255,7 @@ src/
 | --- | --- | --- |
 | v1.1 | 즐겨찾기 | 추천 메뉴 저장 |
 | v1.2 | 제외 재료/알레르기 필터 | 개인화 시작 |
-| v1.3 | 조리 시간/난이도 필터 | 10분 이하 메뉴 등 |
+| v1.3 | 조리 시간 필터 | 10분 이하 메뉴 등 |
 | v1.4 | 외부 레시피 API | 메뉴 데이터 확장 |
 | v1.5 | AI 추천 | 남은 재료 조합 기반 신규 레시피 제안 |
 

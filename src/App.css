@@ -136,6 +136,86 @@
   color: #6b7280;
 }
 
+.recommendation-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  background: #f9fafb;
+}
+
+.match-rate-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.match-rate-filter-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 24px;
+  font-size: 15px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.match-rate-filter-label output {
+  color: #374151;
+  font-variant-numeric: tabular-nums;
+}
+
+.match-rate-slider {
+  width: 100%;
+  min-height: 44px;
+  margin: 0;
+  accent-color: #374151;
+  cursor: pointer;
+  touch-action: pan-x;
+}
+
+.match-rate-slider:focus-visible {
+  outline: 2px solid #1f2937;
+  outline-offset: 3px;
+}
+
+.difficulty-filter {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.difficulty-filter-title {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.difficulty-filter-options {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.difficulty-filter-options > button {
+  min-width: 0;
+  min-height: 44px;
+  padding-right: 4px;
+  padding-left: 4px;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.difficulty-filter-options > button[aria-pressed="true"] {
+  border: 1px solid #9ca3af;
+  background: #e5e7eb;
+}
+
 .ingredient-page button:focus-visible {
   outline: 2px solid #1f2937;
   outline-offset: 3px;
@@ -229,6 +309,14 @@
 
 .result-source-ingredients {
   white-space: pre-line;
+}
+
+.result-source-footer {
+  padding-top: 12px;
+  border-top: 1px solid #e5e7eb;
+  color: #6b7280;
+  font-size: 13px;
+  line-height: 1.5;
 }
 
 .result-steps {

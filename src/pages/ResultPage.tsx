@@ -123,22 +123,17 @@ export function ResultPage({
               ))}
             </ol>
           </section>
-          {recommendation.recipe.source && (
-            <section className="result-detail" aria-labelledby="source-title">
-              <h3 id="source-title" className="result-detail-title">
-                데이터 출처
-              </h3>
-              <p className="result-detail-text">
-                출처: {recommendation.recipe.source.provider}{" "}
-                {recommendation.recipe.source.dataset} · 원본 ID{" "}
-                {recommendation.recipe.source.sourceId}
-              </p>
-            </section>
-          )}
           {candidateCount === 1 && (
             <p className="result-no-alternatives">
               현재 재료로 추천할 수 있는 메뉴가 1개예요.
             </p>
+          )}
+          {recommendation.recipe.source && (
+            <footer className="result-source-footer" aria-label="데이터 출처">
+              출처: {recommendation.recipe.source.provider}{" "}
+              {recommendation.recipe.source.dataset} · 원본 ID{" "}
+              {recommendation.recipe.source.sourceId}
+            </footer>
           )}
         </section>
       ) : (

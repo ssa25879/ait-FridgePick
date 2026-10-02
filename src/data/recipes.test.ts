@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { INGREDIENTS } from "./ingredients";
 import { LOCAL_RECIPES, RECIPES } from "./recipes";
 import { PUBLIC_RECIPES, PUBLIC_RECIPE_IMPORT_SUMMARY } from "./publicRecipes";
+import { inferRecipeDifficulty } from "../utils/recipeDifficulty";
 
 describe("레시피 카탈로그", () => {
   const ingredientIds = new Set(INGREDIENTS.map(({ id }) => id));
@@ -36,7 +37,7 @@ describe("레시피 카탈로그", () => {
       expect(recipe.steps.length).toBeGreaterThanOrEqual(3);
       expect(recipe.steps.length).toBeLessThanOrEqual(5);
       expect(recipe.steps.every((step) => step.trim().length > 0)).toBe(true);
-      expect(["easy", "normal"]).toContain(recipe.difficulty);
+      expect(["easy", "normal", "hard"]).toContain(recipe.difficulty);
     }
   });
 
@@ -78,7 +79,20 @@ describe("레시피 카탈로그", () => {
       expect(new Set(allIngredientIds).size).toBe(allIngredientIds.length);
       expect(recipe.steps.length).toBeGreaterThan(0);
       expect(recipe.steps.every((step) => step.trim().length > 0)).toBe(true);
-      expect(["easy", "normal"]).toContain(recipe.difficulty);
+      expect(["easy", "normal", "hard"]).toContain(recipe.difficulty);
+      expect(recipe.difficulty).toBe(inferRecipeDifficulty(recipe));
+    }
+  });
+
+  it("공개 레시피 난이도도 단계 수와 전체 필수 재료 수 판정과 일치한다", () => {
+    for (const recipe of PUBLIC_RECIPES) {
+      expect(recipe.difficulty).toBe(inferRecipeDifficulty(recipe));
+    }
+  });
+
+  it("수기 레시피 난이도도 단계 수와 필수 재료 수 판정과 일치한다", () => {
+    for (const recipe of LOCAL_RECIPES) {
+      expect(recipe.difficulty).toBe(inferRecipeDifficulty(recipe));
     }
   });
 });

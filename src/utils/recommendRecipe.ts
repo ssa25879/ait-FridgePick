@@ -1,7 +1,12 @@
 import { RECIPES } from "../data/recipes";
-import type { Recipe } from "../types/recipe";
+import type { Recipe, RecipeDifficulty } from "../types/recipe";
 
 export const MINIMUM_RECIPE_MATCH_RATE = 0.6;
+
+export interface RecipeCandidateFilters {
+  minimumMatchRate?: number;
+  difficultyFilter?: RecipeDifficulty | "all";
+}
 
 export interface RecipeMatch {
   recipe: Recipe;
@@ -14,8 +19,12 @@ export interface RecipeMatch {
 export function getRecipeCandidates(
   selectedIngredientIds: string[],
   recipes: Recipe[] = RECIPES,
+  filters: RecipeCandidateFilters = {},
 ): RecipeMatch[] {
   const selectedIds = new Set(selectedIngredientIds);
+  const minimumMatchRate =
+    filters.minimumMatchRate ?? MINIMUM_RECIPE_MATCH_RATE;
+  const difficultyFilter = filters.difficultyFilter ?? "all";
 
   return recipes.flatMap((recipe) => {
     const unmappedRequiredIngredients =
@@ -33,7 +42,10 @@ export function getRecipeCandidates(
     const matchRate =
       matchedRequiredIngredientIds.length / totalRequiredIngredientCount;
 
-    if (matchRate < MINIMUM_RECIPE_MATCH_RATE) return [];
+    if (matchRate < minimumMatchRate) return [];
+    if (difficultyFilter !== "all" && recipe.difficulty !== difficultyFilter) {
+      return [];
+    }
 
     return [
       {

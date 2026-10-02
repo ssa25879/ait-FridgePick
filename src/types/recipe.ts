@@ -1,4 +1,4 @@
-export type RecipeDifficulty = "easy" | "normal";
+export type RecipeDifficulty = "easy" | "normal" | "hard";
 
 export interface RecipeSource {
   provider: string;

@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { TDSMobileAITProvider } from "@toss/tds-mobile-ait";
 import { describe, expect, it } from "vitest";
@@ -16,6 +16,54 @@ function renderApp() {
 }
 
 describe("재료 선택 흐름", () => {
+  it("매칭률·난이도 필터를 결과 편집까지 유지하고 처음부터 기본값으로 초기화한다", async () => {
+    const user = renderApp();
+    await user.click(screen.getByRole("button", { name: "재료 고르기" }));
+
+    const matchRate = screen.getByRole("slider", { name: "최소 매칭률" });
+    expect(matchRate).toHaveValue("60");
+    expect(matchRate).toHaveAttribute("min", "60");
+    expect(matchRate).toHaveAttribute("max", "100");
+    expect(matchRate).toHaveAttribute("step", "5");
+    expect(screen.getByRole("button", { name: "전체" })).toHaveAttribute(
+      "aria-pressed",
+      "true",
+    );
+    fireEvent.change(matchRate, { target: { value: "80" } });
+    await user.click(screen.getByRole("button", { name: "어려움" }));
+    await user.click(screen.getByRole("button", { name: "계란·유제품" }));
+    await user.click(screen.getByRole("button", { name: "달걀" }));
+    await user.click(screen.getByRole("button", { name: "치즈" }));
+    await user.click(screen.getByRole("button", { name: "버터" }));
+    await user.click(screen.getByRole("button", { name: "메뉴 뽑기" }));
+
+    expect(
+      screen.getByText("현재 재료로 추천할 수 있는 메뉴가 없어요."),
+    ).toBeInTheDocument();
+    await user.click(
+      screen.getByRole("button", { name: "재료 추가·변경하기" }),
+    );
+
+    expect(
+      screen.getByRole("slider", { name: "최소 매칭률" }),
+    ).toHaveValue("80");
+    expect(screen.getByRole("button", { name: "어려움" })).toHaveAttribute(
+      "aria-pressed",
+      "true",
+    );
+
+    await user.click(screen.getByRole("button", { name: "메뉴 뽑기" }));
+    await user.click(screen.getByRole("button", { name: "처음부터" }));
+
+    expect(
+      screen.getByRole("slider", { name: "최소 매칭률" }),
+    ).toHaveValue("60");
+    expect(screen.getByRole("button", { name: "전체" })).toHaveAttribute(
+      "aria-pressed",
+      "true",
+    );
+  });
+
   it("화면 전환 후 새 화면의 기본 영역으로 초점을 옮긴다", async () => {
     const user = renderApp();
     await user.click(screen.getByRole("button", { name: "재료 고르기" }));

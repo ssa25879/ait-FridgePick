@@ -4,10 +4,12 @@ import { HomePage } from "./pages/HomePage";
 import { IngredientPage } from "./pages/IngredientPage";
 import { ResultPage } from "./pages/ResultPage";
 import {
+  MINIMUM_RECIPE_MATCH_RATE,
   getRecipeCandidates,
   pickRecipeCandidate,
   type RecipeMatch,
 } from "./utils/recommendRecipe";
+import type { RecipeDifficulty } from "./types/recipe";
 
 type Screen = "home" | "ingredients" | "result";
 
@@ -17,6 +19,12 @@ function App() {
   const [selectedIngredientIds, setSelectedIngredientIds] = useState<string[]>(
     [],
   );
+  const [minimumMatchRate, setMinimumMatchRate] = useState(
+    MINIMUM_RECIPE_MATCH_RATE,
+  );
+  const [difficultyFilter, setDifficultyFilter] = useState<
+    RecipeDifficulty | "all"
+  >("all");
   const [candidates, setCandidates] = useState<RecipeMatch[]>([]);
   const [recommendation, setRecommendation] = useState<RecipeMatch | null>(
     null,
@@ -31,7 +39,10 @@ function App() {
   };
 
   const recommend = () => {
-    const nextCandidates = getRecipeCandidates(selectedIngredientIds);
+    const nextCandidates = getRecipeCandidates(selectedIngredientIds, undefined, {
+      minimumMatchRate,
+      difficultyFilter,
+    });
     setCandidates(nextCandidates);
     setRecommendation(pickRecipeCandidate(nextCandidates));
     setScreen("result");
@@ -45,6 +56,8 @@ function App() {
 
   const startOver = () => {
     setSelectedIngredientIds([]);
+    setMinimumMatchRate(MINIMUM_RECIPE_MATCH_RATE);
+    setDifficultyFilter("all");
     setCandidates([]);
     setRecommendation(null);
     setScreen("ingredients");
@@ -74,6 +87,10 @@ function App() {
       <IngredientPage
         mainRef={mainRef}
         selectedIngredientIds={selectedIngredientIds}
+        minimumMatchRate={minimumMatchRate}
+        onMinimumMatchRateChange={setMinimumMatchRate}
+        difficultyFilter={difficultyFilter}
+        onDifficultyFilterChange={setDifficultyFilter}
         onToggleIngredient={toggleIngredient}
         onRecommend={recommend}
         onBack={() => setScreen("home")}

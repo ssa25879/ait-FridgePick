@@ -1,6 +1,7 @@
 import type { RecipeCsvRecord } from "./recipeCsv";
 import { getRecipeSteps } from "./recipeCsv.ts";
 import type { Recipe } from "../types/recipe";
+import { inferRecipeDifficulty } from "../utils/recipeDifficulty.ts";
 
 export interface ParsedRecipeIngredients {
   requiredIngredients: string[];
@@ -315,7 +316,11 @@ export function normalizePublicRecipeRecord(
     requiredIngredients: requiredIds,
     optionalIngredients: [...optionalIngredientIds],
     steps,
-    difficulty: "normal",
+    difficulty: inferRecipeDifficulty({
+      steps,
+      requiredIngredients: requiredIds,
+      unmappedRequiredIngredients: unmappedNames,
+    }),
     unmappedRequiredIngredients: unmappedNames,
     sourceIngredientText,
     source: {

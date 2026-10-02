@@ -36,7 +36,7 @@ export const LOCAL_RECIPES: Recipe[] = [
       "달군 팬에 양파와 양념한 고기를 넣고 볶아요.",
       "고기가 완전히 익고 양념이 배면 불을 꺼요.",
     ],
-    difficulty: "normal",
+    difficulty: "easy",
   },
   {
     id: "beef_soy_stir_fry",
@@ -72,7 +72,7 @@ export const LOCAL_RECIPES: Recipe[] = [
       "냄비에 재료와 고추장, 간장, 물을 넣고 끓여요.",
       "감자가 익고 국물이 자작해질 때까지 조려요.",
     ],
-    difficulty: "normal",
+    difficulty: "easy",
   },
   {
     id: "doenjang_potato_stew",
@@ -216,7 +216,7 @@ export const LOCAL_RECIPES: Recipe[] = [
       "약불로 달군 팬에 기름을 두르고 계란물을 얇게 부어요.",
       "가장자리가 익으면 돌돌 말아 속까지 익혀요.",
     ],
-    difficulty: "normal",
+    difficulty: "easy",
   },
   {
     id: "cheese_omelet",
@@ -228,7 +228,7 @@ export const LOCAL_RECIPES: Recipe[] = [
       "팬에 버터를 녹이고 계란물을 부어 가장자리를 익혀요.",
       "가운데에 치즈를 올리고 반으로 접어 마저 익혀요.",
     ],
-    difficulty: "normal",
+    difficulty: "easy",
   },
   {
     id: "creamy_mushroom_pasta",
@@ -240,7 +240,7 @@ export const LOCAL_RECIPES: Recipe[] = [
       "팬에 버터를 녹여 버섯을 볶고 우유를 부어요.",
       "치즈를 녹인 뒤 삶은 면을 넣어 소스와 섞어요.",
     ],
-    difficulty: "normal",
+    difficulty: "easy",
   },
 ];
 

@@ -6,10 +6,22 @@ import { IngredientChip } from "../components/IngredientChip";
 import { SelectedIngredientBar } from "../components/SelectedIngredientBar";
 import { INGREDIENTS, INGREDIENT_CATEGORIES } from "../data/ingredients";
 import type { Ingredient, IngredientCategory } from "../types/ingredient";
+import type { RecipeDifficulty } from "../types/recipe";
+
+const DIFFICULTY_FILTERS = [
+  { value: "all", label: "전체" },
+  { value: "easy", label: "쉬움" },
+  { value: "normal", label: "보통" },
+  { value: "hard", label: "어려움" },
+] as const;
 
 interface IngredientPageProps {
   mainRef: RefObject<HTMLElement>;
   selectedIngredientIds: string[];
+  minimumMatchRate: number;
+  onMinimumMatchRateChange: (value: number) => void;
+  difficultyFilter: RecipeDifficulty | "all";
+  onDifficultyFilterChange: (value: RecipeDifficulty | "all") => void;
   onToggleIngredient: (ingredientId: string) => void;
   onRecommend: () => void;
   onBack: () => void;
@@ -18,6 +30,10 @@ interface IngredientPageProps {
 export function IngredientPage({
   mainRef,
   selectedIngredientIds,
+  minimumMatchRate,
+  onMinimumMatchRateChange,
+  difficultyFilter,
+  onDifficultyFilterChange,
   onToggleIngredient,
   onRecommend,
   onBack,
@@ -88,6 +104,49 @@ export function IngredientPage({
       </section>
 
       <SelectedIngredientBar ingredients={selectedIngredients} />
+
+      <section className="recommendation-filters" aria-label="추천 필터">
+        <div className="match-rate-filter">
+          <div className="match-rate-filter-label">
+            <label htmlFor="minimum-match-rate">최소 매칭률</label>
+            <output htmlFor="minimum-match-rate" aria-live="polite">
+              {Math.round(minimumMatchRate * 100)}% 이상
+            </output>
+          </div>
+          <input
+            id="minimum-match-rate"
+            className="match-rate-slider"
+            type="range"
+            min="60"
+            max="100"
+            step="5"
+            value={Math.round(minimumMatchRate * 100)}
+            onChange={(event) =>
+              onMinimumMatchRateChange(Number(event.currentTarget.value) / 100)
+            }
+          />
+        </div>
+
+        <fieldset className="difficulty-filter">
+          <legend className="difficulty-filter-title">난이도</legend>
+          <div className="difficulty-filter-options">
+            {DIFFICULTY_FILTERS.map(({ value, label }) => (
+              <Button
+                key={value}
+                type="button"
+                color="dark"
+                variant="weak"
+                size="small"
+                className="difficulty-filter-choice"
+                aria-pressed={difficultyFilter === value}
+                onClick={() => onDifficultyFilterChange(value)}
+              >
+                {label}
+              </Button>
+            ))}
+          </div>
+        </fieldset>
+      </section>
 
       <div className="ingredient-page-actions">
         <Button

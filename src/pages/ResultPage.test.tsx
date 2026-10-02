@@ -92,7 +92,7 @@ describe("추천 결과 상세", () => {
   });
 
   it("선택할 수 없는 재료와 원문 분량, 공공 데이터 출처를 표시한다", () => {
-    render(
+    const { container } = render(
       <TDSMobileAITProvider>
         <ResultPage
           mainRef={createRef<HTMLElement>()}
@@ -113,8 +113,15 @@ describe("추천 결과 상세", () => {
     expect(screen.getByRole("region", { name: "재료와 분량" })).toHaveTextContent(
       "두부 100g, 토마토 1개, 황태 20g",
     );
-    expect(screen.getByRole("region", { name: "데이터 출처" })).toHaveTextContent(
+    const sourceFooter = container.querySelector(".result-source-footer");
+    const recipeSteps = screen.getByRole("list");
+
+    expect(sourceFooter).toHaveTextContent(
       "식품의약품안전처 조리식품의 레시피 DB · 원본 ID 100",
     );
+    expect(
+      recipeSteps.compareDocumentPosition(sourceFooter!) &
+        Node.DOCUMENT_POSITION_FOLLOWING,
+    ).toBeTruthy();
   });
 });
