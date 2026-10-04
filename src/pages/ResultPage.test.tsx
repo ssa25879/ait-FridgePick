@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { createRef } from "react";
 import { TDSMobileAITProvider } from "@toss/tds-mobile-ait";
 import { describe, expect, it, vi } from "vitest";
-import { RECIPES } from "../data/recipes";
+import { TEST_RECIPES as RECIPES } from "../test/fixtures/recipes";
 import type { RecipeMatch } from "../utils/recommendRecipe";
 import { ResultPage } from "./ResultPage";
 

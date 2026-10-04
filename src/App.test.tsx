@@ -5,6 +5,12 @@ import { TDSMobileAITProvider } from "@toss/tds-mobile-ait";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import App from "./App";
 
+// Isolate state/navigation contracts from changes to the production catalog.
+vi.mock("./data/recipes", async () => {
+  const { TEST_RECIPES } = await import("./test/fixtures/recipes");
+  return { RECIPES: TEST_RECIPES };
+});
+
 const ads = vi.hoisted(() => ({
   initialize: vi.fn(),
   initializeSupported: vi.fn(),
@@ -428,5 +434,17 @@ describe("재료 선택 흐름", () => {
     await user.click(screen.getByText("필터·저장 설정", { exact: true }));
     expect(screen.getByRole("slider")).toHaveValue("85");
     expect(screen.getByRole("button", { name: "보통" })).toHaveAttribute("aria-pressed", "true");
+  });
+  it("필터는 카테고리 앞에 있고 재료 목록은 별도의 키보드 접근 영역이다", async () => {
+    const user = renderApp();
+    await user.click(screen.getByRole("button", { name: "재료 고르기" }));
+    const settings = screen.getByText("필터·저장 설정", { exact: true });
+    const category = screen.getByRole("button", { name: "전체 재료" });
+    expect(settings.compareDocumentPosition(category) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    const list = screen.getByRole("group", { name: "스크롤 가능한 재료 목록" });
+    expect(list).toHaveAttribute("tabindex", "0");
+    expect(list).not.toContainElement(screen.getByRole("button", { name: "메뉴 뽑기" }));
+    await user.click(category);
+    expect(screen.getByRole("group", { name: "스크롤 가능한 재료 목록" }).querySelectorAll("button")).toHaveLength(95);
   });
 });
