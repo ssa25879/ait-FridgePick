@@ -5,10 +5,10 @@ export const EPIS_RECIPE_IMPORT_SUMMARY = {
   "sourceRecordCount": 537,
   "ingredientRowCount": 6104,
   "stepRowCount": 3022,
-  "includedRecordCount": 467,
-  "excludedRecordCount": 70,
+  "includedRecordCount": 471,
+  "excludedRecordCount": 66,
   "excludedByReason": {
-    "low-ingredient-coverage": 63,
+    "low-ingredient-coverage": 59,
     "missing-quantity": 3,
     "missing-ingredients": 1,
     "invalid-step-sequence": 3
@@ -84,10 +84,6 @@ export const EPIS_RECIPE_IMPORT_SUMMARY = {
     },
     {
       "sourceId": "463",
-      "reason": "low-ingredient-coverage"
-    },
-    {
-      "sourceId": "460",
       "reason": "low-ingredient-coverage"
     },
     {
@@ -191,10 +187,6 @@ export const EPIS_RECIPE_IMPORT_SUMMARY = {
       "reason": "invalid-step-sequence"
     },
     {
-      "sourceId": "265",
-      "reason": "low-ingredient-coverage"
-    },
-    {
       "sourceId": "262",
       "reason": "low-ingredient-coverage"
     },
@@ -260,14 +252,6 @@ export const EPIS_RECIPE_IMPORT_SUMMARY = {
     },
     {
       "sourceId": "82",
-      "reason": "low-ingredient-coverage"
-    },
-    {
-      "sourceId": "68",
-      "reason": "low-ingredient-coverage"
-    },
-    {
-      "sourceId": "66",
       "reason": "low-ingredient-coverage"
     },
     {
@@ -591,6 +575,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "water_parsley",
       "egg",
       "garlic",
+      "ginger",
       "carrot",
       "glass_noodles",
       "tofu",
@@ -615,7 +600,6 @@ export const EPIS_RECIPES: Recipe[] = [
       "찜통에 배추만두를 넣고 5분간 쪄준다."
     ],
     "unmappedRequiredIngredients": [
-      "다진생강",
       "다짐육(돼지고기)",
       "다짐육(소고기)"
     ],
@@ -745,6 +729,7 @@ export const EPIS_RECIPES: Recipe[] = [
     "id": "epis_91023",
     "name": "고추장아찌",
     "requiredIngredients": [
+      "chili_pepper",
       "vinegar",
       "soy_sauce",
       "sugar"
@@ -757,9 +742,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "통에 고추를 넣고 식힌 간장을 부어 그늘지고 시원한 곳에서 15일간 숙성 시켜준다.",
       "숙성된 고추장아찌는 냉장고에 보관한다."
     ],
-    "unmappedRequiredIngredients": [
-      "고추"
-    ],
+    "unmappedRequiredIngredients": [],
     "difficulty": "easy",
     "sourceIngredientText": "원문 분량: 2인분\n주재료: 고추 180g (약2줌)\n양념: 식초 1컵\n양념: 간장 1.5컵\n양념: 물 1컵\n양념: 설탕 1컵",
     "source": {
@@ -851,6 +834,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "crown_daisy",
       "cucumber",
       "carrot",
+      "chili_pepper",
       "onion",
       "squid",
       "gochujang",
@@ -869,7 +853,6 @@ export const EPIS_RECIPES: Recipe[] = [
     "unmappedRequiredIngredients": [
       "치커리",
       "상추",
-      "고추",
       "와사비"
     ],
     "difficulty": "hard",
@@ -1063,7 +1046,8 @@ export const EPIS_RECIPES: Recipe[] = [
       "chives",
       "onion",
       "garlic",
-      "plum_syrup"
+      "plum_syrup",
+      "chili_powder"
     ],
     "optionalIngredients": [],
     "steps": [
@@ -1073,8 +1057,7 @@ export const EPIS_RECIPES: Recipe[] = [
     ],
     "unmappedRequiredIngredients": [
       "돛나물",
-      "액젓",
-      "고추가루"
+      "액젓"
     ],
     "difficulty": "normal",
     "sourceIngredientText": "원문 분량: 2인분\n주재료: 오이 2개\n주재료: 부추 20g\n주재료: 돛나물 20g\n양념: 양파 소1/2\n양념: 다진마늘 1t\n양념: 매실액 1T\n양념: 액젓 1T\n양념: 고추가루 1T",
@@ -1206,6 +1189,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "green_onion",
       "onion",
       "garlic",
+      "ginger",
       "salt",
       "black_pepper"
     ],
@@ -1221,8 +1205,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "시래기",
       "다시마 우린 물",
       "배즙",
-      "사과즙",
-      "다진생강"
+      "사과즙"
     ],
     "difficulty": "hard",
     "sourceIngredientText": "원문 분량: 2인분\n주재료: 돼지갈비 1.2kg\n주재료: 시래기 200g\n부재료: 다시마 우린 물 2컵\n양념: 고춧가루 5큰술\n양념: 고추장 5큰술\n양념: 간장 3큰술\n양념: 청주 3큰술\n양념: 배즙 2큰술\n양념: 사과즙 3큰술\n양념: 다진파 3큰술\n양념: 다진양파 2큰술\n양념: 다진마늘 1큰술\n양념: 다진생강 1작은술\n양념: 소금 1작은술\n양념: 후추 약간",
@@ -1238,6 +1221,7 @@ export const EPIS_RECIPES: Recipe[] = [
     "id": "epis_39665",
     "name": "흑임자삼계죽",
     "requiredIngredients": [
+      "chicken",
       "peanut",
       "green_onion",
       "onion",
@@ -1254,7 +1238,6 @@ export const EPIS_RECIPES: Recipe[] = [
       "찹쌀이 뭉근히 퍼지면 검은깨와 땅콩을 거른 물, 채썬 대추를 넣고 물 1컵으로 농도를 조절한 후 소금으로 간한다. 잣은 고깔을 제거하여 고명으로 올려낸다."
     ],
     "unmappedRequiredIngredients": [
-      "닭",
       "볶은 흑임자(검은깨)",
       "인삼",
       "참쌀"
@@ -1748,6 +1731,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "soy_sauce",
       "cooking_wine",
       "garlic",
+      "ginger",
       "black_pepper",
       "salt",
       "sesame_oil"
@@ -1763,8 +1747,7 @@ export const EPIS_RECIPES: Recipe[] = [
     "unmappedRequiredIngredients": [
       "대하",
       "미더덕",
-      "꽃게",
-      "다진생강"
+      "꽃게"
     ],
     "difficulty": "hard",
     "sourceIngredientText": "원문 분량: 4인분\n주재료: 대하 12마리\n주재료: 오징어 1마리\n주재료: 미더덕 50g\n주재료: 바지락 1봉\n주재료: 꽃게 3마리\n부재료: 무 50g\n부재료: 양파 1개\n부재료: 청고추 1개\n부재료: 다시마 1장\n부재료: 미나리 50g\n부재료: 쑥갓 30g\n양념: 고춧가루 5큰술\n양념: 국간장 4큰술\n양념: 맛술 3큰술\n양념: 다진마늘 2큰술\n양념: 다진생강 1큰술\n양념: 후춧가루 약간\n양념: 소금 약간\n양념: 참기름 약간\n부재료: 홍고추 1개",
@@ -1925,6 +1908,7 @@ export const EPIS_RECIPES: Recipe[] = [
     "id": "epis_481",
     "name": "돼지고기김치찌개",
     "requiredIngredients": [
+      "kimchi",
       "mushroom",
       "green_onion",
       "chili_pepper",
@@ -1940,7 +1924,6 @@ export const EPIS_RECIPES: Recipe[] = [
       "김치가 익었으면 고추와 대파로 마무리한다."
     ],
     "unmappedRequiredIngredients": [
-      "신김치",
       "돼지고기안심",
       "청정원국선생"
     ],
@@ -1958,6 +1941,7 @@ export const EPIS_RECIPES: Recipe[] = [
     "id": "epis_480",
     "name": "해물찌개",
     "requiredIngredients": [
+      "octopus",
       "soy_sauce",
       "squid",
       "shrimp",
@@ -1968,6 +1952,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "water_parsley",
       "chili_powder",
       "garlic",
+      "ginger",
       "gochujang",
       "salt",
       "black_pepper",
@@ -1983,10 +1968,8 @@ export const EPIS_RECIPES: Recipe[] = [
       "해물이 익으면 고추, 미나리, 대파를 넣고 간을 맞춰 낸다."
     ],
     "unmappedRequiredIngredients": [
-      "쭈꾸미",
       "모시조개",
-      "홍합",
-      "다진생강"
+      "홍합"
     ],
     "difficulty": "hard",
     "sourceIngredientText": "원문 분량: 4인분\n주재료: 쭈꾸미 2마리\n양념: 간장 3큰술\n주재료: 오징어 1/2마리\n주재료: 새우 8마리\n주재료: 모시조개 1봉\n주재료: 홍합 50g\n부재료: 양파 1/2개\n부재료: 무 1/4개\n부재료: 홍고추 1개\n부재료: 대파 2뿌리\n부재료: 미나리 50g\n양념: 고춧가루 1큰술\n양념: 다진마늘 2큰술\n양념: 다진생강 1큰술\n양념: 고추장 1작은술\n양념: 소금 약간\n양념: 후춧가루 약간\n부재료: 다시마 1장\n부재료: 청고추 1개",
@@ -2076,6 +2059,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "carrot",
       "potato",
       "mushroom",
+      "raw_rice",
       "sesame_oil",
       "soy_sauce",
       "sesame",
@@ -2093,8 +2077,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "먹기 직전에 통깨, 다진 실파를 뿌려준다."
     ],
     "unmappedRequiredIngredients": [
-      "참치통조림",
-      "불린쌀"
+      "참치통조림"
     ],
     "difficulty": "hard",
     "sourceIngredientText": "원문 분량: 2인분\n주재료: 참치통조림 1캔\n부재료: 당근 1/3개\n부재료: 감자 1개\n부재료: 표고버섯 2장\n주재료: 불린쌀 1컵\n양념: 참기름 약간\n양념: 국간장 약간\n양념: 깨소금 약간\n부재료: 실파 2줄기\n부재료: 물 5컵\n부재료: 다시마 1장\n부재료: 애호박 1/3개",
@@ -2110,6 +2093,7 @@ export const EPIS_RECIPES: Recipe[] = [
     "id": "epis_476",
     "name": "고추장닭강정",
     "requiredIngredients": [
+      "chicken",
       "milk",
       "cooking_wine",
       "salt",
@@ -2133,7 +2117,6 @@ export const EPIS_RECIPES: Recipe[] = [
       "윤기가 나게 소스에 버무려지면 호두를 다져 넣고 마무리한다."
     ],
     "unmappedRequiredIngredients": [
-      "닭",
       "튀김가루",
       "토마토케첩",
       "고추기름"
@@ -2340,6 +2323,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "chives",
       "green_onion",
       "garlic",
+      "ginger",
       "chili_powder",
       "sugar",
       "salt"
@@ -2352,7 +2336,6 @@ export const EPIS_RECIPES: Recipe[] = [
       "우묵한 그릇에 부추와 실파를 넣고 고추 양념으로 버무려 소금으로 간을 맞춘 후 물기를 뺀 가지의 칼집 사이로 버무린 소를 넣어 가지김치를 항아리에 담는다."
     ],
     "unmappedRequiredIngredients": [
-      "다진생강",
       "액젓"
     ],
     "difficulty": "normal",
@@ -2536,6 +2519,40 @@ export const EPIS_RECIPES: Recipe[] = [
       "provider": "농림수산식품교육문화정보원",
       "dataset": "레시피 기본정보·재료정보·과정정보",
       "sourceId": "461",
+      "sourceUrl": "https://www.data.go.kr/data/15057205/openapi.do",
+      "usageScope": "공공데이터포털 이용허락범위 제한 없음 표시 확인(2026-10-05)"
+    }
+  },
+  {
+    "id": "epis_460",
+    "name": "대대로닭칼국수",
+    "requiredIngredients": [
+      "flour",
+      "chicken",
+      "ginger",
+      "cucumber",
+      "salt"
+    ],
+    "optionalIngredients": [],
+    "steps": [
+      "날콩가루(50g)를 곱게 갈아 밀가루와 합하여 반죽을 한 후 젖은 면보에 싸둔다.",
+      "닭과 닭발, 통파, 생강을 넣어 무르게 끓인 닭육수를 준비한다.",
+      "①의 반죽을 밀가루를 뿌려가면서 얇게 밀어 돌돌만 후 곱게 채썬다.",
+      "채썬 반죽은 밀가루를 뿌린 쟁반에 둔다.",
+      "②의 닭이 익으면 건져 뼈를 발라내고 닭살은 찢어둔다.",
+      "①의 콩가루보다는 굵게 갈은 콩을 ⑤의 닭살과 섞는다.(콩가루 50g)"
+    ],
+    "unmappedRequiredIngredients": [
+      "날콩가루",
+      "닭발",
+      "통파"
+    ],
+    "difficulty": "normal",
+    "sourceIngredientText": "원문 분량: 2인분\n주재료: 날콩가루 100g\n주재료: 밀가루 100g\n주재료: 닭 1마리\n부재료: 닭발 2개\n부재료: 통파 1대\n양념: 생강 적당량\n부재료: 오이 1/4개\n양념: 소금 적당량",
+    "source": {
+      "provider": "농림수산식품교육문화정보원",
+      "dataset": "레시피 기본정보·재료정보·과정정보",
+      "sourceId": "460",
       "sourceUrl": "https://www.data.go.kr/data/15057205/openapi.do",
       "usageScope": "공공데이터포털 이용허락범위 제한 없음 표시 확인(2026-10-05)"
     }
@@ -2799,6 +2816,7 @@ export const EPIS_RECIPES: Recipe[] = [
     "name": "파프리카볶음밥",
     "requiredIngredients": [
       "bell_pepper",
+      "cooked_rice",
       "potato",
       "onion",
       "carrot",
@@ -2815,7 +2833,6 @@ export const EPIS_RECIPES: Recipe[] = [
       "180℃로 예열된 오븐에 ④를 넣고 20분 간 굽는다."
     ],
     "unmappedRequiredIngredients": [
-      "찬밥",
       "호박"
     ],
     "difficulty": "normal",
@@ -2838,6 +2855,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "jujube",
       "green_onion",
       "onion",
+      "ginger",
       "anchovy",
       "sugar"
     ],
@@ -2850,7 +2868,6 @@ export const EPIS_RECIPES: Recipe[] = [
     ],
     "unmappedRequiredIngredients": [
       "밤",
-      "다진생강",
       "멸치액젓"
     ],
     "difficulty": "hard",
@@ -3178,6 +3195,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "onion",
       "chili_pepper",
       "sugar",
+      "ginger",
       "garlic",
       "cooking_wine",
       "doenjang",
@@ -3196,8 +3214,7 @@ export const EPIS_RECIPES: Recipe[] = [
     "unmappedRequiredIngredients": [
       "갈치",
       "굵은고춧가루",
-      "고운고춧가루",
-      "다진생강"
+      "고운고춧가루"
     ],
     "difficulty": "hard",
     "sourceIngredientText": "원문 분량: 2인분\n주재료: 갈치 4토막\n부재료: 무 1/3개\n부재료: 애호박 1/2개\n부재료: 당근 1/4개\n부재료: 대파 1개\n부재료: 양파 1/2개\n부재료: 홍고추 1개\n부재료: 청고추 1개\n양념: 굵은고춧가루 2큰술\n양념: 고운고춧가루 1큰술\n양념: 설탕 1큰술\n양념: 다진생강 2작은술\n양념: 다진마늘 1큰술\n양념: 정종 1큰술\n양념: 된장 2작은술\n양념: 후춧가루 약간\n양념: 소금 약간\n양념: 간장 2큰술\n양념: 물엿 2큰술",
@@ -3477,6 +3494,7 @@ export const EPIS_RECIPES: Recipe[] = [
     "name": "꽃상추쌈",
     "requiredIngredients": [
       "cooked_rice",
+      "beef",
       "onion",
       "soy_sauce",
       "sugar",
@@ -3496,8 +3514,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "먹기 직전에 고추장을 약간 뿌린다."
     ],
     "unmappedRequiredIngredients": [
-      "상추",
-      "다진쇠고기"
+      "상추"
     ],
     "difficulty": "hard",
     "sourceIngredientText": "원문 분량: 2인분\n주재료: 상추 4장\n주재료: 밥 1그릇\n부재료: 다진쇠고기 100g\n부재료: 다진양파 1/2개\n양념: 간장 1큰술\n양념: 설탕 1/2큰술\n양념: 다진파 약간\n양념: 다진마늘 약간\n양념: 깨소금 약간\n양념: 참기름 약간\n양념: 고추장 약간",
@@ -3514,6 +3531,7 @@ export const EPIS_RECIPES: Recipe[] = [
     "name": "양파전",
     "requiredIngredients": [
       "onion",
+      "beef",
       "tofu",
       "green_onion",
       "garlic",
@@ -3533,9 +3551,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "①의 안쪽에 밀가루를 뿌린 다음 ③의 속을 밀리지 않게 잘 채워넣는다.",
       "채워 넣은 양파는 밀가루, 계란 순으로 묻혀 기름을 두른팬에 노릇하게 지져낸다. 홍고추 등으로 포인트를 주면 좋다."
     ],
-    "unmappedRequiredIngredients": [
-      "다진쇠고기"
-    ],
+    "unmappedRequiredIngredients": [],
     "difficulty": "hard",
     "sourceIngredientText": "원문 분량: 2인분\n주재료: 양파 2개\n부재료: 다진쇠고기 50g\n부재료: 두부 1/4모\n양념: 다진파 1작은술\n양념: 다진마늘 1작은술\n양념: 깨소금 약간\n양념: 소금 약간\n양념: 참기름 약간\n양념: 후춧가루 약간\n부재료: 밀가루 약간\n부재료: 계란 1개\n부재료: 홍고추 1/2개",
     "source": {
@@ -3554,6 +3570,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "chili_powder",
       "garlic",
       "green_onion",
+      "ginger",
       "sesame_oil",
       "sesame"
     ],
@@ -3568,8 +3585,7 @@ export const EPIS_RECIPES: Recipe[] = [
     "unmappedRequiredIngredients": [
       "봄동",
       "까나리액젓",
-      "새우젓",
-      "다진생강"
+      "새우젓"
     ],
     "difficulty": "normal",
     "sourceIngredientText": "원문 분량: 2인분\n주재료: 봄동 100g\n부재료: 영양부추 1/4단\n양념: 고춧가루 3큰술\n양념: 까나리액젓 2큰술\n양념: 새우젓 1/2큰술\n양념: 다진마늘 1작은술\n양념: 다진파 1큰술\n양념: 다진생강 1/2작은술\n양념: 참기름 약간\n양념: 깨소금 약간",
@@ -3892,6 +3908,7 @@ export const EPIS_RECIPES: Recipe[] = [
     "id": "epis_409",
     "name": "라조기",
     "requiredIngredients": [
+      "chicken",
       "soy_sauce",
       "egg",
       "starch",
@@ -3912,7 +3929,6 @@ export const EPIS_RECIPES: Recipe[] = [
       "매운 맛이 나면 먼저 간장과 술로 양념하고 표고버섯, 양파, 피망의 순서로 넣고 볶는다.(항상 맛이 들어야 하는 버섯을 먼저 넣고 푸른 채소는 마지막에 넣도록 한다)"
     ],
     "unmappedRequiredIngredients": [
-      "닭",
       "튀김가루",
       "마른고추",
       "고춧기름",
@@ -4149,6 +4165,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "onion",
       "chili_pepper",
       "garlic",
+      "ginger",
       "salt",
       "sesame_oil",
       "sesame",
@@ -4164,7 +4181,6 @@ export const EPIS_RECIPES: Recipe[] = [
       "채소가 어느 정도 숨이 죽으면 준비한 부추를 넣어 살짝 볶은 후 참기름 한방울을 넣어 마무리한다."
     ],
     "unmappedRequiredIngredients": [
-      "다진생강",
       "청정원굴소스"
     ],
     "difficulty": "hard",
@@ -4370,6 +4386,7 @@ export const EPIS_RECIPES: Recipe[] = [
     "id": "epis_394",
     "name": "닭가슴살해파리샐러드",
     "requiredIngredients": [
+      "chicken",
       "cucumber",
       "chili_pepper",
       "lemon",
@@ -4390,7 +4407,6 @@ export const EPIS_RECIPES: Recipe[] = [
       "④의 소스에 찢어놓은 닭가슴살과 해파리를 묻힌 후 접시에 오이를 깔고 그 위에 담아낸다."
     ],
     "unmappedRequiredIngredients": [
-      "닭",
       "해파리"
     ],
     "difficulty": "hard",
@@ -4758,6 +4774,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "chili_pepper",
       "green_onion",
       "garlic",
+      "ginger",
       "soy_sauce",
       "cooking_wine",
       "sugar",
@@ -4773,7 +4790,6 @@ export const EPIS_RECIPES: Recipe[] = [
       "마지막에 참기름을 두른 후 불을 끈다."
     ],
     "unmappedRequiredIngredients": [
-      "다진생강",
       "두반장",
       "고추기름",
       "녹말물"
@@ -4800,6 +4816,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "cooking_wine",
       "sugar",
       "garlic",
+      "ginger",
       "syrup",
       "sesame_oil",
       "chili_pepper"
@@ -4813,8 +4830,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "위의 재료를 모두 섞고 양념을 분량대로 넣어 버무려주고, 프라이팬에 물기 없이 볶아 낸다."
     ],
     "unmappedRequiredIngredients": [
-      "옥수수통조림",
-      "다진생강"
+      "옥수수통조림"
     ],
     "difficulty": "hard",
     "sourceIngredientText": "원문 분량: 2인분\n주재료: 오징어 1마리\n주재료: 돼지고기 200g\n부재료: 옥수수통조림 1/2캔\n부재료: 양파 1개\n부재료: 실파 3뿌리\n양념: 고추장 5큰술\n양념: 미림 1큰술\n양념: 설탕 1큰술\n양념: 다진마늘 약간\n양념: 다진생강 약간\n양념: 물엿 3큰술\n양념: 참기름 약간\n부재료: 청고추 1/2개\n부재료: 홍고추 1/2개",
@@ -5995,6 +6011,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "salt",
       "chili_powder",
       "garlic",
+      "ginger",
       "green_onion"
     ],
     "optionalIngredients": [],
@@ -6005,9 +6022,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "소금 1/2큰술, 다진 파 1큰술, 다진 마늘 1/2큰술, 다진 생강 1/4큰술, 고춧가루 2큰술을 섞어 양념장을 만든다.",
       "준비한 양념장에 오징어채를 넣어 버무린 다음 항아리에 담아 서늘한 곳에서 일주일 정도 삭힌다."
     ],
-    "unmappedRequiredIngredients": [
-      "다진생강"
-    ],
+    "unmappedRequiredIngredients": [],
     "difficulty": "easy",
     "sourceIngredientText": "원문 분량: 2인분\n주재료: 오징어 1마리\n양념: 소금 3큰술\n양념: 고춧가루 2큰술\n양념: 다진마늘 1/2큰술\n양념: 다진생강 1/4큰술\n양념: 다진파 1큰술",
     "source": {
@@ -6154,6 +6169,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "bean_sprout",
       "cucumber",
       "carrot",
+      "beef",
       "salt"
     ],
     "optionalIngredients": [],
@@ -6166,8 +6182,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "간장, 참기름, 깨소금, 후춧가루, 다진 파, 마늘 등을 섞어 양념장을 만든다."
     ],
     "unmappedRequiredIngredients": [
-      "보리",
-      "다진쇠고기"
+      "보리"
     ],
     "difficulty": "normal",
     "sourceIngredientText": "원문 분량: 1인분\n주재료: 밥 60g\n주재료: 보리 10g\n주재료: 콩나물 40g\n주재료: 오이 20g\n부재료: 당근 15g\n주재료: 다진쇠고기 30g\n양념: 소금 1큰술",
@@ -6391,6 +6406,7 @@ export const EPIS_RECIPES: Recipe[] = [
     "id": "epis_331",
     "name": "고추부각",
     "requiredIngredients": [
+      "chili_pepper",
       "glutinous_rice_flour",
       "cooking_oil",
       "salt",
@@ -6403,9 +6419,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "찜통에 김이 오르면 찹쌀가루에 버무린 고추를 넣어 찐 다음 햇볕에  말린다.",
       "180℃ 정도의 기름에 살짝 튀겨 건진 다음 설탕을 솔솔 뿌린다."
     ],
-    "unmappedRequiredIngredients": [
-      "고추"
-    ],
+    "unmappedRequiredIngredients": [],
     "difficulty": "easy",
     "sourceIngredientText": "원문 분량: 2인분\n주재료: 고추 150g\n주재료: 찹쌀가루 1/2컵\n부재료: 식용유 4컵\n주재료: 소금 약간\n주재료: 설탕 약간",
     "source": {
@@ -7198,6 +7212,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "kimchi",
       "green_onion",
       "garlic",
+      "ginger",
       "soy_sauce",
       "chili_powder",
       "sugar"
@@ -7211,8 +7226,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "양념장이 거의 없어 지게 될 무렵, 찬물을 조금 더 부어 자작하게 조린 후 접시에 담아낸다."
     ],
     "unmappedRequiredIngredients": [
-      "고등어",
-      "다진생강"
+      "고등어"
     ],
     "difficulty": "normal",
     "sourceIngredientText": "원문 분량: 2인분\n주재료: 고등어 1마리\n주재료: 배추김치 1/4포기\n부재료: 물 2컵\n부재료: 파 1뿌리\n양념: 다진마늘 1큰술\n양념: 다진생강 1큰술\n양념: 진간장 2큰술\n양념: 고춧가루 ½큰술\n양념: 설탕 1큰술",
@@ -7501,6 +7515,7 @@ export const EPIS_RECIPES: Recipe[] = [
     "id": "epis_297",
     "name": "닭갈비",
     "requiredIngredients": [
+      "chicken",
       "sweet_potato",
       "cabbage",
       "onion",
@@ -7522,7 +7537,6 @@ export const EPIS_RECIPES: Recipe[] = [
       "닭이 거의 익으면 마지막으로 깻잎을 넣고 볶아낸 후 담아낸다."
     ],
     "unmappedRequiredIngredients": [
-      "닭",
       "흰떡"
     ],
     "difficulty": "hard",
@@ -7573,6 +7587,7 @@ export const EPIS_RECIPES: Recipe[] = [
     "id": "epis_295",
     "name": "치킨데리야끼",
     "requiredIngredients": [
+      "chicken",
       "pineapple",
       "broccoli",
       "carrot",
@@ -7595,9 +7610,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "달군 프라이팬에 ④을 넣고 볶다가 계란 푼 것을 넣고 계속 볶는다.",
       "밥을 넣고 밥이 뭉치지 않도록 볶다가 간장으로 간을 한 후 참기름으로 마무리한다."
     ],
-    "unmappedRequiredIngredients": [
-      "닭"
-    ],
+    "unmappedRequiredIngredients": [],
     "difficulty": "hard",
     "sourceIngredientText": "원문 분량: 2인분\n주재료: 닭 500g\n부재료: 파인애플 2조각\n부재료: 브로콜리 150g\n부재료: 당근 150g\n양념: 설탕 5큰술\n양념: 청주 약간\n양념: 물 약간\n부재료: 밥 1공기\n부재료: 청피망 1/2개\n부재료: 계란 1개\n양념: 간장 1컵\n양념: 참기름 약간\n양념: 식용유 약간\n부재료: 숙주 20g",
     "source": {
@@ -8247,6 +8260,7 @@ export const EPIS_RECIPES: Recipe[] = [
     "id": "epis_273",
     "name": "김치두부쌈",
     "requiredIngredients": [
+      "kimchi",
       "tofu",
       "pork",
       "chili_pepper",
@@ -8263,9 +8277,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "접시에 돼지고기를 깔고, 두부를 돌려 담은 후 김치를 얹어 보기좋게 준비한다.",
       "쌈채소와 쌈장을 곁들이면 더욱 좋다."
     ],
-    "unmappedRequiredIngredients": [
-      "신김치"
-    ],
+    "unmappedRequiredIngredients": [],
     "difficulty": "normal",
     "sourceIngredientText": "원문 분량: 4인분\n주재료: 신김치 2포기\n주재료: 두부 1모\n주재료: 돼지고기 600g\n부재료: 청고추 1개\n부재료: 깻잎 1봉\n양념: 대파 1/2뿌리\n양념: 생강 1쪽\n양념: 소금 약간",
     "source": {
@@ -8280,6 +8292,7 @@ export const EPIS_RECIPES: Recipe[] = [
     "id": "epis_272",
     "name": "닭고기콩나물덮밥",
     "requiredIngredients": [
+      "chicken",
       "bean_sprout",
       "cucumber",
       "kimchi",
@@ -8299,7 +8312,6 @@ export const EPIS_RECIPES: Recipe[] = [
       "닭 살, 콩나물, 오이, 김치를 양념장으로 골고루 버무려 밥 위에 소담히 담아낸다."
     ],
     "unmappedRequiredIngredients": [
-      "닭",
       "육수"
     ],
     "difficulty": "hard",
@@ -8510,6 +8522,44 @@ export const EPIS_RECIPES: Recipe[] = [
     }
   },
   {
+    "id": "epis_265",
+    "name": "고들빼기김치",
+    "requiredIngredients": [
+      "green_onion",
+      "chili_pepper",
+      "chili_powder",
+      "sugar",
+      "jujube",
+      "sesame",
+      "garlic",
+      "ginger"
+    ],
+    "optionalIngredients": [],
+    "steps": [
+      "고들빼기는 다듬어서 소금물에 절인 다음 무거운 것으로 눌러 일주일 정도 삭힌다.",
+      "일주일 정도 삭힌 고들빼기는 물에 쓴 맛을 우려내어 체에 건져놓는다.",
+      "밴댕이 젓등의 젓갈류를 준비하여 다져놓고 삭힌 고추는 걸러놓는다.",
+      "갓, 실파등은 길이 10cm 길이로 썰어 젓국에 절여 놓는다.",
+      "젓국에 고춧가루와 설탕을 함께 개어 놓는다.",
+      "고들빼기, 고추, 갓 등의 양채를 양념에 넣어 고루 버무린 다음 항아리에 차곡차곡 담은 후 우거지를 덮어 소금을 뿌리고 무거운 것으로 누른 다음 익으면 먹도록 한다."
+    ],
+    "unmappedRequiredIngredients": [
+      "고들빼기",
+      "갓",
+      "멸치액젓",
+      "밤"
+    ],
+    "difficulty": "hard",
+    "sourceIngredientText": "원문 분량: 2인분\n주재료: 고들빼기 1관\n부재료: 실파 1단\n양념: 고추 1근\n부재료: 갓 1단\n양념: 고춧가루 1근\n양념: 멸치액젓 2컵\n양념: 설탕 3큰술\n부재료: 밤 20개\n부재료: 대추 20개\n양념: 깨소금 약간\n양념: 다진마늘 약간\n양념: 다진생강 약간",
+    "source": {
+      "provider": "농림수산식품교육문화정보원",
+      "dataset": "레시피 기본정보·재료정보·과정정보",
+      "sourceId": "265",
+      "sourceUrl": "https://www.data.go.kr/data/15057205/openapi.do",
+      "usageScope": "공공데이터포털 이용허락범위 제한 없음 표시 확인(2026-10-05)"
+    }
+  },
+  {
     "id": "epis_264",
     "name": "삼색수제비",
     "requiredIngredients": [
@@ -8656,6 +8706,7 @@ export const EPIS_RECIPES: Recipe[] = [
     "name": "떡잡채",
     "requiredIngredients": [
       "beef",
+      "kimchi",
       "onion",
       "bell_pepper",
       "carrot",
@@ -8672,8 +8723,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "고기와 채소가 거의 익으면 흰 떡을 넣어 고루 섞으면서 볶다가 참기름을 두르고 통깨를 훌훌 뿌린다."
     ],
     "unmappedRequiredIngredients": [
-      "가래떡",
-      "신김치"
+      "가래떡"
     ],
     "difficulty": "normal",
     "sourceIngredientText": "원문 분량: 4인분\n주재료: 가래떡 400g\n주재료: 쇠고기 80g\n부재료: 신김치 100g\n부재료: 양파 1/2개\n부재료: 피망 1/2개\n부재료: 당근 30g\n양념: 참기름 약간\n양념: 깨소금 약간\n양념: 소금 약간\n양념: 통깨 약간",
@@ -8960,6 +9010,7 @@ export const EPIS_RECIPES: Recipe[] = [
     "name": "김치피자",
     "requiredIngredients": [
       "cheese",
+      "kimchi",
       "bacon",
       "carrot",
       "bell_pepper",
@@ -8977,8 +9028,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "접시에 담기 전 파슬리가루를 솔솔 뿌려 담아 낸다."
     ],
     "unmappedRequiredIngredients": [
-      "바게트",
-      "신김치"
+      "바게트"
     ],
     "difficulty": "hard",
     "sourceIngredientText": "원문 분량: 4인분\n주재료: 바게트 1/4개\n주재료: 모짜렐라치즈 100g\n주재료: 신김치 1/5포기\n부재료: 베이컨 2줄\n부재료: 당근 1/4개\n부재료: 피망 1/4개\n부재료: 양송이 3개\n부재료: 파슬리가루 약간\n양념: 소금 약간\n양념: 후춧가루 약간\n부재료: 식용유 약간",
@@ -9135,6 +9185,7 @@ export const EPIS_RECIPES: Recipe[] = [
     "id": "epis_246",
     "name": "찬밥전",
     "requiredIngredients": [
+      "cooked_rice",
       "onion",
       "carrot",
       "green_onion",
@@ -9154,7 +9205,6 @@ export const EPIS_RECIPES: Recipe[] = [
       "④를 둥글게 모양을 만들어 앞 뒤로 노릇하게 지진다."
     ],
     "unmappedRequiredIngredients": [
-      "찬밥",
       "참치"
     ],
     "difficulty": "hard",
@@ -9252,6 +9302,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "water_parsley",
       "green_onion",
       "pear",
+      "chili_powder",
       "garlic",
       "ginger",
       "sugar",
@@ -9268,7 +9319,6 @@ export const EPIS_RECIPES: Recipe[] = [
     "unmappedRequiredIngredients": [
       "밤",
       "갓",
-      "고추가루",
       "액체육젓",
       "[절임용 소금물] 소금"
     ],
@@ -9430,6 +9480,7 @@ export const EPIS_RECIPES: Recipe[] = [
     "requiredIngredients": [
       "kimchi",
       "cooked_rice",
+      "beef",
       "cucumber",
       "carrot",
       "water_parsley",
@@ -9450,7 +9501,6 @@ export const EPIS_RECIPES: Recipe[] = [
       "김치잎을 펴서 볶아둔 밥을 놓고 흐트러지지 않게 오므려 싼 다음 미나리 데친 것으로 가운데를 묶어준다."
     ],
     "unmappedRequiredIngredients": [
-      "다진쇠고기",
       "단무지"
     ],
     "difficulty": "hard",
@@ -9611,6 +9661,7 @@ export const EPIS_RECIPES: Recipe[] = [
     "id": "epis_233",
     "name": "닭고기카레튀김",
     "requiredIngredients": [
+      "chicken",
       "curry_powder",
       "egg",
       "salt",
@@ -9631,7 +9682,6 @@ export const EPIS_RECIPES: Recipe[] = [
       "먹기 직전에 드레싱을 뿌려 먹는다."
     ],
     "unmappedRequiredIngredients": [
-      "닭",
       "콘플레이크",
       "토마토케첩"
     ],
@@ -9752,6 +9802,7 @@ export const EPIS_RECIPES: Recipe[] = [
     "id": "epis_229",
     "name": "두부스테이크",
     "requiredIngredients": [
+      "beef",
       "tofu",
       "salt",
       "black_pepper",
@@ -9763,9 +9814,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "모양을 만들어 프라이팬에 지져낸다.",
       "장식으로 파슬리를 곁들인다."
     ],
-    "unmappedRequiredIngredients": [
-      "다진쇠고기"
-    ],
+    "unmappedRequiredIngredients": [],
     "difficulty": "easy",
     "sourceIngredientText": "원문 분량: 2인분\n주재료: 다진쇠고기 90g\n주재료: 두부 1모\n양념: 소금 약간\n양념: 후춧가루 약간\n부재료: 파슬리 약간",
     "source": {
@@ -9865,6 +9914,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "soy_sauce",
       "sugar",
       "garlic",
+      "ginger",
       "sesame_oil",
       "black_pepper"
     ],
@@ -9877,8 +9927,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "접시에 담고 송송 썬 실파를 얹는다."
     ],
     "unmappedRequiredIngredients": [
-      "코다리",
-      "다진생강"
+      "코다리"
     ],
     "difficulty": "normal",
     "sourceIngredientText": "원문 분량: 4인분\n주재료: 코다리 2마리\n주재료: 실파 2뿌리\n양념: 고추장 1큰술\n양념: 간장 1/2큰술\n양념: 설탕 1큰술\n양념: 다진파 1큰술\n양념: 다진마늘 1/2큰술\n양념: 다진생강 1/2작은술\n양념: 참기름 1큰술\n양념: 후춧가루 1/4작은술",
@@ -9942,6 +9991,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "carrot",
       "green_onion",
       "mushroom",
+      "chili_powder",
       "soy_sauce",
       "garlic",
       "ginger",
@@ -9962,8 +10012,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "돼기고기",
       "조개살",
       "홍합",
-      "호박",
-      "고추가루"
+      "호박"
     ],
     "difficulty": "hard",
     "sourceIngredientText": "원문 분량: 2인분\n주재료: 밥 2그릇\n주재료: 돼기고기 150g\n주재료: 오징어 1/2마리\n주재료: 조개살 100g\n주재료: 홍합 200g\n부재료: 양파 1개\n부재료: 당근 20g\n부재료: 호박 700g\n부재료: 대파 1뿌리\n부재료: 목이버섯 6장\n양념: 고추가루 3큰술\n양념: 간장 1큰술\n양념: 다진마늘 약간\n양념: 생강 약간\n양념: 소금 약간\n양념: 후춧가루 약간\n양념: 참기름 약간",
@@ -10342,6 +10391,7 @@ export const EPIS_RECIPES: Recipe[] = [
     "id": "epis_211",
     "name": "닭꼬치구이",
     "requiredIngredients": [
+      "chicken",
       "egg",
       "green_onion",
       "chili_pepper",
@@ -10361,7 +10411,6 @@ export const EPIS_RECIPES: Recipe[] = [
       "닭이 어느정도 익어가면 대파도 4㎝ 길이로 썰어 살짝 익힌다."
     ],
     "unmappedRequiredIngredients": [
-      "닭",
       "꼬치",
       "다시물"
     ],
@@ -10443,6 +10492,7 @@ export const EPIS_RECIPES: Recipe[] = [
     "id": "epis_208",
     "name": "초교탕",
     "requiredIngredients": [
+      "chicken",
       "green_onion",
       "garlic",
       "ginger",
@@ -10463,7 +10513,6 @@ export const EPIS_RECIPES: Recipe[] = [
       "도라지는 얇게 채썰고 미나리는 잎을 떼어내고 3㎝ 길이로 썰고 끓는 물에 데쳐 물기를 뺀다."
     ],
     "unmappedRequiredIngredients": [
-      "닭",
       "도라지",
       "말린표고버섯"
     ],
@@ -10775,6 +10824,7 @@ export const EPIS_RECIPES: Recipe[] = [
     "id": "epis_199",
     "name": "잣죽",
     "requiredIngredients": [
+      "raw_rice",
       "pine_nut",
       "jujube",
       "salt"
@@ -10788,9 +10838,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "냄비에 갈아놓은 쌀과 물 1컵을 부은 뒤 불에 올려, 바닥이 눌지 않도록 저어가며 끓인다.",
       "쌀이 끓어서 퍼지기 시작하고 어느 정도 익으면 잣 갈아놓은 것을 넣고 이 때부터는 아주 약한 불에서 알맞은 농도가 될 때까지 끓이고, 먹기 직전에 간을 해서 먹는다."
     ],
-    "unmappedRequiredIngredients": [
-      "불린쌀"
-    ],
+    "unmappedRequiredIngredients": [],
     "difficulty": "easy",
     "sourceIngredientText": "원문 분량: 2인분\n주재료: 불린쌀 1컵\n주재료: 잣 1/2컵\n부재료: 물 4컵\n부재료: 대추 1개\n양념: 소금 약간",
     "source": {
@@ -11075,6 +11123,7 @@ export const EPIS_RECIPES: Recipe[] = [
     "id": "epis_186",
     "name": "찬밥맛탕",
     "requiredIngredients": [
+      "cooked_rice",
       "salt",
       "egg",
       "starch",
@@ -11090,7 +11139,6 @@ export const EPIS_RECIPES: Recipe[] = [
       "④의 시럽에 튀겨 놓은 맛탕을 버무려 낸다."
     ],
     "unmappedRequiredIngredients": [
-      "찬밥",
       "옥수수"
     ],
     "difficulty": "normal",
@@ -11425,6 +11473,7 @@ export const EPIS_RECIPES: Recipe[] = [
     "id": "epis_175",
     "name": "쇠고기완자찜",
     "requiredIngredients": [
+      "beef",
       "tofu",
       "radish",
       "carrot",
@@ -11447,7 +11496,6 @@ export const EPIS_RECIPES: Recipe[] = [
       "냄비에 양념장을 넣어 끓어오르면 완자를 넣는다."
     ],
     "unmappedRequiredIngredients": [
-      "다진쇠고기",
       "밤"
     ],
     "difficulty": "hard",
@@ -11465,6 +11513,7 @@ export const EPIS_RECIPES: Recipe[] = [
     "name": "두부탕",
     "requiredIngredients": [
       "tofu",
+      "beef",
       "salt",
       "black_pepper",
       "green_onion",
@@ -11481,9 +11530,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "①의 국물에 국간장, 소금, 후춧가루로 간을 한 후 끓인다.",
       "⑤가 끓어오르면 완자와 ④의 무를 넣어 끓인다."
     ],
-    "unmappedRequiredIngredients": [
-      "다진쇠고기"
-    ],
+    "unmappedRequiredIngredients": [],
     "difficulty": "normal",
     "sourceIngredientText": "원문 분량: 2인분\n주재료: 두부 1모\n주재료: 다진쇠고기 100g\n양념: 소금 1/2작은술\n양념: 후춧가루 1/4작은술\n부재료: 실파 약간\n부재료: 물 7컵\n부재료: 다시마 1장\n부재료: 무 200g\n양념: 국간장 2작은술\n양념: 소금 1작은술\n양념: 후춧가루 1/4작은술",
     "source": {
@@ -11737,6 +11784,7 @@ export const EPIS_RECIPES: Recipe[] = [
     "id": "epis_164",
     "name": "찬밥지짐이",
     "requiredIngredients": [
+      "cooked_rice",
       "onion",
       "carrot",
       "green_onion",
@@ -11755,7 +11803,6 @@ export const EPIS_RECIPES: Recipe[] = [
       "프라이팬에 기름을 두르고 둥글게 지진다."
     ],
     "unmappedRequiredIngredients": [
-      "찬밥",
       "날콩가루"
     ],
     "difficulty": "normal",
@@ -11892,6 +11939,7 @@ export const EPIS_RECIPES: Recipe[] = [
     "id": "epis_160",
     "name": "닭날개튀김",
     "requiredIngredients": [
+      "chicken",
       "cooking_oil",
       "soy_sauce",
       "cooking_wine",
@@ -11909,7 +11957,6 @@ export const EPIS_RECIPES: Recipe[] = [
       "녹말가루와 튀김가루를 섞어 재워둔 닭고기에 묻히고 160℃의 기름에서 바삭하게 튀긴다."
     ],
     "unmappedRequiredIngredients": [
-      "닭",
       "튀김가루"
     ],
     "difficulty": "hard",
@@ -13896,6 +13943,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "salt",
       "green_onion",
       "garlic",
+      "ginger",
       "chili_powder",
       "soy_sauce",
       "sugar",
@@ -13911,7 +13959,6 @@ export const EPIS_RECIPES: Recipe[] = [
       "찢은 배추를 양념으로 버무린다. 상에 낼 때 통깨로 마무리한다."
     ],
     "unmappedRequiredIngredients": [
-      "다진생강",
       "새우젓"
     ],
     "difficulty": "hard",
@@ -13928,6 +13975,7 @@ export const EPIS_RECIPES: Recipe[] = [
     "id": "epis_98",
     "name": "닭강정",
     "requiredIngredients": [
+      "chicken",
       "soy_sauce",
       "garlic",
       "black_pepper",
@@ -13944,7 +13992,6 @@ export const EPIS_RECIPES: Recipe[] = [
       "닭강정을 접시에 담고 통깨를 뿌린다."
     ],
     "unmappedRequiredIngredients": [
-      "닭",
       "술"
     ],
     "difficulty": "normal",
@@ -14254,6 +14301,7 @@ export const EPIS_RECIPES: Recipe[] = [
     "requiredIngredients": [
       "green_onion",
       "garlic",
+      "ginger",
       "chili_powder",
       "sugar",
       "salt",
@@ -14268,8 +14316,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "버무린 실파는 다섯 뿌리씩 모아 잡고 한 데 묶어 항아리에 담는다."
     ],
     "unmappedRequiredIngredients": [
-      "까나리액젓",
-      "다진생강"
+      "까나리액젓"
     ],
     "difficulty": "normal",
     "sourceIngredientText": "원문 분량: 4인분\n주재료: 실파 2단\n양념: 까나리액젓 1컵\n양념: 다진마늘 1과 1/2작은술\n양념: 다진생강 1작은술\n양념: 고춧가루 1컵\n양념: 설탕 2큰술\n부재료: 소금 약간\n양념: 깨소금 2큰술",
@@ -14391,6 +14438,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "ginger",
       "salt",
       "green_onion",
+      "chili_powder",
       "garlic",
       "soy_sauce",
       "black_pepper"
@@ -14405,8 +14453,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "진간장에 다진 마늘 반 큰술, 생강, 고춧가루, 참기름, 후춧가루를 넣고 양념장을 만들어 종지에 담아내어 곁들인다."
     ],
     "unmappedRequiredIngredients": [
-      "도가니",
-      "고추가루"
+      "도가니"
     ],
     "difficulty": "normal",
     "sourceIngredientText": "원문 분량: 4인분\n주재료: 도가니 1/2개\n주재료: 쇠고기 400g\n부재료: 물 20컵\n양념: 생강 1/2큰술\n양념: 소금 1큰술\n부재료: 파 2뿌리\n양념: 다진파 4큰술\n양념: 고추가루 4큰술\n양념: 다진마늘 3큰술\n양념: 진간장 2큰술\n양념: 생강 1작은술\n양념: 소금 1큰술\n양념: 후추 약간",
@@ -14740,6 +14787,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "garlic",
       "ginger",
       "soy_sauce",
+      "chili_powder",
       "salt"
     ],
     "optionalIngredients": [],
@@ -14752,8 +14800,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "조기가 어느정도 익으면 굵은 파와 채썬 양파, 다진 마늘, 생강을 넣고 잠깐 더 끓여 불에서 내린다."
     ],
     "unmappedRequiredIngredients": [
-      "조기",
-      "고추가루"
+      "조기"
     ],
     "difficulty": "normal",
     "sourceIngredientText": "원문 분량: 4인분\n주재료: 조기 2마리\n부재료: 무 100g\n부재료: 양파 1개\n부재료: 대파 1뿌리\n양념: 마늘 3쪽\n양념: 생강 1쪽\n양념: 간장 3큰술\n양념: 고추가루 3큰술\n부재료: 물 10컵\n양념: 소금 약간",
@@ -14852,6 +14899,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "gochujang",
       "chili_powder",
       "garlic",
+      "ginger",
       "soy_sauce",
       "salt",
       "black_pepper"
@@ -14866,8 +14914,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "재료가 다 익어 맛이 어우러지면 위에 떠오르는 거품을 걷어내고 국간장, 소금, 후춧가루로 간을 맞춰 살짝 끓여 낸다."
     ],
     "unmappedRequiredIngredients": [
-      "꽃게",
-      "다진생강"
+      "꽃게"
     ],
     "difficulty": "hard",
     "sourceIngredientText": "원문 분량: 4인분\n주재료: 꽃게 2마리\n부재료: 애호박 1/2개\n부재료: 무 1/3개\n부재료: 느타리버섯 20g\n부재료: 청고추 1개\n부재료: 홍고추 1개\n부재료: 대파 1/2뿌리\n양념: 고추장 2큰술\n양념: 고춧가루 2큰술\n양념: 다진마늘 1/2큰술\n양념: 다진생강 1작은술\n양념: 국간장 2큰술\n양념: 소금 약간\n양념: 후춧가루 약간",
@@ -14916,6 +14963,39 @@ export const EPIS_RECIPES: Recipe[] = [
     }
   },
   {
+    "id": "epis_68",
+    "name": "동치미",
+    "requiredIngredients": [
+      "radish",
+      "chili_pepper",
+      "salt",
+      "green_onion",
+      "garlic"
+    ],
+    "optionalIngredients": [],
+    "steps": [
+      "무는 적당히 작은 것으로 골라 수세미로 가볍게 문질러 씻어 잔털을 정리한다.",
+      "넓은 그릇에 소금을 깔고 무를 그 위에 굴려 항아리에 담아 하룻밤 재운다.",
+      "갓과 살파는 소금에 절여 헹구어 믈기를 뺀 후 실파는 3뿌리씩 갓은 1뿌리씩 묶는다.",
+      "손질한 청고추는 항아리에 차곡차곡 담아 짭짤하게 소금물을 만들어 붓고 한달 정도 그늘에 두어 삭힌다.",
+      "마늘과 생강은 얄팍하게 저며썬다.",
+      "배는 씻어 껍질을 벗기지 말고 반으로 자른다. 깨끗한 주머니에 저며 썬 마늘과 생강, 굵은 파뿌리를 넣고 배를 넣어 잘 아물린다."
+    ],
+    "unmappedRequiredIngredients": [
+      "갓",
+      "배주머니"
+    ],
+    "difficulty": "normal",
+    "sourceIngredientText": "원문 분량: 4인분\n주재료: 무 10개\n주재료: 고추 20개\n양념: 소금 3컵\n주재료: 갓 1/2단\n부재료: 실파 1/2단\n양념: 마늘 5쪽\n부재료: 대파 5개\n부재료: 배주머니 5개\n부재료: 물 10컵",
+    "source": {
+      "provider": "농림수산식품교육문화정보원",
+      "dataset": "레시피 기본정보·재료정보·과정정보",
+      "sourceId": "68",
+      "sourceUrl": "https://www.data.go.kr/data/15057205/openapi.do",
+      "usageScope": "공공데이터포털 이용허락범위 제한 없음 표시 확인(2026-10-05)"
+    }
+  },
+  {
     "id": "epis_67",
     "name": "굴깍두기",
     "requiredIngredients": [
@@ -14947,6 +15027,43 @@ export const EPIS_RECIPES: Recipe[] = [
       "provider": "농림수산식품교육문화정보원",
       "dataset": "레시피 기본정보·재료정보·과정정보",
       "sourceId": "67",
+      "sourceUrl": "https://www.data.go.kr/data/15057205/openapi.do",
+      "usageScope": "공공데이터포털 이용허락범위 제한 없음 표시 확인(2026-10-05)"
+    }
+  },
+  {
+    "id": "epis_66",
+    "name": "총각김치",
+    "requiredIngredients": [
+      "salt",
+      "green_onion",
+      "chili_powder",
+      "garlic",
+      "ginger",
+      "sugar",
+      "glutinous_rice_flour"
+    ],
+    "optionalIngredients": [],
+    "steps": [
+      "총각무는 무청이 파랗고 심이 없는 것으로 골라 잔뿌리는 떼고 무청이 달린 부분은 칼로 다듬어 씻어 건진 후 무가 크면 길게 2등분한다.\n팁: 총각무는 뿌리 밑동이 위쪽보다 퍼지고 살이 통통하고 고우며 무청이 짤막하고 실한 것이 좋은 것이다.",
+      "큰 그릇에 총각무를 켜켜이 담아 소금물을 붓고 표면이 덮이도록 소금을 뿌려 3시간 정도 절인다.",
+      "대파는 깨끗이 손질해 어슷썬다.",
+      "물1컵에 찹쌀가루 3큰술을 풀어 거품기로 저어주면서 중간 불에서 찹쌀풀을 쑤어 식힌다.",
+      "멸치젓을 냄비에 담고 센불에서 살이 빠지고 뼈만 남을 때까지 끓여 체에 밭쳐 국물을 거르고, 식힌 찹쌀풀에 고춧가루, 대파, 다진 마늘, 다진 생강, 멸치젓국, 새우젓, 설탕을 고루 넣어 양념을 만든다.",
+      "절여둔 총각무에 양념을 넣어 잘 버무린 다음 2-3개씩 모아 하나로 묶어서 항아리에 차곡차곡 담아 익힌다."
+    ],
+    "unmappedRequiredIngredients": [
+      "총각무",
+      "멸치젓",
+      "새우젓",
+      "[절임용 소금물] 물"
+    ],
+    "difficulty": "hard",
+    "sourceIngredientText": "원문 분량: 4인분\n주재료: 총각무 1단\n양념: 소금 2컵\n부재료: 대파 2뿌리\n양념: 고추가루 1/2컵\n양념: 다진마늘 5큰술\n양념: 다진생강 2큰술\n양념: 멸치젓 1/4컵\n양념: 새우젓 1/4컵\n양념: 설탕 3큰술\n부재료: 찹쌀가루 3큰술\n부재료: 물 1컵\n양념: [절임용 소금물] 물 10컵\n양념: 소금 2컵",
+    "source": {
+      "provider": "농림수산식품교육문화정보원",
+      "dataset": "레시피 기본정보·재료정보·과정정보",
+      "sourceId": "66",
       "sourceUrl": "https://www.data.go.kr/data/15057205/openapi.do",
       "usageScope": "공공데이터포털 이용허락범위 제한 없음 표시 확인(2026-10-05)"
     }
@@ -14995,6 +15112,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "chives",
       "green_onion",
       "garlic",
+      "ginger",
       "sugar",
       "soy_sauce",
       "cooking_wine"
@@ -15009,7 +15127,6 @@ export const EPIS_RECIPES: Recipe[] = [
       "준비해둔 통에 오이를 길이대로 눕혀 차곡차곡 담고 남은 소를 위에 얹는다."
     ],
     "unmappedRequiredIngredients": [
-      "다진생강",
       "[절임용 소금물] 소금"
     ],
     "difficulty": "hard",
@@ -15142,6 +15259,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "salt",
       "vinegar",
       "sugar",
+      "beef",
       "mushroom",
       "anchovy",
       "soy_sauce",
@@ -15162,7 +15280,6 @@ export const EPIS_RECIPES: Recipe[] = [
       "다섯가지 재료가 완성되면 준비한 밥을 다섯 등분으로 나누어 속재료를 한가지씩 묻혀서 갖가지 모양을 만든다."
     ],
     "unmappedRequiredIngredients": [
-      "다진쇠고기",
       "단무지"
     ],
     "difficulty": "hard",
@@ -15330,6 +15447,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "gochujang",
       "chili_powder",
       "garlic",
+      "ginger",
       "salt"
     ],
     "optionalIngredients": [],
@@ -15341,8 +15459,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "냄비에 물 또는 육수를 붓고 고추장을 풀어 끓으면 무와 동태를 넣은 뒤 남은 재료를 모두 넣고 끓이면서 소금으로 간을 맞춘다."
     ],
     "unmappedRequiredIngredients": [
-      "동태",
-      "다진생강"
+      "동태"
     ],
     "difficulty": "hard",
     "sourceIngredientText": "원문 분량: 2인분\n주재료: 동태 1마리\n주재료: 무 300g\n부재료: 애호박 1/2개\n부재료: 두부 1/2모\n부재료: 청고추 3개\n부재료: 홍고추 3개\n부재료: 대파 1뿌리\n부재료: 물 5컵\n양념: 고추장 4큰술\n양념: 고춧가루 1큰술\n양념: 다진마늘 2큰술\n양념: 다진생강 1작은술\n양념: 소금 약간",
@@ -15835,6 +15952,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "tofu",
       "mushroom",
       "carrot",
+      "chili_pepper",
       "sesame",
       "salt",
       "sesame_oil",
@@ -15850,7 +15968,6 @@ export const EPIS_RECIPES: Recipe[] = [
       "1의 다시마에 4의 양념된 두부를 손가락 크기로 만들어 놓고 다시마를 세로로 놓아 김밥처럼 말아서 적당히 자른다."
     ],
     "unmappedRequiredIngredients": [
-      "고추",
       "들깨가루",
       "초고추장",
       "양념간장"
@@ -15869,6 +15986,7 @@ export const EPIS_RECIPES: Recipe[] = [
     "id": "epis_40",
     "name": "닭불고기",
     "requiredIngredients": [
+      "chicken",
       "soy_sauce",
       "gochujang",
       "chili_powder",
@@ -15885,9 +16003,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "닭고기에 양념장을 고루 버무려 30분 정도 재워둔다.",
       "팬에 기름을 두르고 중불에서 너무 바삭해지지 않도록 적당히 익혀낸다."
     ],
-    "unmappedRequiredIngredients": [
-      "닭"
-    ],
+    "unmappedRequiredIngredients": [],
     "difficulty": "normal",
     "sourceIngredientText": "원문 분량: 4인분\n주재료: 닭 1마리\n양념: 간장 5큰술\n부재료: 고추장 2큰술\n양념: 고춧가루 1과1/2큰술\n부재료: 대파 1뿌리\n부재료: 마늘 3쪽\n양념: 생강즙 1큰술\n양념: 깨소금 약간\n양념: 후춧가루 약간",
     "source": {
@@ -16413,6 +16529,7 @@ export const EPIS_RECIPES: Recipe[] = [
     "id": "epis_21",
     "name": "미역국",
     "requiredIngredients": [
+      "beef",
       "garlic",
       "cooking_oil",
       "black_pepper",
@@ -16427,8 +16544,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "미역이 푸른색을 띠게 볶아지면 분량의 물을 붓고 한소끔 끓인 뒤 다진 마늘을 넣고 국간장, 후춧가루로 간을 한다."
     ],
     "unmappedRequiredIngredients": [
-      "미역",
-      "다진쇠고기"
+      "미역"
     ],
     "difficulty": "normal",
     "sourceIngredientText": "원문 분량: 4인분\n주재료: 미역 2컵\n주재료: 다진쇠고기 150g\n양념: 마늘 1큰술\n부재료: 식용유 약간\n양념: 후춧가루 약간\n양념: 국간장 2큰술\n양념: 참기름 2큰술\n부재료: 물 10컵",
@@ -16696,6 +16812,7 @@ export const EPIS_RECIPES: Recipe[] = [
       "chili_pepper",
       "green_onion",
       "garlic",
+      "ginger",
       "chili_powder",
       "vinegar",
       "sugar"
@@ -16712,7 +16829,6 @@ export const EPIS_RECIPES: Recipe[] = [
     "unmappedRequiredIngredients": [
       "열무",
       "냉면",
-      "다진생강",
       "겨자"
     ],
     "difficulty": "hard",

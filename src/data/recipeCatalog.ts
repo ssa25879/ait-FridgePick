@@ -52,7 +52,7 @@ function hasQuantity(value: string): boolean {
 }
 
 const INGREDIENT_ALIASES: Record<string, string[]> = {
-  kimchi: ["김치", "배추김치", "묵은지"],
+  kimchi: ["김치", "배추김치", "묵은지", "신김치"],
   onion: ["양파", "다진양파", "양파다진것"],
   green_onion: ["대파", "실파", "쪽파", "파", "다진파", "다진대파"],
   garlic: ["마늘", "다진마늘", "마늘다진것", "양념다진마늘"],
@@ -88,6 +88,7 @@ const INGREDIENT_ALIASES: Record<string, string[]> = {
     "소고기등심",
     "쇠고기등심",
     "다진소고기",
+    "다진쇠고기",
   ],
   chicken: [
     "닭고기",
@@ -96,6 +97,7 @@ const INGREDIENT_ALIASES: Record<string, string[]> = {
     "닭안심",
     "닭다리",
     "닭고기살",
+    "닭",
   ],
   ham: ["햄"],
   bacon: ["베이컨"],
@@ -103,7 +105,7 @@ const INGREDIENT_ALIASES: Record<string, string[]> = {
   milk: ["우유"],
   cheese: ["치즈", "파마산치즈", "모짜렐라치즈"],
   butter: ["버터", "무염버터"],
-  cooked_rice: ["밥"],
+  cooked_rice: ["밥", "찬밥"],
   ramen_noodles: ["라면", "라면사리"],
   pasta: ["파스타면", "스파게티면", "파스타"],
   bread: ["식빵"],
@@ -138,7 +140,7 @@ const INGREDIENT_ALIASES: Record<string, string[]> = {
   tomato: ["토마토", "방울토마토", "홀토마토"],
   tofu: ["두부", "연두부", "순두부"],
   flour: ["밀가루", "강력분", "박력분"],
-  chili_powder: ["고춧가루"],
+  chili_powder: ["고춧가루", "고추가루"],
   cucumber: ["오이", "오이피클", "다진오이피클"],
   lemon: ["레몬", "레몬즙", "레몬주스"],
   honey: ["꿀"],
@@ -161,8 +163,9 @@ const INGREDIENT_ALIASES: Record<string, string[]> = {
   perilla_leaf: ["깻잎"],
   kelp: ["다시마", "건다시마"],
   pumpkin: ["단호박"],
-  ginger: ["생강", "생강즙"],
+  ginger: ["생강", "생강즙", "다진생강"],
   chili_pepper: [
+    "고추",
     "홍고추",
     "청고추",
     "청양고추",
@@ -180,11 +183,11 @@ const INGREDIENT_ALIASES: Record<string, string[]> = {
   sweet_potato: ["고구마"],
   mayonnaise: ["마요네즈"],
   cooking_wine: ["맛술", "청주", "정종", "미림"],
-  broccoli: ["브로콜리", "브로컬리"],
+  broccoli: ["브로콜리", "브로컬리", "브로코리"],
   cabbage: ["양배추", "배추", "배추잎", "적양배추", "알배추"],
   bean_sprout: ["숙주", "콩나물"],
   yogurt: ["요거트", "플레인요거트", "플레인요구르트", "요구르트"],
-  raw_rice: ["쌀", "멥쌀"],
+  raw_rice: ["쌀", "멥쌀", "불린쌀"],
   pear: ["배"],
   water_parsley: ["미나리"],
   glutinous_rice_flour: ["찹쌀가루"],
@@ -216,7 +219,7 @@ const INGREDIENT_ALIASES: Record<string, string[]> = {
   anchovy: ["멸치", "국물용멸치", "국멸치"],
   salmon: ["연어"],
   cockle: ["바지락"],
-  octopus: ["주꾸미"],
+  octopus: ["주꾸미", "쭈꾸미"],
   sprouts: ["무순"],
 };
 
