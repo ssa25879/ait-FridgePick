@@ -8,6 +8,22 @@ import {
 } from "./recipeCatalog";
 import { INGREDIENTS } from "./ingredients";
 
+describe("일상 재료의 명확한 표기 매핑", () => {
+  it.each([
+    ["다진생강", "ginger"], ["불린 쌀", "raw_rice"], ["닭", "chicken"],
+    ["다진쇠고기", "beef"], ["고추가루", "chili_powder"], ["고추", "chili_pepper"],
+    ["찬밥", "cooked_rice"], ["신김치", "kimchi"], ["쭈꾸미", "octopus"],
+    ["브로코리", "broccoli"],
+  ])("%s를 %s에 연결한다", (name, id) => {
+    expect(mapRecipeIngredientName(name)).toBe(id);
+  });
+  it.each(["안심", "호박", "육수", "계란노른자", "계란흰자", "술", "국수"])(
+    "종류·형태가 불명확한 %s를 임의로 연결하지 않는다", name => {
+      expect(mapRecipeIngredientName(name)).toBeUndefined();
+    },
+  );
+});
+
 describe("parseRecipeIngredients", () => {
   it("분량을 제거하고 제목·고명 구역을 구분한다", () => {
     expect(
