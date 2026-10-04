@@ -2,7 +2,9 @@
 
 - 상태: 명세를 작업 브랜치에 이어받음. RCR-01~03·07은 [2026-10-04 명세](../26-10-04_feature_user_state_persistence/README.md)로 코드·자동 검증 완료, 실기기 및 나머지는 후속
 - 작성일: 2026-10-02
-- 명세 브랜치: `codex/release-checklist-readiness`
+- 현재 문서 보완 브랜치: feature/release-validation-specs (기준c4f44f7)
+- 다음 실행 범위: 로드맵11단계 기기 잔여·12단계 출시 전 검증
+- 최초 명세 브랜치: `codex/release-checklist-readiness`
 - 현재 구현 브랜치: `feature/user-state-persistence`
 - 로드맵: [`specs/roadmap.md`](../roadmap.md) 11·12단계
 - 대상: 앱인토스 WebView 미니앱 (`ait-fridgepick`)
@@ -48,3 +50,13 @@
 - [`decisions.md`](./decisions.md): 확정 사항, 충돌과 구현 전 결정 게이트
 - [`plan.md`](./plan.md): 단계별 실행 계획 및 검토 지점
 - [`validation.md`](./validation.md): 현재 증거와 미실행 검증 시나리오
+
+## 문서 역할과 실행 상태
+
+- [requirements.md](./requirements.md): RCR-01~14의 요구사항·완료 조건
+- [design.md](./design.md): 현재 저장/배너/뷰포트와 검증 경계
+- [plan.md](./plan.md): 선행 조건·다음 실행 순서·작업별 완료 기준
+- [decisions.md](./decisions.md): 확정 결정과 미해결 선택
+- [validation.md](./validation.md): 요구사항별 증거·미실행·실기기 기록 양식
+
+기존 같은 목적의 폴더를 재사용해 중복 명세를 만들지 않았다. 문서 작성 완료와 기기/출시 완료는 별개다. 추천 품질·개발 환경13단계는 이 검증 명세 밖이다.

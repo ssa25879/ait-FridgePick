@@ -2,6 +2,8 @@
 
 - 작성일: 2026-10-04
 - 브랜치: `feature/user-state-persistence`
+- 문서 보완 브랜치: feature/release-validation-specs
+- 구현 커밋: 3a9972c
 - 상태: 문서·코드·자동 테스트·브라우저 mock 검증 완료, 실기기 QA 대기
 - 요청: specs 정합성 개선 후 감사 보고의 보완내용 1번 진행
 - 상위 요구사항: RCR-01~03, RCR-07의 뒤로가기·홈 이벤트 연결
@@ -14,3 +16,5 @@
 - [design.md](./design.md): 저장·복원과 비동기 순서 계약
 - [plan.md](./plan.md): 실행 순서와 검토 초점
 - [validation.md](./validation.md): 실제 검증 결과와 남은 기기 QA
+
+- [decisions.md](./decisions.md): 선택 근거와 기기 미확정 사항
