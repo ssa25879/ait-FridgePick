@@ -123,11 +123,6 @@ export function ResultPage({
               ))}
             </ol>
           </section>
-          {candidateCount === 1 && (
-            <p className="result-no-alternatives">
-              현재 재료로 추천할 수 있는 메뉴가 1개예요.
-            </p>
-          )}
           {recommendation.recipe.source && (
             <footer className="result-source-footer" aria-label="데이터 출처">
               출처: {recommendation.recipe.source.provider}{" "}
@@ -138,11 +133,11 @@ export function ResultPage({
         </section>
       ) : (
         <section className="result-empty" role="status">
-          <Post.Paragraph className="result-empty-message">
-            {selectedIngredientIds.length === 0
-              ? "메뉴를 추천하려면 재료를 먼저 선택해 주세요."
-              : "현재 재료로 추천할 수 있는 메뉴가 없어요."}
-          </Post.Paragraph>
+          {selectedIngredientIds.length === 0 && (
+            <Post.Paragraph className="result-empty-message">
+              메뉴를 추천하려면 재료를 먼저 선택해 주세요.
+            </Post.Paragraph>
+          )}
           {selectedIngredientIds.length > 0 && (
             <p className="result-empty-hint">재료를 더 선택하거나 바꿔 보세요.</p>
           )}
@@ -159,7 +154,7 @@ export function ResultPage({
             type="button"
             color="dark"
             display="full"
-            size="xlarge"
+            size="large"
             onClick={onReroll}
           >
             다시 뽑기
@@ -169,7 +164,7 @@ export function ResultPage({
           type="button"
           color="dark"
           display="full"
-          size="xlarge"
+          size="large"
           onClick={onEditIngredients}
         >
           {selectedIngredientIds.length === 0
@@ -184,7 +179,7 @@ export function ResultPage({
             color="dark"
             variant="weak"
             display="full"
-            size="xlarge"
+            size="large"
             onClick={onStartOver}
           >
             처음부터

@@ -19,6 +19,8 @@ describe("검색 후보 수 안내", () => {
       onReroll={vi.fn()} onBackHome={vi.fn()} onEditIngredients={vi.fn()} onStartOver={vi.fn()}
     /></TDSMobileAITProvider>);
     const summary = screen.getByText(`레시피가 ${count}개 검색되었습니다`);
+    expect(screen.queryByText(/현재 재료로 추천할 수 있는 메뉴가/)).not.toBeInTheDocument();
+    expect(screen.getAllByText(`레시피가 ${count}개 검색되었습니다`)).toHaveLength(1);
     const edit = screen.getByRole("button", { name: count === 0 ? "재료 추가·변경하기" : "재료 바꾸기" });
     expect(summary.compareDocumentPosition(edit) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
     if (count > 0) {

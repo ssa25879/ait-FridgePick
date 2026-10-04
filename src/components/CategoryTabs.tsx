@@ -1,10 +1,12 @@
 import { Button } from "@toss/tds-mobile";
 import { INGREDIENT_CATEGORIES } from "../data/ingredients";
-import type { IngredientCategory } from "../types/ingredient";
+import type { IngredientCategoryFilter } from "../types/ingredient";
+
+const categories = [{ id: "all", name: "전체" } as const, ...INGREDIENT_CATEGORIES];
 
 interface CategoryTabsProps {
-  activeCategory: IngredientCategory;
-  onSelectCategory: (category: IngredientCategory) => void;
+  activeCategory: IngredientCategoryFilter;
+  onSelectCategory: (category: IngredientCategoryFilter) => void;
 }
 
 export function CategoryTabs({
@@ -13,7 +15,7 @@ export function CategoryTabs({
 }: CategoryTabsProps) {
   return (
     <div className="category-tabs" role="group" aria-label="재료 카테고리">
-      {INGREDIENT_CATEGORIES.map((category) => {
+      {categories.map((category) => {
         const selected = activeCategory === category.id;
 
         return (
@@ -25,6 +27,7 @@ export function CategoryTabs({
             display="full"
             size="small"
             aria-pressed={selected}
+            aria-label={category.id === "all" ? "전체 재료" : undefined}
             onClick={() => onSelectCategory(category.id)}
           >
             {category.name}

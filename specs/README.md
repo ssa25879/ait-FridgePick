@@ -40,6 +40,6 @@
 | 사용자 상태·플랫폼 이동/11A | USP-01~10 → RCR-01~03·07 | README/requirements/design/plan/decisions/validation | 로컬 구현 완료·기기 대기 |
 | 재료 배너/11B | IB-01~08 → RCR-05·06·09 | README/requirements/design/plan/decisions/validation | 로컬 구현 완료·기기/검수 대기 |
 | 출시 검증/11 잔여·12 | RCR-01~14 | 기존26-10-02 폴더 재사용, 현재 계획·증거 양식 갱신 | 다음 실행 문서 준비·실행 미완료 |
-| 선택 설정·검색 개수/14 | SSC-01~05 | README/requirements/design/plan/decisions/validation | 구현·자동/브라우저 검증 완료, 새 빌드 기기 대기, 홈 꾸밈 보류 |
+| 선택 설정·검색 개수/14 | SSC-01~07 | README/requirements/design/plan/decisions/validation | 초기화·복원 사용자 확인, 중복 안내·전체 탭·접기/펼치기 보완108개 테스트 통과, 새 빌드 기기 대기 |
 
 문서 브랜치: feature/release-validation-specs, 기준c4f44f7. 기존 구현은 feature/user-state-persistence에 push되어 있다. 문서 변경은 기능 코드 변경과 분리하며 과거 실행 수치·외부 상태는 해당 시점의 기록으로 유지한다.

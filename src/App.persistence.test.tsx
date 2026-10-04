@@ -47,6 +47,7 @@ function mountApp() {
 
 async function start() {
   await userEvent.click(screen.getByRole("button", { name: "재료 고르기" }));
+  await userEvent.click(screen.getByText("필터·저장 설정", { exact: true }));
 }
 
 beforeEach(() => {
