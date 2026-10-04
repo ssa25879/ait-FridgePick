@@ -5,7 +5,7 @@ import { CategoryTabs } from "../components/CategoryTabs";
 import { IngredientChip } from "../components/IngredientChip";
 import { SelectedIngredientBar } from "../components/SelectedIngredientBar";
 import { INGREDIENTS, INGREDIENT_CATEGORIES } from "../data/ingredients";
-import type { Ingredient, IngredientCategory } from "../types/ingredient";
+import type { Ingredient, IngredientCategoryFilter } from "../types/ingredient";
 import type { RecipeDifficulty } from "../types/recipe";
 
 import { ScrollableIngredientBanner } from "../components/ScrollableIngredientBanner";
@@ -64,12 +64,12 @@ export function IngredientPage({
     resetRef.current?.focus();
   };
   const [activeCategory, setActiveCategory] =
-    useState<IngredientCategory>("vegetable");
-  const categoryName = INGREDIENT_CATEGORIES.find(
+    useState<IngredientCategoryFilter>("vegetable");
+  const categoryName = activeCategory === "all" ? "전체" : INGREDIENT_CATEGORIES.find(
     (category) => category.id === activeCategory,
   )?.name ?? "";
   const visibleIngredients = INGREDIENTS.filter(
-    (ingredient) => ingredient.category === activeCategory,
+    (ingredient) => activeCategory === "all" || ingredient.category === activeCategory,
   );
   const selectedIngredients = selectedIngredientIds
     .map((id) => INGREDIENTS.find((ingredient) => ingredient.id === id))
@@ -131,6 +131,13 @@ export function IngredientPage({
 
         <SelectedIngredientBar ingredients={selectedIngredients} />
 
+        <details className="filter-settings">
+          <summary>
+            <span>필터·저장 설정</span>
+            <span className="filter-settings-value">
+              {Math.round(minimumMatchRate * 100)}% · {DIFFICULTY_FILTERS.find(({ value }) => value === difficultyFilter)?.label}
+            </span>
+          </summary>
         <section className="recommendation-filters" aria-label="추천 필터">
           <div className="match-rate-filter">
             <div className="match-rate-filter-label">
@@ -178,7 +185,7 @@ export function IngredientPage({
           <p className="selection-save-status" role="status">{SAVE_MESSAGES[saveStatus]}</p>
           <Button
             ref={resetRef}
-            type="button" color="dark" variant="weak" display="full" size="large"
+            type="button" color="dark" variant="weak" display="full" size="small"
             aria-expanded={confirmReset} aria-controls="reset-confirmation"
             onClick={() => setConfirmReset(true)}
           >
@@ -190,19 +197,21 @@ export function IngredientPage({
                 선택한 재료를 지우고 최소 매칭률을 60%, 난이도를 전체로 되돌릴까요?
               </p>
               <div className="reset-confirmation-actions">
-                <Button type="button" color="dark" variant="weak" size="large" onClick={closeReset}>취소</Button>
-                <Button type="button" color="dark" size="large" onClick={() => { onReset(); closeReset(); }}>초기화하기</Button>
+                <Button type="button" color="dark" variant="weak" size="small" onClick={closeReset}>취소</Button>
+                <Button type="button" color="dark" size="small" onClick={() => { onReset(); closeReset(); }}>초기화하기</Button>
               </div>
             </div>
           )}
         </section>
+
+        </details>
 
         <div className="ingredient-page-actions">
           <Button
             type="button"
             color="dark"
             display="full"
-            size="xlarge"
+            size="large"
             onClick={onRecommend}
           >
             메뉴 뽑기

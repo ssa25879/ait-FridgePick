@@ -66,7 +66,7 @@
 .ingredient-page-content {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
 }
 
 .ingredient-page {
@@ -108,7 +108,7 @@
 
 .category-tabs {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px;
 }
 
@@ -116,6 +116,8 @@
   min-width: 0;
   min-height: 44px;
   white-space: normal;
+  padding: 2px;
+  font-size: 15px;
 }
 
 .ingredient-list-section {
@@ -141,6 +143,9 @@
 
 .ingredient-chip-list > button {
   max-width: 100%;
+  min-height: 44px;
+  padding: 4px 8px;
+  font-size: 15px;
 }
 
 .ingredient-chip-check {
@@ -152,7 +157,7 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-  padding: 16px;
+  padding: 12px;
   border: 1px solid #e5e7eb;
   border-radius: 16px;
   background: #f9fafb;
@@ -177,8 +182,8 @@
 .selection-settings {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding: 16px;
+  gap: 12px;
+  padding: 12px;
   border: 1px solid #e5e7eb;
   border-radius: 16px;
   background: #f9fafb;
@@ -286,7 +291,7 @@
 .result-page {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
   width: 100%;
   max-width: 480px;
   min-height: 100%;
@@ -326,7 +331,6 @@
 
 .result-recipe-name,
 .result-match-rate,
-.result-no-alternatives,
 .result-empty-hint {
   margin: 0;
 }
@@ -399,11 +403,6 @@
   margin: 0;
 }
 
-.result-no-alternatives {
-  color: #6b7280;
-  line-height: 1.5;
-}
-
 .result-page button:focus-visible {
   outline: 2px solid #1f2937;
   outline-offset: 3px;
@@ -414,3 +413,9 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+
+.filter-settings { border: 1px solid #e5e7eb; border-radius: 16px; background: #f9fafb; }
+.filter-settings > summary { min-height: 44px; padding: 12px; cursor: pointer; font-size: 15px; font-weight: 700; line-height: 1.5; }
+.filter-settings > summary:focus-visible { outline: 2px solid #1f2937; outline-offset: 3px; }
+.filter-settings-value { margin-left: 8px; font-weight: 400; white-space: nowrap; }
+.filter-settings .recommendation-filters, .filter-settings .selection-settings { border: 0; border-radius: 0; background: transparent; }

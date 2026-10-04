@@ -153,6 +153,7 @@ describe("재료 선택 흐름", () => {
     const user = renderApp();
     await user.click(screen.getByRole("button", { name: "재료 고르기" }));
 
+    await user.click(screen.getByText("필터·저장 설정", { exact: true }));
     const matchRate = screen.getByRole("slider", { name: "최소 매칭률" });
     expect(matchRate).toHaveValue("60");
     expect(matchRate).toHaveAttribute("min", "60");
@@ -171,11 +172,12 @@ describe("재료 선택 흐름", () => {
     await user.click(screen.getByRole("button", { name: "메뉴 뽑기" }));
 
     expect(
-      screen.getByText("현재 재료로 추천할 수 있는 메뉴가 없어요."),
+      screen.getByText("레시피가 0개 검색되었습니다"),
     ).toBeInTheDocument();
     await user.click(
       screen.getByRole("button", { name: "재료 추가·변경하기" }),
     );
+    await user.click(screen.getByText("필터·저장 설정", { exact: true }));
 
     expect(
       screen.getByRole("slider", { name: "최소 매칭률" }),
@@ -187,6 +189,7 @@ describe("재료 선택 흐름", () => {
 
     await user.click(screen.getByRole("button", { name: "메뉴 뽑기" }));
     await user.click(screen.getByRole("button", { name: "처음부터" }));
+    await user.click(screen.getByText("필터·저장 설정", { exact: true }));
 
     expect(
       screen.getByRole("slider", { name: "최소 매칭률" }),
@@ -352,7 +355,7 @@ describe("재료 선택 흐름", () => {
     await user.click(screen.getByRole("button", { name: "메뉴 뽑기" }));
 
     expect(
-      screen.getByText("현재 재료로 추천할 수 있는 메뉴가 없어요."),
+      screen.getByText("레시피가 0개 검색되었습니다"),
     ).toBeInTheDocument();
     await user.click(
       screen.getByRole("button", { name: "재료 추가·변경하기" }),
@@ -372,7 +375,7 @@ describe("재료 선택 흐름", () => {
     await user.click(screen.getByRole("button", { name: "메뉴 뽑기" }));
 
     expect(
-      screen.getByText("현재 재료로 추천할 수 있는 메뉴가 1개예요."),
+      screen.getByText("레시피가 1개 검색되었습니다"),
     ).toBeInTheDocument();
     expect(
       screen.queryByRole("button", { name: "다시 뽑기" }),
@@ -389,6 +392,7 @@ describe("재료 선택 흐름", () => {
     await user.click(screen.getByRole("button", { name: "식용유" }));
     await user.click(screen.getByRole("button", { name: "메뉴 뽑기" }));
     await user.click(screen.getByRole("button", { name: "처음부터" }));
+    await user.click(screen.getByText("필터·저장 설정", { exact: true }));
 
     expect(
       screen.getByRole("heading", { name: "선택한 재료 0개" }),
@@ -397,5 +401,32 @@ describe("재료 선택 흐름", () => {
       "aria-pressed",
       "false",
     );
+  });
+  it("전체 재료 탭에서 모든 카테고리를 선택하고 이동해도 선택이 유지된다", async () => {
+    const user = renderApp();
+    await user.click(screen.getByRole("button", { name: "재료 고르기" }));
+    await user.click(screen.getByRole("button", { name: "전체 재료" }));
+    const list = screen.getByRole("region", { name: "전체 재료" });
+    expect(list.querySelectorAll("button")).toHaveLength(95);
+    await user.click(screen.getByRole("button", { name: "돼지고기" }));
+    await user.click(screen.getByRole("button", { name: "밥" }));
+    await user.click(screen.getByRole("button", { name: "단백질" }));
+    expect(screen.getByRole("button", { name: "돼지고기" })).toHaveAttribute("aria-pressed", "true");
+    await user.click(screen.getByRole("button", { name: "전체 재료" }));
+    expect(screen.getByRole("button", { name: "밥" })).toHaveAttribute("aria-pressed", "true");
+  });
+
+  it("필터·저장 설정은 접혀 시작하고 다시 펼쳐도 필터 입력을 유지한다", async () => {
+    const user = renderApp();
+    await user.click(screen.getByRole("button", { name: "재료 고르기" }));
+    expect(screen.getByRole("slider")).not.toBeVisible();
+    await user.click(screen.getByText("필터·저장 설정", { exact: true }));
+    fireEvent.change(screen.getByRole("slider"), { target: { value: "85" } });
+    await user.click(screen.getByRole("button", { name: "보통" }));
+    await user.click(screen.getByText("필터·저장 설정", { exact: true }));
+    expect(screen.getByRole("slider")).not.toBeVisible();
+    await user.click(screen.getByText("필터·저장 설정", { exact: true }));
+    expect(screen.getByRole("slider")).toHaveValue("85");
+    expect(screen.getByRole("button", { name: "보통" })).toHaveAttribute("aria-pressed", "true");
   });
 });
