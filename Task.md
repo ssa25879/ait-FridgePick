@@ -10,10 +10,13 @@
 - 구현 브랜치: feature/user-state-persistence, origin 최신확인 c4f44f7
 - 최초 구현 기준:9cf1fcd. 이번 문서 기준:c4f44f7. master 기준 제품 커밋:def4bae.
 - 문서·사용자 상태·배너 변경 커밋3a9972c를 origin/feature/user-state-persistence에 push 완료했다.
-- viewport 제한 설정은 c4f44f7로 커밋·push 완료했다. master는 변경하지 않았다. 콘솔 업로드·출시는 수행하지 않았다.
+- viewport 제한 설정은 c4f44f7로 커밋·push 완료했다. master는 변경하지 않았다. 이번 후속 단계에서 기본 테스트 번들 업로드/본인 테스트 푸시를 수행했다. 검수 제출·출시는 수행하지 않았다.
 - 사용자 요청으로 D:\Codex 별도 로그는 생략했다. 기존 Log.md도 변경하지 않았다.
 
 ## 완료
+
+- 후속 작업 지침: AGENTS.md에 roadmap-feature-specs와 recording-change-history 적용 기준 추가(3f5760d).
+- 새 기기 테스트 준비: 기본 build·AIT 전용 포맷8파일 ID 검사 통과, 번들20261004-6 업로드/컴파일/본인 테스트 푸시 완료. deployment01a1071e-f051-78da-9a33-841acc72ab7c, 소스3f5760d. 실제 기기 QA는 미확인.
 
 - 지정 스킬로 specs 구조 보완: 배너6문서/IB-01~08, 사용자 상태 결정기록·USP 검증 추적, 출시 계획/RCR 증거 양식·현재 경로/상태 정합화. 이번 문서 작업은 제품 코드·테스트·빌드·기기·콘솔을 재실행하지 않는다. 문서 일관성만 검사했다: specs66문서/상대링크148개 누락0, USP10·IB8·RCR14 ID 검증표 대응 누락0, 제품 코드 변경0. 문서 전용 커밋으로 기록하며 새 문서 브랜치는 아직 push하지 않았다.
 
@@ -40,7 +43,8 @@
 
 ## 다음 작업
 
-1. 보완 1번 실기기 QA: 실제 HASH 응답 타입, 종료·재진입, 계정 분리, 플랫폼 back/home/닫기. WebView 유지 중 계정 변경과 저장 완료 전 즉시 종료도 확인한다.
+1. 테스트 QR: https://apps-in-toss.toss.im/workspace/96603/mini-app/80586/app-build?testDeploymentId=01a1071e-f051-78da-9a33-841acc72ab7c&testVersionName=20261004-6
+   보완 1번 실기기 QA: 실제 HASH 응답 타입, 종료·재진입, 계정 분리, 플랫폼 back/home/닫기. WebView 유지 중 계정 변경과 저장 완료 전 즉시 종료도 확인한다.
 2. 보완 2번 실기기 QA: 재료 화면 실제 광고/Ad 표기, 크기·카테고리 변화, no-fill, safe area, CTA 오클릭 위험과 검수 적합성을 확인한다. 홈→재료 조건부 배치는 구현 완료했다.
 3. 확대 제한 설정은 구현 완료. 실제 토스 핀치·두 번 탭·터치/스크롤, UI/스킴/성능 검증과 약관·최초 검수 확인이 남는다.
 4. 대표 10개 조합 무후보 3/10, 미지원 필수 재료 포함 814개 레시피의 매핑 보완.
