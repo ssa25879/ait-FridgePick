@@ -76,3 +76,17 @@
 - [새 테스트 QR](https://apps-in-toss.toss.im/workspace/96603/mini-app/80586/app-build?testDeploymentId=01a1074a-4ed9-7383-9224-b4b27d181d0d&testVersionName=20261004-8).
 - 도구 반환 본인 전용 링크: intoss-private://ait-fridgepick?_deploymentId=01a1074a-4ed9-7383-9224-b4b27d181d0d&host=appsInTossHost
 - 실기기 결과는 대기. 검수 제출·라이브 전환은 수행하지 않았다. 기존7버전 사용자 보고를8버전 QA 통과로 재사용하지 않는다.
+
+## SSC-08 브라우저 검증
+
+393×852 전체95개 목록: 높이280px/콘텐츠1782px/justify-content:center/필터가 카테고리보다 위에 있다. 320×640: 목록218px/콘텐츠2592px/최소 칩46px/문서 너비320px로 수평 넘침 없음. 카테고리 전환 후 scrollTop0이며 선택 유지 테스트를 수행했다. 키보드로 목록 스크롤 시 페이지 scrollY99를 유지했다. 네이티브 scroll 호출은 대상 진입 때 외부 페이지도 이동하므로 기기 터치 스크롤 느낌은 미검증이다.
+
+이미지: ingredient-scroll-centered.png, ingredient-filter-expanded.png, ingredient-scroll-320.png(사용자 시각 자료 디렉터리). 기존 S26U 결과를 이번 변경의 기기 통과로 재사용하지 않는다. 최종 테스트/빌드 결과는 후속 기록한다.
+
+## 최종 검사 결과
+
+2026-10-04 최종 코드 기준 npm test:12파일/108개 통과. 후속 단계 번호 중복 회귀는 수정 전 실패를 확인하고 수정 후 관련7개를 확인했으며 전체108개를 다시 통과했다. npm run lint:성공(기존 useInAppAds.tsx:54 경고1개). npm run build와 npm run build:release:TypeScript/Vite/AIT 성공, 기존 큰 JS 청크 경고 유지. git diff --check:공백 오류 없음. 빌드 산출물에 수기 fixture ID가 포함되지 않음을 확인했다. 브라우저 모의 이미지에는 파란 AIT 개발 도구 버튼이 포함된다. 신규 기기 QA/커밋/푸시/번들 업로드는 미수행.
+
+## 2026-10-05 커밋·테스트 번들 준비
+
+사용자가 이미지 확인 이후 커밋·푸시와 다음 단계를 승인했다. 코드 변경 없이 전체12파일/108개 테스트를 재확인해 통과했다. 기본 TypeScript/Vite/AIT 빌드 성공. 새 deploymentId01a10774-4e3e-7e61-94cb-c9acfe84dfac,962950바이트,SHA256 adf50c43025a7e4312ca763111fdc3313a3a9c3afa5f6093beeb74a7f4fc80bc. AITReader8파일 검사: 실제 광고ID0/테스트 배너ID1/수기 fixture ID0. 이번 기록 시점 업로드·기기 확인은 아직 미수행이며 다음 단계로 진행한다.

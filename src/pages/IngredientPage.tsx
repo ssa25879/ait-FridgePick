@@ -105,32 +105,6 @@ export function IngredientPage({
           </Button>
         </header>
 
-        <CategoryTabs
-          activeCategory={activeCategory}
-          onSelectCategory={setActiveCategory}
-        />
-
-        <section
-          className="ingredient-list-section"
-          aria-labelledby="ingredient-list-title"
-        >
-          <h2 id="ingredient-list-title" className="ingredient-category-title">
-            {categoryName} 재료
-          </h2>
-          <div className="ingredient-chip-list">
-            {visibleIngredients.map((ingredient) => (
-              <IngredientChip
-                key={ingredient.id}
-                name={ingredient.name}
-                selected={selectedIngredientIds.includes(ingredient.id)}
-                onToggle={() => onToggleIngredient(ingredient.id)}
-              />
-            ))}
-          </div>
-        </section>
-
-        <SelectedIngredientBar ingredients={selectedIngredients} />
-
         <details className="filter-settings">
           <summary>
             <span>필터·저장 설정</span>
@@ -205,6 +179,40 @@ export function IngredientPage({
         </section>
 
         </details>
+
+        <CategoryTabs
+          activeCategory={activeCategory}
+          onSelectCategory={setActiveCategory}
+        />
+
+        <section
+          className="ingredient-list-section"
+          aria-labelledby="ingredient-list-title"
+        >
+          <h2 id="ingredient-list-title" className="ingredient-category-title">
+            {categoryName} 재료
+          </h2>
+          <div
+            key={activeCategory}
+            className="ingredient-scroll-viewport"
+            tabIndex={0}
+            role="group"
+            aria-label="스크롤 가능한 재료 목록"
+          >
+            <div className="ingredient-chip-list">
+              {visibleIngredients.map((ingredient) => (
+                <IngredientChip
+                  key={ingredient.id}
+                  name={ingredient.name}
+                  selected={selectedIngredientIds.includes(ingredient.id)}
+                  onToggle={() => onToggleIngredient(ingredient.id)}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <SelectedIngredientBar ingredients={selectedIngredients} />
 
         <div className="ingredient-page-actions">
           <Button

@@ -3,14 +3,14 @@ import { render, screen } from "@testing-library/react";
 import { TDSMobileAITProvider } from "@toss/tds-mobile-ait";
 import { describe, expect, it, vi } from "vitest";
 import { ResultPage } from "./ResultPage";
-import { LOCAL_RECIPES } from "../data/recipes";
+import { TEST_RECIPES } from "../test/fixtures/recipes";
 
 describe("검색 후보 수 안내", () => {
   it.each([0, 1, 7])("후보 %i개를 레시피 내용 다음과 동작 버튼 전에 표시한다", (count) => {
     render(<TDSMobileAITProvider><ResultPage
       mainRef={createRef<HTMLElement>()}
       recommendation={count === 0 ? null : {
-        recipe: LOCAL_RECIPES[0], matchRate: 1,
+        recipe: TEST_RECIPES[0], matchRate: 1,
         matchedRequiredIngredientIds: ["kimchi", "cooked_rice", "cooking_oil"],
         missingRequiredIngredientIds: [], missingUnmappedRequiredIngredients: [],
       }}

@@ -119,7 +119,7 @@ export function ResultPage({
             </h3>
             <ol className="result-steps">
               {recommendation.recipe.steps.map((step) => (
-                <li key={step}>{step}</li>
+                <li key={step}>{step.replace(/^\d+\.\s+/, "")}</li>
               ))}
             </ol>
           </section>

@@ -5,6 +5,12 @@ import { TDSMobileAITProvider } from "@toss/tds-mobile-ait";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import App from "./App";
 
+// Isolate state/navigation contracts from changes to the production catalog.
+vi.mock("./data/recipes", async () => {
+  const { TEST_RECIPES } = await import("./test/fixtures/recipes");
+  return { RECIPES: TEST_RECIPES };
+});
+
 const bridge = vi.hoisted(() => ({
   identify: vi.fn(),
   supported: vi.fn(),

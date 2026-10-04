@@ -96,3 +96,21 @@ deployment01a1074a-4ed9-7383-9224-b4b27d181d0d. 아래7버전 기록은 보완 �
 C:\Users\User\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin
 
 npm_config_cache는 $env:TEMP\codex-fridgepick-npm-cache를 사용한다. npm test / npm run lint / npm run build / npm run build:release로 검증한다.
+
+## 최신 피드백 반영 — 미커밋
+
+- 기준 c94dea4, 기존 브랜치 재사용. 재료만 제한 높이 스크롤/중앙 정렬, 필터를 카테고리 위로 이동했다.
+- 사용자 선택에 따라 수기20개를 공식 원문 메뉴로 대체하고 중복 제외888개를 제공한다. 원문 이름이 달라지며 일부 기존 단순 조합 후보가 사라질 수 있다. 교체표: specs/26-10-04_feature_recipe_source_cleanup/decisions.md.
+- 기존 수기 데이터는 test/fixtures/recipes.ts의 상태/화면 계약 테스트 전용이다. 실제 카탈로그 결과는 별도 통합 검사로 검증한다.
+- 393×852/320×640 브라우저 이미지 준비. 사용자에게 이미지를 먼저 제시하며 확인 이후 커밋·푸시한다. 새 번들 업로드/기기 QA는 아직 수행하지 않았다.
+- 최종 검사 결과는 아래 후속 기록. 기존 번들20261004-8에는 이번 변경이 들어 있지 않다. 5/8단계의 gpt-6-luna xhigh 하위 에이전트3개 검증은 아직 도달하지 않았다.
+
+## 최종 검사 결과
+
+2026-10-04 최종 코드 기준 npm test:12파일/108개 통과. 후속 단계 번호 중복 회귀는 수정 전 실패를 확인하고 수정 후 관련7개를 확인했으며 전체108개를 다시 통과했다. npm run lint:성공(기존 useInAppAds.tsx:54 경고1개). npm run build와 npm run build:release:TypeScript/Vite/AIT 성공, 기존 큰 JS 청크 경고 유지. git diff --check:공백 오류 없음. 빌드 산출물에 수기 fixture ID가 포함되지 않음을 확인했다. 브라우저 모의 이미지에는 파란 AIT 개발 도구 버튼이 포함된다. 신규 기기 QA/커밋/푸시/번들 업로드는 미수행.
+
+최종 이미지: ingredient-scroll-centered.png(393px), ingredient-scroll-320.png, ingredient-filter-expanded.png, sourced-recipe-quantities-final.png. 저장 위치 C:/Users/User/.codex/visualizations/2026/10/04/01a106c5-c475-7170-8b1a-e23dc6c7007f/. 다음 실행은 이미지/교체 메뉴 사용자 피드백 반영 또는 확인 후 Change Record 커밋·푸시·새 테스트 번들 업로드다.
+
+## 2026-10-05 커밋·테스트 번들 준비
+
+사용자가 이미지 확인 이후 커밋·푸시와 다음 단계를 승인했다. 코드 변경 없이 전체12파일/108개 테스트를 재확인해 통과했다. 기본 TypeScript/Vite/AIT 빌드 성공. 새 deploymentId01a10774-4e3e-7e61-94cb-c9acfe84dfac,962950바이트,SHA256 adf50c43025a7e4312ca763111fdc3313a3a9c3afa5f6093beeb74a7f4fc80bc. AITReader8파일 검사: 실제 광고ID0/테스트 배너ID1/수기 fixture ID0. 이번 기록 시점 업로드·기기 확인은 아직 미수행이며 다음 단계로 진행한다.

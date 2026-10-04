@@ -419,3 +419,8 @@
 .filter-settings > summary:focus-visible { outline: 2px solid #1f2937; outline-offset: 3px; }
 .filter-settings-value { margin-left: 8px; font-weight: 400; white-space: nowrap; }
 .filter-settings .recommendation-filters, .filter-settings .selection-settings { border: 0; border-radius: 0; background: transparent; }
+
+.ingredient-category-title { text-align: center; }
+.ingredient-scroll-viewport { max-height: clamp(176px, 34dvh, 280px); overflow-y: auto; padding: 4px; scrollbar-gutter: stable both-edges; }
+.ingredient-scroll-viewport:focus-visible { outline: 2px solid #1f2937; outline-offset: 2px; border-radius: 8px; }
+.ingredient-chip-list { justify-content: center; }
