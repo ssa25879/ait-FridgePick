@@ -6,13 +6,16 @@
 
 - 로컬: D:\ait-home\ait-FridgePick
 - 원격: https://github.com/ssa25879/ait-FridgePick.git
-- 현재 브랜치: feature/user-state-persistence
-- 기준 HEAD: 9cf1fcd (출시 준비 명세). master 기준 제품 커밋은 def4bae.
+- 현재 문서 브랜치: feature/release-validation-specs (c4f44f7에서 분기)
+- 구현 브랜치: feature/user-state-persistence, origin 최신확인 c4f44f7
+- 최초 구현 기준:9cf1fcd. 이번 문서 기준:c4f44f7. master 기준 제품 커밋:def4bae.
 - 문서·사용자 상태·배너 변경 커밋3a9972c를 origin/feature/user-state-persistence에 push 완료했다.
-- 다음 viewport 제한 설정과 검증 기록도 별도 커밋해 같은 브랜치에 push한다. 최종 SHA는 git log/upstream으로 확인한다. master는 변경하지 않는다. 콘솔 업로드·출시는 수행하지 않는다.
+- viewport 제한 설정은 c4f44f7로 커밋·push 완료했다. master는 변경하지 않았다. 콘솔 업로드·출시는 수행하지 않았다.
 - 사용자 요청으로 D:\Codex 별도 로그는 생략했다. 기존 Log.md도 변경하지 않았다.
 
 ## 완료
+
+- 지정 스킬로 specs 구조 보완: 배너6문서/IB-01~08, 사용자 상태 결정기록·USP 검증 추적, 출시 계획/RCR 증거 양식·현재 경로/상태 정합화. 이번 문서 작업은 제품 코드·테스트·빌드·기기·콘솔을 재실행하지 않는다. 문서 일관성만 검사했다: specs66문서/상대링크148개 누락0, USP10·IB8·RCR14 ID 검증표 대응 누락0, 제품 코드 변경0. 문서 전용 커밋으로 기록하며 새 문서 브랜치는 아직 push하지 않았다.
 
 - 다음 단계: index.html viewport 최대 배율1/사용자 확대 금지 설정 추가. TypeScript·기본 Vite/AIT 빌드, 320×640 버튼/매칭률 슬라이더/김치볶음밥 흐름 확인. 실제 토스 핀치 차단은 미검증.
 
