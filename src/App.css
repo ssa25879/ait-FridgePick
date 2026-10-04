@@ -48,7 +48,7 @@
   margin-top: auto;
 }
 
-.home-page-ad {
+.ingredient-page-ad {
   width: calc(
     100% + max(24px, env(safe-area-inset-left)) +
       max(24px, env(safe-area-inset-right))
@@ -59,15 +59,20 @@
   overflow: hidden;
 }
 
-.home-page-ad[data-state="hidden"] {
-  height: 0;
-  flex-basis: 0;
+.ingredient-page-ad[data-state="hidden"] {
+  display: none;
+}
+
+.ingredient-page-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .ingredient-page {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 32px;
   width: 100%;
   max-width: 480px;
   min-height: 100%;

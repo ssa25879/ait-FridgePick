@@ -10,6 +10,10 @@
 
 **Spec:** `specs/26-10-02_feature_release_checklist_readiness/requirements.md` 및 `design.md`
 
+## 현재 실행 순서 (2026-10-04)
+
+이 문서는 전체 출시 작업의 상위 계획이다. Task 2·3과 Task 7의 이벤트 연결은 [상태 저장 실행 계획](../26-10-04_feature_user_state_persistence/plan.md)으로 구체화해 먼저 수행한다. 광고 위치 결정을 기다리느라 사용자 상태 작업을 중단하지 않는다. Task 4·5·7의 실기기/콘솔 작업은 별도 후속 단계다.
+
 ## Global Constraints
 
 - 새 로그인, 서버 API, 결제, 새 기기 권한을 추가하지 않는다.
@@ -18,7 +22,7 @@
 - 출시 위치가 정책 적합한지 확정되기 전 배너 위치를 다른 화면으로 옮기지 않는다.
 - 토스 네비게이션·실제 광고 노출은 지원되는 토스 앱 기기에서 확인한다.
 - 콘솔 약관 동의·검수·라이브 전환은 별도 사용자 요청과 권한이 있기 전 수행하지 않는다.
-- AGENTS.md의 프로젝트 UI·접근성 하드 규칙과 커밋 전 사용자 확인 규칙을 따른다.
+- AGENTS.md의 프로젝트 UI·접근성 하드 규칙을 따른다. 사용자 변경사항을 임의 커밋하지 않으며 이번 작업은 미커밋 상태로 제공한다.
 
 ## Review Focus
 
@@ -54,7 +58,7 @@
 - Consumes: `User.getAnonymousKey(): Promise<{ type: "HASH"; hash: string }>`
 - Produces: `getMiniAppUserKey(): Promise<string | null>`
 - Produces: `PersistedUserState = { selectedIngredientIds: string[]; minimumMatchRate: number; difficultyFilter: RecipeDifficulty | "all" }`
-- Produces: `loadUserState(userHash: string): PersistedUserState | null`, `saveUserState(userHash: string, state: PersistedUserState): void`
+- Produces: `loadUserState(userHash: string): Promise<{ status: "loaded"; state: PersistedUserState | null } | { status: "unavailable" }>`, `saveUserState(userHash: string, state: PersistedUserState): Promise<boolean>`
 
 - [ ] `getMiniAppUserKey` 성공은 HASH를 반환하고 거부/미지원은 null을 반환하는지, 동일 키 저장 상태는 복원되고 다른 키는 null인지, 저장소 읽기·쓰기 예외가 앱 흐름을 중단시키지 않는지 assertion을 정한 테스트를 작성한다.
 - [ ] 실행: `npm test -- src/user/userKey.test.ts src/storage/userState.test.ts` — 기대: 구현 전 함수 미존재 또는 미구현 동작 때문에 HASH/null 반환, 키 분리, 저장소 예외 시 non-throw/session fallback assertion이 실패한다.
@@ -142,7 +146,7 @@
 **Files:**
 - Modify: `specs/roadmap.md`
 - Modify: `specs/26-10-02_feature_release_checklist_readiness/validation.md`
-- Create: `D:\Codex\Log\YYYYMMDD_출시체크리스트_검증_Log.md`
+- Update: `Task.md` (사용자가 별도 작업 로그 생략을 선택함)
 
 - [ ] 요구사항별 실제 결과와 외부 차단 요인을 반영한다.
 - [ ] `git diff --check`를 실행해 공백 오류가 없는지 확인한다.

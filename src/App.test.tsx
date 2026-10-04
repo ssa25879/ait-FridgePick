@@ -2,7 +2,7 @@ import { StrictMode } from "react";
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { TDSMobileAITProvider } from "@toss/tds-mobile-ait";
-import { beforeEach, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import App from "./App";
 
 const ads = vi.hoisted(() => ({
@@ -14,6 +14,8 @@ const ads = vi.hoisted(() => ({
 }));
 
 vi.mock("@apps-in-toss/web-framework", () => ({
+  User: { getAnonymousKey: Object.assign(vi.fn(), { isSupported: () => false }) },
+  graniteEvent: { addEventListener: () => () => {} },
   TossAds: {
     initialize: Object.assign(ads.initialize, {
       isSupported: ads.initializeSupported,
@@ -24,7 +26,15 @@ vi.mock("@apps-in-toss/web-framework", () => ({
   },
 }));
 
+let contentBottom = 1000;
+afterEach(() => { vi.restoreAllMocks(); vi.unstubAllGlobals(); });
+
 beforeEach(() => {
+  contentBottom = 1000;
+  vi.spyOn(HTMLElement.prototype, "getBoundingClientRect").mockImplementation(function (this: HTMLElement) {
+    return { bottom: this.classList.contains("ingredient-page-content") ? contentBottom : 0, top: 0, height: 0, width: 0, left: 0, right: 0, x: 0, y: 0, toJSON: () => ({}) };
+  });
+  vi.stubGlobal("ResizeObserver", class { observe() {} disconnect() {} });
   vi.clearAllMocks();
   ads.initializeSupported.mockReturnValue(true);
   ads.initialize.mockImplementation((options) => {
@@ -46,7 +56,7 @@ function renderApp() {
 }
 
 describe("재료 선택 흐름", () => {
-  it("StrictMode에서도 광고를 한 번 초기화하고 홈에서만 부착·해제한다", async () => {
+  it("StrictMode에서도 홈에는 광고가 없고 스크롤 가능한 재료 화면에서 부착·해제한다", async () => {
     const user = userEvent.setup();
     render(
       <StrictMode>
@@ -56,20 +66,40 @@ describe("재료 선택 흐름", () => {
       </StrictMode>,
     );
 
+    expect(screen.queryByRole("region", { name: "배너 광고" })).not.toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "재료 고르기" }));
     expect(await screen.findByRole("region", { name: "배너 광고" })).toBeInTheDocument();
     expect(ads.initialize).toHaveBeenCalledTimes(1);
-    expect(ads.attachBanner).toHaveBeenCalledTimes(2);
+    expect(ads.attachBanner).toHaveBeenCalled();
     expect(ads.attachBanner.mock.calls[0][0]).toBe("ait-ad-test-banner-id");
-    expect(ads.attachBanner.mock.calls[1][0]).toBe("ait-ad-test-banner-id");
-    expect(ads.destroyBanner).toHaveBeenCalledTimes(1);
-
-    await user.click(screen.getByRole("button", { name: "재료 고르기" }));
-
+    await user.click(screen.getByRole("button", { name: "메뉴 뽑기" }));
     expect(screen.queryByRole("region", { name: "배너 광고" })).not.toBeInTheDocument();
-    expect(ads.destroyBanner).toHaveBeenCalledTimes(2);
+    expect(ads.destroyBanner).toHaveBeenCalledTimes(ads.attachBanner.mock.calls.length);
   });
 
-  it("광고가 없으면 슬롯을 접고 홈 CTA를 계속 사용할 수 있다", async () => {
+  it("콘텐츠가 화면 안에 들어오면 광고가 스크롤을 만들지 않는다", async () => {
+    contentBottom = 300;
+    const user = renderApp();
+    await user.click(screen.getByRole("button", { name: "재료 고르기" }));
+    expect(screen.queryByRole("region", { name: "배너 광고" })).not.toBeInTheDocument();
+    expect(ads.attachBanner).not.toHaveBeenCalled();
+    expect(screen.getByRole("button", { name: "메뉴 뽑기" })).toBeEnabled();
+  });
+
+  it("화면 크기 변경으로 스크롤 조건이 사라지면 슬롯을 해제하고 다시 필요할 때 부착한다", async () => {
+    const user = renderApp();
+    await user.click(screen.getByRole("button", { name: "재료 고르기" }));
+    await screen.findByRole("region", { name: "배너 광고" });
+    contentBottom = 300;
+    fireEvent(window, new Event("resize"));
+    await waitFor(() => expect(screen.queryByRole("region", { name: "배너 광고" })).not.toBeInTheDocument());
+    expect(ads.destroyBanner).toHaveBeenCalled();
+    contentBottom = 1000;
+    fireEvent(window, new Event("resize"));
+    expect(await screen.findByRole("region", { name: "배너 광고" })).toBeInTheDocument();
+  });
+
+  it("광고가 없으면 슬롯을 접고 재료 CTA를 계속 사용할 수 있다", async () => {
     ads.attachBanner.mockImplementation((_groupId, _target, options) => {
       options.callbacks?.onNoFill?.({
         slotId: "test-slot",
@@ -79,20 +109,22 @@ describe("재료 선택 흐름", () => {
       return { destroy: ads.destroyBanner };
     });
     const user = renderApp();
+    await user.click(screen.getByRole("button", { name: "재료 고르기" }));
+    await waitFor(() => expect(ads.attachBanner).toHaveBeenCalled());
 
     await waitFor(() => {
       expect(
         screen.queryByRole("region", { name: "배너 광고" }),
       ).not.toBeInTheDocument();
     });
-    expect(screen.getByRole("button", { name: "재료 고르기" })).toBeEnabled();
+    expect(screen.getByRole("button", { name: "메뉴 뽑기" })).toBeEnabled();
 
-    await user.click(screen.getByRole("button", { name: "재료 고르기" }));
+    await user.click(screen.getByRole("button", { name: "메뉴 뽑기" }));
 
-    expect(screen.getByRole("heading", { name: "재료 선택" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "추천 결과" })).toBeInTheDocument();
   });
 
-  it("배너 렌더 실패 뒤에도 홈 CTA를 사용할 수 있다", async () => {
+  it("배너 렌더 실패 뒤에도 재료 CTA를 사용할 수 있다", async () => {
     ads.attachBanner.mockImplementation((_groupId, _target, options) => {
       options.callbacks?.onAdFailedToRender?.({
         slotId: "test-slot",
@@ -103,6 +135,8 @@ describe("재료 선택 흐름", () => {
       return { destroy: ads.destroyBanner };
     });
     const user = renderApp();
+    await user.click(screen.getByRole("button", { name: "재료 고르기" }));
+    await waitFor(() => expect(ads.attachBanner).toHaveBeenCalled());
 
     await waitFor(() => {
       expect(
@@ -110,9 +144,9 @@ describe("재료 선택 흐름", () => {
       ).not.toBeInTheDocument();
     });
 
-    await user.click(screen.getByRole("button", { name: "재료 고르기" }));
+    await user.click(screen.getByRole("button", { name: "메뉴 뽑기" }));
 
-    expect(screen.getByRole("heading", { name: "재료 선택" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "추천 결과" })).toBeInTheDocument();
   });
 
   it("매칭률·난이도 필터를 결과 편집까지 유지하고 처음부터 기본값으로 초기화한다", async () => {
