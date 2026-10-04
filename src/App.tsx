@@ -1,31 +1,25 @@
 import { useEffect, useRef, useState } from "react";
+import { graniteEvent } from "@apps-in-toss/web-framework";
 import "./App.css";
 import { initializeBannerAds } from "./ads/bannerAds";
 import { HomePage } from "./pages/HomePage";
 import { IngredientPage } from "./pages/IngredientPage";
 import { ResultPage } from "./pages/ResultPage";
 import {
-  MINIMUM_RECIPE_MATCH_RATE,
   getRecipeCandidates,
   pickRecipeCandidate,
   type RecipeMatch,
 } from "./utils/recommendRecipe";
-import type { RecipeDifficulty } from "./types/recipe";
+import { usePersistentUserState } from "./hooks/usePersistentUserState";
+import { createDefaultUserState } from "./storage/userState";
 
 type Screen = "home" | "ingredients" | "result";
 
 function App() {
   const [screen, setScreen] = useState<Screen>("home");
   const mainRef = useRef<HTMLElement>(null);
-  const [selectedIngredientIds, setSelectedIngredientIds] = useState<string[]>(
-    [],
-  );
-  const [minimumMatchRate, setMinimumMatchRate] = useState(
-    MINIMUM_RECIPE_MATCH_RATE,
-  );
-  const [difficultyFilter, setDifficultyFilter] = useState<
-    RecipeDifficulty | "all"
-  >("all");
+  const { state, updateState, preserveCurrentState } = usePersistentUserState();
+  const { selectedIngredientIds, minimumMatchRate, difficultyFilter } = state;
   const [candidates, setCandidates] = useState<RecipeMatch[]>([]);
   const [recommendation, setRecommendation] = useState<RecipeMatch | null>(
     null,
@@ -33,14 +27,16 @@ function App() {
   const [bannerAdsReady, setBannerAdsReady] = useState(false);
 
   const toggleIngredient = (ingredientId: string) => {
-    setSelectedIngredientIds((currentIds) =>
-      currentIds.includes(ingredientId)
-        ? currentIds.filter((id) => id !== ingredientId)
-        : [...currentIds, ingredientId],
-    );
+    updateState((current) => ({
+      ...current,
+      selectedIngredientIds: current.selectedIngredientIds.includes(ingredientId)
+        ? current.selectedIngredientIds.filter((id) => id !== ingredientId)
+        : [...current.selectedIngredientIds, ingredientId],
+    }));
   };
 
   const recommend = () => {
+    preserveCurrentState();
     const nextCandidates = getRecipeCandidates(selectedIngredientIds, undefined, {
       minimumMatchRate,
       difficultyFilter,
@@ -57,9 +53,7 @@ function App() {
   };
 
   const startOver = () => {
-    setSelectedIngredientIds([]);
-    setMinimumMatchRate(MINIMUM_RECIPE_MATCH_RATE);
-    setDifficultyFilter("all");
+    updateState(createDefaultUserState);
     setCandidates([]);
     setRecommendation(null);
     setScreen("ingredients");
@@ -67,6 +61,30 @@ function App() {
 
   useEffect(() => {
     mainRef.current?.focus();
+  }, [screen]);
+
+  useEffect(() => {
+    if (screen === "home") return;
+    const cleanups: (() => void)[] = [];
+    for (const event of ["backEvent", "homeEvent"] as const) {
+      try {
+        cleanups.push(graniteEvent.addEventListener(event, {
+          onEvent: () => setScreen((current) =>
+            event === "backEvent" && current === "result" ? "ingredients" : "home",
+          ),
+          onError: () => console.warn("플랫폼 화면 이동 이벤트를 처리하지 못했습니다."),
+        }));
+      } catch {
+        console.warn("플랫폼 화면 이동 이벤트를 연결하지 못했습니다.");
+      }
+    }
+    return () => {
+      for (const cleanup of cleanups) {
+        try { cleanup(); } catch {
+          console.warn("플랫폼 화면 이동 이벤트를 해제하지 못했습니다.");
+        }
+      }
+    };
   }, [screen]);
 
   useEffect(() => {
@@ -104,11 +122,12 @@ function App() {
         mainRef={mainRef}
         selectedIngredientIds={selectedIngredientIds}
         minimumMatchRate={minimumMatchRate}
-        onMinimumMatchRateChange={setMinimumMatchRate}
+        onMinimumMatchRateChange={(value) => updateState((current) => ({ ...current, minimumMatchRate: value }))}
         difficultyFilter={difficultyFilter}
-        onDifficultyFilterChange={setDifficultyFilter}
+        onDifficultyFilterChange={(value) => updateState((current) => ({ ...current, difficultyFilter: value }))}
         onToggleIngredient={toggleIngredient}
         onRecommend={recommend}
+        showBannerAd={bannerAdsReady}
         onBack={() => setScreen("home")}
       />
     );
@@ -118,7 +137,6 @@ function App() {
     <HomePage
       mainRef={mainRef}
       onStart={() => setScreen("ingredients")}
-      showBannerAd={bannerAdsReady}
     />
   );
 }

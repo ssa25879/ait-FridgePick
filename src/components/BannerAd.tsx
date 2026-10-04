@@ -4,7 +4,7 @@ import { BANNER_AD_GROUP_ID } from "../ads/bannerAds";
 
 type BannerState = "loading" | "visible" | "hidden";
 
-export function HomeBannerAd() {
+export function BannerAd() {
   const targetRef = useRef<HTMLDivElement>(null);
   const [state, setState] = useState<BannerState>("loading");
 
@@ -48,7 +48,7 @@ export function HomeBannerAd() {
   return (
     <div
       ref={targetRef}
-      className="home-page-ad"
+      className="ingredient-page-ad"
       data-state={state}
       role="region"
       aria-label="배너 광고"
