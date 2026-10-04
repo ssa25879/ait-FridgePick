@@ -9,6 +9,16 @@ import type { Ingredient, IngredientCategory } from "../types/ingredient";
 import type { RecipeDifficulty } from "../types/recipe";
 
 import { ScrollableIngredientBanner } from "../components/ScrollableIngredientBanner";
+import type { usePersistentUserState } from "../hooks/usePersistentUserState";
+
+const SAVE_MESSAGES = {
+  checking: "선택한 항목의 저장 상태를 확인하고 있어요.",
+  ready: "선택한 재료와 필터는 자동 저장돼요.",
+  saving: "선택한 재료와 필터를 저장하고 있어요.",
+  saved: "선택한 재료와 필터를 저장했어요.",
+  error: "저장하지 못했어요. 선택을 바꾸면 다시 저장해요.",
+  session: "이 환경에서는 선택한 항목이 이번 실행 동안만 유지돼요.",
+};
 
 const DIFFICULTY_FILTERS = [
   { value: "all", label: "전체" },
@@ -25,6 +35,8 @@ interface IngredientPageProps {
   difficultyFilter: RecipeDifficulty | "all";
   onDifficultyFilterChange: (value: RecipeDifficulty | "all") => void;
   onToggleIngredient: (ingredientId: string) => void;
+  saveStatus: ReturnType<typeof usePersistentUserState>["saveStatus"];
+  onReset: () => void;
   onRecommend: () => void;
   onBack: () => void;
   showBannerAd: boolean;
@@ -38,11 +50,19 @@ export function IngredientPage({
   difficultyFilter,
   onDifficultyFilterChange,
   onToggleIngredient,
+  saveStatus,
+  onReset,
   onRecommend,
   onBack,
   showBannerAd,
 }: IngredientPageProps) {
   const contentRef = useRef<HTMLDivElement>(null);
+  const resetRef = useRef<HTMLButtonElement>(null);
+  const [confirmReset, setConfirmReset] = useState(false);
+  const closeReset = () => {
+    setConfirmReset(false);
+    resetRef.current?.focus();
+  };
   const [activeCategory, setActiveCategory] =
     useState<IngredientCategory>("vegetable");
   const categoryName = INGREDIENT_CATEGORIES.find(
@@ -152,6 +172,29 @@ export function IngredientPage({
               ))}
             </div>
           </fieldset>
+        </section>
+
+        <section className="selection-settings" aria-label="선택 항목 설정">
+          <p className="selection-save-status" role="status">{SAVE_MESSAGES[saveStatus]}</p>
+          <Button
+            ref={resetRef}
+            type="button" color="dark" variant="weak" display="full" size="large"
+            aria-expanded={confirmReset} aria-controls="reset-confirmation"
+            onClick={() => setConfirmReset(true)}
+          >
+            재료·필터 초기화
+          </Button>
+          {confirmReset && (
+            <div id="reset-confirmation" className="reset-confirmation" role="group" aria-label="초기화 확인">
+              <p className="selection-save-status">
+                선택한 재료를 지우고 최소 매칭률을 60%, 난이도를 전체로 되돌릴까요?
+              </p>
+              <div className="reset-confirmation-actions">
+                <Button type="button" color="dark" variant="weak" size="large" onClick={closeReset}>취소</Button>
+                <Button type="button" color="dark" size="large" onClick={() => { onReset(); closeReset(); }}>초기화하기</Button>
+              </div>
+            </div>
+          )}
         </section>
 
         <div className="ingredient-page-actions">

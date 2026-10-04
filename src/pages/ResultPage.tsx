@@ -149,6 +149,10 @@ export function ResultPage({
         </section>
       )}
 
+      <p className="result-candidate-count">
+        레시피가 {candidateCount}개 검색되었습니다
+      </p>
+
       <div className="result-page-actions">
         {recommendation && candidateCount > 1 && (
           <Button

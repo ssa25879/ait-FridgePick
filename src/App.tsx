@@ -18,7 +18,7 @@ type Screen = "home" | "ingredients" | "result";
 function App() {
   const [screen, setScreen] = useState<Screen>("home");
   const mainRef = useRef<HTMLElement>(null);
-  const { state, updateState, preserveCurrentState } = usePersistentUserState();
+  const { state, saveStatus, updateState, preserveCurrentState } = usePersistentUserState();
   const { selectedIngredientIds, minimumMatchRate, difficultyFilter } = state;
   const [candidates, setCandidates] = useState<RecipeMatch[]>([]);
   const [recommendation, setRecommendation] = useState<RecipeMatch | null>(
@@ -126,6 +126,8 @@ function App() {
         difficultyFilter={difficultyFilter}
         onDifficultyFilterChange={(value) => updateState((current) => ({ ...current, difficultyFilter: value }))}
         onToggleIngredient={toggleIngredient}
+        saveStatus={saveStatus}
+        onReset={startOver}
         onRecommend={recommend}
         showBannerAd={bannerAdsReady}
         onBack={() => setScreen("home")}

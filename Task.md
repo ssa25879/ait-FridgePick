@@ -6,7 +6,8 @@
 
 - 로컬: D:\ait-home\ait-FridgePick
 - 원격: https://github.com/ssa25879/ait-FridgePick.git
-- 현재 문서 브랜치: feature/release-validation-specs (c4f44f7에서 분기)
+- 현재 작업 브랜치: feature/selection-settings-result-count (문서 브랜치08f78a5에서 분기)
+- 이전 문서 브랜치: feature/release-validation-specs (c4f44f7에서 분기)
 - 구현 브랜치: feature/user-state-persistence, origin 최신확인 c4f44f7
 - 최초 구현 기준:9cf1fcd. 이번 문서 기준:c4f44f7. master 기준 제품 커밋:def4bae.
 - 문서·사용자 상태·배너 변경 커밋3a9972c를 origin/feature/user-state-persistence에 push 완료했다.
@@ -40,6 +41,14 @@
 - 독립 코드 리뷰 Critical/Important 없음. 느린 저장 중 초기화·동일 사용자 재마운트 테스트 추가 후 재검증 통과.
 - 브라우저 TDS safe-area 오류는 기존과 동일. 실제 토스 앱 HASH·영속 저장·Android 백 동작은 미검증.
 - 이번 검증용 5174 개발 서버와 브라우저 탭은 종료했다. 기존 5173 프로세스는 건드리지 않았다.
+
+## 최신 사용자 피드백 (2026-10-04)
+
+- 사용자가 정상 작동과 S26U에서 화면 겹침 없음을 확인했다. 기본 동작·겹침 없음은 사용자 확인이며, OS/토스 버전과 개별 QA 시나리오는 제공되지 않았다. 기존 “실제 기기 QA 미확인” 기록은 이 보고 이전 상태다.
+- 추가 요청: 홈 이미지 등 꾸밈, 재료·필터 저장/초기화 설정, 결과 하단 “레시피가 N개 검색되었습니다” 표시.
+- 사용자 결정: 홈 꾸밈 보류, 나머지 진행. 재료 화면에 실제 자동 저장 상태 안내·확인 후 재료/필터 초기화, 결과 하단 후보 N개 표시를 구현했다. 다시 뽑기는 개수를 유지하며 실패·미지원은 저장 성공으로 안내하지 않는다.
+- 새 범위는 specs/roadmap.md 14단계 및 specs/26-10-04_feature_selection_settings_result_count/6문서 SSC-01~05에 기록했다. 최종11개 파일106개 테스트 통과, lint 종료0/기존 경고1건, 기본 TypeScript/Vite/AIT build 통과.320×640 브라우저 가로 넘침 없음/버튼48px/광고 간격32px 확인. 별도 로그는 계속 생략한다.
+- 새 기본 번들01a10732-9b57-7e91-b7d0-ba18979807d0은 로컬 생성만 했다. 콘솔 업로드·실기기 확인은 대기다. 이전 S26U 통과 보고를 새 기능 검증으로 재사용하지 않는다.
 
 ## 다음 작업
 

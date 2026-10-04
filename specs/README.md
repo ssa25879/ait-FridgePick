@@ -7,6 +7,7 @@
 - 실행 환경·SDK 계약: [tech.md](./tech.md)
 - 구현된 기능: [사용자 상태 저장·복원과 플랫폼 이동](./26-10-04_feature_user_state_persistence/README.md)
 - 광고 배치 보완: [재료 화면의 조건부 배너](./26-10-04_feature_ingredient_banner/README.md)
+- 사용자 피드백 보완: [선택 설정과 검색 개수](./26-10-04_feature_selection_settings_result_count/README.md)
 - 다음 작업(기기·콘솔 검증): [출시 준비](./26-10-02_feature_release_checklist_readiness/README.md)
 
 판단은 코드·현재 검증을 우선한다. 날짜별 문서의 테스트 수·로컬 경로·콘솔 상태는 해당 날짜의 기록이다. 초기 [프로젝트 기획서](./NaengteolPick_React_Project_Plan.md)의 예시 타입·범위는 이후 기능 명세가 구체화하거나 대체한다.
@@ -39,5 +40,6 @@
 | 사용자 상태·플랫폼 이동/11A | USP-01~10 → RCR-01~03·07 | README/requirements/design/plan/decisions/validation | 로컬 구현 완료·기기 대기 |
 | 재료 배너/11B | IB-01~08 → RCR-05·06·09 | README/requirements/design/plan/decisions/validation | 로컬 구현 완료·기기/검수 대기 |
 | 출시 검증/11 잔여·12 | RCR-01~14 | 기존26-10-02 폴더 재사용, 현재 계획·증거 양식 갱신 | 다음 실행 문서 준비·실행 미완료 |
+| 선택 설정·검색 개수/14 | SSC-01~05 | README/requirements/design/plan/decisions/validation | 구현·자동/브라우저 검증 완료, 새 빌드 기기 대기, 홈 꾸밈 보류 |
 
 문서 브랜치: feature/release-validation-specs, 기준c4f44f7. 기존 구현은 feature/user-state-persistence에 push되어 있다. 문서 변경은 기능 코드 변경과 분리하며 과거 실행 수치·외부 상태는 해당 시점의 기록으로 유지한다.

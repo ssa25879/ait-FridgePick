@@ -320,7 +320,10 @@ describe("재료 선택 흐름", () => {
     await user.click(screen.getByRole("button", { name: "메뉴 뽑기" }));
 
     const firstRecipe = screen.getByRole("heading", { level: 2 }).textContent;
+    const initialCount = screen.getByText(/^레시피가 \d+개 검색되었습니다$/).textContent;
+    expect(Number(initialCount?.match(/\d+/)?.[0])).toBeGreaterThan(1);
     await user.click(screen.getByRole("button", { name: "다시 뽑기" }));
+    expect(screen.getByText(/^레시피가 \d+개 검색되었습니다$/)).toHaveTextContent(initialCount!);
 
     expect(screen.getByRole("heading", { level: 2 }).textContent).not.toBe(
       firstRecipe,
@@ -335,6 +338,7 @@ describe("재료 선택 흐름", () => {
     expect(
       screen.getByText("메뉴를 추천하려면 재료를 먼저 선택해 주세요."),
     ).toBeInTheDocument();
+    expect(screen.getByText("레시피가 0개 검색되었습니다")).toBeInTheDocument();
     await user.click(screen.getByRole("button", { name: "재료 선택하기" }));
     expect(
       screen.getByRole("heading", { name: "선택한 재료 0개" }),
