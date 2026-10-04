@@ -81,3 +81,25 @@ RCR-01~03은 USP-01~08·10, RCR-07은 USP-09·10, RCR-05·06·09는 IB-01~08, RC
 ## 이번 문서 정리의 검증 경계
 
 제품 코드·빌드 설정을 변경하지 않았고 테스트·빌드·기기·콘솔 재조회도 실행하지 않았다. 기존98개 테스트와 빌드 기록은 이전 구현의 증거다. 이번에는 문서 상대 링크·소스 경로·요구사항ID/계획/검증 대응·체크 상태를 확인한다. 외부 상태는 마지막 확인 시점의 기록이며 최신으로 단정하지 않는다.
+
+## 새 기기 테스트 준비 실행 (2026-10-04)
+
+로드맵11단계 잔여·12단계의 기기 확인을 위해 ait:test-on-device 스킬을 적용했다. 이번에는 문서 준비를 넘어 기본 테스트 번들 생성·내부 검사·콘솔 업로드·컴파일·본인 테스트 푸시까지 수행했다. 실제 기기 실행·검수 제출·라이브 출시는 수행하지 않았다.
+
+| 항목 | 실제 결과 |
+| --- | --- |
+| 소스 기준 | 3f5760dbf23d9cb8b776a59ebefa914c45d58602, feature/release-validation-specs. 제품 구현은3a9972c/c4f44f7 |
+| 로컬 build | Node24.19.0, npm run build: TypeScript·Vite·AIT 통과, 기존 큰 청크 경고 |
+| 파일 | ait-fridgepick.ait, 963299 bytes |
+| SHA256 | a8ae69ddededf30c28be9494950970770a68d1703d77c89271e73102f39b6371 |
+| ID 검사 | @apps-in-toss/ait-format의 공식 판독기로 내부8파일을 풀어 확인: 테스트 ID 포함, ait.v2 실제 ID 패턴0파일 |
+| 검사 제한 | 소스/기존 원격 이력 비노출은 별도 미달성. .ait는 AITBUNDL 헤더의 전용 포맷이므로 일반 ZIP 검사만으로 판단하지 않음 |
+| 대상 앱 | workspace96603/miniApp80586, appName ait-fridgepick: 로컬 설정과 일치 |
+| deploymentId | 01a1071e-f051-78da-9a33-841acc72ab7c |
+| 콘솔 버전 | 20261004-6, reviewStatus CREATED, failureReason null, deployed false |
+| 테스트 준비 | 본인 테스트 푸시 성공, isTested=true. 이 값은 실제 기기 QA 통과를 뜻하지 않음 |
+| 콘솔 재조회 | PREPARE, 메타APPROVED/최초 등록false/라이브false, 제휴 약관 동의 필요, reviewRequestDecision ALLOWED |
+
+[테스트 QR/번들 페이지](https://apps-in-toss.toss.im/workspace/96603/mini-app/80586/app-build?testDeploymentId=01a1071e-f051-78da-9a33-841acc72ab7c&testVersionName=20261004-6). 도구가 반환한 본인 전용 링크는 intoss-private://ait-fridgepick?_deploymentId=01a1071e-f051-78da-9a33-841acc72ab7c&host=appsInTossHost 이다. 링크를 임의 조립하지 않았다. 업로드 서명 URL·HASH·실제 광고 ID는 기록하지 않는다.
+
+다음 실행: [plan.md](./plan.md)의 기기 순서2~8을 본인 기기에서 확인하고 OS/토스 버전/기대값/실제값/증거를 기록한다. 기기 결과는 전부 미실행 상태다. 실제 완료 확인과 검토 요청 없이 bundle_submit_review를 수행하지 않는다.
