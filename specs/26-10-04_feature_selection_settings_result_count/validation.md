@@ -90,3 +90,21 @@
 ## 2026-10-05 커밋·테스트 번들 준비
 
 사용자가 이미지 확인 이후 커밋·푸시와 다음 단계를 승인했다. 코드 변경 없이 전체12파일/108개 테스트를 재확인해 통과했다. 기본 TypeScript/Vite/AIT 빌드 성공. 새 deploymentId01a10774-4e3e-7e61-94cb-c9acfe84dfac,962950바이트,SHA256 adf50c43025a7e4312ca763111fdc3313a3a9c3afa5f6093beeb74a7f4fc80bc. AITReader8파일 검사: 실제 광고ID0/테스트 배너ID1/수기 fixture ID0. 이번 기록 시점 업로드·기기 확인은 아직 미수행이며 다음 단계로 진행한다.
+
+## 2026-10-05 새 번들 QA 시나리오
+
+- 제품 소스9d94ad8을 origin/feature/selection-settings-result-count에 push하고 원격 SHA 일치를 확인했다. master def4bae는 유지했다.
+- 새 버전20261005-9의 업로드 PUT200/완료 접수true를 확인했다. 컴파일 완료 상태와 테스트 링크는 후속 기록한다.
+- 기기 확인1: 전체 탭의 재료 목록 내부 스크롤·중앙 정렬, 카테고리 전환 시 목록 처음으로 이동/선택 유지, 목록 끝에서 페이지로 넘어가는 스크롤 체감을 확인한다.
+- 기기 확인2: 필터가 카테고리 위에 있고 접기·펼치기, 저장·초기화 취소/확인과 종료·재진입 복원이 유지되는지 확인한다.
+- 기기 확인3: 초기화 후 당근/감자/요거트만 선택하고60%·전체에서 공식 감자요거트 샐러드 후보1개,75%,부족 재료 완두콩,원문 분량·출처·하단 검색 수1회를 확인한다.100% 또는 재료0개에서 무후보 안내와 하단에 검색 수0개가 한 번만 표시되는지를 확인한다.
+- 기기 확인4: 조리 단계 번호 중복 없음과 CTA/광고 겹침·safe area·가로 넘침을 확인한다. 신규 기기 결과가 있어야 이 변경의 QA를 통과로 표시한다.
+- 실제 사용자 QA 대기 중에는 검수 제출·출시를 하지 않는다. 정해진5/8단계의 하위 에이전트 검증은 아직 해당 단계가 아니다.
+
+## 2026-10-05 테스트 환경 준비 완료
+
+- 버전 20261005-9, 제품 소스9d94ad8ac82efa9ebbf65b4aec11908abea22ab2.
+- deployment 01a10774-4e3e-7e61-94cb-c9acfe84dfac, 컴파일CREATED/failureReason null/deployed false. 본인 테스트 푸시 성공/isTested true는 환경 준비 완료이며 실제 QA 완료가 아니다.
+- 도구 반환 privateLink: intoss-private://ait-fridgepick?_deploymentId=01a10774-4e3e-7e61-94cb-c9acfe84dfac&host=appsInTossHost
+- 도구 반환 consoleTestUrl: https://apps-in-toss.toss.im/workspace/96603/mini-app/80586/app-build?testDeploymentId=01a10774-4e3e-7e61-94cb-c9acfe84dfac&testVersionName=20261005-9
+- 다음 단계: 위 새 버전에서 재료 내부 스크롤/중앙 정렬/필터 위치, 선택 저장·초기화, 공식 레시피 분량·출처/단계 번호/검색 개수, CTA·광고를 실기기 확인한다. 사용자 결과 대기. 검수 제출·출시는 수행하지 않았다.
