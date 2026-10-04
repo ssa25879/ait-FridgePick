@@ -67,3 +67,12 @@
 | G7/G8 | 320px 가로 넘침 없음·광고 간격32px, 접기/펼치기로 광고 스크롤 측정 기준을 변경하지 않음 |
 
 새 번들의 실기기에서0/1개 안내 단일 표시, 전체 탭, 설정 접기/펼치기·저장/초기화, 긴 스크롤 체감을 재확인한다. 계정 분리·핀치 제한·실제 광고 실패는 계속 별도 미확인이다.
+
+## 보완 테스트 번들20261004-8
+
+- 제품 소스38fae50b163fa65500e7c0e12b6f0225284fa538을 기존 기능 브랜치에 push하고 원격 SHA 일치를 확인했다. master def4bae 유지.
+- 빌드 deploymentId:01a1074a-4ed9-7383-9224-b4b27d181d0d.964139 bytes, SHA256 4f71963a27245099088fceaa7ed35fde28c1ec49c33d562242378bc8422a317f.
+- 공식 AIT 판독기로8파일·테스트 광고 ID1파일·실제 ID 패턴0파일을 확인했다. PUT HTTP200, upload_complete 성공, 콘솔CREATED/failureReason null/deployed false, 본인 테스트 푸시 성공/isTested true.
+- [새 테스트 QR](https://apps-in-toss.toss.im/workspace/96603/mini-app/80586/app-build?testDeploymentId=01a1074a-4ed9-7383-9224-b4b27d181d0d&testVersionName=20261004-8).
+- 도구 반환 본인 전용 링크: intoss-private://ait-fridgepick?_deploymentId=01a1074a-4ed9-7383-9224-b4b27d181d0d&host=appsInTossHost
+- 실기기 결과는 대기. 검수 제출·라이브 전환은 수행하지 않았다. 기존7버전 사용자 보고를8버전 QA 통과로 재사용하지 않는다.

@@ -54,6 +54,10 @@
 
 ### 사용자 지정 실행 순서 (2026-10-04)
 
+최신 재확인 대상:20261004-8, 제품 커밋38fae50 push 확인. 전체 탭·설정 접기/펼치기·검색 안내 중복 제거를 포함한다. 기본 빌드·내부8파일 ID 검사·업로드/컴파일CREATED·본인 테스트 푸시 완료, 실제 기기 결과 대기.
+QR: https://apps-in-toss.toss.im/workspace/96603/mini-app/80586/app-build?testDeploymentId=01a1074a-4ed9-7383-9224-b4b27d181d0d&testVersionName=20261004-8
+deployment01a1074a-4ed9-7383-9224-b4b27d181d0d. 아래7버전 기록은 보완 이전 이력이다.5·8번의3개 gpt-6-luna/xhigh 검증은 해당 순서에서 실행한다.
+
 1. 완료: 기능 커밋fa8b4e0 push·원격 SHA 일치, master def4bae 유지. 새 기본 번들20261004-7 업로드·컴파일CREATED·본인 테스트 푸시 성공. 소스fa8b4e0, deployment01a1073a-0617-7005-8723-4e1a318ecb28. 이전 “로컬 생성만” 기록 이후 수행한 갱신이다.
 2. 현재: 사용자 초기화·종료 재진입 정상/겹침 없음 확인. 후보0/1개 중복 안내·전체 탭·긴 스크롤을 보완했다. 필터·저장 설정 기본 접힘, 전체95개 탭, 개수 하단 단일 안내, 본문15px·터치44px 이상 유지.108개 테스트·기본 build·lint 종료0/기존 경고1건.320×640 기본 화면 높이1793→1526px. 새 번들 재확인 대기이며 아래 QR은 보완 전7버전이다.
    테스트 QR: https://apps-in-toss.toss.im/workspace/96603/mini-app/80586/app-build?testDeploymentId=01a1073a-0617-7005-8723-4e1a318ecb28&testVersionName=20261004-7
