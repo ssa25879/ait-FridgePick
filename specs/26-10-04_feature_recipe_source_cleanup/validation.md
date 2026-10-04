@@ -31,3 +31,57 @@
 - 도구 반환 privateLink: intoss-private://ait-fridgepick?_deploymentId=01a10774-4e3e-7e61-94cb-c9acfe84dfac&host=appsInTossHost
 - 도구 반환 consoleTestUrl: https://apps-in-toss.toss.im/workspace/96603/mini-app/80586/app-build?testDeploymentId=01a10774-4e3e-7e61-94cb-c9acfe84dfac&testVersionName=20261005-9
 - 다음 단계: 위 새 버전에서 재료 내부 스크롤/중앙 정렬/필터 위치, 선택 저장·초기화, 공식 레시피 분량·출처/단계 번호/검색 개수, CTA·광고를 실기기 확인한다. 사용자 결과 대기. 검수 제출·출시는 수행하지 않았다.
+
+## 2026-10-05 RSC-04~05 조사·기준선
+
+- 공식 페이지에서 EPIS 세 자료의 필드·이용 조건을 확인했다. 공개 XML 샘플 기본·재료·과정 모두 HTTP200/INFO-000/5행을 확인했다. 전체 수집·발급 키·다운로드 파일은 미확보다.
+- 현재 publicRecipes.ts의888개를 읽고 recommendRecipe.ts 원본을 TypeScript transpileModule로 메모리 변환해 getRecipeCandidates를 실행했다. 기본 import를 제거하고 동일888개를 명시 인자로 전달했다. 테스트 fixture는 사용하지 않았다. UI·번들·기기 테스트를 실행한 것은 아니다.
+- 전체888개/미지원 필수 재료 포함814개/총 필수 재료5개 이하52개. 아래10조합을60%·난이도 전체로 평가한 후보 수는 모두0개다. 기존908개 카탈로그의3/10 무후보는 현재 기준선이 아니다.
+
+| 조합 | 선택 ID | 후보 수 |
+| --- | --- | --- |
+| 1 | kimchi,cooked_rice,egg,green_onion | 0 |
+| 2 | potato,onion,carrot,cooking_oil | 0 |
+| 3 | pork,kimchi,onion,garlic,gochujang,cooked_rice | 0 |
+| 4 | chicken,potato,onion,carrot,soy_sauce | 0 |
+| 5 | mushroom,tofu,zucchini,green_onion,soy_sauce | 0 |
+| 6 | shrimp,egg,tofu,chives,garlic | 0 |
+| 7 | pasta,mushroom,milk,cheese,butter | 0 |
+| 8 | beef,onion,bell_pepper,soy_sauce,garlic | 0 |
+| 9 | cabbage,bean_sprout,pork,gochujang,sesame_oil | 0 |
+| 10 | spinach,chicken,egg,cooked_rice,sesame_oil | 0 |
+
+이 표본은 과거 문서와 비교하기 위한 고정 조합이며 전체 사용자 무결과율을 뜻하지 않는다. RSC-05 완료 시 같은 함수·조합·조건의 전후 수치와 실제 신규 레시피 표시를 확인한다. RSC-04~05는 미완료다. 이번 변경은 문서뿐이므로 전체 제품 테스트·빌드는 재실행하지 않았다.
+
+## 2026-10-05 재료 수집기 후속 검증
+
+위 문서 조사 이후 사용자가 로컬 수집 도구 구현을 승인했다. 구현 전 검사 파일을 작성하고 모듈 부재로 실패를 확인했다. 구현 후 `node --test scripts/downloadEpisIngredients.checks.mjs`7개 통과:1000행 분할/마지막 범위/원문 보존, 인증 및 네트워크 오류의 키 비노출, 누락·중복·건수 변경·필수 필드 오류 거부. PowerShell Parser 구문 검사 오류0개.
+
+공식 공개 JSON 샘플 HTTP200, totalCnt6104와 원문 필드를 확인했다. 공개 XML 샘플의 표시와 달리 JSON 샘플은 실제 전체 행 수를 알려주지만 전체 응답을 받은 것은 아니다. 발급 키 전체 수집·PowerShell 숨김 입력의 직접 실행·파일 저장 결과는 미확인이다.
+
+Node24.19.0에서 npm test12파일/108개 통과. npm run lint 종료0, 기존 useInAppAds.tsx:54 경고1개와 npm 기본 캐시 권한 경고가 있었다. 신규 수집기는 앱 빌드에서 사용하지 않으며 제품 빌드는 재실행하지 않았다. 기존 문서 변경과 신규 수집기 파일을 보존한 미커밋 상태다.
+
+## 2026-10-05 빈 원문 분량으로 인한 수집 중단 보완
+
+사용자 실행 로그의 실제 원인은285행 IRDNT_CPCTY 공백이다. 원본 수집과 제품 편입 품질 검사를 혼동해 공백 분량을 전체 수집 실패로 처리했던 검사를 수정했다. 빈 문자열/null은 그대로 보존하고 manifest에 미기재 건수·행/레시피/재료 순번 목록을 기록한다. 필드 부재·행 수·순번·전체 건수 검사는 유지한다. 분량을 임의 추정하거나 해당 레시피를 제품에 편입한 것은 아니다.
+
+공식 API에 개인 키가 아닌 명시적 무효 진단 값을 요청해 최상위 result의 INFO-100 응답을 확인했다. 이 형태가 UNKNOWN으로 표시되던 문제도 수정했다. 서비스의 원문 오류 메시지는 키 노출 가능성을 줄이기 위해 출력하지 않는다.
+
+두 회귀 검사의 수정 전 실패를 확인하고 수정 후 수집기9개 검사 통과를 확인했다. 빈 분량의 보존과 검토 목록, 최상위 인증 오류 코드를 검증한다. lint 종료0/기존 경고1개, git diff --check 공백 오류 없음. 수집기만 변경해 앱 전체 테스트·빌드는 추가 재실행하지 않았다. 사용자 키 전체 수집·저장 결과는 재실행 확인이 필요하다.
+
+## 2026-10-05 재료정보 전체 확보·파일 검증
+
+사용자가 수집 성공과 폴더 D:\ait-home\recipe-sources\epis\ingredients-20261005-015434-8a9035를 전달했다. 실제 ingredients.json/manifest.json을 읽어 전체6104행, 고유 재료 키(RECIPE_ID+IRDNT_SN)6104개, 연속 ROW_NUM1~6104, manifest 행 수·SHA256 일치, 빈 분량16행과 manifest 검토 목록의 일치를 확인했다. 고유 RECIPE_ID는575개이며 주재료/양념/부재료 세 역할이 있다. 이는 재료정보의 ID 수이며 신규 편입 메뉴 수가 아니다.
+
+분량 미기재 예:285행 소스(RECIPE_ID26),1666행 꼬치(RECIPE_ID149),5520행 양상추(RECIPE_ID498). 원문을 임의 보충하지 않는다. 기본정보·조리과정 전체 자료는 아직 확인하지 못했으며 제품 카탈로그888개는 유지된다. 원본 기준일은 여전히 unknown이다. RSC-04 전체 결합·RSC-05 추천 개선은 미완료다.
+
+## 2026-10-05 RSC-04~05 첨부 자료 편입 검증
+
+- 기본CSV537개, 과정CSV3022행, 재료JSON6104행을 원본 수정 없이 읽었다. 공식 공개 JSON basic/steps totalCnt537/3022와 일치한다. 기본정보537개의 재료·과정 연결이 존재한다. 재료/과정575개 ID의38개는 기본정보가 없어 편입하지 않았다.
+- CP949 호환 디코딩, 실제 잘못된 CSV 따옴표1곳과 마지막 팁의 인용되지 않은 쉼표62행을 문장 보존해 복구했다. 결과CSV의 기본15열/과정5열을 검사했다. 원본 해시는 EPIS_RECIPE_IMPORT_SUMMARY.sourceFiles에 기록했다.
+- EPIS467개 편입,70개 제외:low-ingredient-coverage63,missing-ingredients1,missing-quantity3,invalid-step-sequence3. 빈 분량 원본16행 중 기본정보가 있는 메뉴에서 제외한 것은3개다. 생성 요약의 제외ID/사유와 기본정보 없는 ID를 확인한다.
+- 전체1355개, ID 중복0, 이름/분량/단계 정규화의 완전 일치 기준 출처 간 중복0. 이름 중복13개는 분량·과정이 다르므로 유지한다. 의미적 유사 메뉴까지 모두 판별한 검사는 아니다.
+- 실제 recommendRecipe.ts 함수를 TypeScript 메모리 변환해 실제 두 카탈로그로 위10조합을 재평가했다. 기본60%/전체 후보 수는 추가 전[0,0,0,0,0,0,0,0,0,0], 추가 후[0,0,0,0,1,0,0,0,0,0].5번의 미소된장국만 새 후보이며 무후보10/10→9/10이다. 전체 사용자 무결과율로 일반화하지 않는다.
+- 변환기8개 회귀/계약 검사와 실제 데이터/결과 화면 검사를 포함해 npm test13파일/119개 통과. 원문 분량·양념·팁, 순서 복원, 모호한 안심 보존, 기본ID 중복, 분량/단계 누락 제외, CSV 복구를 검증했다. 실제 epis_320 김치볶음밥의 결과 표시·분량·출처·하단 단일 검색 수를 확인했다. 최초 모듈 부재 실패와 결과 테스트의 줄바꿈 정규화 실패를 확인 후 보완했다.
+- 입력 세 파일/확보일로 임시 출력에 재생성하고 src/data/episRecipes.ts와 SHA256 일치를 확인했다. 수집기9개도 통과했다. npm run lint 종료0/기존 useInAppAds.tsx:54 경고1개. 기본과 출시 TypeScript/Vite/AIT build 성공, 약3.074MB 청크 경고. 실제 기기 초기 로딩 성능은 측정하지 않았다.
+- 현재 .ait는 마지막 build:release 산출물이다. 기본 테스트 업로드 전 기본 빌드를 다시 해야 한다. 새 데이터의 기기 QA·업로드·커밋/푸시·출시 사용 범위 확인은 미수행이다. RSC-04 로컬 확보·변환과 RSC-05 자동 품질 비교만 완료이며 잔여 출시·기기 항목을 완료로 표시하지 않는다.

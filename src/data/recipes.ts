@@ -1,5 +1,6 @@
 import type { Recipe } from "../types/recipe";
 import { PUBLIC_RECIPES } from "./publicRecipes";
+import { EPIS_RECIPES } from "./episRecipes";
 
 // Source-backed substitutes for the 20 hand-written recipes; keep original source names.
 const replacementIds = [
@@ -33,4 +34,5 @@ export const SOURCED_REPLACEMENT_RECIPES: Recipe[] = replacementIds.map(
 export const RECIPES: Recipe[] = [
   ...SOURCED_REPLACEMENT_RECIPES,
   ...PUBLIC_RECIPES.filter(({ id }) => !replacementIds.includes(id)),
+  ...EPIS_RECIPES,
 ];
