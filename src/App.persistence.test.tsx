@@ -68,6 +68,73 @@ beforeEach(() => {
 afterEach(() => { vi.useRealTimers(); });
 
 describe("사용자별 재료와 필터 저장", () => {
+  it("재료 화면 초기화 취소는 선택을 유지하고 확인은 저장 상태와 재진입을 초기화한다", async () => {
+    bridge.values.set(ALPHA_KEY, JSON.stringify(saved));
+    const app = mountApp();
+    await start();
+    await screen.findByRole("heading", { name: "선택한 재료 2개" });
+    await userEvent.click(screen.getByRole("button", { name: "재료·필터 초기화" }));
+    await userEvent.click(screen.getByRole("button", { name: "취소" }));
+    expect(screen.getByRole("slider")).toHaveValue("85");
+    expect(screen.getByRole("heading", { name: "선택한 재료 2개" })).toBeInTheDocument();
+    expect(bridge.values.get(ALPHA_KEY)).toBe(JSON.stringify(saved));
+    await userEvent.click(screen.getByRole("button", { name: "재료·필터 초기화" }));
+    await userEvent.click(screen.getByRole("button", { name: "초기화하기" }));
+    expect(screen.getByRole("heading", { name: "선택한 재료 0개" })).toBeInTheDocument();
+    expect(screen.getByRole("slider")).toHaveValue("60");
+    expect(screen.getByRole("button", { name: "전체" })).toHaveAttribute("aria-pressed", "true");
+    await waitFor(() => expect(JSON.parse(bridge.values.get(ALPHA_KEY)!)).toEqual({
+      version: 1, selectedIngredientIds: [], minimumMatchRate: 0.6, difficultyFilter: "all",
+    }));
+    app.unmount();
+    mountApp();
+    await start();
+    expect(screen.getByRole("heading", { name: "선택한 재료 0개" })).toBeInTheDocument();
+  });
+
+  it("저장 실패를 성공으로 안내하지 않고 다음 변경 성공 시 회복한다", async () => {
+    bridge.write.mockRejectedValueOnce(new Error("write failed"));
+    mountApp();
+    await start();
+    await userEvent.click(screen.getByRole("button", { name: "양파" }));
+    expect(await screen.findByText("저장하지 못했어요. 선택을 바꾸면 다시 저장해요.")).toBeInTheDocument();
+    await userEvent.click(screen.getByRole("button", { name: "김치" }));
+    expect(await screen.findByText("선택한 재료와 필터를 저장했어요.")).toBeInTheDocument();
+  });
+
+  it("저장이 미지원이면 이번 실행에만 유지됨을 안내한다", async () => {
+    bridge.supported.mockReturnValue(false);
+    mountApp();
+    await start();
+    expect(await screen.findByText("이 환경에서는 선택한 항목이 이번 실행 동안만 유지돼요.")).toBeInTheDocument();
+  });
+
+  it("이전 저장 완료는 더 최신 입력의 저장 중 안내를 덮지 않는다", async () => {
+    const first = deferred<void>();
+    const second = deferred<void>();
+    bridge.write.mockReturnValueOnce(first.promise).mockReturnValueOnce(second.promise);
+    mountApp();
+    await start();
+    await userEvent.click(screen.getByRole("button", { name: "양파" }));
+    await userEvent.click(screen.getByRole("button", { name: "김치" }));
+    await act(async () => { first.resolve(); });
+    expect(screen.getByText("선택한 재료와 필터를 저장하고 있어요.")).toBeInTheDocument();
+    await act(async () => { second.resolve(); });
+    expect(screen.getByText("선택한 재료와 필터를 저장했어요.")).toBeInTheDocument();
+  });
+
+  it("늦은 복원 중 초기화 확인은 기존 저장값의 복원을 막는다", async () => {
+    const read = deferred<string>();
+    bridge.read.mockReturnValue(read.promise);
+    mountApp();
+    await start();
+    await userEvent.click(screen.getByRole("button", { name: "재료·필터 초기화" }));
+    await userEvent.click(screen.getByRole("button", { name: "초기화하기" }));
+    await act(async () => { read.resolve(JSON.stringify(saved)); });
+    expect(screen.getByRole("heading", { name: "선택한 재료 0개" })).toBeInTheDocument();
+    await waitFor(() => expect(JSON.parse(bridge.values.get(ALPHA_KEY)!).selectedIngredientIds).toEqual([]));
+  });
+
   it("StrictMode 재진입에서 저장한 재료·필터를 복원하고 홈부터 시작한다", async () => {
     bridge.values.set(ALPHA_KEY, JSON.stringify(saved));
     mountApp();
