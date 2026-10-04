@@ -20,3 +20,26 @@
 - 기본 번들 deploymentId:01a10732-9b57-7e91-b7d0-ba18979807d0. 이 새 번들은 로컬 생성만 했으며 콘솔 업로드·실기기·검수·출시는 수행하지 않았다.
 
 이전 S26U 확인은 새 변경의 실기기 통과가 아니다. 새 번들에서 초기화 취소/확인, 저장 완료 후 종료·재진입, 후보0/1/여러 개·다시 뽑기, CTA·광고 간격을 확인한다.
+
+## 새 테스트 번들 업로드 (2026-10-04)
+
+사용자가 정리된 작업1~8을 순서대로 진행하도록 요청하여 `ait:test-on-device` 경로로 새 번들을 준비했다.
+
+| 항목 | 확인 결과 |
+| --- | --- |
+| 소스 | fa8b4e06878af7c573c8485d021b8274e18205d2, feature/selection-settings-result-count |
+| Git | 기능 브랜치 push 후 원격 SHA 일치. 원격 master는def4bae 유지 |
+| 빌드 | npm run build 종료0: TypeScript·Vite·AIT 성공, 기존 큰 청크 경고 |
+| 파일 | ait-fridgepick.ait, 964020 bytes |
+| SHA256 | 116effd4878752cf38332cbeb199572894dc5dc2249cf4e2b584506f38d08bbe |
+| 내부 검사 | 공식 AIT 판독기로8파일 확인, 테스트 광고 ID1파일·실제 광고 ID 패턴0파일 |
+| 대상 | workspace96603/miniApp80586, appName ait-fridgepick 일치 |
+| deploymentId | 01a1073a-0617-7005-8723-4e1a318ecb28 |
+| 콘솔 | 버전20261004-7, PUT HTTP200, upload_complete 성공, 컴파일CREATED/failureReason null |
+| 본인 테스트 푸시 | 성공, isTested=true: 테스트 준비만 완료, 실제 QA 통과 아님 |
+| 실기기·검수·출시 | 새 번들 실기기 결과 대기, 검수 제출·라이브 전환 수행하지 않음 |
+
+도구 반환 [테스트 QR](https://apps-in-toss.toss.im/workspace/96603/mini-app/80586/app-build?testDeploymentId=01a1073a-0617-7005-8723-4e1a318ecb28&testVersionName=20261004-7).
+본인 전용 링크: intoss-private://ait-fridgepick?_deploymentId=01a1073a-0617-7005-8723-4e1a318ecb28&host=appsInTossHost
+
+다음 작업2: 초기화 취소/확인, 저장 완료 후 종료·재진입, 검색 개수0/1/여러 개와 다시 뽑기, 화면·광고 겹침을 확인하고 기기/OS/토스 버전·결과를 받는다. 작업5·8은 각각 하위 에이전트3개, gpt-6-luna/xhigh로 검증하도록 사용자가 지정했다. 아직 해당 검증을 실행하지 않았다.
