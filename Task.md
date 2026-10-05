@@ -62,3 +62,8 @@
 C:\Users\User\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin
 
 npm_config_cache는 $env:TEMP\codex-fridgepick-npm-cache를 사용한다. npm test / npm run lint / npm run build / npm run build:release로 검증한다.
+
+
+## 2026-10-05 Roadmap 11: ad configuration cleanup
+
+Protected configuration is loaded outside Git; default builds use the test ID. User selected ordinary commits with historical commits retained. This branch cleanup does not include pending feature work from the primary checkout. Release/terms/device checks remain separate.
