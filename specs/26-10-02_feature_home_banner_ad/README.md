@@ -20,7 +20,7 @@
 
 ## 콘솔 상태와 개발 범위
 
-2026-10-02 콘솔 조회에서 미니앱 상태는 PREPARE였고, “배너 광고 1차” 지면은 REGISTERING 상태였으며 groupId는 null이었다. 이후 재조회에서 지면은 ENABLED, 그룹 ID는 `ait.v2.live.65a4afab51804f34`로 확인됐다. 코드는 Vite `release` 모드에서만 이 ID를 선택하며 기본 개발·테스트 빌드는 공식 테스트 ID를 유지한다.
+2026-10-02 콘솔 조회에서 미니앱 상태는 PREPARE였고, “배너 광고 1차” 지면은 REGISTERING 상태였으며 groupId는 null이었다. 이후 재조회에서 지면은 ENABLED, 그룹 ID는 `[release ad ID: external local configuration]`로 확인됐다. 코드는 Vite `release` 모드에서만 이 ID를 선택하며 기본 개발·테스트 빌드는 공식 테스트 ID를 유지한다.
 
 앱인토스 개발자 문서는 테스트에 ait-ad-test-banner-id를 사용하도록 안내한다. 샌드박스에서는 배너 광고가 지원되지 않으므로 실제 표시 확인은 콘솔 QR을 통한 토스 앱 테스트가 필요하다. 테스트 중에는 실제 그룹 ID를 사용하지 않는다. `npm run build:release`는 활성 그룹 ID를 출시 모드 산출물에 포함한다. 출시 모드 빌드의 콘솔 검수·출시 및 토스 앱 광고 노출 확인은 별도 단계다.
 

@@ -4,7 +4,7 @@
 
 홈 배너 구현에 테스트·출시 ID 선택을 추가했다. 기본 `build`는 공식 테스트 ID만 포함하고 `build:release`는 활성 발급된 실제 groupId만 포함한다. 두 모드의 AIT 산출물을 각각 생성해 ID 포함 여부를 확인했으며, 최종 `ait-fridgepick.ait`는 테스트 ID 빌드로 준비했다.
 
-콘솔 조회(2026-10-02): 워크스페이스 `YWS_WorkSpace`(96603)의 미니앱 `냉털픽`(80586)은 PREPARE다. “배너 광고 1차” 지면은 ENABLED이며 groupId `ait.v2.live.65a4afab51804f34`가 발급됐다. release 모드 AIT 번들은 로컬 생성 및 ID 확인을 마쳤다. 콘솔 업로드·QR 테스트·출시는 수행하지 않았다.
+콘솔 조회(2026-10-02): 워크스페이스 `YWS_WorkSpace`(96603)의 미니앱 `냉털픽`(80586)은 PREPARE다. “배너 광고 1차” 지면은 ENABLED이며 groupId `[release ad ID: external local configuration]`가 발급됐다. release 모드 AIT 번들은 로컬 생성 및 ID 확인을 마쳤다. 콘솔 업로드·QR 테스트·출시는 수행하지 않았다.
 
 ## 요구사항별 검증
 
