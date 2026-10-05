@@ -37,6 +37,31 @@ const publicRecommendation: RecipeMatch = {
 };
 
 describe("추천 결과 상세", () => {
+  it("등록 필수 재료를 모두 보유해도 원문 누락 검토 안내가 있으면 조리 가능으로 안내하지 않는다", () => {
+    render(<TDSMobileAITProvider>
+      <ResultPage mainRef={createRef<HTMLElement>()}
+        recommendation={{ ...recommendation, recipe: { ...recipe, ingredientReviewNotes: ["조리 2단계의 육수가 원문 재료 목록에 없어요. 분량을 확인해 주세요."] }, missingRequiredIngredientIds: [], matchRate: 1 }}
+        selectedIngredientIds={recipe.requiredIngredients} candidateCount={1}
+        onReroll={vi.fn()} onBackHome={vi.fn()} onEditIngredients={vi.fn()} onStartOver={vi.fn()} />
+    </TDSMobileAITProvider>);
+    expect(screen.getByRole("status")).toHaveTextContent("레시피 재료 확인이 필요해요");
+    expect(screen.getByRole("status")).not.toHaveTextContent("레시피에 필요한 재료를 모두 선택했어요");
+    expect(screen.getByRole("region", { name: "원문 재료 확인" })).toHaveTextContent("육수");
+    expect(screen.getByRole("region", { name: "더 준비할 재료" })).toHaveTextContent("등록된 재료는 모두 선택했어요. 아래 원문 확인 안내도 살펴봐 주세요.");
+  });
+  it("주재료 100%여도 더 준비할 재료와 준비 안내를 표시한다", () => {
+    render(
+      <TDSMobileAITProvider>
+        <ResultPage mainRef={createRef<HTMLElement>()}
+          recommendation={{ ...recommendation, matchRate: 1, matchBasis: "main" }}
+          selectedIngredientIds={["pork", "kimchi", "cooking_oil"]} candidateCount={1}
+          onReroll={vi.fn()} onBackHome={vi.fn()} onEditIngredients={vi.fn()} onStartOver={vi.fn()} />
+      </TDSMobileAITProvider>,
+    );
+    expect(screen.getByRole("status")).toHaveTextContent("주재료 매칭률 100%");
+    expect(screen.getByRole("region", { name: "더 준비할 재료" })).toHaveTextContent("양파");
+    expect(screen.getByText(/100%여도 부족한 양념·부재료/)).toBeInTheDocument();
+  });
   it("레시피에 쓰는 보유 재료와 부족 재료, 조리 단계를 표시한다", () => {
     render(
       <TDSMobileAITProvider>
@@ -107,7 +132,7 @@ describe("추천 결과 상세", () => {
       </TDSMobileAITProvider>,
     );
 
-    expect(screen.getByRole("region", { name: "부족한 필수 재료" })).toHaveTextContent(
+    expect(screen.getByRole("region", { name: "더 준비할 재료" })).toHaveTextContent(
       "황태",
     );
     expect(screen.getByRole("region", { name: "재료와 분량" })).toHaveTextContent(

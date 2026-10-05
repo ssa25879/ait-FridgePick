@@ -14,6 +14,7 @@ describe("일상 재료의 명확한 표기 매핑", () => {
     ["다진쇠고기", "beef"], ["고추가루", "chili_powder"], ["고추", "chili_pepper"],
     ["찬밥", "cooked_rice"], ["신김치", "kimchi"], ["쭈꾸미", "octopus"],
     ["브로코리", "broccoli"],
+    ["돼기고기", "pork"], ["참쌀", "glutinous_rice"],
   ])("%s를 %s에 연결한다", (name, id) => {
     expect(mapRecipeIngredientName(name)).toBe(id);
   });

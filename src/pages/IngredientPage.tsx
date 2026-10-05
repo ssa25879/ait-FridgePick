@@ -38,6 +38,8 @@ interface IngredientPageProps {
   saveStatus: ReturnType<typeof usePersistentUserState>["saveStatus"];
   onReset: () => void;
   onRecommend: () => void;
+  isRecommending?: boolean;
+  recommendationError?: string;
   onBack: () => void;
   showBannerAd: boolean;
 }
@@ -53,6 +55,8 @@ export function IngredientPage({
   saveStatus,
   onReset,
   onRecommend,
+  isRecommending = false,
+  recommendationError,
   onBack,
   showBannerAd,
 }: IngredientPageProps) {
@@ -113,6 +117,7 @@ export function IngredientPage({
             </span>
           </summary>
         <section className="recommendation-filters" aria-label="추천 필터">
+          <p className="selection-save-status">레시피에 필요한 재료를 모두 선택한 메뉴를 먼저 추천해요. 재료 추가가 필요한 메뉴는 주재료 매칭률로 찾고 별도로 표시해요.</p>
           <div className="match-rate-filter">
             <div className="match-rate-filter-label">
               <label htmlFor="minimum-match-rate">최소 매칭률</label>
@@ -215,14 +220,16 @@ export function IngredientPage({
         <SelectedIngredientBar ingredients={selectedIngredients} />
 
         <div className="ingredient-page-actions">
+          {recommendationError && <p className="selection-save-status" role="alert">{recommendationError}</p>}
           <Button
             type="button"
             color="dark"
             display="full"
             size="large"
             onClick={onRecommend}
+            disabled={isRecommending}
           >
-            메뉴 뽑기
+            {isRecommending ? "메뉴 준비 중" : "메뉴 뽑기"}
           </Button>
         </div>
       </div>

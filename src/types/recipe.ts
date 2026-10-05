@@ -16,6 +16,8 @@ export interface Recipe {
   steps: string[];
   difficulty: RecipeDifficulty;
   unmappedRequiredIngredients?: string[];
+  /** Confirmed source inconsistencies; blocks a claim that the recipe is ready. */
+  ingredientReviewNotes?: string[];
   sourceIngredientText?: string;
   source?: RecipeSource;
 }

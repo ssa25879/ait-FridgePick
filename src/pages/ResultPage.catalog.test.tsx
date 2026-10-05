@@ -6,6 +6,22 @@ import { RECIPES } from "../data/recipes";
 import { getRecipeCandidates } from "../utils/recommendRecipe";
 import { ResultPage } from "./ResultPage";
 
+it.each([
+  ["fsk_834", ["egg", "salt"], ["달걀", "소금"]],
+  ["epis_434", ["butter", "milk"], ["버터", "우유", "육수"]],
+] as const)("조리 단계 누락을 보완한 %s의 미보유 재료를 추가 준비 영역에 표시한다", (id, removeIds, expectedNames) => {
+  const recipe = RECIPES.find((recipe) => recipe.id === id)!;
+  const selected = recipe.requiredIngredients.filter((ingredientId) => !(removeIds as readonly string[]).includes(ingredientId));
+  const [recommendation] = getRecipeCandidates(selected, [recipe], { minimumMatchRate: 0 });
+  render(<TDSMobileAITProvider><ResultPage mainRef={createRef<HTMLElement>()}
+    recommendation={recommendation} selectedIngredientIds={selected} candidateCount={1}
+    onReroll={vi.fn()} onBackHome={vi.fn()} onEditIngredients={vi.fn()} onStartOver={vi.fn()}
+  /></TDSMobileAITProvider>);
+  const additional = screen.getByRole("region", { name: "더 준비할 재료" });
+  for (const name of expectedNames) expect(additional).toHaveTextContent(name);
+  expect(screen.getByRole("region", { name: "원문 재료 확인" })).toBeInTheDocument();
+});
+
 it("실제 공식 카탈로그의 후보를 추천하면 원문 분량과 출처를 표시한다", () => {
   const recipe = RECIPES.find(({ id }) => id === "fsk_28")!;
   const selected = recipe.requiredIngredients;

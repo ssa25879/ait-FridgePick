@@ -74,6 +74,7 @@ const INGREDIENT_ALIASES: Record<string, string[]> = {
   ],
   pork: [
     "돼지고기",
+    "돼기고기",
     "다진돼지고기",
     "삼겹살",
     "목살",
@@ -214,7 +215,7 @@ const INGREDIENT_ALIASES: Record<string, string[]> = {
   crown_daisy: ["쑥갓"],
   perilla_oil: ["들기름"],
   bok_choy: ["청경채"],
-  glutinous_rice: ["찹쌀"],
+  glutinous_rice: ["찹쌀", "참쌀"],
   lotus_root: ["연근"],
   anchovy: ["멸치", "국물용멸치", "국멸치"],
   salmon: ["연어"],

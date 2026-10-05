@@ -1,6 +1,6 @@
 # 기술 스택
 
-현재 의존성과 실행 명령은 [`package.json`](../package.json), 앱인토스 설정은 [`apps-in-toss.config.ts`](../apps-in-toss.config.ts)가 기준이다. 루트 README는 Vite 템플릿 설명을 포함하므로 실제 버전과 명령은 프로젝트 설정 파일을 우선한다.
+현재 의존성과 실행 명령은 [`package.json`](../package.json), 앱인토스 설정은 [`apps-in-toss.config.ts`](../apps-in-toss.config.ts)가 기준이다. 설치·검증·데이터 재생성은 루트 README를 따른다.
 
 ## 현재 스택
 

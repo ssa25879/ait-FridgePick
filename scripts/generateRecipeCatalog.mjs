@@ -1,6 +1,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { basename, dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { createHash } from "node:crypto";
 import { parseRecipeCsv } from "../src/data/recipeCsv.ts";
 import {
   MINIMUM_PUBLIC_RECIPE_COVERAGE,
@@ -14,25 +15,23 @@ const outputPath = resolve(
   process.argv[3] ?? "src/data/publicRecipes.ts",
 );
 const sourceSnapshotDate = process.argv[4] ?? "unknown";
+const acquiredDate = process.argv[5] ?? "unknown";
 
 if (!inputPath) {
   throw new Error(
-    "사용법: node --experimental-strip-types scripts/generateRecipeCatalog.mjs <CSV 경로> [출력 경로] [데이터 기준일 YYYY-MM-DD]",
+    "사용법: node scripts/generateRecipeCatalog.mjs <CSV 경로> [출력 경로] [데이터 기준일 YYYY-MM-DD 또는 unknown] [확보일 YYYY-MM-DD 또는 unknown]",
   );
 }
 
-const snapshotTimestamp = Date.parse(`${sourceSnapshotDate}T00:00:00.000Z`);
-if (
-  sourceSnapshotDate !== "unknown" &&
-  (!/^\d{4}-\d{2}-\d{2}$/.test(sourceSnapshotDate) ||
-    !Number.isFinite(snapshotTimestamp) ||
-    new Date(snapshotTimestamp).toISOString().slice(0, 10) !==
-      sourceSnapshotDate)
-) {
-  throw new Error("데이터 기준일은 YYYY-MM-DD 또는 unknown이어야 합니다.");
+for (const [label, date] of [["데이터 기준일", sourceSnapshotDate], ["확보일", acquiredDate]]) {
+  const timestamp = Date.parse(`${date}T00:00:00.000Z`);
+  if (date !== "unknown" && (!/^\d{4}-\d{2}-\d{2}$/.test(date) || !Number.isFinite(timestamp) || new Date(timestamp).toISOString().slice(0, 10) !== date)) {
+    throw new Error(`${label}은 YYYY-MM-DD 또는 unknown이어야 합니다.`);
+  }
 }
 
-const records = parseRecipeCsv(await readFile(resolve(inputPath), "utf8"));
+const inputBytes = await readFile(resolve(inputPath));
+const records = parseRecipeCsv(inputBytes.toString("utf8"));
 const recipes = [];
 const excludedByReason = {};
 
@@ -58,6 +57,8 @@ const summary = {
   excludedByReason,
   minimumIngredientCoverage: MINIMUM_PUBLIC_RECIPE_COVERAGE,
   sourceSnapshotDate,
+  acquiredDate,
+  sourceFiles: [{ name: basename(resolve(inputPath)), sha256: createHash("sha256").update(inputBytes).digest("hex") }],
 };
 
 const output = [
