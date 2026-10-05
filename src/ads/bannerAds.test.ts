@@ -72,17 +72,29 @@ describe("배너 광고 초기화", () => {
 afterEach(() => vi.unstubAllEnvs());
 
 describe("배너 광고 그룹 ID 선택", () => {
-  it("테스트 모드는 공식 테스트 ID를 사용한다", async () => {
-    const { BANNER_AD_GROUP_ID, TEST_BANNER_AD_GROUP_ID } = await import("./bannerAds");
+  const configuredId = ["ait", "v2", "live", "0".repeat(16)].join(".");
 
+  it("기본 모드는 출시 설정이 있어도 공식 테스트 ID를 사용한다", async () => {
+    vi.stubEnv("FRIDGEPICK_BANNER_AD_GROUP_ID", configuredId);
+    const { BANNER_AD_GROUP_ID, TEST_BANNER_AD_GROUP_ID } = await import("./bannerAds");
     expect(BANNER_AD_GROUP_ID).toBe(TEST_BANNER_AD_GROUP_ID);
   });
 
-  it("release 모드는 발급된 활성 그룹 ID를 사용한다", async () => {
+  it("release 모드는 외부 설정의 그룹 ID를 사용한다", async () => {
     vi.stubEnv("MODE", "release");
-    const { BANNER_AD_GROUP_ID, RELEASE_BANNER_AD_GROUP_ID } = await import("./bannerAds");
-
-    expect(RELEASE_BANNER_AD_GROUP_ID).toBe("ait.v2.live.65a4afab51804f34");
-    expect(BANNER_AD_GROUP_ID).toBe(RELEASE_BANNER_AD_GROUP_ID);
+    vi.stubEnv("FRIDGEPICK_BANNER_AD_GROUP_ID", configuredId);
+    const { BANNER_AD_GROUP_ID } = await import("./bannerAds");
+    expect(BANNER_AD_GROUP_ID).toBe(configuredId);
   });
+
+  it.each([undefined, "", "ait-ad-test-banner-id", "invalid"])(
+    "release 모드의 누락되거나 잘못된 설정을 거부한다: %s",
+    async (value) => {
+      vi.stubEnv("MODE", "release");
+      vi.stubEnv("FRIDGEPICK_BANNER_AD_GROUP_ID", value);
+      await expect(import("./bannerAds")).rejects.toThrow(
+        "출시 광고 그룹 ID 설정이 필요합니다",
+      );
+    },
+  );
 });

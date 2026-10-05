@@ -42,3 +42,8 @@ npm run deploy
 ```
 
 플랫폼 설정은 `apps-in-toss.config.ts`에서 관리해요.
+
+
+## Release advertisement configuration
+
+Default builds use the official test ID. Release builds load FRIDGEPICK_BANNER_AD_GROUP_ID from ../local-config/ait-fridgepick/.env.release.local outside Git and reject missing or invalid settings. See config/release.env.example. Existing Git history is retained by user decision; the release client bundle contains the configured advertisement identifier.
