@@ -1,6 +1,10 @@
 # 추가 레시피 확보 안내
 
-확인일: 2026-10-05. 전체 자료 확보·신규 레시피 편입은 아직 수행하지 않았다. 사용자에게 준비된 자료가 없으므로 다운로드/발급 절차를 안내한다.
+확인일: 2026-10-05. 아래 최초 확보 절차 이후 EPIS 전체 자료와 사용자 제공 식약처 압축 원본을 확보했다. 제품은 식약처888개·EPIS471개로 총1359개다.
+
+식약처 원본은 D:/ait-home/recipe-sources/mfds/acquired-20261005-1791194578004에 압축 사본·CSV·manifest와 재생성 대조 파일로 보존했다. 원본1156행이며 기존 생성 코드9d94ad8의888개 출력과 LF 정규화 후 전체 일치한다. 확보일2026-10-05와 데이터 기준일unknown을 구분한다. 현재 매핑의 추가 후보6개는 검토 후 모두 보류했다. 경로·SHA256·재현 근거와 후보별 사유는 [원본 복구 검증](./source-recovery-review.md)을 따른다.
+
+다음은 최초 자료 확보 당시의 안내와 후속 기록이다.
 
 ## 1차 확보 대상: 농림수산식품교육문화정보원
 
@@ -76,6 +80,6 @@ node scripts/generateEpisCatalog.mjs "C:\Users\User\Downloads\레시피+기본�
 | --- | --- | --- |
 | 농식품 올바로 메뉴젠 | [공식 API 안내](https://www.nics.go.kr/food/kfi/openapi/useNewGuidance)의 음식·재료 및 조리정보 | 전체 응답·사용 조건·중복률 확인 전, 2차 후보 |
 | 농촌진흥청 이달의 음식 | [공식 데이터 안내](https://www.data.go.kr/data/15033496/openapi.do) | 계절 음식 보완 후보, 실제 분량·매핑 적합성 확인 전 |
-| 기존 식약처 COOKRCP01 최신 원본 | [공식 API 안내](https://www.foodsafetykorea.go.kr/api/openApiInfo.do?menu_grp=MENU_GRP31&menu_no=661&show_cnt=10&start_idx=1&svc_no=COOKRCP01) | 원본 CSV가 clone에 없어 새 확보와 기준일 기록 필요 |
+| 기존 식약처 COOKRCP01 원본 | [공식 API 안내](https://www.foodsafetykorea.go.kr/api/openApiInfo.do?menu_grp=MENU_GRP31&menu_no=661&show_cnt=10&start_idx=1&svc_no=COOKRCP01) | 사용자 제공 압축 원본1156행 복구·기존888개 재현 확인. 기준일unknown; 위 복구 검증 참고 |
 
 확보 우선순위는 EPIS 세 자료 → 일상 조합에 대한 추천 검증 → 필요하면 메뉴젠/계절 음식이다. 추가 출처가 현재 추천 공백을 해결하는지는 전체 자료 확보 전 확정할 수 없다.

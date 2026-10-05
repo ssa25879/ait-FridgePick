@@ -320,6 +320,7 @@ describe("재료 선택 흐름", () => {
   it("대체 후보가 있으면 다시 뽑아 다른 메뉴를 보여준다", async () => {
     const user = renderApp();
     await user.click(screen.getByRole("button", { name: "재료 고르기" }));
+    await user.click(screen.getByRole("button", { name: "김치" }));
     await user.click(screen.getByRole("button", { name: "계란·유제품" }));
     await user.click(screen.getByRole("button", { name: "달걀" }));
     await user.click(screen.getByRole("button", { name: "탄수화물" }));
