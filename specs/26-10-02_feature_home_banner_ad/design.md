@@ -19,7 +19,7 @@
 ## 광고 ID와 지원 환경
 
 - 개발·테스트 및 기본 `build`에서는 공식 배너 테스트 ID인 ait-ad-test-banner-id를 사용한다.
-- 콘솔에서 “배너 광고 1차” 지면이 ENABLED이고 groupId `ait.v2.live.65a4afab51804f34`가 발급된 것을 확인했다. `build:release`에 해당 ID를 연결하며 테스트 빌드에는 넣지 않는다.
+- 콘솔에서 “배너 광고 1차” 지면이 ENABLED이고 groupId `[release ad ID: external local configuration]`가 발급된 것을 확인했다. `build:release`에 해당 ID를 연결하며 테스트 빌드에는 넣지 않는다.
 - ID 선택은 Vite 모드로 분기한다. 모드가 `release`일 때만 실제 ID를 사용하고 그 외에는 테스트 ID를 기본값으로 쓴다.
 - 공식 문서의 최소 지원 토스 앱 버전은 5.241.0이다. 초기화·부착 API의 isSupported 확인을 우선하며, 미지원 버전에서는 광고 없이 홈을 표시한다.
 - 샌드박스는 광고를 지원하지 않는다. 실제 광고 렌더링은 콘솔 QR을 통해 토스 앱에서 확인한다.
