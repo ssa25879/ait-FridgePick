@@ -45,3 +45,11 @@
 ## 2026-10-04 저장 설계 구체화
 
 비동기 API 계약, JSON 검증, 1,500ms 초기 조회 제한, 입력 우선권, 읽기 실패 시 덮어쓰기 방지, 키별 쓰기 순서는 [상태 저장 설계](../26-10-04_feature_user_state_persistence/design.md)를 따른다. 광고 위치 판단은 이 작업을 막지 않는다.
+
+## 2026-10-05 RCR-14 구현 구성
+
+- src/ads/bannerAdConfig.ts:공식 테스트ID와 출시 설정 형식 검사. 실제 ID 상수는 없다.
+- src/ads/bannerAds.ts:빌드 MODE로 분기하며 release만 설정 검사를 호출한다. 모드 분기를 최상위에 두어 반대 모드 ID가 산출물에 남지 않도록 한다.
+- vite.config.ts:release만 외부 .env.release.local/보호 프로세스 환경변수를 읽고 빌드 시 검증·정적 치환한다. 기본 모드는 실제 값 대신 빈 값을 정의한다.
+- config/release.env.example와 README:빈 값 예제·외부 설정 위치·설정 누락 차단·이력/클라이언트 노출 경계.
+- 해당 환경변수는 인증 비밀키 전달에 사용하지 않는다. 실제 광고 그룹ID의 원격 소스 노출과 배포 클라이언트 포함을 구분한다.
