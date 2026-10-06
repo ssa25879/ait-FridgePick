@@ -1,5 +1,19 @@
 # 검증
 
+## 2026-10-06 사용자 승인 커밋·테스트18 업로드
+
+사용자가 커밋·업로드를 승인했다. 관련8파일을 `e52070d6448ec1d8c22e6d806a075766b7b55ace`에 커밋했다. 제품 코드 추가 변경 없이 기존 검증한 기본 AIT의 앱이름 `ait-fridgepick`·SHA256·sources/dist바이트일치·실제광고ID0/테스트ID1을 다시 확인했다.
+
+콘솔 기본 테스트 버전 `20261006-18`, deployment `01a10eb0-0c04-73ff-917e-72d1763535f5`. 발급URL PUT HTTP200→bundle_upload_complete 성공→해당ID의 bundle_list `CREATED`, SDK3.2.0 확인. 1112357bytes,SHA256 `64e7a133805a6e88087d4d1f8f50d3fe8d6e9c4a2adf59fc89cbbd095fbd4964`. 임시 업로드 URL·인증값은 기록하지 않는다.
+
+`isTested=false`, `deployed=false`, releaseNote=null. 실제 토스 앱 종료·재실행 QA, 본인 테스트 푸시, 검수 제출·출시와 Git push는 수행하지 않았다. 사용자는 [콘솔 앱 출시](https://apps-in-toss.toss.im/workspace/96603/mini-app/ait-fridgepick/app-build)의18번 테스트 버튼에서 열 수 있다. 기존17 출시 후보와 자동저장 설명은 이번 변경 전 상태이므로 검수 전 갱신이 필요하다. 아래 미커밋·미업로드 표현은 당시 이력이다.
+
+Files: Task.md, specs/26-10-04_feature_user_state_persistence/validation.md
+Change: 승인한 수정 커밋과 테스트18 업로드·컴파일 완료 결과를 기록함.
+Before: 검증한 수정본은 미커밋이며 기본 번들은 미업로드였음.
+After: 제품 수정 e52070d 커밋·테스트18 CREATED 확인, 실제기기 QA와 검수·출시는 미완료.
+Verification: git 커밋 범위8파일, 업로드 전 AIT해시/앱이름/광고ID/정합성, PUT200·완료호출·콘솔CREATED 확인. 제품 변경이 없어 자동 테스트는 직전179개 통과 결과를 사용함.
+
 ## 2026-10-06 재실행 시 선택 초기화 정책
 
 사용자가 앱 실행 시 과거 선택이 계속 표시되지 않도록 수정 요청했다. App은 영속 상태 훅 대신 기본값으로 초기화한 React 상태를 사용한다. 새 마운트마다 재료0개·60%·전체·홈 화면이며 동일 마운트의 화면 왕복은 보존한다. 영속 저장·사용자키 조회는 App에서 호출하지 않는다. 기존 저장 모듈/사용자 데이터는 삭제하지 않았다.
