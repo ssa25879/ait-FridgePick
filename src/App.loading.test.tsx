@@ -136,7 +136,7 @@ describe("추천 모듈 지연 로딩", () => {
     loader.mockReturnValue(new Promise((done) => { resolve = done; }));
     start();
     fireEvent.click(screen.getByRole("button", { name: "메뉴 뽑기" }));
-    fireEvent.click(screen.getByText("필터·저장 설정"));
+    fireEvent.click(screen.getByText("필터·선택 설정"));
     fireEvent.click(screen.getByRole("button", { name: "재료·필터 초기화" }));
     fireEvent.click(screen.getByRole("button", { name: "초기화하기" }));
     await act(async () => resolve(module));
@@ -152,7 +152,7 @@ describe("추천 모듈 지연 로딩", () => {
     const view = start();
     fireEvent.click(screen.getByRole("button", { name: "메뉴 뽑기" }));
     if (action === "filter") {
-      fireEvent.click(screen.getByText("필터·저장 설정"));
+      fireEvent.click(screen.getByText("필터·선택 설정"));
       fireEvent.change(screen.getByRole("slider", { name: "최소 매칭률" }), { target: { value: "75" } });
     } else if (action === "platform") {
       act(() => platformEvents.get("backEvent")!());
