@@ -9,16 +9,6 @@ import type { Ingredient, IngredientCategoryFilter } from "../types/ingredient";
 import type { RecipeDifficulty } from "../types/recipe";
 
 import { ScrollableIngredientBanner } from "../components/ScrollableIngredientBanner";
-import type { usePersistentUserState } from "../hooks/usePersistentUserState";
-
-const SAVE_MESSAGES = {
-  checking: "선택한 항목의 저장 상태를 확인하고 있어요.",
-  ready: "선택한 재료와 필터는 자동 저장돼요.",
-  saving: "선택한 재료와 필터를 저장하고 있어요.",
-  saved: "선택한 재료와 필터를 저장했어요.",
-  error: "저장하지 못했어요. 선택을 바꾸면 다시 저장해요.",
-  session: "이 환경에서는 선택한 항목이 이번 실행 동안만 유지돼요.",
-};
 
 const DIFFICULTY_FILTERS = [
   { value: "all", label: "전체" },
@@ -35,7 +25,6 @@ interface IngredientPageProps {
   difficultyFilter: RecipeDifficulty | "all";
   onDifficultyFilterChange: (value: RecipeDifficulty | "all") => void;
   onToggleIngredient: (ingredientId: string) => void;
-  saveStatus: ReturnType<typeof usePersistentUserState>["saveStatus"];
   onReset: () => void;
   onRecommend: () => void;
   isRecommending?: boolean;
@@ -52,7 +41,6 @@ export function IngredientPage({
   difficultyFilter,
   onDifficultyFilterChange,
   onToggleIngredient,
-  saveStatus,
   onReset,
   onRecommend,
   isRecommending = false,
@@ -111,7 +99,7 @@ export function IngredientPage({
 
         <details className="filter-settings">
           <summary>
-            <span>필터·저장 설정</span>
+            <span>필터·선택 설정</span>
             <span className="filter-settings-value">
               {Math.round(minimumMatchRate * 100)}% · {DIFFICULTY_FILTERS.find(({ value }) => value === difficultyFilter)?.label}
             </span>
@@ -161,7 +149,7 @@ export function IngredientPage({
         </section>
 
         <section className="selection-settings" aria-label="선택 항목 설정">
-          <p className="selection-save-status" role="status">{SAVE_MESSAGES[saveStatus]}</p>
+          <p className="selection-save-status" role="status">선택한 재료와 필터는 이번 실행 동안만 유지돼요. 앱을 다시 실행하면 초기화돼요.</p>
           <Button
             ref={resetRef}
             type="button" color="dark" variant="weak" display="full" size="small"

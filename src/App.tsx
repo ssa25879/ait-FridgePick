@@ -8,7 +8,6 @@ import { ResultPage } from "./pages/ResultPage";
 import type { RecipeMatch } from "./utils/recommendRecipe";
 import { isRecipeReady } from "./utils/recipeReadiness";
 import { loadRecommendationModule, type RecommendationModule } from "./utils/loadRecommendationModule";
-import { usePersistentUserState } from "./hooks/usePersistentUserState";
 import { createDefaultUserState } from "./storage/userState";
 
 type Screen = "home" | "ingredients" | "result";
@@ -17,7 +16,7 @@ function App() {
   const [screen, setScreen] = useState<Screen>("home");
   const mainRef = useRef<HTMLElement>(null);
   const scrollAfterReroll = useRef(false);
-  const { state, saveStatus, updateState, preserveCurrentState } = usePersistentUserState();
+  const [state, updateState] = useState(createDefaultUserState);
   const { selectedIngredientIds, minimumMatchRate, difficultyFilter } = state;
   const [candidates, setCandidates] = useState<RecipeMatch[]>([]);
   const [candidateGroup, setCandidateGroup] = useState<"ready" | "needs">("ready");
@@ -65,7 +64,6 @@ function App() {
 
   const recommend = async () => {
     if (pendingRef.current) return;
-    preserveCurrentState();
     if (selectedIngredientIds.length === 0) {
       setCandidates([]);
       setRecommendation(null);
@@ -205,7 +203,6 @@ function App() {
         difficultyFilter={difficultyFilter}
         onDifficultyFilterChange={(value) => { cancelRecommendation(); updateState((current) => ({ ...current, difficultyFilter: value })); }}
         onToggleIngredient={toggleIngredient}
-        saveStatus={saveStatus}
         onReset={startOver}
         onRecommend={recommend}
         isRecommending={isRecommending}
