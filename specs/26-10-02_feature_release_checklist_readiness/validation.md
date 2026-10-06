@@ -1,5 +1,32 @@
 # 검증 계획 및 현재 상태: 비게임 출시 체크리스트 대응
 
+## 2026-10-06 출시 후보17 재빌드·등록 (로드맵12단계)
+
+소스 `ad1b914cc328a5069b5003ba815b23cc615dd4af`, 작업경로 `D:/work/ait-FridgePick`, Node24.19.0. 설치된 잠금 패키지 버전 불일치0건을 확인했다. 새 `npm ci`는 실행하지 않았다. 앱14파일201개/스크립트10개 통과, lint 종료0·기존 useInAppAds 경고1개, 기본·출시 TypeScript/Vite/AIT 빌드 성공. Vite 대형 청크 경고는 남는다. 출시 설정 없이 `vite build --mode release`가 오류로 차단되는 것도 확인했다.
+
+외부 설정 파일이 없으므로 콘솔에서 조회한 활성 배너 그룹을 출시 빌드 프로세스 환경변수로만 전달했다. 실제값을 파일/Git에 저장하지 않았다. 다음 표의 ID 검사는 포함된 JS 파일 수이며 실제 광고 렌더 증거가 아니다.
+
+| 모드 | deployment | bytes | SHA256 | 실제/테스트 ID 포함 JS |
+| --- | --- | --- | --- | --- |
+| 기본·루트 복원 | 01a10e9f-1c8e-760c-8925-4d8d4c366d73 | 1113429 | bc259baaac648bd3ef4d927bf3b669b57f550d58eda879723a5811dd6ee69547 | 0/1 |
+| 출시 후보17 | 01a10e9e-5670-7681-b2c3-5516d5dd1039 | 1113542 | 29b4aae4cb484c6a60db0e9cfd3f1627a934f969f890a8fcac34bad0c79ec32c | 1/0 |
+
+각 AIT9entry·JS2개·sources7개 전부 해당 dist와 바이트 일치. 실제 AITReader로 읽어 검사했다. 근거 JSON·출시 AIT/dist·콘솔 화면: Git 제외 `node_modules/.cache/fridgepick-validation-20261006/`. `npm ci`로 제거될 수 있는 로컬 증거이며 영구 보존 경로로 간주하지 않는다. 루트는 기본 모드이고 기본 번들은 업로드하지 않았다.
+
+콘솔 후보17 등록→발급URL HTTP PUT200→bundle_upload_complete→빌드목록에서 해당ID 종료→bundle_list `CREATED`/SDK3.2.0 확인. 버전 `20261006-17`, `isTested=false`, `deployed=false`, releaseNote=null. 웹에서도17 검토 요청 버튼 비활성 확인. 검수 제출·실기기 실행·테스트 푸시·라이브 전환은 하지 않았다. 기존16의 사용자 기기 보고를17 통과로 재사용하지 않는다.
+
+사용자 로그인 후 기존16 최초등록 폼의 저장된 부제·상세·출시노트 유지와 확약5개 미체크를 확인했다. 최종 제출 버튼은 누르지 않았고 새17에 기존 초안을 옮기거나 저장하지 않았다. 콘솔 API는 앱정보APPROVED/최초등록false/라이브없음/검수중없음/WORKSPACE_TERMS_AGREEMENT_REQUIRED. 워크스페이스 내 정보·앱 출시·최초등록 폼에서 제휴약관 동의 버튼/본문을 찾지 못했다. `workspace_members_overview`는 서버 미등록 도구 오류로 실패했으므로 현재 권한 상세를 이 호출로 검증했다고 주장하지 않는다. 사업자등록 보류 유지.
+
+[공식 등록 안내](https://developers-apps-in-toss.toss.im/guide/operation/console-workspace)의 스크린샷 제출은 선택사항이며 제출 시 세로636×1048 최소3장/가로1504×741 최소1장. 콘솔의 규격 안내만으로 빈images를 필수 누락으로 판정하지 않는다. 동일 안내는 검토 요청 전 최소1회 토스앱 테스트를 요구한다. 현재17의 테스트 선행조건은 미충족이고 제휴약관도 미동의다.
+
+다음12단계는 테스트 광고 기본 번들의 통합 기기 QA와 후보17 테스트 선행조건을 구분해 준비하고, 제휴약관 실제 화면 확인/사용자 동의·새17 설명/출시노트 연결·최초검수 제출 여부 결정이다. 스크롤 수정 기기검증 생략 결정을 유지하며 테스트 광고 QA를 실제 광고 렌더로 확대하지 않는다. 원격CI·기기 성능 수치·원본 기준일은 이번 미검증이다.
+
+Files: Task.md, specs/26-10-02_feature_release_checklist_readiness/validation.md
+Change: 최신 소스의 기본/출시 재검증과 후보17 등록 및 남은 콘솔 조건을 기록함.
+Before: 새 PC의 최신 출시 산출물이 없고 콘솔 최신16은 테스트 광고였다.
+After: 출시 후보17 컴파일 완료·기본 루트 복원, 새17 테스트/약관/최초검수/출시는 미완료.
+Verification: 앱201개·스크립트10개·lint·양 모드 빌드·설정누락 차단·AIT/dist 정합성·HTTP200·콘솔CREATED 및 웹 상태 확인. 사용자 승인으로 문서 커밋 진행, push 미수행.
+
 ## 2026-10-05 최종 로컬 통합·테스트15 (로드맵12~14단계)
 
 [최종 증거와 외부 조건](../26-10-04_feature_recipe_source_cleanup/final-integration-validation.md). 기본15 업로드/CREATED/본인테스트 준비 완료,실제ID0/테스트포함. 최신release TypeScript/Vite/AIT 성공·실제ID1파일/테스트0,출시모드 번들은 미업로드이며 프로젝트루트는 기본15로 복원했다. 320/393px 브라우저 추천·준비 그룹·초기화·검색 안내1회·가로 넘침 없음 확인. 브라우저 광고 미지원 흐름은 확인했으나 실제 no-fill/SDK실패·safe area·계정분리의 기기 증거로 확대하지 않는다.
