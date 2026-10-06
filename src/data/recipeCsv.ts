@@ -7,7 +7,7 @@ const REQUIRED_HEADERS = [
   "MANUAL01",
 ] as const;
 
-function parseCsvRows(csvText: string): string[][] {
+export function parseCsvRows(csvText: string): string[][] {
   const text = csvText.charCodeAt(0) === 0xfeff ? csvText.slice(1) : csvText;
   const rows: string[][] = [];
   let fields: string[] = [];

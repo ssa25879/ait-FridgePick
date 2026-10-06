@@ -1,6 +1,6 @@
 # 추천 필터와 레시피 출처 각주
 
-- 상태: 구현·검증 완료, 커밋 전
+- 상태: 구현·검증 완료, `a7256d7`로 master 반영됨
 - 작성일: 2026-10-02
 - 개발 브랜치: `feature/recommendation-filters`
 - 로드맵: [`specs/roadmap.md`](../roadmap.md) 9단계

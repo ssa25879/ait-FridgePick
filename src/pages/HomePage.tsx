@@ -1,14 +1,12 @@
 import { Button, Paragraph, Post } from "@toss/tds-mobile";
 import type { RefObject } from "react";
-import { HomeBannerAd } from "../components/HomeBannerAd";
 
 interface HomePageProps {
   mainRef: RefObject<HTMLElement>;
   onStart: () => void;
-  showBannerAd: boolean;
 }
 
-export function HomePage({ mainRef, onStart, showBannerAd }: HomePageProps) {
+export function HomePage({ mainRef, onStart }: HomePageProps) {
   return (
     <main
       ref={mainRef}
@@ -39,7 +37,6 @@ export function HomePage({ mainRef, onStart, showBannerAd }: HomePageProps) {
             재료 고르기
           </Button>
         </div>
-        {showBannerAd && <HomeBannerAd />}
       </div>
     </main>
   );

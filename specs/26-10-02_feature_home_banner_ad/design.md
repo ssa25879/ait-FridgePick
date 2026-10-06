@@ -1,5 +1,8 @@
 # 설계: 홈 하단 배너 광고
 
+> 2026-10-04 변경: 사용자가 재료 선택 화면 하단으로 이동하고 스크롤 조건을 적용하도록 선택했다. 아래 홈 전용 설명은 당시 설계 기록이다. 현재 배치와 검증은 [재료 화면 배너 명세](../26-10-04_feature_ingredient_banner/README.md)를 따른다.
+
+
 ## 구조와 생명주기
 
 - App 최상위에서 TossAds.initialize.isSupported()를 확인한 뒤 SDK 초기화를 한 번 수행한다. 프로젝트가 React StrictMode를 사용하므로 개발 환경의 effect 재실행에도 중복 초기화하지 않도록 앱 수명 동안 유지되는 초기화 가드를 둔다. 실제 배너를 붙이기 전에는 TossAds.attachBanner.isSupported()도 확인한다.
@@ -19,7 +22,7 @@
 ## 광고 ID와 지원 환경
 
 - 개발·테스트 및 기본 `build`에서는 공식 배너 테스트 ID인 ait-ad-test-banner-id를 사용한다.
-- 콘솔에서 “배너 광고 1차” 지면이 ENABLED이고 groupId `[release ad ID: external local configuration]`가 발급된 것을 확인했다. `build:release`에 해당 ID를 연결하며 테스트 빌드에는 넣지 않는다.
+- 콘솔에서 “배너 광고 1차” 지면이 ENABLED이고 groupId `[실제 광고 ID 생략]`가 발급된 것을 확인했다. `build:release`에 해당 ID를 연결하며 테스트 빌드에는 넣지 않는다.
 - ID 선택은 Vite 모드로 분기한다. 모드가 `release`일 때만 실제 ID를 사용하고 그 외에는 테스트 ID를 기본값으로 쓴다.
 - 공식 문서의 최소 지원 토스 앱 버전은 5.241.0이다. 초기화·부착 API의 isSupported 확인을 우선하며, 미지원 버전에서는 광고 없이 홈을 표시한다.
 - 샌드박스는 광고를 지원하지 않는다. 실제 광고 렌더링은 콘솔 QR을 통해 토스 앱에서 확인한다.

@@ -1,5 +1,7 @@
 # 인수인계: 식품안전나라 레시피 CSV 카탈로그
 
+> 2026-10-04 정정: 아래는 2026-10-01 당시 기록이다. 실제 재료 카탈로그는 95개이며 100개 표기는 오류다. 현재 clone은 `D:\ait-home\ait-FridgePick`이고 원본 CSV는 없다. 과거 경로·Junction·로그 지시는 현재 환경에 적용하지 않는다. 최신 작업은 [문서 안내](../README.md)를 따른다.
+
 - 기준일: 2026-10-01
 - 저장소: `D:\work\ait-FridgePick`
 - 작업 브랜치: `feature/public-recipe-catalog` (master에 병합 완료)

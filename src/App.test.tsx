@@ -2,8 +2,14 @@ import { StrictMode } from "react";
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { TDSMobileAITProvider } from "@toss/tds-mobile-ait";
-import { beforeEach, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import App from "./App";
+
+// Isolate state/navigation contracts from changes to the production catalog.
+vi.mock("./data/recipes", async () => {
+  const { TEST_RECIPES } = await import("./test/fixtures/recipes");
+  return { RECIPES: TEST_RECIPES };
+});
 
 const ads = vi.hoisted(() => ({
   initialize: vi.fn(),
@@ -14,6 +20,8 @@ const ads = vi.hoisted(() => ({
 }));
 
 vi.mock("@apps-in-toss/web-framework", () => ({
+  User: { getAnonymousKey: Object.assign(vi.fn(), { isSupported: () => false }) },
+  graniteEvent: { addEventListener: () => () => {} },
   TossAds: {
     initialize: Object.assign(ads.initialize, {
       isSupported: ads.initializeSupported,
@@ -24,7 +32,15 @@ vi.mock("@apps-in-toss/web-framework", () => ({
   },
 }));
 
+let contentBottom = 1000;
+afterEach(() => { vi.restoreAllMocks(); vi.unstubAllGlobals(); });
+
 beforeEach(() => {
+  contentBottom = 1000;
+  vi.spyOn(HTMLElement.prototype, "getBoundingClientRect").mockImplementation(function (this: HTMLElement) {
+    return { bottom: this.classList.contains("ingredient-page-content") ? contentBottom : 0, top: 0, height: 0, width: 0, left: 0, right: 0, x: 0, y: 0, toJSON: () => ({}) };
+  });
+  vi.stubGlobal("ResizeObserver", class { observe() {} disconnect() {} });
   vi.clearAllMocks();
   ads.initializeSupported.mockReturnValue(true);
   ads.initialize.mockImplementation((options) => {
@@ -46,7 +62,7 @@ function renderApp() {
 }
 
 describe("재료 선택 흐름", () => {
-  it("StrictMode에서도 광고를 한 번 초기화하고 홈에서만 부착·해제한다", async () => {
+  it("StrictMode에서도 홈에는 광고가 없고 스크롤 가능한 재료 화면에서 부착·해제한다", async () => {
     const user = userEvent.setup();
     render(
       <StrictMode>
@@ -56,20 +72,40 @@ describe("재료 선택 흐름", () => {
       </StrictMode>,
     );
 
+    expect(screen.queryByRole("region", { name: "배너 광고" })).not.toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "재료 고르기" }));
     expect(await screen.findByRole("region", { name: "배너 광고" })).toBeInTheDocument();
     expect(ads.initialize).toHaveBeenCalledTimes(1);
-    expect(ads.attachBanner).toHaveBeenCalledTimes(2);
+    expect(ads.attachBanner).toHaveBeenCalled();
     expect(ads.attachBanner.mock.calls[0][0]).toBe("ait-ad-test-banner-id");
-    expect(ads.attachBanner.mock.calls[1][0]).toBe("ait-ad-test-banner-id");
-    expect(ads.destroyBanner).toHaveBeenCalledTimes(1);
-
-    await user.click(screen.getByRole("button", { name: "재료 고르기" }));
-
+    await user.click(screen.getByRole("button", { name: "메뉴 뽑기" }));
     expect(screen.queryByRole("region", { name: "배너 광고" })).not.toBeInTheDocument();
-    expect(ads.destroyBanner).toHaveBeenCalledTimes(2);
+    expect(ads.destroyBanner).toHaveBeenCalledTimes(ads.attachBanner.mock.calls.length);
   });
 
-  it("광고가 없으면 슬롯을 접고 홈 CTA를 계속 사용할 수 있다", async () => {
+  it("콘텐츠가 화면 안에 들어오면 광고가 스크롤을 만들지 않는다", async () => {
+    contentBottom = 300;
+    const user = renderApp();
+    await user.click(screen.getByRole("button", { name: "재료 고르기" }));
+    expect(screen.queryByRole("region", { name: "배너 광고" })).not.toBeInTheDocument();
+    expect(ads.attachBanner).not.toHaveBeenCalled();
+    expect(screen.getByRole("button", { name: "메뉴 뽑기" })).toBeEnabled();
+  });
+
+  it("화면 크기 변경으로 스크롤 조건이 사라지면 슬롯을 해제하고 다시 필요할 때 부착한다", async () => {
+    const user = renderApp();
+    await user.click(screen.getByRole("button", { name: "재료 고르기" }));
+    await screen.findByRole("region", { name: "배너 광고" });
+    contentBottom = 300;
+    fireEvent(window, new Event("resize"));
+    await waitFor(() => expect(screen.queryByRole("region", { name: "배너 광고" })).not.toBeInTheDocument());
+    expect(ads.destroyBanner).toHaveBeenCalled();
+    contentBottom = 1000;
+    fireEvent(window, new Event("resize"));
+    expect(await screen.findByRole("region", { name: "배너 광고" })).toBeInTheDocument();
+  });
+
+  it("광고가 없으면 슬롯을 접고 재료 CTA를 계속 사용할 수 있다", async () => {
     ads.attachBanner.mockImplementation((_groupId, _target, options) => {
       options.callbacks?.onNoFill?.({
         slotId: "test-slot",
@@ -79,20 +115,22 @@ describe("재료 선택 흐름", () => {
       return { destroy: ads.destroyBanner };
     });
     const user = renderApp();
+    await user.click(screen.getByRole("button", { name: "재료 고르기" }));
+    await waitFor(() => expect(ads.attachBanner).toHaveBeenCalled());
 
     await waitFor(() => {
       expect(
         screen.queryByRole("region", { name: "배너 광고" }),
       ).not.toBeInTheDocument();
     });
-    expect(screen.getByRole("button", { name: "재료 고르기" })).toBeEnabled();
+    expect(screen.getByRole("button", { name: "메뉴 뽑기" })).toBeEnabled();
 
-    await user.click(screen.getByRole("button", { name: "재료 고르기" }));
+    await user.click(screen.getByRole("button", { name: "메뉴 뽑기" }));
 
-    expect(screen.getByRole("heading", { name: "재료 선택" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "추천 결과" })).toBeInTheDocument();
   });
 
-  it("배너 렌더 실패 뒤에도 홈 CTA를 사용할 수 있다", async () => {
+  it("배너 렌더 실패 뒤에도 재료 CTA를 사용할 수 있다", async () => {
     ads.attachBanner.mockImplementation((_groupId, _target, options) => {
       options.callbacks?.onAdFailedToRender?.({
         slotId: "test-slot",
@@ -103,6 +141,8 @@ describe("재료 선택 흐름", () => {
       return { destroy: ads.destroyBanner };
     });
     const user = renderApp();
+    await user.click(screen.getByRole("button", { name: "재료 고르기" }));
+    await waitFor(() => expect(ads.attachBanner).toHaveBeenCalled());
 
     await waitFor(() => {
       expect(
@@ -110,15 +150,16 @@ describe("재료 선택 흐름", () => {
       ).not.toBeInTheDocument();
     });
 
-    await user.click(screen.getByRole("button", { name: "재료 고르기" }));
+    await user.click(screen.getByRole("button", { name: "메뉴 뽑기" }));
 
-    expect(screen.getByRole("heading", { name: "재료 선택" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "추천 결과" })).toBeInTheDocument();
   });
 
   it("매칭률·난이도 필터를 결과 편집까지 유지하고 처음부터 기본값으로 초기화한다", async () => {
     const user = renderApp();
     await user.click(screen.getByRole("button", { name: "재료 고르기" }));
 
+    await user.click(screen.getByText("필터·선택 설정", { exact: true }));
     const matchRate = screen.getByRole("slider", { name: "최소 매칭률" });
     expect(matchRate).toHaveValue("60");
     expect(matchRate).toHaveAttribute("min", "60");
@@ -137,11 +178,12 @@ describe("재료 선택 흐름", () => {
     await user.click(screen.getByRole("button", { name: "메뉴 뽑기" }));
 
     expect(
-      screen.getByText("현재 재료로 추천할 수 있는 메뉴가 없어요."),
+      screen.getByText("레시피가 0개 검색되었습니다"),
     ).toBeInTheDocument();
     await user.click(
       screen.getByRole("button", { name: "재료 추가·변경하기" }),
     );
+    await user.click(screen.getByText("필터·선택 설정", { exact: true }));
 
     expect(
       screen.getByRole("slider", { name: "최소 매칭률" }),
@@ -153,6 +195,7 @@ describe("재료 선택 흐름", () => {
 
     await user.click(screen.getByRole("button", { name: "메뉴 뽑기" }));
     await user.click(screen.getByRole("button", { name: "처음부터" }));
+    await user.click(screen.getByText("필터·선택 설정", { exact: true }));
 
     expect(
       screen.getByRole("slider", { name: "최소 매칭률" }),
@@ -277,6 +320,7 @@ describe("재료 선택 흐름", () => {
   it("대체 후보가 있으면 다시 뽑아 다른 메뉴를 보여준다", async () => {
     const user = renderApp();
     await user.click(screen.getByRole("button", { name: "재료 고르기" }));
+    await user.click(screen.getByRole("button", { name: "김치" }));
     await user.click(screen.getByRole("button", { name: "계란·유제품" }));
     await user.click(screen.getByRole("button", { name: "달걀" }));
     await user.click(screen.getByRole("button", { name: "탄수화물" }));
@@ -286,7 +330,10 @@ describe("재료 선택 흐름", () => {
     await user.click(screen.getByRole("button", { name: "메뉴 뽑기" }));
 
     const firstRecipe = screen.getByRole("heading", { level: 2 }).textContent;
+    const initialCount = screen.getByText(/^레시피가 \d+개 검색되었습니다$/).textContent;
+    expect(Number(initialCount?.match(/\d+/)?.[0])).toBeGreaterThan(1);
     await user.click(screen.getByRole("button", { name: "다시 뽑기" }));
+    expect(screen.getByText(/^레시피가 \d+개 검색되었습니다$/)).toHaveTextContent(initialCount!);
 
     expect(screen.getByRole("heading", { level: 2 }).textContent).not.toBe(
       firstRecipe,
@@ -301,6 +348,7 @@ describe("재료 선택 흐름", () => {
     expect(
       screen.getByText("메뉴를 추천하려면 재료를 먼저 선택해 주세요."),
     ).toBeInTheDocument();
+    expect(screen.getByText("레시피가 0개 검색되었습니다")).toBeInTheDocument();
     await user.click(screen.getByRole("button", { name: "재료 선택하기" }));
     expect(
       screen.getByRole("heading", { name: "선택한 재료 0개" }),
@@ -314,7 +362,7 @@ describe("재료 선택 흐름", () => {
     await user.click(screen.getByRole("button", { name: "메뉴 뽑기" }));
 
     expect(
-      screen.getByText("현재 재료로 추천할 수 있는 메뉴가 없어요."),
+      screen.getByText("레시피가 0개 검색되었습니다"),
     ).toBeInTheDocument();
     await user.click(
       screen.getByRole("button", { name: "재료 추가·변경하기" }),
@@ -334,7 +382,7 @@ describe("재료 선택 흐름", () => {
     await user.click(screen.getByRole("button", { name: "메뉴 뽑기" }));
 
     expect(
-      screen.getByText("현재 재료로 추천할 수 있는 메뉴가 1개예요."),
+      screen.getByText("레시피가 1개 검색되었습니다"),
     ).toBeInTheDocument();
     expect(
       screen.queryByRole("button", { name: "다시 뽑기" }),
@@ -351,6 +399,7 @@ describe("재료 선택 흐름", () => {
     await user.click(screen.getByRole("button", { name: "식용유" }));
     await user.click(screen.getByRole("button", { name: "메뉴 뽑기" }));
     await user.click(screen.getByRole("button", { name: "처음부터" }));
+    await user.click(screen.getByText("필터·선택 설정", { exact: true }));
 
     expect(
       screen.getByRole("heading", { name: "선택한 재료 0개" }),
@@ -359,5 +408,44 @@ describe("재료 선택 흐름", () => {
       "aria-pressed",
       "false",
     );
+  });
+  it("전체 재료 탭에서 모든 카테고리를 선택하고 이동해도 선택이 유지된다", async () => {
+    const user = renderApp();
+    await user.click(screen.getByRole("button", { name: "재료 고르기" }));
+    await user.click(screen.getByRole("button", { name: "전체 재료" }));
+    const list = screen.getByRole("region", { name: "전체 재료" });
+    expect(list.querySelectorAll("button")).toHaveLength(95);
+    await user.click(screen.getByRole("button", { name: "돼지고기" }));
+    await user.click(screen.getByRole("button", { name: "밥" }));
+    await user.click(screen.getByRole("button", { name: "단백질" }));
+    expect(screen.getByRole("button", { name: "돼지고기" })).toHaveAttribute("aria-pressed", "true");
+    await user.click(screen.getByRole("button", { name: "전체 재료" }));
+    expect(screen.getByRole("button", { name: "밥" })).toHaveAttribute("aria-pressed", "true");
+  });
+
+  it("필터·선택 설정은 접혀 시작하고 다시 펼쳐도 필터 입력을 유지한다", async () => {
+    const user = renderApp();
+    await user.click(screen.getByRole("button", { name: "재료 고르기" }));
+    expect(screen.getByRole("slider")).not.toBeVisible();
+    await user.click(screen.getByText("필터·선택 설정", { exact: true }));
+    fireEvent.change(screen.getByRole("slider"), { target: { value: "85" } });
+    await user.click(screen.getByRole("button", { name: "보통" }));
+    await user.click(screen.getByText("필터·선택 설정", { exact: true }));
+    expect(screen.getByRole("slider")).not.toBeVisible();
+    await user.click(screen.getByText("필터·선택 설정", { exact: true }));
+    expect(screen.getByRole("slider")).toHaveValue("85");
+    expect(screen.getByRole("button", { name: "보통" })).toHaveAttribute("aria-pressed", "true");
+  });
+  it("필터는 카테고리 앞에 있고 재료 목록은 별도의 키보드 접근 영역이다", async () => {
+    const user = renderApp();
+    await user.click(screen.getByRole("button", { name: "재료 고르기" }));
+    const settings = screen.getByText("필터·선택 설정", { exact: true });
+    const category = screen.getByRole("button", { name: "전체 재료" });
+    expect(settings.compareDocumentPosition(category) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    const list = screen.getByRole("group", { name: "스크롤 가능한 재료 목록" });
+    expect(list).toHaveAttribute("tabindex", "0");
+    expect(list).not.toContainElement(screen.getByRole("button", { name: "메뉴 뽑기" }));
+    await user.click(category);
+    expect(screen.getByRole("group", { name: "스크롤 가능한 재료 목록" }).querySelectorAll("button")).toHaveLength(95);
   });
 });

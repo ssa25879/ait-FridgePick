@@ -2,7 +2,7 @@
 
 작업 브랜치: `feature/recommendation-filters`
 
-상태: 구현·검증 완료, 커밋 전
+상태: 구현·검증 완료, `a7256d7`로 master 반영됨
 
 ## 변경 파일 후보
 

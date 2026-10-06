@@ -1,247 +1,78 @@
 import type { Recipe } from "../types/recipe";
 import { PUBLIC_RECIPES } from "./publicRecipes";
+import { EPIS_RECIPES } from "./episRecipes";
+import { mapRecipeIngredientName } from "./recipeCatalog";
+import { inferRecipeDifficulty } from "../utils/recipeDifficulty";
+import { RECIPE_INGREDIENT_REVIEW_NOTES } from "./recipeIngredientReviews";
+import { mapReviewedStepIngredient, RECIPE_STEP_REQUIRED_INGREDIENTS } from "./recipeStepIngredients";
 
-export const LOCAL_RECIPES: Recipe[] = [
-  {
-    id: "kimchi_fried_rice",
-    name: "김치볶음밥",
-    requiredIngredients: ["kimchi", "cooked_rice", "cooking_oil"],
-    optionalIngredients: ["egg", "green_onion", "soy_sauce"],
-    steps: [
-      "김치를 먹기 좋은 크기로 썰어요.",
-      "팬에 기름을 두르고 김치를 볶은 뒤 밥을 넣어 고루 섞어요.",
-      "밥알이 고슬고슬해지면 간을 맞추고 마무리해요.",
-    ],
-    difficulty: "easy",
-  },
-  {
-    id: "pork_kimchi_stir_fry",
-    name: "돼지고기 김치볶음",
-    requiredIngredients: ["pork", "kimchi", "onion", "cooking_oil"],
-    optionalIngredients: ["gochujang", "garlic", "green_onion"],
-    steps: [
-      "양파와 김치를 먹기 좋은 크기로 썰어요.",
-      "팬에 기름을 두르고 돼지고기와 양파를 볶아요.",
-      "돼지고기가 익으면 김치를 넣고 함께 충분히 볶아요.",
-    ],
-    difficulty: "easy",
-  },
-  {
-    id: "spicy_pork_stir_fry",
-    name: "제육볶음",
-    requiredIngredients: ["pork", "gochujang", "soy_sauce", "onion", "garlic"],
-    optionalIngredients: ["green_onion", "sesame_oil"],
-    steps: [
-      "돼지고기에 고추장, 간장, 다진 마늘을 버무려요.",
-      "달군 팬에 양파와 양념한 고기를 넣고 볶아요.",
-      "고기가 완전히 익고 양념이 배면 불을 꺼요.",
-    ],
-    difficulty: "easy",
-  },
-  {
-    id: "beef_soy_stir_fry",
-    name: "소고기 간장볶음",
-    requiredIngredients: ["beef", "soy_sauce", "onion", "garlic"],
-    optionalIngredients: ["green_onion", "sesame_oil"],
-    steps: [
-      "소고기와 양파를 한입 크기로 썰어요.",
-      "팬에서 소고기와 마늘을 볶다가 양파를 넣어요.",
-      "간장으로 간을 맞추고 재료가 익을 때까지 볶아요.",
-    ],
-    difficulty: "easy",
-  },
-  {
-    id: "chicken_soy_stir_fry",
-    name: "닭고기 간장볶음",
-    requiredIngredients: ["chicken", "soy_sauce", "onion", "cooking_oil"],
-    optionalIngredients: ["garlic", "green_onion"],
-    steps: [
-      "닭고기와 양파를 먹기 좋은 크기로 썰어요.",
-      "팬에 기름을 두르고 닭고기를 속까지 익혀요.",
-      "양파와 간장을 넣고 재료에 간이 배도록 볶아요.",
-    ],
-    difficulty: "easy",
-  },
-  {
-    id: "spicy_chicken_potato_stew",
-    name: "고추장 닭감자조림",
-    requiredIngredients: ["chicken", "potato", "onion", "gochujang", "soy_sauce"],
-    optionalIngredients: ["garlic", "green_onion"],
-    steps: [
-      "닭고기와 감자, 양파를 비슷한 크기로 썰어요.",
-      "냄비에 재료와 고추장, 간장, 물을 넣고 끓여요.",
-      "감자가 익고 국물이 자작해질 때까지 조려요.",
-    ],
-    difficulty: "easy",
-  },
-  {
-    id: "doenjang_potato_stew",
-    name: "된장 감자찌개",
-    requiredIngredients: ["potato", "doenjang", "onion", "zucchini"],
-    optionalIngredients: ["green_onion", "garlic"],
-    steps: [
-      "감자, 양파, 애호박을 한입 크기로 썰어요.",
-      "냄비에 물과 된장을 풀고 감자와 양파를 넣어 끓여요.",
-      "감자가 익으면 애호박을 넣고 부드러워질 때까지 끓여요.",
-    ],
-    difficulty: "easy",
-  },
-  {
-    id: "zucchini_doenjang_stir_fry",
-    name: "애호박 된장볶음",
-    requiredIngredients: ["zucchini", "doenjang", "garlic", "cooking_oil"],
-    optionalIngredients: ["onion", "sesame_oil"],
-    steps: [
-      "애호박을 반달 모양으로 썰고 된장을 물에 조금 풀어요.",
-      "팬에 기름과 마늘을 넣고 향이 나도록 볶아요.",
-      "애호박과 된장물을 넣고 부드러워질 때까지 볶아요.",
-    ],
-    difficulty: "easy",
-  },
-  {
-    id: "egg_fried_rice",
-    name: "계란볶음밥",
-    requiredIngredients: ["egg", "cooked_rice", "cooking_oil"],
-    optionalIngredients: ["green_onion", "soy_sauce"],
-    steps: [
-      "계란을 풀어 팬에서 부드럽게 익혀요.",
-      "밥을 넣고 덩어리를 풀며 계란과 함께 볶아요.",
-      "밥알이 고슬고슬해지면 간을 맞춰 마무리해요.",
-    ],
-    difficulty: "easy",
-  },
-  {
-    id: "soy_egg_rice",
-    name: "간장계란밥",
-    requiredIngredients: ["egg", "cooked_rice", "soy_sauce"],
-    optionalIngredients: ["sesame_oil", "butter", "green_onion"],
-    steps: [
-      "밥을 그릇에 담고 따뜻하게 준비해요.",
-      "계란을 취향에 맞게 익혀 밥 위에 올려요.",
-      "간장으로 간을 하고 밥과 계란을 섞어 먹어요.",
-    ],
-    difficulty: "easy",
-  },
-  {
-    id: "ham_egg_fried_rice",
-    name: "햄 계란볶음밥",
-    requiredIngredients: ["ham", "egg", "cooked_rice", "cooking_oil"],
-    optionalIngredients: ["green_onion", "soy_sauce"],
-    steps: [
-      "햄을 작게 썰고 계란을 풀어요.",
-      "기름을 두른 팬에 햄과 계란을 차례로 볶아요.",
-      "밥을 넣어 고루 볶고 간을 맞춰요.",
-    ],
-    difficulty: "easy",
-  },
-  {
-    id: "bacon_onion_stir_fry",
-    name: "베이컨 양파볶음",
-    requiredIngredients: ["bacon", "onion", "cooking_oil", "garlic"],
-    optionalIngredients: ["egg", "soy_sauce"],
-    steps: [
-      "베이컨과 양파를 먹기 좋은 크기로 썰어요.",
-      "팬에 베이컨과 마늘을 넣고 기름이 나올 때까지 볶아요.",
-      "양파를 넣고 투명해질 때까지 함께 볶아요.",
-    ],
-    difficulty: "easy",
-  },
-  {
-    id: "potato_stir_fry",
-    name: "감자볶음",
-    requiredIngredients: ["potato", "onion", "cooking_oil"],
-    optionalIngredients: ["carrot", "salt"],
-    steps: [
-      "감자를 가늘게 채 썰어 물에 헹군 뒤 물기를 빼요.",
-      "팬에 기름을 두르고 감자를 먼저 볶아요.",
-      "양파를 넣고 감자가 익을 때까지 볶아 간을 맞춰요.",
-    ],
-    difficulty: "easy",
-  },
-  {
-    id: "zucchini_egg_stir_fry",
-    name: "애호박 계란볶음",
-    requiredIngredients: ["zucchini", "egg", "cooking_oil", "garlic"],
-    optionalIngredients: ["onion", "salt"],
-    steps: [
-      "애호박을 반달 모양으로 썰고 계란을 풀어요.",
-      "팬에 기름과 마늘을 볶은 뒤 애호박을 익혀요.",
-      "계란을 둘러 부드럽게 익히고 간을 맞춰요.",
-    ],
-    difficulty: "easy",
-  },
-  {
-    id: "carrot_potato_stir_fry",
-    name: "당근 감자볶음",
-    requiredIngredients: ["carrot", "potato", "onion", "cooking_oil"],
-    optionalIngredients: ["salt"],
-    steps: [
-      "당근, 감자, 양파를 비슷한 굵기로 채 썰어요.",
-      "팬에 기름을 두르고 감자와 당근을 먼저 볶아요.",
-      "양파를 넣고 모든 재료가 부드럽게 익도록 볶아요.",
-    ],
-    difficulty: "easy",
-  },
-  {
-    id: "garlic_butter_mushrooms",
-    name: "마늘 버터 버섯볶음",
-    requiredIngredients: ["mushroom", "butter", "garlic"],
-    optionalIngredients: ["salt", "soy_sauce"],
-    steps: [
-      "버섯을 먹기 좋은 크기로 썰고 마늘을 다져요.",
-      "팬에 버터와 마늘을 넣고 향이 나도록 볶아요.",
-      "버섯을 넣고 수분이 날아갈 때까지 볶아 간을 맞춰요.",
-    ],
-    difficulty: "easy",
-  },
-  {
-    id: "soy_mushroom_stir_fry",
-    name: "버섯 간장볶음",
-    requiredIngredients: ["mushroom", "soy_sauce", "cooking_oil", "garlic"],
-    optionalIngredients: ["green_onion", "sesame_oil"],
-    steps: [
-      "버섯을 한입 크기로 썰고 마늘을 다져요.",
-      "팬에 기름과 마늘을 넣고 볶은 뒤 버섯을 더해요.",
-      "버섯이 익으면 간장을 넣고 재빨리 볶아요.",
-    ],
-    difficulty: "easy",
-  },
-  {
-    id: "kimchi_egg_omelet",
-    name: "김치 계란말이",
-    requiredIngredients: ["egg", "kimchi", "cooking_oil"],
-    optionalIngredients: ["cheese", "green_onion"],
-    steps: [
-      "김치를 잘게 썰고 계란을 풀어 김치와 섞어요.",
-      "약불로 달군 팬에 기름을 두르고 계란물을 얇게 부어요.",
-      "가장자리가 익으면 돌돌 말아 속까지 익혀요.",
-    ],
-    difficulty: "easy",
-  },
-  {
-    id: "cheese_omelet",
-    name: "치즈 오믈렛",
-    requiredIngredients: ["egg", "cheese", "butter"],
-    optionalIngredients: ["ham", "onion"],
-    steps: [
-      "계란을 풀고 치즈를 잘게 준비해요.",
-      "팬에 버터를 녹이고 계란물을 부어 가장자리를 익혀요.",
-      "가운데에 치즈를 올리고 반으로 접어 마저 익혀요.",
-    ],
-    difficulty: "easy",
-  },
-  {
-    id: "creamy_mushroom_pasta",
-    name: "버섯 크림 파스타",
-    requiredIngredients: ["pasta", "mushroom", "milk", "cheese", "butter"],
-    optionalIngredients: ["salt", "garlic"],
-    steps: [
-      "파스타면을 삶아 물기를 빼고 버섯을 썰어요.",
-      "팬에 버터를 녹여 버섯을 볶고 우유를 부어요.",
-      "치즈를 녹인 뒤 삶은 면을 넣어 소스와 섞어요.",
-    ],
-    difficulty: "easy",
-  },
+function applyCurrentIngredientMappings(recipe: Recipe): Recipe {
+  const unresolved = recipe.unmappedRequiredIngredients ?? [];
+  const newlyMapped = unresolved
+    .map(mapRecipeIngredientName)
+    .filter((id): id is string => id !== undefined);
+  if (newlyMapped.length === 0) return recipe;
+
+  const requiredIngredients = [...new Set([...recipe.requiredIngredients, ...newlyMapped])];
+  const updated: Recipe = {
+    ...recipe,
+    requiredIngredients,
+    optionalIngredients: recipe.optionalIngredients?.filter((id) => !requiredIngredients.includes(id)),
+    unmappedRequiredIngredients: unresolved.filter((name) => !mapRecipeIngredientName(name)),
+  };
+  return { ...updated, difficulty: inferRecipeDifficulty(updated) };
+}
+
+// Source-backed substitutes for the 20 hand-written recipes; keep original source names.
+const replacementIds = [
+  "fsk_738",
+  "fsk_272",
+  "fsk_2986",
+  "fsk_458",
+  "fsk_3082",
+  "fsk_3081",
+  "fsk_137",
+  "fsk_531",
+  "fsk_784",
+  "fsk_231",
+  "fsk_439",
+  "fsk_941",
+  "fsk_2978",
+  "fsk_982",
+  "fsk_3010",
+  "fsk_18",
+  "fsk_816",
+  "fsk_2958",
+  "fsk_834",
+  "fsk_493"
 ];
 
-export const RECIPES: Recipe[] = [...LOCAL_RECIPES, ...PUBLIC_RECIPES];
+export const SOURCED_REPLACEMENT_RECIPES: Recipe[] = replacementIds.map(
+  (id) => PUBLIC_RECIPES.find((recipe) => recipe.id === id)!,
+);
+
+// Each official record appears once, even when used as a replacement.
+export const RECIPES: Recipe[] = [
+  ...SOURCED_REPLACEMENT_RECIPES,
+  ...PUBLIC_RECIPES.filter(({ id }) => !replacementIds.includes(id)),
+  ...EPIS_RECIPES,
+].map(applyCurrentIngredientMappings).map((recipe) => {
+  const notes = RECIPE_INGREDIENT_REVIEW_NOTES[recipe.id];
+  const stepIngredients = RECIPE_STEP_REQUIRED_INGREDIENTS[recipe.id];
+  if (!notes && !stepIngredients) return recipe;
+  const requiredIngredients = [...new Set([
+    ...recipe.requiredIngredients,
+    ...(stepIngredients ?? []).map(mapReviewedStepIngredient).filter((id): id is string => id !== undefined),
+  ])];
+  const updated: Recipe = {
+    ...recipe,
+    requiredIngredients,
+    optionalIngredients: recipe.optionalIngredients?.filter((id) => !requiredIngredients.includes(id)),
+    unmappedRequiredIngredients: [...new Set([
+      ...(recipe.unmappedRequiredIngredients ?? []),
+      ...(stepIngredients ?? []).filter((name) => !mapReviewedStepIngredient(name)),
+    ])],
+    ingredientReviewNotes: notes ? [...notes] : undefined,
+  };
+  return { ...updated, difficulty: inferRecipeDifficulty(updated) };
+});
