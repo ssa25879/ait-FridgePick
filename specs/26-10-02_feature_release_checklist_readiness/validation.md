@@ -1,5 +1,30 @@
 # 검증 계획 및 현재 상태: 비게임 출시 체크리스트 대응
 
+## 2026-10-06 출시 후보19 등록·설명 초안 갱신 (로드맵12단계)
+
+테스트18 사용자 정상 확인을 `1598b32`에 커밋한 master를 사용했다. 초기화 수정 `e52070d` 이후 제품 소스/패키지/빌드 설정 차이가 없음을 확인했다. 이번에 제품 코드는 변경하지 않았다. 기존 master 검증은 앱179개·스크립트10개 통과와 lint 오류0/기존경고1개이며 이번에 전체 테스트를 재실행하지 않았다.
+
+| 항목 | 결과 |
+| --- | --- |
+| 출시 후보 | `20261006-19`, deployment `01a10f00-e7ad-721e-a25e-f83df2008cfc` |
+| bytes / SHA256 | 1112475 / `a125a2c1b07f980ad5ad21348269dd46132552c253c13403460e850bf8f53948` |
+| 출시 검증 | TypeScript/Vite/AIT 성공, 실제/테스트ID 포함JS1/0, AIT sources와 dist 바이트일치 |
+| 업로드 | 발급URL PUT200·완료호출 성공·목록 `CREATED`/SDK3.2.0 |
+| 후보 상태 | `isTested=false`, `deployed=false`, API releaseNote=null |
+| 기본 루트 복원 | deployment `01a10f02-1b6f-72b0-8811-e52110cad9cc`, TypeScript/Vite/AIT 성공, 실제/테스트ID0/1·dist일치, 미업로드 |
+| 콘솔 초안 | 후보19 폼 상세 설명/출시노트 변경·임시저장 성공 알림·새로고침 후 값 유지 |
+| 등록·출시 상태 | 앱정보APPROVED/최초등록false/라이브없음/검수중없음, `WORKSPACE_TERMS_AGREEMENT_REQUIRED`, reviewRequestDecision ALLOWED |
+
+활성 배너 그룹은 빌드 프로세스 환경변수로만 전달했다. 실제ID·인증값·발급URL은 문서/Git에 기록하지 않는다. 근거: Git 제외 `node_modules/.cache/fridgepick-release-1598b32/release-proof.json`, `release/ait-fridgepick.ait`, `release/dist`, `console-draft19.jpg`. 캐시는 재설치로 소실될 수 있다.
+
+콘솔 초안은 승인된 앱정보 및 배포본 releaseNote와 별개다. 테스트18 사용자 보고는 재실행 초기화/실행 중 상태 유지의 확인 범위이며 후보19 기기 실행·실제광고 렌더·광고 실패/no-fill·성능 검증으로 확대하지 않는다. 다음은 후보19 테스트 선행조건·제휴약관 실제 화면 확인 및 사용자 동의·확약 재확인 후 최초검수 제출 여부 결정이다. 테스트 푸시·약관수락·검수제출·출시·원격push는 하지 않았다.
+
+Files: Task.md, specs/26-10-02_feature_release_checklist_readiness/validation.md, console-update.md
+Change: 초기화 수정 포함 출시 후보19와 최신 설명/출시노트 저장 결과를 기록함.
+Before: 후보17은 초기화 수정 전이며 콘솔 초안에 자동저장 문구가 남았음.
+After: 후보19 CREATED·초안 저장/새로고침 유지 확인·기본 루트 복원, 후보19 테스트/약관/최초검수는 남음.
+Verification: 소스 차이 확인·양 모드 빌드·AIT/dist 및 ID검사·PUT200·CREATED·콘솔 초안 새로고침 및 상태 조회.
+
 ## 2026-10-06 출시 후보17 재빌드·등록 (로드맵12단계)
 
 소스 `ad1b914cc328a5069b5003ba815b23cc615dd4af`, 작업경로 `D:/work/ait-FridgePick`, Node24.19.0. 설치된 잠금 패키지 버전 불일치0건을 확인했다. 새 `npm ci`는 실행하지 않았다. 앱14파일201개/스크립트10개 통과, lint 종료0·기존 useInAppAds 경고1개, 기본·출시 TypeScript/Vite/AIT 빌드 성공. Vite 대형 청크 경고는 남는다. 출시 설정 없이 `vite build --mode release`가 오류로 차단되는 것도 확인했다.
