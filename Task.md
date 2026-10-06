@@ -2,6 +2,20 @@
 
 갱신: 2026-10-06 (Asia/Seoul)
 
+## 최신 후속: 기능 브랜치 master 통합
+
+- 사용자 요청으로 `feature/selection-settings-result-count`의 로컬3커밋을 원격 `c902658`까지 일반 push했다. 원격 master `fe2301a`에서 최신화 후 선택설정 브랜치 병합 `8dad61b`, 출시체크리스트 병합 `15033ef`, 상태저장 브랜치 병합 `eb0306d`를 생성했다.
+- 직접 병합 대상: `feature/selection-settings-result-count`, `origin/codex/release-checklist-readiness`, `origin/feature/user-state-persistence`. 홈진입 `origin/feature/home-entry-docs`·광고 `codex/home-banner-ad`·공공레시피 `feature/public-recipe-catalog`·추천필터 `feature/recommendation-filters`는 이미 포함된 이력이며, 총7개 참조의 master 조상 여부를 확인했다.
+- 충돌은 README/Task와 홈배너 명세의 중복 광고정책 문서뿐이었다. 외부출시설정·과거이력보존 정책과 최신 한국어 기록을 유지했다. 제품/테스트/설정뿐 아니라 전체트리가 최신선택설정 `c902658`과 일치하는 것을 병합 직후 확인했다. 이번 인수인계 기록만 추가한다.
+- 병합 상태 검증: 앱14파일179개/76.10초(15초 제한), 스크립트10개, lint 오류0/기존경고1개, 기본 TypeScript/Vite/AIT 통과. 추적173파일의 실제광고ID0·충돌표시0, AIT/dist 일치·실제/테스트ID0/1. 이번로컬빌드 deployment `01a10ebf-9b48-7663-ba3a-07769ac9f51b`는 미업로드이며, 콘솔 테스트18은 기존 업로드본이다.
+- 사용자 승인 범위에서 master는 일반 push로 원격에 반영하며 최종 SHA는 Git 이력·원격 조회로 확인한다. 기능 브랜치 삭제·강제push·stash복원·추가번들업로드·검수제출·출시는 수행하지 않는다. 기존 미커밋 작업은 `stash@{0}`에 그대로 보존했다. 현재 작업 브랜치는 master다.
+
+Files: Task.md
+Change: 기능 브랜치 통합 범위·문서 충돌 해소·병합 검증 결과를 기록함.
+Before: 최신 기능3커밋이 로컬에만 있고 master에 누적 제품 기능이 미통합이었음.
+After: 최신 기능 원격push와 기능7참조의 master 포함 확인, 재실행 선택 초기화 정책 유지.
+Verification: git ancestry/전체트리 비교·앱179개·스크립트10개·lint·기본빌드·AIT정합성·소스ID/충돌표시 검사.
+
 ## 최신 후속: 선택 초기화 커밋·테스트18 업로드 완료
 
 - 사용자 커밋·업로드 승인으로 수정8파일을 `e52070d6448ec1d8c22e6d806a075766b7b55ace`에 커밋했다. 테스트179개·lint·기본빌드·브라우저 검증은 아래 기록을 따른다. 업로드 직전 AIT앱이름/해시·dist일치·테스트광고 전용 재확인.
