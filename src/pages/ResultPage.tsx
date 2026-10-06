@@ -2,12 +2,17 @@ import { Button, Post } from "@toss/tds-mobile";
 import type { RefObject } from "react";
 import { INGREDIENTS } from "../data/ingredients";
 import type { RecipeMatch } from "../utils/recommendRecipe";
+import { isRecipeReady } from "../utils/recipeReadiness";
 
 interface ResultPageProps {
   mainRef: RefObject<HTMLElement>;
   recommendation: RecipeMatch | null;
   selectedIngredientIds: string[];
   candidateCount: number;
+  readyCandidateCount?: number;
+  needsCandidateCount?: number;
+  candidateGroup?: "ready" | "needs";
+  onChangeCandidateGroup?: (group: "ready" | "needs") => void;
   onReroll: () => void;
   onBackHome: () => void;
   onEditIngredients: () => void;
@@ -19,12 +24,17 @@ export function ResultPage({
   recommendation,
   selectedIngredientIds,
   candidateCount,
+  readyCandidateCount,
+  needsCandidateCount,
+  candidateGroup,
+  onChangeCandidateGroup,
   onReroll,
   onBackHome,
   onEditIngredients,
   onStartOver,
 }: ResultPageProps) {
   const selectedIds = new Set(selectedIngredientIds);
+  const reviewNotes = recommendation?.recipe.ingredientReviewNotes ?? [];
   const ingredientById = new Map(INGREDIENTS.map((item) => [item.id, item]));
   const availableIngredients = recommendation
     ? [
@@ -69,16 +79,41 @@ export function ResultPage({
         </Button>
       </header>
 
+      {onChangeCandidateGroup && readyCandidateCount !== undefined && needsCandidateCount !== undefined && (
+        <section className="result-detail" aria-label="재료 준비 상태별 메뉴">
+          <Button type="button" color="dark" variant={candidateGroup === "ready" ? undefined : "weak"} display="full" size="large"
+            aria-pressed={candidateGroup === "ready"} disabled={readyCandidateCount === 0}
+            onClick={() => onChangeCandidateGroup("ready")}>
+            바로 만들 수 있는 메뉴 {readyCandidateCount}개
+          </Button>
+          <Button type="button" color="dark" variant={candidateGroup === "needs" ? undefined : "weak"} display="full" size="large"
+            aria-pressed={candidateGroup === "needs"} disabled={needsCandidateCount === 0}
+            onClick={() => onChangeCandidateGroup("needs")}>
+            재료 추가가 필요한 메뉴 {needsCandidateCount}개
+          </Button>
+          {readyCandidateCount === 0 && needsCandidateCount > 0 && (
+            <p className="result-detail-text">선택한 재료만으로 만들 수 있는 메뉴가 없어요.</p>
+          )}
+        </section>
+      )}
+
       {recommendation ? (
         <section className="result-recommendation">
           <div className="result-summary" role="status">
+            <p className="result-detail-text">
+              {reviewNotes.length > 0 ? "레시피 재료 확인이 필요해요" : isRecipeReady(recommendation) ? "레시피에 필요한 재료를 모두 선택했어요" : "아래 재료를 추가해야 만들 수 있어요"}
+            </p>
             <h2 className="result-recipe-name">
               {recommendation.recipe.name}
             </h2>
             <p className="result-match-rate">
-              필수 재료 매칭률 {Math.round(recommendation.matchRate * 100)}%
+              {recommendation.matchBasis === "main" ? "주재료" : "필수 재료"} 매칭률 {Math.round(recommendation.matchRate * 100)}%
             </p>
           </div>
+          <p className="result-detail-text">선택한 재료의 보유 여부 기준이에요. 필요한 분량은 레시피에서 확인해 주세요.</p>
+          {recommendation.matchBasis === "main" && !isRecipeReady(recommendation) && (
+            <p className="result-detail-text">주재료 중심으로 계산한 비율이에요. 100%여도 부족한 양념·부재료를 확인해 주세요.</p>
+          )}
           <section className="result-detail" aria-labelledby="available-title">
             <h3 id="available-title" className="result-detail-title">
               보유 재료
@@ -89,14 +124,20 @@ export function ResultPage({
           </section>
           <section className="result-detail" aria-labelledby="missing-title">
             <h3 id="missing-title" className="result-detail-title">
-              부족한 필수 재료
+              더 준비할 재료
             </h3>
             <p className="result-detail-text">
               {missingIngredientNames.length > 0
                 ? missingIngredientNames.join(", ")
-                : "부족한 필수 재료가 없어요."}
+                : reviewNotes.length > 0 ? "등록된 재료는 모두 선택했어요. 아래 원문 확인 안내도 살펴봐 주세요." : "더 준비할 재료가 없어요."}
             </p>
           </section>
+          {reviewNotes.length > 0 && (
+            <section className="result-detail" aria-labelledby="ingredient-review-title">
+              <h3 id="ingredient-review-title" className="result-detail-title">원문 재료 확인</h3>
+              {reviewNotes.map((note) => <p key={note} className="result-detail-text">{note}</p>)}
+            </section>
+          )}
           {recommendation.recipe.sourceIngredientText && (
             <section
               className="result-detail"
@@ -119,15 +160,10 @@ export function ResultPage({
             </h3>
             <ol className="result-steps">
               {recommendation.recipe.steps.map((step) => (
-                <li key={step}>{step}</li>
+                <li key={step}>{step.replace(/^\d+\.\s+/, "")}</li>
               ))}
             </ol>
           </section>
-          {candidateCount === 1 && (
-            <p className="result-no-alternatives">
-              현재 재료로 추천할 수 있는 메뉴가 1개예요.
-            </p>
-          )}
           {recommendation.recipe.source && (
             <footer className="result-source-footer" aria-label="데이터 출처">
               출처: {recommendation.recipe.source.provider}{" "}
@@ -138,16 +174,20 @@ export function ResultPage({
         </section>
       ) : (
         <section className="result-empty" role="status">
-          <Post.Paragraph className="result-empty-message">
-            {selectedIngredientIds.length === 0
-              ? "메뉴를 추천하려면 재료를 먼저 선택해 주세요."
-              : "현재 재료로 추천할 수 있는 메뉴가 없어요."}
-          </Post.Paragraph>
+          {selectedIngredientIds.length === 0 && (
+            <Post.Paragraph className="result-empty-message">
+              메뉴를 추천하려면 재료를 먼저 선택해 주세요.
+            </Post.Paragraph>
+          )}
           {selectedIngredientIds.length > 0 && (
             <p className="result-empty-hint">재료를 더 선택하거나 바꿔 보세요.</p>
           )}
         </section>
       )}
+
+      <p className="result-candidate-count">
+        레시피가 {candidateCount}개 검색되었습니다
+      </p>
 
       <div className="result-page-actions">
         {recommendation && candidateCount > 1 && (
@@ -155,7 +195,7 @@ export function ResultPage({
             type="button"
             color="dark"
             display="full"
-            size="xlarge"
+            size="large"
             onClick={onReroll}
           >
             다시 뽑기
@@ -165,7 +205,7 @@ export function ResultPage({
           type="button"
           color="dark"
           display="full"
-          size="xlarge"
+          size="large"
           onClick={onEditIngredients}
         >
           {selectedIngredientIds.length === 0
@@ -180,7 +220,7 @@ export function ResultPage({
             color="dark"
             variant="weak"
             display="full"
-            size="xlarge"
+            size="large"
             onClick={onStartOver}
           >
             처음부터
