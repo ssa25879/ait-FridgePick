@@ -1,5 +1,31 @@
 # 검증 계획 및 현재 상태: 비게임 출시 체크리스트 대응
 
+## 2026-10-12 콘솔 재확인: 후보19 현재 출시됨
+
+로그인된 Chrome에서 앱인토스 콘솔 앱 출시 화면을 읽기 전용으로 확인했다. `20261006-19`(SDK 3.2.0)가 `현재 출시됨`·2026. 10. 06 15:51 출시로 표시되고 상단에 "현재 출시된 버전: 20261006-19"가 있다. 나머지 버전(17·18 등)은 `검토 필요`다. 홈 대시보드는 최근 한 달 유저 3명(Android 100%)을 보여준다. 10-06 기록의 요청 `235649` PENDING은 과거 상태이며 이후 승인·출시된 것으로 보인다.
+
+앱 정보 수정 2단계에서 `미리보기 및 스크린샷`이 비어 있음을 확인했다(세로형 636×1048 최소 3장, 가로형 1504×741 최소 1장). S26 Ultra 비율(412×892 CSS, DPR2)로 프로덕션 빌드를 캡처해 세로 3장·가로 1장을 로컬 제작했고 크기를 PNG 헤더로 검증했다. AIT 개발자 도구 패널 문구는 화면에 없다. 위치는 Git 제외 `node_modules/.cache/fridgepick-store-assets-20261012/`. 주요 기능 입력안 3개(재료 선택·메뉴 추천·레시피 확인)를 준비했다. 콘솔 저장·검토 제출은 이 시점에 미실행.
+
+미확인: 출시 실행 주체(사용자 직접 또는 승인 후 자동), 요청 `235649`의 최종 결과, 제휴약관 수락 상태, 라이브 앱의 실제 동작. 약관 동의·제출·출시 등 쓰기 작업은 수행하지 않았다.
+
+Files: Task.md, specs/26-10-02_feature_release_checklist_readiness/validation.md
+Change: 2026-10-12 콘솔 재확인 결과(후보19 현재 출시됨)를 기록함.
+Before: 요청235649 PENDING·번들 REVIEWING, 출시 미완료로 기록됨.
+After: 후보19가 10-06 15:51 출시된 것으로 콘솔에 표시됨, 경위·약관 상태는 미확인.
+Verification: 로그인된 Chrome에서 홈·앱 출시 화면 텍스트와 스크린샷 확인. 제품 변경 없어 제품 검사는 실행하지 않음. 미커밋·미푸시.
+
+## 2026-10-06 후보19 최초검수 접수
+
+사용자가 등록 확약5개를 직접 체크했다고 알렸다. 후보19 폼의 체크5개와 활성 검토 요청 버튼을 확인한 뒤 제출했고 앱 출시 화면의 검토 중 표시를 확인했다. review_list 요청 `235649`/`INITIAL`/`PENDING`·deploymentReviewStatus `REVIEWING`, miniapp_meta_status `IN_REVIEW`·isEditable=false를 확인했다. 후보19 deployment `01a10f00-e7ad-721e-a25e-f83df2008cfc`의 isTested=true·deployed=false와 최종 출시노트 등록도 bundle_list에서 확인했다.
+
+release_status는 `INITIAL_REVIEW_IN_PROGRESS`·hasBundleInReview=true·liveBundleVersionName=null·`WORKSPACE_TERMS_AGREEMENT_REQUIRED`. 제휴약관은 미수락이지만 검수 요청은 접수됐으며 출시 조건으로 남는다. 앱정보와 번들의 최초등록 승인은 아직 완료되지 않았다. 화면의 영업일3~7일 내 이메일 안내는 표시된 안내이며 확정 완료일로 간주하지 않는다. 증거: Git 제외 `node_modules/.cache/fridgepick-release-1598b32/review19-submitted.png`.
+
+Files: Task.md, specs/26-10-02_feature_release_checklist_readiness/validation.md, console-update.md
+Change: 사용자 직접 확약 체크 후 후보19 최초검수 접수 및 남은 출시 조건을 기록함.
+Before: 후보19 테스트 확인 완료·최초검수 미제출.
+After: 요청235649 PENDING·번들REVIEWING·앱정보IN_REVIEW, 약관 및 출시는 대기.
+Verification: 웹 체크5개·제출 후 검토 중, review_list·bundle_list·meta_status·release_status 확인. 제품 검사는 실행하지 않음 — 코드 변경 없음. 이번 기록 미커밋·미푸시.
+
 ## 2026-10-06 후보19 사용자 테스트 정상 확인
 
 후보19 토스앱 테스트 안내 후 사용자가 “테스트 해봤음. 문제 없음.”이라고 보고했다. 콘솔 재조회에서 `20261006-19`/deployment `01a10f00-e7ad-721e-a25e-f83df2008cfc`의 `isTested=true`·`CREATED`·`deployed=false`를 확인했다. 메타는 `APPROVED`, 최초등록false·편집가능true·라이브false다. 후보19의 테스트 선행조건을 확인했으며 아래 업로드 시점 isTested=false는 과거 상태다.
