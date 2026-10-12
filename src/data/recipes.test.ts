@@ -20,7 +20,11 @@ describe("레시피 카탈로그", () => {
       for (const name of names) {
         expect(original.steps.join("").replace(/\s/g, ""), `${id}:${name}`).toContain(name.replace(/\s/g, ""));
       }
-      expect(current.requiredIngredients, id).toEqual(expect.arrayContaining(original.requiredIngredients));
+      // 배추 recipes are re-pointed from cabbage to napa_cabbage (RSA-04); everything else must stay.
+      expect(current.requiredIngredients, id).toEqual(expect.arrayContaining(original.requiredIngredients.filter((ingredient) => ingredient !== "cabbage")));
+      if (original.requiredIngredients.includes("cabbage")) {
+        expect(current.requiredIngredients.some((ingredient) => ingredient === "cabbage" || ingredient === "napa_cabbage"), id).toBe(true);
+      }
       expect(current.sourceIngredientText, id).toBe(original.sourceIngredientText);
       expect(current.steps, id).toEqual(original.steps);
     }
