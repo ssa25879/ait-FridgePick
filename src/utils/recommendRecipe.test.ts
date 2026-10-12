@@ -65,8 +65,8 @@ describe("메뉴 추천 계산", () => {
     expect(getRecipeCandidates(["soy_sauce", "salt"], [recipe])).toEqual([]);
   });
   it("원문 분량 단위가 달라도 이미 확인된 재료명을 그대로 사용한다", () => {
-    const recipe = { ...makeRecipe("quantities", ["cabbage", "milk", "tofu"]), sourceIngredientText: "주재료: 배추 2잎\n주재료: 우유 1cup\n주재료: 두부 반모" };
-    expect(getRecipeCandidates(["cabbage", "milk", "tofu"], [recipe])[0].matchRate).toBe(1);
+    const recipe = { ...makeRecipe("quantities", ["napa_cabbage", "milk", "tofu"]), sourceIngredientText: "주재료: 배추 2잎\n주재료: 우유 1cup\n주재료: 두부 반모" };
+    expect(getRecipeCandidates(["napa_cabbage", "milk", "tofu"], [recipe])[0].matchRate).toBe(1);
   });
   it("필수 재료의 보유 목록, 부족 목록과 60% 매칭률을 계산한다", () => {
     const recipe = makeRecipe(

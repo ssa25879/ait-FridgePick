@@ -101,6 +101,26 @@ export function getRecipeCandidates(
   });
 }
 
+// Fewer missing ingredients means the recipe is closer to what the user already has.
+export function getMissingIngredientCount(match: RecipeMatch): number {
+  return match.missingRequiredIngredientIds.length + match.missingUnmappedRequiredIngredients.length;
+}
+
+const MINIMUM_TOP_POOL_SIZE = 5;
+const TOP_POOL_RATIO = 0.25;
+
+// Best-first slice of the candidates (fewest missing, then highest match rate).
+// The candidate set itself is unchanged; this only narrows which ones may be shown.
+export function getTopCandidatePool(candidates: RecipeMatch[]): RecipeMatch[] {
+  const size = Math.min(
+    candidates.length,
+    Math.max(MINIMUM_TOP_POOL_SIZE, Math.ceil(candidates.length * TOP_POOL_RATIO)),
+  );
+  return [...candidates]
+    .sort((a, b) => getMissingIngredientCount(a) - getMissingIngredientCount(b) || b.matchRate - a.matchRate)
+    .slice(0, size);
+}
+
 export function pickRecipeCandidate(
   candidates: RecipeMatch[],
   previousRecipeId?: string,
@@ -108,10 +128,16 @@ export function pickRecipeCandidate(
 ): RecipeMatch | null {
   if (candidates.length === 0) return null;
 
-  const alternatives = previousRecipeId
-    ? candidates.filter(({ recipe }) => recipe.id !== previousRecipeId)
-    : candidates;
-  const pool = alternatives.length > 0 ? alternatives : candidates;
+  const top = getTopCandidatePool(candidates);
+  // Different official records can share a title; avoid showing the same title twice in a row.
+  const previousName = candidates.find(({ recipe }) => recipe.id === previousRecipeId)?.recipe.name;
+  const differentTitle = previousRecipeId
+    ? top.filter(({ recipe }) => recipe.id !== previousRecipeId && recipe.name !== previousName)
+    : top;
+  const differentRecipe = previousRecipeId
+    ? top.filter(({ recipe }) => recipe.id !== previousRecipeId)
+    : top;
+  const pool = differentTitle.length > 0 ? differentTitle : differentRecipe.length > 0 ? differentRecipe : candidates;
   const index = Math.min(Math.floor(random() * pool.length), pool.length - 1);
 
   return pool[Math.max(index, 0)];

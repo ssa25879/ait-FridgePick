@@ -137,4 +137,5 @@ export const INGREDIENTS: Ingredient[] = [
   { id: "tomato_sauce", name: "토마토소스", category: "seasoning" },
   { id: "konjac", name: "곤약", category: "carb" },
   { id: "chamnamul", name: "참나물", category: "vegetable" },
+  { id: "napa_cabbage", name: "배추", category: "vegetable" },
 ];
