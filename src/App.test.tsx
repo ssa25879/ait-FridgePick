@@ -414,7 +414,7 @@ describe("재료 선택 흐름", () => {
     await user.click(screen.getByRole("button", { name: "재료 고르기" }));
     await user.click(screen.getByRole("button", { name: "전체 재료" }));
     const list = screen.getByRole("region", { name: "전체 재료" });
-    expect(list.querySelectorAll("button")).toHaveLength(95);
+    expect(list.querySelectorAll("button")).toHaveLength(110);
     await user.click(screen.getByRole("button", { name: "돼지고기" }));
     await user.click(screen.getByRole("button", { name: "밥" }));
     await user.click(screen.getByRole("button", { name: "단백질" }));
@@ -446,6 +446,6 @@ describe("재료 선택 흐름", () => {
     expect(list).toHaveAttribute("tabindex", "0");
     expect(list).not.toContainElement(screen.getByRole("button", { name: "메뉴 뽑기" }));
     await user.click(category);
-    expect(screen.getByRole("group", { name: "스크롤 가능한 재료 목록" }).querySelectorAll("button")).toHaveLength(95);
+    expect(screen.getByRole("group", { name: "스크롤 가능한 재료 목록" }).querySelectorAll("button")).toHaveLength(110);
   });
 });

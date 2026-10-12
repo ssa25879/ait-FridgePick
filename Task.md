@@ -20,7 +20,14 @@ Change: 추천 공백 보완 기능의 브랜치와 개발 명세 6개를 준비
 Before: 로드맵 13단계 RSC-05 잔여 항목만 있고 전용 명세·기준선 없음.
 After: 요구사항 RGC-01~07, 설계, 작업 순서, 결정 사항, 구현 전 기준선 기록.
 Verification: 상대 링크 검사·실제 데이터 기준선 측정(임시 vitest). 제품 코드 변경 없음, 제품 테스트 미실행. 미커밋·미푸시.
-- 제품 코드 변경 없음. 상세는 validation.md.
+- 추천 공백 보완 1차 반영(2026-10-12, 브랜치 feature/recommendation-gap-coverage): 사용자 결정(제안대로)에 따라 새 선택 재료 15개(굴소스·케첩·셀러리·상추·김·홍합·밤·새우젓·들깻가루·튀김가루·고사리·도라지·머스터드·고등어·떡)와 별칭, 스파게티→파스타면 별칭을 추가했다. 육수·기름·호박은 보존. 전후: 미지원 레시피 1,218→1,169, 전체 선택 후보 938→1,023·준비 완료 126→169, 일상 조합 10개 준비 완료는 여전히 모두 0. 검증: npm test 201개·test:scripts 10개·tsc·기본 build 통과, lint 기존 경고 1개, 320×640 칩 110개·가로 넘침 없음. 테스트 기대값 95→110과 testTimeout 15000 조정. 업로드·출시·번들 생성 없음, 광고 ID 검사 미실행.
+
+Files: src/data/ingredients.ts, src/data/recipeCatalog.ts, src/data/recommendationGap.test.ts, src/data/recipeCatalog.test.ts, src/App.test.tsx, vite.config.ts, specs/26-10-12_feature_recommendation_gap_coverage/*, Task.md
+Change: 추천 공백 보완 1차(재료 15개·별칭)와 기준선 테스트를 반영함.
+Before: 재료 95개, 준비 완료 126(전체 선택), 일상 조합 준비 완료 0.
+After: 재료 110개, 준비 완료 169(전체 선택), 일상 조합은 개선 없음.
+Verification: 위 자동·브라우저 검증. 기기 QA와 출시 산출물 검사 미실행.
+- 제품 코드 변경은 위 1차 반영뿐. 상세는 validation.md.
 
 ## 최신 후속: 후보19 최초검수 접수 완료
 
