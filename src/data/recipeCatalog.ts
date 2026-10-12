@@ -108,7 +108,7 @@ const INGREDIENT_ALIASES: Record<string, string[]> = {
   butter: ["버터", "무염버터"],
   cooked_rice: ["밥", "찬밥"],
   ramen_noodles: ["라면", "라면사리"],
-  pasta: ["파스타면", "스파게티면", "파스타"],
+  pasta: ["파스타면", "스파게티면", "파스타", "스파게티"],
   bread: ["식빵"],
   glass_noodles: ["당면"],
   soy_sauce: [
@@ -222,6 +222,21 @@ const INGREDIENT_ALIASES: Record<string, string[]> = {
   cockle: ["바지락"],
   octopus: ["주꾸미", "쭈꾸미"],
   sprouts: ["무순"],
+  oyster_sauce: ["굴소스", "청정원굴소스"],
+  ketchup: ["토마토케첩", "케첩"],
+  celery: ["셀러리", "샐러리"],
+  leaf_lettuce: ["상추", "상추잎"],
+  laver: ["김", "구운김", "김밥용김", "김가루"],
+  mussel: ["홍합", "홍합살"],
+  chestnut: ["밤", "깐밤", "생밤"],
+  salted_shrimp: ["새우젓"],
+  perilla_powder: ["들깻가루", "들깨가루", "거피들깨가루", "거피한들깨가루"],
+  frying_mix: ["튀김가루"],
+  bracken: ["고사리"],
+  bellflower_root: ["도라지", "통도라지"],
+  mustard: ["머스터드", "디종머스터드"],
+  mackerel: ["고등어", "냉동고등어", "손질된고등어"],
+  rice_cake: ["떡", "떡볶이떡", "가래떡", "떡국떡", "흰떡", "조랭이떡"],
 };
 
 const ALIAS_TO_INGREDIENT_ID = new Map<string, string>();

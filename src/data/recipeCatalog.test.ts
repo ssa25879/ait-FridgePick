@@ -241,13 +241,13 @@ describe("공식 레시피 정규화", () => {
     const result = normalizePublicRecipeRecord({
       RCP_SEQ: "101",
       RCP_NM: "감자 황태 전복 요리",
-      RCP_PARTS_DTLS: "감자 1개, 황태 100g, 전복 1개, 샐러리 20g",
+      RCP_PARTS_DTLS: "감자 1개, 황태 100g, 전복 1개, 오레가노 20g",
       MANUAL01: "재료를 익힌다.",
     });
 
     expect(result.recipe).toBeUndefined();
     expect(result.exclusionReason).toBe("low-ingredient-coverage");
-    expect(result.unmappedRequiredIngredients).toEqual(["황태", "전복", "샐러리"]);
+    expect(result.unmappedRequiredIngredients).toEqual(["황태", "전복", "오레가노"]);
   });
 
   it("단계가 없는 레코드를 사유와 함께 제외한다", () => {
