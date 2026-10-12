@@ -44,19 +44,19 @@ describe("메뉴 추천 계산", () => {
   });
 
   it("구분 없는 원문은 양념을 제외하되 미지원 재료를 분모와 부족 목록에 남긴다", () => {
-    const recipe = { ...makeRecipe("fallback", ["tofu", "onion", "soy_sauce", "salt"]), sourceIngredientText: "두부 100g, 양파 50g, 간장 1T, 소금 약간, 전복 1개", unmappedRequiredIngredients: ["전복"] };
+    const recipe = { ...makeRecipe("fallback", ["tofu", "onion", "soy_sauce", "salt"]), sourceIngredientText: "두부 100g, 양파 50g, 간장 1T, 소금 약간, 호박잎 1개", unmappedRequiredIngredients: ["호박잎"] };
     const [match] = getRecipeCandidates(["tofu", "onion"], [recipe]);
     expect(match.matchRate).toBe(2 / 3);
     expect(match.missingRequiredIngredientIds).toEqual(["soy_sauce", "salt"]);
-    expect(match.missingUnmappedRequiredIngredients).toEqual(["전복"]);
+    expect(match.missingUnmappedRequiredIngredients).toEqual(["호박잎"]);
     expect(getRecipeCandidates(["tofu"], [recipe])).toEqual([]);
   });
 
   it("미지원 주재료는 계산에 남기고 미지원 부재료는 부족 목록에 남긴다", () => {
-    const recipe = { ...makeRecipe("roles", ["tofu", "soy_sauce"]), sourceIngredientText: "주재료: 두부 100g\n주재료: 전복 1개\n부재료: 황태 10g\n양념: 간장 1T", unmappedRequiredIngredients: ["전복", "황태"] };
+    const recipe = { ...makeRecipe("roles", ["tofu", "soy_sauce"]), sourceIngredientText: "주재료: 두부 100g\n주재료: 호박잎 1개\n부재료: 황태 10g\n양념: 간장 1T", unmappedRequiredIngredients: ["호박잎", "황태"] };
     const [match] = getRecipeCandidates(["tofu"], [recipe], { minimumMatchRate: 0.5 });
     expect(match.matchRate).toBe(0.5);
-    expect(match.missingUnmappedRequiredIngredients).toEqual(["전복", "황태"]);
+    expect(match.missingUnmappedRequiredIngredients).toEqual(["호박잎", "황태"]);
     expect(getRecipeCandidates(["tofu"], [recipe])).toEqual([]);
   });
 
@@ -135,12 +135,12 @@ describe("메뉴 추천 계산", () => {
   it("선택 목록에 없는 필수 재료도 매칭률과 부족 목록에 포함한다", () => {
     const recipe: Recipe = {
       ...makeRecipe("unmapped", ["tofu", "tomato", "onion"]),
-      unmappedRequiredIngredients: ["황태", "전복"],
+      unmappedRequiredIngredients: ["황태", "호박잎"],
     };
     const [match] = getRecipeCandidates(["tofu", "tomato", "onion"], [recipe]);
 
     expect(match.matchRate).toBe(0.6);
-    expect(match.missingUnmappedRequiredIngredients).toEqual(["황태", "전복"]);
+    expect(match.missingUnmappedRequiredIngredients).toEqual(["황태", "호박잎"]);
     expect(getRecipeCandidates(["tofu", "tomato"], [recipe])).toEqual([]);
   });
 
