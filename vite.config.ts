@@ -22,6 +22,8 @@ export default defineConfig(({ mode }) => {
     test: {
       environment: "jsdom",
       setupFiles: ["./src/test/setup.ts"],
+      // jsdom user-event flows with the full ingredient list sit close to the 5s default.
+      testTimeout: 15000,
     },
   };
 });

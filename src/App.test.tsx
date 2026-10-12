@@ -221,7 +221,7 @@ describe("재료 선택 흐름", () => {
     expect(screen.getByRole("main")).toHaveFocus();
   });
 
-  it("홈에서 재료 선택 화면을 열면 채소 재료를 보여준다", async () => {
+  it("홈에서 재료 선택 화면을 열면 전체 재료를 보여준다", async () => {
     const user = renderApp();
 
     await user.click(screen.getByRole("button", { name: "재료 고르기" }));
@@ -230,9 +230,7 @@ describe("재료 선택 흐름", () => {
       screen.getByRole("heading", { name: "재료 선택" }),
     ).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "김치" })).toBeInTheDocument();
-    expect(
-      screen.queryByRole("button", { name: "돼지고기" }),
-    ).not.toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "돼지고기" })).toBeInTheDocument();
   });
 
   it("카테고리를 바꾸면 해당 재료 목록만 보여준다", async () => {
@@ -409,12 +407,20 @@ describe("재료 선택 흐름", () => {
       "false",
     );
   });
+  it("처음 재료 선택에 들어가면 전체 카테고리가 선택되어 모든 재료를 보여준다", async () => {
+    const user = renderApp();
+    await user.click(screen.getByRole("button", { name: "재료 고르기" }));
+    expect(screen.getByRole("button", { name: "전체 재료" })).toHaveAttribute("aria-pressed", "true");
+    expect(screen.getByRole("button", { name: "채소·과일" })).toHaveAttribute("aria-pressed", "false");
+    expect(screen.getByRole("region", { name: "전체 재료" }).querySelectorAll("button")).toHaveLength(125);
+  });
+
   it("전체 재료 탭에서 모든 카테고리를 선택하고 이동해도 선택이 유지된다", async () => {
     const user = renderApp();
     await user.click(screen.getByRole("button", { name: "재료 고르기" }));
     await user.click(screen.getByRole("button", { name: "전체 재료" }));
     const list = screen.getByRole("region", { name: "전체 재료" });
-    expect(list.querySelectorAll("button")).toHaveLength(95);
+    expect(list.querySelectorAll("button")).toHaveLength(125);
     await user.click(screen.getByRole("button", { name: "돼지고기" }));
     await user.click(screen.getByRole("button", { name: "밥" }));
     await user.click(screen.getByRole("button", { name: "단백질" }));
@@ -446,6 +452,6 @@ describe("재료 선택 흐름", () => {
     expect(list).toHaveAttribute("tabindex", "0");
     expect(list).not.toContainElement(screen.getByRole("button", { name: "메뉴 뽑기" }));
     await user.click(category);
-    expect(screen.getByRole("group", { name: "스크롤 가능한 재료 목록" }).querySelectorAll("button")).toHaveLength(95);
+    expect(screen.getByRole("group", { name: "스크롤 가능한 재료 목록" }).querySelectorAll("button")).toHaveLength(125);
   });
 });
