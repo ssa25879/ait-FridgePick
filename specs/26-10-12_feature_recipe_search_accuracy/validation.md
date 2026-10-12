@@ -35,6 +35,10 @@
 
 자동 검증: npm test 17파일/239개 통과(신규: recommendationAccuracy 18, ingredientMappingAudit 4), test:scripts 10, tsc, lint 기존 경고 1개, 기본 build 성공(deploymentId 01a12eb4-3d59-76bc-a5c5-dec21fb5ec03, 1,113,711바이트, SHA256 eea13915…b5b6, 테스트 배너 ID 포함·실제 ID 패턴 없음). 브라우저 320×640: 칩 126개·처음 전체 선택·가로 넘침 없음, 양배추+달걀 선택 결과에서 안내 문구 일관. 기존 테스트 수정: 재료 수 125→126, 배추 예시를 napa_cabbage로, 단계 재료 테스트가 cabbage→napa_cabbage 재지정을 허용.
 
+## 2026-10-12 가나다 정렬 반영과 번들 업로드 (사용자 승인)
+
+사용자 요청으로 재료 칩 목록(전체·카테고리)·선택 요약·결과 화면의 보유/더 준비할 재료를 가나다 순으로 표시했다(src/utils/koreanOrder.ts, 새 테스트 6개). 원문 분량·조리 순서와 데이터 원본 순서는 그대로다. 최종 소스 27ab9c7에서 npm test 18파일/245개, test:scripts 10, tsc 통과, lint 기존 경고 1개. 기본 빌드 deploymentId 01a12ec9-dd58-7aa9-8c74-b103be6a91c0, ait-fridgepick.ait 1,113,732바이트, SHA256 116395898fbeececa9f3e4b5f1337dea11e7f9b15785ddbc0f40d7b83ec82263, 테스트 배너 ID 포함·실제 광고 ID 패턴 없음. 콘솔에 버전 20261012-22(SDK 3.2.0)로 등록해 빌드 완료·상태 검토 필요를 확인했다. 기기 확인은 22로 한다. 본인 테스트 푸시·검토 요청·출시는 하지 않았고 라이브는 20261006-19 유지.
+
 ## 요구사항별 상태
 
 | ID | 방법 | 상태 |
