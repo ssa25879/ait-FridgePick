@@ -56,7 +56,7 @@ export function IngredientPage({
     resetRef.current?.focus();
   };
   const [activeCategory, setActiveCategory] =
-    useState<IngredientCategoryFilter>("vegetable");
+    useState<IngredientCategoryFilter>("all");
   const categoryName = activeCategory === "all" ? "전체" : INGREDIENT_CATEGORIES.find(
     (category) => category.id === activeCategory,
   )?.name ?? "";
