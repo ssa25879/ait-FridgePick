@@ -1,6 +1,7 @@
 import { Button, Post } from "@toss/tds-mobile";
 import type { RefObject } from "react";
 import { INGREDIENTS } from "../data/ingredients";
+import { sortByKoreanName, sortKoreanNames } from "../utils/koreanOrder";
 import type { RecipeMatch } from "../utils/recommendRecipe";
 import { isRecipeReady } from "../utils/recipeReadiness";
 
@@ -37,13 +38,13 @@ export function ResultPage({
   const reviewNotes = recommendation?.recipe.ingredientReviewNotes ?? [];
   const ingredientById = new Map(INGREDIENTS.map((item) => [item.id, item]));
   const availableIngredients = recommendation
-    ? [
+    ? sortByKoreanName([
         ...recommendation.recipe.requiredIngredients,
         ...(recommendation.recipe.optionalIngredients ?? []),
       ]
         .filter((id) => selectedIds.has(id))
         .map((id) => ingredientById.get(id))
-        .filter((ingredient) => ingredient !== undefined)
+        .filter((ingredient) => ingredient !== undefined))
     : [];
   const missingIngredients = recommendation
     ? recommendation.missingRequiredIngredientIds
@@ -51,10 +52,10 @@ export function ResultPage({
         .filter((ingredient) => ingredient !== undefined)
     : [];
   const missingIngredientNames = recommendation
-    ? [
+    ? sortKoreanNames([
         ...missingIngredients.map(({ name }) => name),
         ...recommendation.missingUnmappedRequiredIngredients,
-      ]
+      ])
     : [];
 
   return (

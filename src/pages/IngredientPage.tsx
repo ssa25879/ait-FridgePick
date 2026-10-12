@@ -5,6 +5,7 @@ import { CategoryTabs } from "../components/CategoryTabs";
 import { IngredientChip } from "../components/IngredientChip";
 import { SelectedIngredientBar } from "../components/SelectedIngredientBar";
 import { INGREDIENTS, INGREDIENT_CATEGORIES } from "../data/ingredients";
+import { sortByKoreanName } from "../utils/koreanOrder";
 import type { Ingredient, IngredientCategoryFilter } from "../types/ingredient";
 import type { RecipeDifficulty } from "../types/recipe";
 
@@ -60,14 +61,14 @@ export function IngredientPage({
   const categoryName = activeCategory === "all" ? "전체" : INGREDIENT_CATEGORIES.find(
     (category) => category.id === activeCategory,
   )?.name ?? "";
-  const visibleIngredients = INGREDIENTS.filter(
+  const visibleIngredients = sortByKoreanName(INGREDIENTS.filter(
     (ingredient) => activeCategory === "all" || ingredient.category === activeCategory,
-  );
-  const selectedIngredients = selectedIngredientIds
+  ));
+  const selectedIngredients = sortByKoreanName(selectedIngredientIds
     .map((id) => INGREDIENTS.find((ingredient) => ingredient.id === id))
     .filter(
       (ingredient): ingredient is Ingredient => ingredient !== undefined,
-    );
+    ));
 
   return (
     <main

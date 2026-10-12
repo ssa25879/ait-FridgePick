@@ -37,6 +37,26 @@ const publicRecommendation: RecipeMatch = {
 };
 
 describe("추천 결과 상세", () => {
+  it("보유 재료와 더 준비할 재료는 가나다 순으로 보여준다", () => {
+    render(
+      <TDSMobileAITProvider>
+        <ResultPage mainRef={createRef<HTMLElement>()}
+          recommendation={{
+            recipe: { ...recipe, requiredIngredients: ["tomato", "tofu", "onion", "egg"], unmappedRequiredIngredients: ["황태"] },
+            matchedRequiredIngredientIds: ["tomato", "tofu"],
+            missingRequiredIngredientIds: ["onion", "egg"],
+            missingUnmappedRequiredIngredients: ["황태"],
+            matchRate: 0.5,
+            matchBasis: "main",
+          }}
+          selectedIngredientIds={["tomato", "tofu"]} candidateCount={1}
+          onReroll={vi.fn()} onBackHome={vi.fn()} onEditIngredients={vi.fn()} onStartOver={vi.fn()} />
+      </TDSMobileAITProvider>,
+    );
+    expect(screen.getByText("두부, 토마토")).toBeInTheDocument();
+    expect(screen.getByText("달걀, 양파, 황태")).toBeInTheDocument();
+  });
+
   it("등록 필수 재료를 모두 보유해도 원문 누락 검토 안내가 있으면 조리 가능으로 안내하지 않는다", () => {
     render(<TDSMobileAITProvider>
       <ResultPage mainRef={createRef<HTMLElement>()}
@@ -85,7 +105,7 @@ describe("추천 결과 상세", () => {
     );
 
     const availableIngredients = screen.getByRole("region", { name: "보유 재료" });
-    expect(availableIngredients).toHaveTextContent("돼지고기, 김치, 식용유, 대파");
+    expect(availableIngredients).toHaveTextContent("김치, 대파, 돼지고기, 식용유");
     expect(availableIngredients).not.toHaveTextContent("치즈");
     expect(screen.getByText("양파")).toBeInTheDocument();
     expect(
