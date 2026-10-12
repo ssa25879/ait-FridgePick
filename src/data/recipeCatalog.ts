@@ -237,6 +237,21 @@ const INGREDIENT_ALIASES: Record<string, string[]> = {
   mustard: ["머스터드", "디종머스터드"],
   mackerel: ["고등어", "냉동고등어", "손질된고등어"],
   rice_cake: ["떡", "떡볶이떡", "가래떡", "떡국떡", "흰떡", "조랭이떡"],
+  baby_greens: ["어린잎", "어린잎채소"],
+  clam: ["모시조개", "조개", "조개살"],
+  chicory: ["치커리", "레드치커리", "그린치커리"],
+  ginseng: ["인삼"],
+  burdock: ["우엉"],
+  bamboo_shoot: ["죽순", "삶은죽순", "죽순통조림"],
+  ginger_syrup: ["생강청"],
+  green_pea: ["완두콩", "완두콩알"],
+  mustard_paste: ["겨자", "연겨자", "양겨자"],
+  abalone: ["전복", "전복살"],
+  small_octopus: ["낙지", "낙지다리"],
+  oregano: ["오레가노", "오레가노가루", "오레가노마른것"],
+  tomato_sauce: ["토마토소스"],
+  konjac: ["곤약", "실곤약"],
+  chamnamul: ["참나물"],
 };
 
 const ALIAS_TO_INGREDIENT_ID = new Map<string, string>();

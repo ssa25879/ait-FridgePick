@@ -27,7 +27,14 @@ Change: 추천 공백 보완 1차(재료 15개·별칭)와 기준선 테스트�
 Before: 재료 95개, 준비 완료 126(전체 선택), 일상 조합 준비 완료 0.
 After: 재료 110개, 준비 완료 169(전체 선택), 일상 조합은 개선 없음.
 Verification: 위 자동·브라우저 검증. 기기 QA와 출시 산출물 검사 미실행.
-- 제품 코드 변경은 위 1차 반영뿐. 상세는 validation.md.
+- 추천 공백 보완 2차 반영(2026-10-12): 새 선택 재료 15개(어린잎채소·조개·치커리·인삼·우엉·죽순·생강청·완두콩·겨자·전복·낙지·오레가노·토마토소스·곤약·참나물)를 추가해 총 125개. 미지원 레시피 1,169→1,120, 전체 선택 후보 1,023→1,075·준비 완료 169→214. 보정 지표(기본 양념 포함 일상 조합 10개)는 후보 199→208이지만 준비 완료는 11 그대로여서, 일상 조합의 준비 완료는 매핑보다 보유 재료 부족에 좌우된다. 검증: npm test 216개·test:scripts 10·tsc·기본 build 통과, lint 기존 경고 1개, 320×640 칩 125개·가로 넘침 없음. 미커밋, 업로드·출시 없음.
+
+Files: src/data/ingredients.ts, src/data/recipeCatalog.ts, src/data/recommendationGap.test.ts, src/data/recipeCatalog.test.ts, src/utils/recommendRecipe.test.ts, src/App.test.tsx, specs/26-10-12_feature_recommendation_gap_coverage/*, Task.md
+Change: 추천 공백 보완 2차(재료 15개·별칭)와 보정 지표를 반영함.
+Before: 재료 110개, 준비 완료 169(전체 선택).
+After: 재료 125개, 준비 완료 214(전체 선택), 보정 일상 조합 준비 완료 변화 없음.
+Verification: 위 자동·브라우저 검증. 기기 QA·출시 산출물 광고 ID 검사 미실행. 미커밋·미푸시.
+- 제품 코드 변경은 위 1·2차 반영뿐. 상세는 validation.md.
 
 ## 최신 후속: 후보19 최초검수 접수 완료
 
