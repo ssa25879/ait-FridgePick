@@ -234,6 +234,7 @@ function App() {
         onReroll={reroll}
         onShare={share}
         shareLinkFailed={shareLinkFailed}
+        showBannerAd={bannerAdsReady}
         onBackHome={() => navigate("home")}
         onEditIngredients={() => navigate("ingredients")}
         onStartOver={startOver}

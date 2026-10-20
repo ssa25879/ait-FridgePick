@@ -291,12 +291,18 @@
 .result-page {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 32px;
   width: 100%;
   max-width: 480px;
   min-height: 100%;
   margin: 0 auto;
   padding: 24px 0;
+}
+
+.result-page-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .result-page-header {
