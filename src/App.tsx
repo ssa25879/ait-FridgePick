@@ -2,6 +2,7 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { graniteEvent } from "@apps-in-toss/web-framework";
 import "./App.css";
 import { initializeBannerAds } from "./ads/bannerAds";
+import { logFunnelEvent } from "./analytics/funnelEvents";
 import { HomePage } from "./pages/HomePage";
 import { IngredientPage } from "./pages/IngredientPage";
 import { ResultPage } from "./pages/ResultPage";
@@ -46,6 +47,7 @@ function App() {
   };
 
   const startIngredients = () => {
+    logFunnelEvent("ingredient_select_start");
     navigate("ingredients");
     void loadRecommendationModule().then((module) => {
       moduleRef.current = module;
@@ -67,6 +69,7 @@ function App() {
     if (selectedIngredientIds.length === 0) {
       setCandidates([]);
       setRecommendation(null);
+      logFunnelEvent("result_empty", { selected_count: 0 });
       navigate("result");
       return;
     }
@@ -86,7 +89,17 @@ function App() {
       const ready = nextCandidates.filter(isRecipeReady);
       const group = ready.length > 0 ? "ready" : "needs";
       setCandidateGroup(group);
-      setRecommendation(module.pickRecipeCandidate(ready.length > 0 ? ready : nextCandidates));
+      const picked = module.pickRecipeCandidate(ready.length > 0 ? ready : nextCandidates);
+      setRecommendation(picked);
+      if (picked) {
+        logFunnelEvent("result_view", {
+          selected_count: selectedIngredientIds.length,
+          candidate_count: (group === "ready" ? ready : nextCandidates).length,
+          group,
+        });
+      } else {
+        logFunnelEvent("result_empty", { selected_count: selectedIngredientIds.length });
+      }
       setScreen("result");
     } catch {
       if (version === requestVersion.current) {
@@ -101,6 +114,7 @@ function App() {
   };
 
   const reroll = () => {
+    logFunnelEvent("reroll", { candidate_count: activeCandidates.length, group: candidateGroup });
     scrollAfterReroll.current = true;
     setRecommendation((current) =>
       moduleRef.current?.pickRecipeCandidate(activeCandidates, current?.recipe.id) ?? null,
@@ -134,6 +148,13 @@ function App() {
   }, [screen]);
 
   useEffect(() => () => { requestVersion.current += 1; }, []);
+
+  const entryLogged = useRef(false);
+  useEffect(() => {
+    if (entryLogged.current) return;
+    entryLogged.current = true;
+    logFunnelEvent("app_entry");
+  }, []);
 
   useEffect(() => {
     if (screen === "home") return;
