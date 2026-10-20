@@ -2,6 +2,9 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { graniteEvent } from "@apps-in-toss/web-framework";
 import "./App.css";
 import { initializeBannerAds } from "./ads/bannerAds";
+import { logFunnelEvent } from "./analytics/funnelEvents";
+import { REVIEW_READY_VIEW_THRESHOLD, requestReviewOnce } from "./review/reviewPrompt";
+import { shareRecommendation } from "./share/shareRecommendation";
 import { HomePage } from "./pages/HomePage";
 import { IngredientPage } from "./pages/IngredientPage";
 import { ResultPage } from "./pages/ResultPage";
@@ -33,6 +36,26 @@ function App() {
   const [isRecommending, setIsRecommending] = useState(false);
   const [recommendationError, setRecommendationError] = useState<string>();
 
+  const [shareLinkFailed, setShareLinkFailed] = useState(false);
+  const readyViews = useRef(0);
+
+  // 바로 만들 수 있는 메뉴를 몇 번 본 사용자에게만 리뷰를 요청한다(기기당 1회는 모듈이 보장).
+  const noteReadyView = () => {
+    readyViews.current += 1;
+    if (readyViews.current !== REVIEW_READY_VIEW_THRESHOLD) return;
+    void requestReviewOnce().then((requested) => {
+      if (requested) logFunnelEvent("review_request");
+    });
+  };
+
+  const share = async () => {
+    if (!recommendation) return;
+    logFunnelEvent("share_tap");
+    setShareLinkFailed(false);
+    const result = await shareRecommendation(recommendation.recipe);
+    setShareLinkFailed(result === "link_failed");
+  };
+
   const cancelRecommendation = () => {
     requestVersion.current += 1;
     pendingRef.current = false;
@@ -46,6 +69,7 @@ function App() {
   };
 
   const startIngredients = () => {
+    logFunnelEvent("ingredient_select_start");
     navigate("ingredients");
     void loadRecommendationModule().then((module) => {
       moduleRef.current = module;
@@ -67,6 +91,7 @@ function App() {
     if (selectedIngredientIds.length === 0) {
       setCandidates([]);
       setRecommendation(null);
+      logFunnelEvent("result_empty", { selected_count: 0 });
       navigate("result");
       return;
     }
@@ -86,7 +111,18 @@ function App() {
       const ready = nextCandidates.filter(isRecipeReady);
       const group = ready.length > 0 ? "ready" : "needs";
       setCandidateGroup(group);
-      setRecommendation(module.pickRecipeCandidate(ready.length > 0 ? ready : nextCandidates));
+      const picked = module.pickRecipeCandidate(ready.length > 0 ? ready : nextCandidates);
+      setRecommendation(picked);
+      if (picked) {
+        logFunnelEvent("result_view", {
+          selected_count: selectedIngredientIds.length,
+          candidate_count: (group === "ready" ? ready : nextCandidates).length,
+          group,
+        });
+        if (group === "ready") noteReadyView();
+      } else {
+        logFunnelEvent("result_empty", { selected_count: selectedIngredientIds.length });
+      }
       setScreen("result");
     } catch {
       if (version === requestVersion.current) {
@@ -101,7 +137,10 @@ function App() {
   };
 
   const reroll = () => {
+    logFunnelEvent("reroll", { candidate_count: activeCandidates.length, group: candidateGroup });
     scrollAfterReroll.current = true;
+    setShareLinkFailed(false);
+    if (candidateGroup === "ready") noteReadyView();
     setRecommendation((current) =>
       moduleRef.current?.pickRecipeCandidate(activeCandidates, current?.recipe.id) ?? null,
     );
@@ -134,6 +173,13 @@ function App() {
   }, [screen]);
 
   useEffect(() => () => { requestVersion.current += 1; }, []);
+
+  const entryLogged = useRef(false);
+  useEffect(() => {
+    if (entryLogged.current) return;
+    entryLogged.current = true;
+    logFunnelEvent("app_entry");
+  }, []);
 
   useEffect(() => {
     if (screen === "home") return;
@@ -186,6 +232,9 @@ function App() {
         candidateGroup={candidateGroup}
         onChangeCandidateGroup={changeCandidateGroup}
         onReroll={reroll}
+        onShare={share}
+        shareLinkFailed={shareLinkFailed}
+        showBannerAd={bannerAdsReady}
         onBackHome={() => navigate("home")}
         onEditIngredients={() => navigate("ingredients")}
         onStartOver={startOver}

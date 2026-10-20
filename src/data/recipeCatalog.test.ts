@@ -18,7 +18,8 @@ describe("일상 재료의 명확한 표기 매핑", () => {
   ])("%s를 %s에 연결한다", (name, id) => {
     expect(mapRecipeIngredientName(name)).toBe(id);
   });
-  it.each(["안심", "호박", "육수", "계란노른자", "계란흰자", "술", "국수"])(
+  // 계란노른자는 사용자 결정(2026-10-20, 달걀로 묶기)으로 매핑되어 이 목록에서 뺐다. 계란흰자는 후속 검토 대상이다.
+  it.each(["안심", "호박", "육수", "계란흰자", "술", "국수"])(
     "종류·형태가 불명확한 %s를 임의로 연결하지 않는다", name => {
       expect(mapRecipeIngredientName(name)).toBeUndefined();
     },

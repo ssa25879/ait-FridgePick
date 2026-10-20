@@ -5,6 +5,7 @@ import { CategoryTabs } from "../components/CategoryTabs";
 import { IngredientChip } from "../components/IngredientChip";
 import { SelectedIngredientBar } from "../components/SelectedIngredientBar";
 import { INGREDIENTS, INGREDIENT_CATEGORIES } from "../data/ingredients";
+import { ASSUMED_SEASONING_IDS } from "../utils/assumedSeasonings";
 import { sortByKoreanName } from "../utils/koreanOrder";
 import type { Ingredient, IngredientCategoryFilter } from "../types/ingredient";
 import type { RecipeDifficulty } from "../types/recipe";
@@ -17,6 +18,10 @@ const DIFFICULTY_FILTERS = [
   { value: "normal", label: "보통" },
   { value: "hard", label: "어려움" },
 ] as const;
+
+const ASSUMED_SEASONING_NOTICE = `${ASSUMED_SEASONING_IDS
+  .map((id) => INGREDIENTS.find((ingredient) => ingredient.id === id)?.name)
+  .join("·")}는 선택하지 않아도 집에 있다고 가정해요`;
 
 interface IngredientPageProps {
   mainRef: RefObject<HTMLElement>;
@@ -186,6 +191,9 @@ export function IngredientPage({
           <h2 id="ingredient-list-title" className="ingredient-category-title">
             {categoryName} 재료
           </h2>
+          {(activeCategory === "all" || activeCategory === "seasoning") && (
+            <p className="selection-save-status">{ASSUMED_SEASONING_NOTICE}</p>
+          )}
           <div
             key={activeCategory}
             className="ingredient-scroll-viewport"

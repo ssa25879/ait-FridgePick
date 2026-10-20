@@ -7,9 +7,9 @@ import { getRecipeCandidates } from "../utils/recommendRecipe";
 import { ResultPage } from "./ResultPage";
 
 it.each([
-  ["fsk_834", ["egg", "salt"], ["달걀", "소금"]],
-  ["epis_434", ["butter", "milk"], ["버터", "우유", "육수"]],
-] as const)("조리 단계 누락을 보완한 %s의 미보유 재료를 추가 준비 영역에 표시한다", (id, removeIds, expectedNames) => {
+  ["fsk_834", ["egg", "salt"], ["달걀"], ["소금"]],
+  ["epis_434", ["butter", "milk"], ["버터", "우유", "육수"], []],
+] as const)("조리 단계 누락을 보완한 %s의 미보유 재료를 추가 준비 영역에, 기본 양념은 양념 확인 영역에 표시한다", (id, removeIds, expectedNames, seasoningNames) => {
   const recipe = RECIPES.find((recipe) => recipe.id === id)!;
   const selected = recipe.requiredIngredients.filter((ingredientId) => !(removeIds as readonly string[]).includes(ingredientId));
   const [recommendation] = getRecipeCandidates(selected, [recipe], { minimumMatchRate: 0 });
@@ -19,6 +19,11 @@ it.each([
   /></TDSMobileAITProvider>);
   const additional = screen.getByRole("region", { name: "더 준비할 재료" });
   for (const name of expectedNames) expect(additional).toHaveTextContent(name);
+  for (const name of seasoningNames) {
+    expect(additional).not.toHaveTextContent(name);
+    expect(screen.getByRole("region", { name: "양념 확인" })).toHaveTextContent(name);
+  }
+  if (seasoningNames.length === 0) expect(screen.queryByRole("region", { name: "양념 확인" })).not.toBeInTheDocument();
   expect(screen.getByRole("region", { name: "원문 재료 확인" })).toBeInTheDocument();
 });
 

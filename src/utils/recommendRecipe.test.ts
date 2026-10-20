@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import type { Recipe, RecipeDifficulty } from "../types/recipe";
-import { getRecipeCandidates, pickRecipeCandidate } from "./recommendRecipe";
+import { getMissingIngredientCount, getRecipeCandidates, pickRecipeCandidate } from "./recommendRecipe";
+import { isRecipeReady } from "./recipeReadiness";
 import { RECIPES } from "../data/recipes";
 
 const makeRecipe = (
@@ -34,20 +35,22 @@ describe("메뉴 추천 계산", () => {
     expect(matches.length).toBeGreaterThan(0);
     expect(matches.every(({ matchRate, matchBasis }) => matchRate >= 0.6 && matchBasis === "main")).toBe(true);
   });
-  it("김치볶음밥은 원문 주재료로 계산하고 부족한 부재료·양념을 모두 남긴다", () => {
+  it("김치볶음밥은 원문 주재료로 계산하고 부족한 부재료는 남기며 기본 양념은 가정한 양념으로 나눈다", () => {
     const recipe = RECIPES.find(({ id }) => id === "epis_320")!;
     const [match] = getRecipeCandidates(["kimchi", "cooked_rice", "egg", "green_onion"], [recipe]);
     expect(match.matchRate).toBe(1);
     expect(match.matchBasis).toBe("main");
-    expect(new Set(match.missingRequiredIngredientIds)).toEqual(new Set(["potato", "onion", "ham", "cooking_oil", "salt", "black_pepper"]));
+    expect(new Set(match.missingRequiredIngredientIds)).toEqual(new Set(["potato", "onion", "ham"]));
+    expect(new Set(match.assumedSeasoningIds)).toEqual(new Set(["cooking_oil", "salt", "black_pepper"]));
     expect(getRecipeCandidates(["salt", "black_pepper", "cooking_oil"], [recipe])).toEqual([]);
   });
 
-  it("구분 없는 원문은 양념을 제외하되 미지원 재료를 분모와 부족 목록에 남긴다", () => {
+  it("구분 없는 원문은 양념을 제외하되 미지원 재료를 분모와 부족 목록에 남기고 기본 양념은 가정한다", () => {
     const recipe = { ...makeRecipe("fallback", ["tofu", "onion", "soy_sauce", "salt"]), sourceIngredientText: "두부 100g, 양파 50g, 간장 1T, 소금 약간, 호박잎 1개", unmappedRequiredIngredients: ["호박잎"] };
     const [match] = getRecipeCandidates(["tofu", "onion"], [recipe]);
     expect(match.matchRate).toBe(2 / 3);
-    expect(match.missingRequiredIngredientIds).toEqual(["soy_sauce", "salt"]);
+    expect(match.missingRequiredIngredientIds).toEqual([]);
+    expect(match.assumedSeasoningIds).toEqual(["soy_sauce", "salt"]);
     expect(match.missingUnmappedRequiredIngredients).toEqual(["호박잎"]);
     expect(getRecipeCandidates(["tofu"], [recipe])).toEqual([]);
   });
@@ -168,5 +171,67 @@ describe("메뉴 추천 계산", () => {
       onlyCandidate,
     );
     expect(pickRecipeCandidate([], undefined, () => 0)).toBeNull();
+  });
+});
+
+describe("기본 양념 보유 가정", () => {
+  // 원문이 없는 레시피는 양념까지 센 필수 재료 기준이라 낮은 매칭률도 후보에 넣는다.
+  const candidates = (selected: string[], recipes: Recipe[]) =>
+    getRecipeCandidates(selected, recipes, { minimumMatchRate: 0 });
+  const friedRice = makeRecipe("fried_rice", ["kimchi", "cooked_rice", "cooking_oil", "salt"]);
+  const spicyStew = makeRecipe("spicy_stew", ["pork", "kimchi", "gochujang", "salt"]);
+
+  it("선택하지 않은 기본 양념은 부족 재료가 아니라 가정한 양념으로 나눈다", () => {
+    const [match] = candidates(["kimchi", "cooked_rice"], [friedRice]);
+
+    expect(match.missingRequiredIngredientIds).toEqual([]);
+    expect(match.assumedSeasoningIds).toEqual(["cooking_oil", "salt"]);
+    expect(isRecipeReady(match)).toBe(true);
+  });
+
+  it("직접 선택한 기본 양념은 가정한 양념에 넣지 않는다", () => {
+    const [match] = candidates(["kimchi", "cooked_rice", "salt"], [friedRice]);
+
+    expect(match.assumedSeasoningIds).toEqual(["cooking_oil"]);
+  });
+
+  it("기본 양념이 아닌 양념이 부족하면 계속 부족 재료이고 준비 완료가 아니다", () => {
+    const [match] = candidates(["pork", "kimchi"], [spicyStew]);
+
+    expect(match.missingRequiredIngredientIds).toEqual(["gochujang"]);
+    expect(match.assumedSeasoningIds).toEqual(["salt"]);
+    expect(isRecipeReady(match)).toBe(false);
+  });
+
+  it("양념 외 재료가 부족하면 기본 양념을 가정해도 준비 완료가 아니다", () => {
+    const [match] = candidates(["kimchi", "cooked_rice", "cooking_oil"], [
+      makeRecipe("with_egg", ["kimchi", "cooked_rice", "egg", "salt"]),
+    ]);
+
+    expect(match.missingRequiredIngredientIds).toEqual(["egg"]);
+    expect(isRecipeReady(match)).toBe(false);
+  });
+
+  it("미지원 필수 재료나 원문 확인 안내가 있으면 기본 양념을 가정해도 준비 완료가 아니다", () => {
+    const unmapped: Recipe = { ...friedRice, id: "unmapped", unmappedRequiredIngredients: ["육수"] };
+    const reviewed: Recipe = { ...friedRice, id: "reviewed", ingredientReviewNotes: ["원문 확인"] };
+    const matches = candidates(["kimchi", "cooked_rice"], [unmapped, reviewed]);
+
+    expect(matches).toHaveLength(2);
+    expect(matches.some(isRecipeReady)).toBe(false);
+  });
+
+  it("후보 목록과 매칭률은 양념 가정으로 바뀌지 않는다", () => {
+    const matches = candidates(["kimchi"], [friedRice, spicyStew]);
+
+    expect(matches.map(({ recipe }) => recipe.id)).toEqual(["fried_rice", "spicy_stew"]);
+    // 필수 재료 기준 매칭률은 양념도 센다: 4개 중 1개.
+    expect(matches.map(({ matchRate }) => matchRate)).toEqual([0.25, 0.25]);
+  });
+
+  it("부족 재료 수 정렬은 가정한 양념을 세지 않는다", () => {
+    const [match] = candidates(["kimchi", "cooked_rice"], [friedRice]);
+
+    expect(getMissingIngredientCount(match)).toBe(0);
   });
 });

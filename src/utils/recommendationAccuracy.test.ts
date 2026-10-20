@@ -44,6 +44,7 @@ function match(id: string, missing: number, matchRate = 1): RecipeMatch {
     recipe,
     matchedRequiredIngredientIds: [],
     missingRequiredIngredientIds: Array.from({ length: missing }, (_, i) => `m${i}`),
+    assumedSeasoningIds: [],
     missingUnmappedRequiredIngredients: [],
     matchRate,
   };

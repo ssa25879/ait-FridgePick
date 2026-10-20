@@ -2,6 +2,7 @@ import { RECIPES } from "../data/recipes";
 import { INGREDIENTS } from "../data/ingredients";
 import { isRecipePantryStaple, mapRecipeIngredientName, parseRecipeIngredients } from "../data/recipeCatalog";
 import type { Recipe, RecipeDifficulty } from "../types/recipe";
+import { isAssumedSeasoning } from "./assumedSeasonings";
 
 export const MINIMUM_RECIPE_MATCH_RATE = 0.6;
 
@@ -13,7 +14,10 @@ export interface RecipeCandidateFilters {
 export interface RecipeMatch {
   recipe: Recipe;
   matchedRequiredIngredientIds: string[];
+  /** 선택하지 않은 필수 재료. 가정한 기본 양념은 제외한다. */
   missingRequiredIngredientIds: string[];
+  /** 선택하지 않았지만 집에 있다고 가정한 필수 기본 양념. */
+  assumedSeasoningIds: string[];
   missingUnmappedRequiredIngredients: string[];
   matchRate: number;
   matchBasis?: "main" | "required";
@@ -77,9 +81,12 @@ export function getRecipeCandidates(
     const matchedRequiredIngredientIds = recipe.requiredIngredients.filter(
       (id) => selectedIds.has(id),
     );
-    const missingRequiredIngredientIds = recipe.requiredIngredients.filter(
+    const unselectedRequiredIngredientIds = recipe.requiredIngredients.filter(
       (id) => !selectedIds.has(id),
     );
+    // 기본 양념은 집에 있다고 가정해 부족 재료와 따로 둔다. 후보 여부와 매칭률에는 영향이 없다.
+    const missingRequiredIngredientIds = unselectedRequiredIngredientIds.filter((id) => !isAssumedSeasoning(id));
+    const assumedSeasoningIds = unselectedRequiredIngredientIds.filter(isAssumedSeasoning);
     const matchRate =
       matchingIngredients.ids.filter((id) => selectedIds.has(id)).length / matchingIngredientCount;
 
@@ -93,6 +100,7 @@ export function getRecipeCandidates(
         recipe,
         matchedRequiredIngredientIds,
         missingRequiredIngredientIds,
+        assumedSeasoningIds,
         missingUnmappedRequiredIngredients: unmappedRequiredIngredients,
         matchRate,
         matchBasis: matchingIngredients.basis,

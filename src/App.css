@@ -291,12 +291,18 @@
 .result-page {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 32px;
   width: 100%;
   max-width: 480px;
   min-height: 100%;
   margin: 0 auto;
   padding: 24px 0;
+}
+
+.result-page-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .result-page-header {
@@ -397,6 +403,25 @@
   flex-direction: column;
   gap: 12px;
   width: 100%;
+}
+
+/* 결과 공유하기와 처음부터는 한 줄에 나란히 놓고 각각 절반 너비를 쓴다. */
+.result-secondary-actions {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.result-secondary-actions > * {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+/* 절반 너비에서 "결과 공유하기"가 두 줄로 꺾이지 않도록 버튼 안쪽 여백을 줄이고 한 줄로 둔다. */
+.result-page-actions .result-secondary-actions > button .tds-mobile-button__content {
+  padding-left: 6px;
+  padding-right: 6px;
+  white-space: nowrap;
 }
 
 .result-empty-message {
