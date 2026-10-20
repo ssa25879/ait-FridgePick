@@ -30,11 +30,12 @@ describe("레시피 카탈로그", () => {
     }
   });
 
-  it("두부 달걀전에서 단계에만 적힌 달걀과 소금을 실제 추가 준비 재료로 계산한다", () => {
+  it("두부 달걀전에서 단계에만 적힌 달걀은 추가 준비 재료로, 소금은 가정한 기본 양념으로 계산한다", () => {
     const original = PUBLIC_RECIPES.find(({ id }) => id === "fsk_834")!;
     const current = RECIPES.find(({ id }) => id === "fsk_834")!;
     const [match] = getRecipeCandidates(original.requiredIngredients, [current], { minimumMatchRate: 0 });
-    expect(match.missingRequiredIngredientIds).toEqual(expect.arrayContaining(["egg", "salt"]));
+    expect(match.missingRequiredIngredientIds).toEqual(["egg"]);
+    expect(match.assumedSeasoningIds).toEqual(["salt"]);
     const [selected] = getRecipeCandidates([...original.requiredIngredients, "egg", "salt"], [current], { minimumMatchRate: 0 });
     expect(selected.missingRequiredIngredientIds).toEqual([]);
     expect(isRecipeReady(selected)).toBe(false); // Missing source quantities still need checking.

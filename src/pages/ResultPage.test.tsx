@@ -11,6 +11,7 @@ const recommendation: RecipeMatch = {
   recipe,
   matchedRequiredIngredientIds: ["pork", "kimchi", "cooking_oil"],
   missingRequiredIngredientIds: ["onion"],
+  assumedSeasoningIds: [],
   missingUnmappedRequiredIngredients: [],
   matchRate: 0.75,
 };
@@ -32,6 +33,7 @@ const publicRecommendation: RecipeMatch = {
   },
   matchedRequiredIngredientIds: ["tofu", "tomato"],
   missingRequiredIngredientIds: [],
+  assumedSeasoningIds: [],
   missingUnmappedRequiredIngredients: ["황태"],
   matchRate: 2 / 3,
 };
@@ -45,6 +47,7 @@ describe("추천 결과 상세", () => {
             recipe: { ...recipe, requiredIngredients: ["tomato", "tofu", "onion", "egg"], unmappedRequiredIngredients: ["황태"] },
             matchedRequiredIngredientIds: ["tomato", "tofu"],
             missingRequiredIngredientIds: ["onion", "egg"],
+            assumedSeasoningIds: [],
             missingUnmappedRequiredIngredients: ["황태"],
             matchRate: 0.5,
             matchBasis: "main",
@@ -168,5 +171,49 @@ describe("추천 결과 상세", () => {
       recipeSteps.compareDocumentPosition(sourceFooter!) &
         Node.DOCUMENT_POSITION_FOLLOWING,
     ).toBeTruthy();
+  });
+});
+
+describe("기본 양념 보유 가정 안내", () => {
+  const renderResult = (overrides: Partial<RecipeMatch>) => render(
+    <TDSMobileAITProvider>
+      <ResultPage mainRef={createRef<HTMLElement>()}
+        recommendation={{ ...recommendation, ...overrides }}
+        selectedIngredientIds={["pork", "kimchi"]} candidateCount={1}
+        onReroll={vi.fn()} onBackHome={vi.fn()} onEditIngredients={vi.fn()} onStartOver={vi.fn()} />
+    </TDSMobileAITProvider>,
+  );
+
+  it("가정한 기본 양념을 양념 확인에 가나다 순으로 따로 보여준다", () => {
+    renderResult({ missingRequiredIngredientIds: [], assumedSeasoningIds: ["soy_sauce", "salt", "cooking_oil"] });
+
+    const region = screen.getByRole("region", { name: "양념 확인" });
+    expect(region).toHaveTextContent("집에 있다고 가정했어요");
+    expect(region).toHaveTextContent("간장, 소금, 식용유");
+  });
+
+  it("양념은 더 준비할 재료에 중복해서 나오지 않는다", () => {
+    renderResult({ missingRequiredIngredientIds: ["onion"], assumedSeasoningIds: ["salt"] });
+
+    expect(screen.getByRole("region", { name: "더 준비할 재료" })).toHaveTextContent("양파");
+    expect(screen.getByRole("region", { name: "더 준비할 재료" })).not.toHaveTextContent("소금");
+  });
+
+  it("가정한 양념이 없으면 양념 확인을 숨긴다", () => {
+    renderResult({ missingRequiredIngredientIds: [], assumedSeasoningIds: [] });
+
+    expect(screen.queryByRole("region", { name: "양념 확인" })).not.toBeInTheDocument();
+  });
+
+  it("양념만 가정한 준비 완료 메뉴는 양념을 빼고 모두 선택했다고 안내한다", () => {
+    renderResult({ missingRequiredIngredientIds: [], assumedSeasoningIds: ["salt"], matchRate: 1 });
+
+    expect(screen.getByRole("status")).toHaveTextContent("기본 양념을 빼고 필요한 재료를 모두 선택했어요");
+  });
+
+  it("가정한 양념이 없는 준비 완료 메뉴는 기존 문구를 유지한다", () => {
+    renderResult({ missingRequiredIngredientIds: [], assumedSeasoningIds: [], matchRate: 1 });
+
+    expect(screen.getByRole("status")).toHaveTextContent("레시피에 필요한 재료를 모두 선택했어요");
   });
 });

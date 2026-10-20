@@ -61,6 +61,14 @@ export function ResultPage({
         ...recommendation.missingUnmappedRequiredIngredients,
       ])
     : [];
+  // 선택하지 않았지만 집에 있다고 가정한 기본 양념. 부족 재료와 따로 안내한다.
+  const assumedSeasoningNames = recommendation
+    ? sortKoreanNames(
+        recommendation.assumedSeasoningIds
+          .map((id) => ingredientById.get(id)?.name)
+          .filter((name) => name !== undefined),
+      )
+    : [];
 
   return (
     <main
@@ -106,7 +114,7 @@ export function ResultPage({
         <section className="result-recommendation">
           <div className="result-summary" role="status">
             <p className="result-detail-text">
-              {reviewNotes.length > 0 ? "레시피 재료 확인이 필요해요" : isRecipeReady(recommendation) ? "레시피에 필요한 재료를 모두 선택했어요" : "아래 재료를 추가해야 만들 수 있어요"}
+              {reviewNotes.length > 0 ? "레시피 재료 확인이 필요해요" : isRecipeReady(recommendation) ? (assumedSeasoningNames.length > 0 ? "기본 양념을 빼고 필요한 재료를 모두 선택했어요" : "레시피에 필요한 재료를 모두 선택했어요") : "아래 재료를 추가해야 만들 수 있어요"}
             </p>
             <h2 className="result-recipe-name">
               {recommendation.recipe.name}
@@ -137,6 +145,17 @@ export function ResultPage({
                 : reviewNotes.length > 0 ? "등록된 재료는 모두 선택했어요. 아래 원문 확인 안내도 살펴봐 주세요." : "더 준비할 재료가 없어요."}
             </p>
           </section>
+          {assumedSeasoningNames.length > 0 && (
+            <section className="result-detail" aria-labelledby="seasoning-check-title">
+              <h3 id="seasoning-check-title" className="result-detail-title">
+                양념 확인
+              </h3>
+              <p className="result-detail-text">
+                아래 기본 양념은 집에 있다고 가정했어요. 없다면 준비해 주세요.
+              </p>
+              <p className="result-detail-text">{assumedSeasoningNames.join(", ")}</p>
+            </section>
+          )}
           {reviewNotes.length > 0 && (
             <section className="result-detail" aria-labelledby="ingredient-review-title">
               <h3 id="ingredient-review-title" className="result-detail-title">원문 재료 확인</h3>

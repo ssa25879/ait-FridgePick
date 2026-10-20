@@ -40,8 +40,8 @@ function start() {
 describe("추천 모듈 지연 로딩", () => {
   it("다시 뽑은 결과를 반영한 뒤 화면 맨 위로 이동하고 결과에 초점을 둔다", async () => {
     const candidates = TEST_RECIPES.slice(0, 2).map((recipe) => ({
-      recipe, matchedRequiredIngredientIds: [], missingRequiredIngredientIds: ["salt"],
-      missingUnmappedRequiredIngredients: [], matchRate: 1,
+      recipe, matchedRequiredIngredientIds: [], missingRequiredIngredientIds: ["onion"],
+      assumedSeasoningIds: [], missingUnmappedRequiredIngredients: [], matchRate: 1,
     }));
     const pick = vi.fn().mockReturnValueOnce(candidates[0]).mockReturnValueOnce(candidates[1]);
     loader.mockResolvedValue({ ...module, getRecipeCandidates: () => candidates, pickRecipeCandidate: pick });
@@ -63,9 +63,9 @@ describe("추천 모듈 지연 로딩", () => {
   it("준비 완료 메뉴를 우선 뽑고 준비 필요 메뉴는 별도 그룹에서만 다시 뽑는다", async () => {
     vi.spyOn(Math, "random").mockReturnValue(0);
     const candidates = [
-      { recipe: { id: "missing", name: "준비 필요 메뉴" }, matchedRequiredIngredientIds: ["kimchi"], missingRequiredIngredientIds: ["salt"], missingUnmappedRequiredIngredients: [], matchRate: 1, matchBasis: "main" as const },
-      { recipe: { id: "ready", name: "준비 완료 메뉴" }, matchedRequiredIngredientIds: ["kimchi"], missingRequiredIngredientIds: [], missingUnmappedRequiredIngredients: [], matchRate: 1, matchBasis: "main" as const },
-      { recipe: { id: "unknown", name: "미지원 재료 메뉴" }, matchedRequiredIngredientIds: ["kimchi"], missingRequiredIngredientIds: [], missingUnmappedRequiredIngredients: ["전복"], matchRate: 1, matchBasis: "main" as const },
+      { recipe: { id: "missing", name: "준비 필요 메뉴" }, matchedRequiredIngredientIds: ["kimchi"], missingRequiredIngredientIds: ["onion"], assumedSeasoningIds: [], missingUnmappedRequiredIngredients: [], matchRate: 1, matchBasis: "main" as const },
+      { recipe: { id: "ready", name: "준비 완료 메뉴" }, matchedRequiredIngredientIds: ["kimchi"], missingRequiredIngredientIds: [], assumedSeasoningIds: [], missingUnmappedRequiredIngredients: [], matchRate: 1, matchBasis: "main" as const },
+      { recipe: { id: "unknown", name: "미지원 재료 메뉴" }, matchedRequiredIngredientIds: ["kimchi"], missingRequiredIngredientIds: [], assumedSeasoningIds: [], missingUnmappedRequiredIngredients: ["전복"], matchRate: 1, matchBasis: "main" as const },
     ].map((match) => ({ ...match, recipe: { ...TEST_RECIPES[0], ...match.recipe } }));
     loader.mockResolvedValue({ ...module, getRecipeCandidates: () => candidates });
     start();
@@ -83,7 +83,7 @@ describe("추천 모듈 지연 로딩", () => {
   });
 
   it("준비 완료 메뉴가 없으면 그 사실을 알리고 부족한 메뉴로 표시한다", async () => {
-    const partial = { ...getRecipeCandidates(["kimchi", "onion", "pork"], TEST_RECIPES)[0], missingRequiredIngredientIds: ["cooking_oil"] };
+    const partial = { ...getRecipeCandidates(["kimchi", "onion", "pork"], TEST_RECIPES)[0], missingRequiredIngredientIds: ["onion"] };
     loader.mockResolvedValue({ ...module, getRecipeCandidates: () => [partial] });
     start();
     fireEvent.click(screen.getByRole("button", { name: "메뉴 뽑기" }));

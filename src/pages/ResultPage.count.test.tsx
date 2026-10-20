@@ -12,7 +12,7 @@ describe("검색 후보 수 안내", () => {
       recommendation={count === 0 ? null : {
         recipe: TEST_RECIPES[0], matchRate: 1,
         matchedRequiredIngredientIds: ["kimchi", "cooked_rice", "cooking_oil"],
-        missingRequiredIngredientIds: [], missingUnmappedRequiredIngredients: [],
+        missingRequiredIngredientIds: [], assumedSeasoningIds: [], missingUnmappedRequiredIngredients: [],
       }}
       selectedIngredientIds={["kimchi", "cooked_rice", "cooking_oil"]}
       candidateCount={count}
