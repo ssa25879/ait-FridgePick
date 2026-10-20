@@ -609,3 +609,7 @@ feature/acquisition-growth에서 `src/analytics/funnelEvents.ts`를 추가하고
 ## 2026-10-20 유입 개선 2~4단계 진행
 
 feature/acquisition-growth. 2단계: 콘솔 메타데이터 수정안만 작성(specs/.../metadata-draft.md), 콘솔 적용 없음. 3단계: Share.createLink/sendMessage로 결과 공유 버튼 구현(OG 이미지 없음). 4단계: Review.request를 바로 만들 수 있는 메뉴 2번째 조회 시 기기당 1회 요청, 알림은 지표 부족과 UX 원칙으로 구현하지 않음. tsc·npm test 272개·lint(기존 경고 1)·기본 build 통과. 미수행: 화면·실기기 확인, 업로드·검수·출시, 콘솔 적용. 미커밋.
+
+## 2026-10-20 테스트 번들 20261020-24 업로드
+
+사용자 승인으로 기본 빌드(테스트 광고)를 콘솔 `20261020-24`(deploymentId 01a157ba-6dcc-74bc-9341-02b0d58c8a84)로 업로드해 `CREATED`를 확인했다. 번들에 테스트 광고 ID만 있고 실제 ID는 없음을 확인. 테스트 푸시·검수 제출·출시는 하지 않았고 라이브는 `20261012-23` 유지. 기기 확인(공유 시트·리뷰·이벤트)은 미수행.
