@@ -399,17 +399,23 @@
   width: 100%;
 }
 
-/* 보조 버튼은 38px로 작게 보이되 터치 영역은 44px 이상을 유지한다(위아래 3px 확장, 버튼 간격 12px 안). */
-.result-page-actions .result-secondary-action {
-  position: relative;
-  /* TDS 버튼의 overflow: hidden이 확장 영역을 잘라내 터치를 받지 못하므로 푼다. */
-  overflow: visible;
+/* 결과 공유하기와 처음부터는 한 줄에 나란히 놓고 각각 절반 너비를 쓴다. */
+.result-secondary-actions {
+  display: flex;
+  gap: 12px;
+  width: 100%;
 }
 
-.result-page-actions .result-secondary-action::after {
-  content: "";
-  position: absolute;
-  inset: -3px 0;
+.result-secondary-actions > * {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+/* 절반 너비에서 "결과 공유하기"가 두 줄로 꺾이지 않도록 버튼 안쪽 여백을 줄이고 한 줄로 둔다. */
+.result-page-actions .result-secondary-actions > button .tds-mobile-button__content {
+  padding-left: 6px;
+  padding-right: 6px;
+  white-space: nowrap;
 }
 
 .result-empty-message {

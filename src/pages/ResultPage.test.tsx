@@ -217,3 +217,33 @@ describe("기본 양념 보유 가정 안내", () => {
     expect(screen.getByRole("status")).toHaveTextContent("레시피에 필요한 재료를 모두 선택했어요");
   });
 });
+
+describe("보조 버튼 배치", () => {
+  const renderResult = (selected: string[]) => render(
+    <TDSMobileAITProvider>
+      <ResultPage mainRef={createRef<HTMLElement>()}
+        recommendation={recommendation}
+        selectedIngredientIds={selected} candidateCount={2}
+        onReroll={vi.fn()} onShare={vi.fn()} onBackHome={vi.fn()} onEditIngredients={vi.fn()} onStartOver={vi.fn()} />
+    </TDSMobileAITProvider>,
+  );
+
+  it("결과 공유하기와 처음부터는 한 줄에 나란히 놓고 다시 뽑기·재료 바꾸기는 따로 둔다", () => {
+    renderResult(["pork", "kimchi"]);
+
+    const share = screen.getByRole("button", { name: "결과 공유하기" });
+    const startOver = screen.getByRole("button", { name: "처음부터" });
+    expect(share.parentElement).toBe(startOver.parentElement);
+    expect(share.parentElement).toHaveClass("result-secondary-actions");
+    for (const name of ["다시 뽑기", "재료 바꾸기"]) {
+      expect(screen.getByRole("button", { name }).parentElement).not.toBe(share.parentElement);
+    }
+  });
+
+  it("처음부터가 없으면 공유 버튼만 같은 줄 구역에 남는다", () => {
+    renderResult([]);
+
+    expect(screen.queryByRole("button", { name: "처음부터" })).not.toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "결과 공유하기" }).parentElement).toHaveClass("result-secondary-actions");
+  });
+});

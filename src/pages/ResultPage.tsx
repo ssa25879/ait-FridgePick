@@ -225,24 +225,6 @@ export function ResultPage({
             다시 뽑기
           </Button>
         )}
-        {recommendation && onShare && (
-          <Button
-            type="button"
-            color="dark"
-            variant="weak"
-            display="full"
-            size="medium"
-            className="result-secondary-action"
-            onClick={onShare}
-          >
-            결과 공유하기
-          </Button>
-        )}
-        {shareLinkFailed && (
-          <p className="result-detail-text" role="status">
-            공유 링크를 만들지 못했어요. 잠시 후 다시 시도해 주세요.
-          </p>
-        )}
         <Button
           type="button"
           color="dark"
@@ -256,18 +238,38 @@ export function ResultPage({
               ? "재료 바꾸기"
               : "재료 추가·변경하기"}
         </Button>
-        {selectedIngredientIds.length > 0 && (
-          <Button
-            type="button"
-            color="dark"
-            variant="weak"
-            display="full"
-            size="medium"
-            className="result-secondary-action"
-            onClick={onStartOver}
-          >
-            처음부터
-          </Button>
+        {((recommendation && onShare) || selectedIngredientIds.length > 0) && (
+          <div className="result-secondary-actions">
+            {recommendation && onShare && (
+              <Button
+                type="button"
+                color="dark"
+                variant="weak"
+                display="full"
+                size="large"
+                onClick={onShare}
+              >
+                결과 공유하기
+              </Button>
+            )}
+            {selectedIngredientIds.length > 0 && (
+              <Button
+                type="button"
+                color="dark"
+                variant="weak"
+                display="full"
+                size="large"
+                onClick={onStartOver}
+              >
+                처음부터
+              </Button>
+            )}
+          </div>
+        )}
+        {shareLinkFailed && (
+          <p className="result-detail-text" role="status">
+            공유 링크를 만들지 못했어요. 잠시 후 다시 시도해 주세요.
+          </p>
         )}
       </div>
     </main>
