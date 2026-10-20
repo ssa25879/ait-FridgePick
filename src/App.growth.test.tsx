@@ -82,7 +82,10 @@ describe("결과 공유", () => {
     await user.click(screen.getByRole("button", { name: "결과 공유하기" }));
 
     await waitFor(() => expect(sdk.sendMessage).toHaveBeenCalledTimes(1));
-    expect(sdk.sendMessage.mock.calls[0][0].message).toContain(menuName);
+    const message: string = sdk.sendMessage.mock.calls[0][0].message;
+    expect(message).toContain(menuName);
+    expect(message).toContain("[재료]");
+    expect(message).toContain("[조리 순서]");
     expect(loggedNames()).toContain("share_tap");
   });
 

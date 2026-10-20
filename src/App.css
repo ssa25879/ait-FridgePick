@@ -399,6 +399,19 @@
   width: 100%;
 }
 
+/* 보조 버튼은 38px로 작게 보이되 터치 영역은 44px 이상을 유지한다(위아래 3px 확장, 버튼 간격 12px 안). */
+.result-page-actions .result-secondary-action {
+  position: relative;
+  /* TDS 버튼의 overflow: hidden이 확장 영역을 잘라내 터치를 받지 못하므로 푼다. */
+  overflow: visible;
+}
+
+.result-page-actions .result-secondary-action::after {
+  content: "";
+  position: absolute;
+  inset: -3px 0;
+}
+
 .result-empty-message {
   margin: 0;
 }

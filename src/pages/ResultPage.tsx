@@ -231,7 +231,8 @@ export function ResultPage({
             color="dark"
             variant="weak"
             display="full"
-            size="large"
+            size="medium"
+            className="result-secondary-action"
             onClick={onShare}
           >
             결과 공유하기
@@ -261,7 +262,8 @@ export function ResultPage({
             color="dark"
             variant="weak"
             display="full"
-            size="large"
+            size="medium"
+            className="result-secondary-action"
             onClick={onStartOver}
           >
             처음부터

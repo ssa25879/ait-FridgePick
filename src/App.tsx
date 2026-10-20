@@ -52,7 +52,7 @@ function App() {
     if (!recommendation) return;
     logFunnelEvent("share_tap");
     setShareLinkFailed(false);
-    const result = await shareRecommendation(recommendation.recipe.name);
+    const result = await shareRecommendation(recommendation.recipe);
     setShareLinkFailed(result === "link_failed");
   };
 
