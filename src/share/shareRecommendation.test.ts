@@ -46,6 +46,18 @@ describe("buildShareMessage", () => {
     expect(message.trimEnd().endsWith(LINK)).toBe(true);
   });
 
+  it("출처와 안내 문구 사이를 한 줄 띄우고 안내 문구 바로 아래에 링크를 둔다", () => {
+    const message = buildShareMessage(recipe, LINK);
+
+    expect(message).toContain("출처: 식품의약품안전처 조리식품의 레시피 DB\n\n토스에서 냉털픽으로 골랐어요.\n" + LINK);
+  });
+
+  it("출처가 없어도 조리 순서와 안내 문구 사이를 한 줄 띄운다", () => {
+    const message = buildShareMessage({ ...recipe, source: undefined }, LINK);
+
+    expect(message).toContain("3. 간을 맞춰 마무리해요.\n\n토스에서 냉털픽으로 골랐어요.\n" + LINK);
+  });
+
   it("단계 번호를 중복해서 붙이지 않는다", () => {
     const message = buildShareMessage(recipe, LINK);
 

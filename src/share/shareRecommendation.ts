@@ -37,11 +37,9 @@ function numberedSteps(recipe: Recipe): string[] {
  */
 export function buildShareMessage(recipe: Recipe, link: string): string {
   const head = `오늘 메뉴는 ${recipe.name}!\n\n[재료]\n${ingredientSection(recipe)}\n\n[조리 순서]\n`;
-  const tail = [
-    recipe.source ? `출처: ${recipe.source.provider} ${recipe.source.dataset}` : undefined,
-    "토스에서 냉털픽으로 골랐어요.",
-    link,
-  ].filter((line) => line !== undefined).join("\n");
+  // 출처, 안내 문구는 한 줄씩 띄워 눈에 띄게 하고, 링크는 안내 문구 바로 아래에 둔다.
+  const sourceBlock = recipe.source ? `출처: ${recipe.source.provider} ${recipe.source.dataset}\n\n` : "";
+  const tail = `${sourceBlock}토스에서 냉털픽으로 골랐어요.\n${link}`;
   const compose = (steps: string[], truncated: boolean) =>
     `${head}${steps.join("\n")}${truncated ? `\n${TRUNCATION_NOTICE}` : ""}\n\n${tail}`;
 
