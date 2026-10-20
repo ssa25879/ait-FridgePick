@@ -605,3 +605,7 @@ gpt-6-luna/xhigh 에이전트3개검토를완료하고코드/콘솔기록과대�
 ## 2026-10-20 유입 개선 1단계(측정 이벤트) 구현
 
 feature/acquisition-growth에서 `src/analytics/funnelEvents.ts`를 추가하고 App.tsx에 app_entry·ingredient_select_start·result_view·result_empty·reroll을 연결했다. eventLog는 deprecated라 Analytics.log를 사용했고 params는 개수·추천 그룹만 허용(재료 ID 불가). 테스트 10개 추가, tsc·npm test 255개·lint(기존 경고 1)·기본 build 통과. 미커밋·미업로드·미출시. 로그는 라이브에서만 수집되므로 콘솔 확인과 핵심 지표(전환 지표) 등록은 출시 다음 날 이후 가능하다.
+
+## 2026-10-20 유입 개선 2~4단계 진행
+
+feature/acquisition-growth. 2단계: 콘솔 메타데이터 수정안만 작성(specs/.../metadata-draft.md), 콘솔 적용 없음. 3단계: Share.createLink/sendMessage로 결과 공유 버튼 구현(OG 이미지 없음). 4단계: Review.request를 바로 만들 수 있는 메뉴 2번째 조회 시 기기당 1회 요청, 알림은 지표 부족과 UX 원칙으로 구현하지 않음. tsc·npm test 272개·lint(기존 경고 1)·기본 build 통과. 미수행: 화면·실기기 확인, 업로드·검수·출시, 콘솔 적용. 미커밋.
