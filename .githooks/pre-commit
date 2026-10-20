@@ -1,0 +1,3 @@
+#!/bin/sh
+# 커밋 전에 스테이징된 파일에서 광고 그룹 ID 같은 비밀값을 막는다.
+exec node scripts/checkSecrets.mjs --staged
