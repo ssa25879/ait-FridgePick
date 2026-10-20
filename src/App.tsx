@@ -3,6 +3,8 @@ import { graniteEvent } from "@apps-in-toss/web-framework";
 import "./App.css";
 import { initializeBannerAds } from "./ads/bannerAds";
 import { logFunnelEvent } from "./analytics/funnelEvents";
+import { REVIEW_READY_VIEW_THRESHOLD, requestReviewOnce } from "./review/reviewPrompt";
+import { shareRecommendation } from "./share/shareRecommendation";
 import { HomePage } from "./pages/HomePage";
 import { IngredientPage } from "./pages/IngredientPage";
 import { ResultPage } from "./pages/ResultPage";
@@ -33,6 +35,26 @@ function App() {
   const pendingRef = useRef(false);
   const [isRecommending, setIsRecommending] = useState(false);
   const [recommendationError, setRecommendationError] = useState<string>();
+
+  const [shareLinkFailed, setShareLinkFailed] = useState(false);
+  const readyViews = useRef(0);
+
+  // 바로 만들 수 있는 메뉴를 몇 번 본 사용자에게만 리뷰를 요청한다(기기당 1회는 모듈이 보장).
+  const noteReadyView = () => {
+    readyViews.current += 1;
+    if (readyViews.current !== REVIEW_READY_VIEW_THRESHOLD) return;
+    void requestReviewOnce().then((requested) => {
+      if (requested) logFunnelEvent("review_request");
+    });
+  };
+
+  const share = async () => {
+    if (!recommendation) return;
+    logFunnelEvent("share_tap");
+    setShareLinkFailed(false);
+    const result = await shareRecommendation(recommendation.recipe.name);
+    setShareLinkFailed(result === "link_failed");
+  };
 
   const cancelRecommendation = () => {
     requestVersion.current += 1;
@@ -97,6 +119,7 @@ function App() {
           candidate_count: (group === "ready" ? ready : nextCandidates).length,
           group,
         });
+        if (group === "ready") noteReadyView();
       } else {
         logFunnelEvent("result_empty", { selected_count: selectedIngredientIds.length });
       }
@@ -116,6 +139,8 @@ function App() {
   const reroll = () => {
     logFunnelEvent("reroll", { candidate_count: activeCandidates.length, group: candidateGroup });
     scrollAfterReroll.current = true;
+    setShareLinkFailed(false);
+    if (candidateGroup === "ready") noteReadyView();
     setRecommendation((current) =>
       moduleRef.current?.pickRecipeCandidate(activeCandidates, current?.recipe.id) ?? null,
     );
@@ -207,6 +232,8 @@ function App() {
         candidateGroup={candidateGroup}
         onChangeCandidateGroup={changeCandidateGroup}
         onReroll={reroll}
+        onShare={share}
+        shareLinkFailed={shareLinkFailed}
         onBackHome={() => navigate("home")}
         onEditIngredients={() => navigate("ingredients")}
         onStartOver={startOver}

@@ -9,6 +9,8 @@ interface FunnelEventParams {
   result_view: { selected_count: number; candidate_count: number; group: CandidateGroup };
   result_empty: { selected_count: number };
   reroll: { candidate_count: number; group: CandidateGroup };
+  share_tap: Record<never, never>;
+  review_request: Record<never, never>;
 }
 
 export type FunnelEventName = keyof FunnelEventParams;
@@ -19,7 +21,9 @@ const LOG_TYPES = {
   result_view: "screen",
   result_empty: "screen",
   reroll: "click",
-} as const satisfies Record<FunnelEventName, "screen" | "click">;
+  share_tap: "click",
+  review_request: "event",
+} as const satisfies Record<FunnelEventName, "screen" | "click" | "event">;
 
 type ParamsArgument<N extends FunnelEventName> =
   keyof FunnelEventParams[N] extends never ? [] : [params: FunnelEventParams[N]];

@@ -15,6 +15,8 @@ interface ResultPageProps {
   candidateGroup?: "ready" | "needs";
   onChangeCandidateGroup?: (group: "ready" | "needs") => void;
   onReroll: () => void;
+  onShare?: () => void;
+  shareLinkFailed?: boolean;
   onBackHome: () => void;
   onEditIngredients: () => void;
   onStartOver: () => void;
@@ -30,6 +32,8 @@ export function ResultPage({
   candidateGroup,
   onChangeCandidateGroup,
   onReroll,
+  onShare,
+  shareLinkFailed,
   onBackHome,
   onEditIngredients,
   onStartOver,
@@ -201,6 +205,23 @@ export function ResultPage({
           >
             다시 뽑기
           </Button>
+        )}
+        {recommendation && onShare && (
+          <Button
+            type="button"
+            color="dark"
+            variant="weak"
+            display="full"
+            size="large"
+            onClick={onShare}
+          >
+            결과 공유하기
+          </Button>
+        )}
+        {shareLinkFailed && (
+          <p className="result-detail-text" role="status">
+            공유 링크를 만들지 못했어요. 잠시 후 다시 시도해 주세요.
+          </p>
         )}
         <Button
           type="button"
