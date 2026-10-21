@@ -20,6 +20,7 @@ jobs:
           node-version-file: .node-version
           cache: npm
       - run: npm ci
+      - run: npm run check:secrets
       - run: npm run lint
       - run: npm test -- --maxWorkers=1
       - run: npm run test:scripts

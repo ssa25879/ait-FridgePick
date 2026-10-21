@@ -12,7 +12,9 @@
     "build:release": "tsc -b && vite build --mode release && ait build",
     "lint": "oxlint",
     "test": "vitest run",
-    "test:scripts": "node --test scripts/downloadEpisIngredients.checks.mjs scripts/generateRecipeCatalog.checks.mjs",
+    "test:scripts": "node --test scripts/downloadEpisIngredients.checks.mjs scripts/generateRecipeCatalog.checks.mjs scripts/checkSecrets.checks.mjs",
+    "check:secrets": "node scripts/checkSecrets.mjs",
+    "prepare": "node scripts/installHooks.mjs",
     "preview": "vite preview",
     "deploy": "ait deploy"
   },

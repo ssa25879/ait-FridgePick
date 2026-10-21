@@ -53,3 +53,14 @@
   `Task.md`와 기능의 `validation.md`에 기록한다.
 - 단순 조회·설명처럼 파일 변경이나 로드맵 준비가 없는 요청에 두 스킬의
   문서·커밋 절차를 불필요하게 적용하지 않는다.
+
+## 비밀값 규칙
+
+- 광고 그룹 ID 같은 실제 비밀값은 소스·문서·커밋 메시지·로그 어디에도 쓰지 않는다.
+  문서에서는 `<AD_GROUP_ID>`처럼 자리표시자로 쓴다. 실제 값은 저장소 밖
+  `../local-config/ait-fridgepick/.env.release.local`에만 둔다.
+- 커밋 전 `.githooks/pre-commit`이 `npm run check:secrets`와 같은 검사를 돌려 실제 형식의
+  값이 있으면 커밋을 막는다. `npm ci`/`npm install`이 훅 경로를 연결한다(`prepare`).
+  CI도 같은 검사를 돈다. 검사를 우회(`--no-verify`)하지 않는다.
+- 검사에 걸리면 값을 지우고 자리표시자로 바꾼다. 이미 푸시했다면 이력 정리와 광고 그룹
+  교체를 사용자와 상의한다(`specs/26-10-20_feature_history_cleanup/` 참고).
