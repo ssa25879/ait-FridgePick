@@ -698,3 +698,13 @@ Change: 이력 정리 문서를 STATE.md의 실제 실행 결과로 갱신함.
 Before: 문서에는 "계획만 작성, 아무것도 실행하지 않음"으로 남아 있었고 검증표 V1~V19가 모두 미수행이었다.
 After: 게이트·검증 항목별로 통과/부분/대기를 표시했다. 작업 위치와 남은 확인을 기록했다.
 Verification: STATE.md·HANDOFF-SESSION3.md와 대조함. 새 저장소 원격 참조를 ls-remote로 확인함(master 3b9de10, 10-21 이후 변경 없음). 문서 변경이라 앱 테스트는 실행하지 않음.
+
+## 2026-10-26 CI 전체 결과·광고 어뷰징 확인, G3 통과 (문서만, docs/history-cleanup-g3)
+
+위 문서 갱신은 PR #2로 master `c64ed03`에 병합했다(병합 커밋). V12: Actions의 `Validate` 워크플로(job 1개 `validate`, check:secrets→lint→test→test:scripts→build→테스트 광고 번들 검사) run #1~#5가 모두 Success임을 화면에서 확인해 통과로 바꿨다. lint 경고는 기존 `useInAppAds.tsx:54` 1건이다. S3-4: 콘솔 `iaa_placement_group_list` 읽기 전용 조회에서 배너 지면 1개가 활성, 어뷰징 수준 NONE, 제한 없음이었다. `iaa_abuse_status_get`은 서버가 "등록되지 않은 요청"으로 거절해 앱 전체 송출 제한 여부는 확인하지 못했다. 이로써 S3-1~S3-5가 끝나 게이트 G3를 통과로 기록했다. 남은 일: 드라이브 백업 SHA256 비교, 어뷰징 수준 주기 확인, 14일 안정 운영(2026-11-04 이후), 폴더 이름 전환, 삭제 게이트.
+
+Files: Task.md, specs/26-10-20_feature_history_cleanup/{plan,validation}.md
+Change: CI 전체 결과와 광고 어뷰징 확인을 반영해 V12·S2-6·S3-4·G3를 통과로 갱신함.
+Before: V12와 S2-6은 CI job 최종 상태 미확인으로 부분, S3-4는 모니터링 기록 없음, G3는 미판정이었다.
+After: V12·S2-6·S3-4가 통과(S3-4는 지면 기준)이고 G3 통과로 기록됐다.
+Verification: GitHub Actions 화면에서 run #1~#5 Success 확인, 콘솔 읽기 전용 조회로 지면 상태 확인. 문서 변경이라 앱 테스트는 실행하지 않음.
