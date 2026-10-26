@@ -1,6 +1,6 @@
 # 냉털픽 작업 인수인계
 
-갱신: 2026-10-12 (Asia/Seoul)
+갱신: 2026-10-26 (Asia/Seoul)
 
 > **이력 정리 안내 (2026-10-20):** 공개 저장소 이력에서 광고 그룹 ID를 지우려고 전체 이력을 다시 써서 새 저장소로 옮겼다. 이 문서와 `Log.md`, `specs/`에 적힌 **옛 커밋 해시는 모두 바뀌었다.** 옛 해시 → 새 해시 대응표는 `specs/26-10-20_feature_history_cleanup/commit-map.txt`에 있다(해시를 문서에서 치환하지는 않았다). 콘솔 번들 메모의 소스 해시도 이 표로 찾는다.
 
@@ -688,3 +688,13 @@ feature/acquisition-growth. 2단계: 콘솔 메타데이터 수정안만 작성(
 ## 2026-10-20 이력 정리 계획 작성 (문서만, feature/history-cleanup-plan)
 
 공개 저장소의 옛 커밋 6개(2026-10-02~10-05, 파일 6개)에 남은 실제 광고 그룹 ID를 정리하는 계획을 세 세션으로 나눠 작성했다(`specs/26-10-20_feature_history_cleanup`, HC-01~10, 게이트 G1~G3, 세션별 시작 프롬프트 포함). 권장: 지금 저장소를 private로 바꾸고(되돌릴 수 있음), 방식 B(새 저장소, 기존 저장소 불변·강제 푸시 없음)로 정리한 이력을 올린 뒤, 옛 저장소는 private 보관본으로 두며 삭제는 마지막 단계에서 명시 승인으로만 한다. 실행한 것은 없다(설정 변경·재작성·푸시·삭제 모두 미수행). 실측: 저장소 public, 별·포크·이슈·PR 0, 원격 브랜치 13개, 영향 커밋 76/97개, 로컬 전용 브랜치 3개·스태시 1개·작업 트리 3곳, Python 3.12 있음·git-filter-repo 미설치. 사용자 결정 대기: 정리 방식, 보관 처분, 새 저장소 이름·공개 범위, 광고 그룹 교체, 백업 위치 등 9개.
+
+## 2026-10-26 이력 정리 실행 결과 반영 (문서만, docs/history-cleanup-status)
+
+위 계획은 2026-10-20~10-21에 방식 B로 실행됐다. 실행 기록은 저장소 밖 `D:\work\history-cleanup\STATE.md`에 있었고, 이번에 저장소 문서에 옮겼다. 결정 9개 확정. 백업(번들 verify 통과)을 만들고 git-filter-repo로 이력을 다시 썼다(104커밋, 차이는 ID 치환뿐). 옛 저장소는 `ait-FridgePick-private`로 이름을 바꿔 private로 보관하고, 정리한 이력은 새 저장소 `ait-FridgePick`에 강제 푸시 없이 올렸다. 게이트 G1·G2 통과. 세션 3에서 해시 대응표 `commit-map.txt`, 비밀값 검사(스크립트·훅·CI·AGENTS 규칙)를 PR #1로 master `3b9de10`에 반영했다. 전체 이력 ID 0건을 다시 확인한 뒤 2026-10-21 public으로 전환했다. **작업 위치는 `D:\work\ait-FridgePick-new`다.** 옛 폴더 `D:\work\ait-FridgePick`은 origin을 제거해 보관한다(codex 작업 트리·로컬 전용 브랜치 포함). 남은 일: 드라이브 백업 SHA256 비교(크기만 일치), CI job 최종 상태 확인(테스트 319/319까지만 확인), 광고 그룹 어뷰징 수준 모니터링 기록, 14일 안정 운영(2026-11-04 이후 판정), 폴더 이름 전환, 옛 저장소 삭제 게이트(사용자 승인 전 삭제 없음). G3는 S3-4 모니터링 기록 전이라 통과로 표시하지 않았다.
+
+Files: Task.md, specs/roadmap.md, specs/26-10-20_feature_history_cleanup/{README,plan,validation}.md
+Change: 이력 정리 문서를 STATE.md의 실제 실행 결과로 갱신함.
+Before: 문서에는 "계획만 작성, 아무것도 실행하지 않음"으로 남아 있었고 검증표 V1~V19가 모두 미수행이었다.
+After: 게이트·검증 항목별로 통과/부분/대기를 표시했다. 작업 위치와 남은 확인을 기록했다.
+Verification: STATE.md·HANDOFF-SESSION3.md와 대조함. 새 저장소 원격 참조를 ls-remote로 확인함(master 3b9de10, 10-21 이후 변경 없음). 문서 변경이라 앱 테스트는 실행하지 않음.
